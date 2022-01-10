@@ -1,12 +1,13 @@
 /* Header */
 
 .logo {
-    float: left;
-    width: 120px !important;
+    display: block;
+  margin-left: 50%;
+  width: 50%;
+    
     padding-top: 5px;
-    margin-left: 3%;
+    
 }
-
 .notificationLogo {
     padding-top: 10px !important;
     margin-right: 3% !important;

@@ -1,26 +1,54 @@
 /* Header */
 
 .logo {
-    float: left;
-    width: 120px !important;
-    padding-top: 5px;
-    margin-left: 3%;
+   
+  margin-left: 35%;
+  width: 120px;
+padding-top: 2px;
+    
 }
 
+.locationLogo {
+    padding-top: 10px;
+    padding-right: 60px;
+    height: 35px;
+}
 .notificationLogo {
-    padding-top: 10px !important;
-    margin-right: 3% !important;
-    height: 35px !important;
+    padding-top: 10px;
+    padding-right: 10px;
+    height: 35px;
+}
+.icons {
+    padding-top: 0px;
 }
 
 .mhead {
-    margin: 3px 0px 5px 0px;
+    margin: 0px 0px 5px 0px;
+    background-color: black;
 }
 
 .menu-ham2 {
     width: 120px;
     margin: 5px 0 3px 135px;
 }
+.accountLogo {
+    margin-top: 13px;
+    padding-top: 10px !important;
+    
+    height: 37px !important;
+}
+.searchLogo{
+    margin-top: 15px !important;
+    height: 30px !important;
+    margin-left: 10px;
+    filter: brightness(0) invert(1) !important;    
+}
+.backButton{
+    height: 30px !important;
+    margin-left: 30px !important;
+    margin-top: 23px;
+}
+
 
 
 /* Footer */
@@ -94,4 +122,40 @@
     font-family: Arial;
     font-size: 100%;
     background-color: white;
+}
+
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+
+    .accountLogo {
+        margin-top: 13px;
+        padding-top: 10px !important;
+        margin-left: 60px;
+        
+        height: 40px !important;
+    }
+    .searchLogo{
+        margin-top: 16px !important;
+        margin-left: 30px !important;
+        
+        height: 30px !important;
+        filter: brightness(0) invert(1) !important;    
+    }
+
+    .logo { 
+        margin-left: 60%;
+        width: 120px;
+        margin-top: -12px;          
+      }
+
+      .mhead {
+        height: fit-content !important;
+        background-color: black;
+    }
+
+    .backButton{
+        height: 30px !important;
+        margin-left: 50px !important;
+        margin-top: 30px;
+    }
 }
