@@ -1,0 +1,63 @@
+.ui-btn-left {
+    position: absolute;
+    top: 39.24em;
+    left: 24%;
+}
+
+.carousel-indicators {
+    bottom: 74px;
+}
+
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {}
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+
+
+/* Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    .ui-btn-left {
+        position: absolute;
+        top: 84% !;
+        left: 34%;
+    }
+}
+
+
+/* ----------- iPad ----------- */
+
+@media only screen and (device-width: 768px) {
+    /* For general iPad layouts */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+    .ui-btn-left {
+        top: 84% !important;
+        left: 34% !important;
+    }
+    .carousel-indicators {
+        bottom: 50% !important;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
+    .ui-btn-left {
+        position: absolute;
+        top: 84%;
+        left: 42%;
+    }
+    .carousel-indicators {
+        bottom: 26% !important;
+    }
+}

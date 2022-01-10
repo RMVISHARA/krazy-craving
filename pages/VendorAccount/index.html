@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HOME CHEF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="../../Assets/css/style.min.css">
+    <link rel="stylesheet" href="./vendorAccount.css">
+    <!--slider-->
+    <!--    <link rel="stylesheet" type="text/css" href="../css/home-eats-stylesheet.css">-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../../Assets/js/js.min.js"></script>
+    <style>
+        .round {
+            border-radius: 50%;
+            margin: 5px 0 3px 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div data-role="page" id="vendoraccountpage">
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" id="header">
+            <div class="mhead">
+                <div class="">
+                    <img class="logo" src="../../Assets/img/rectangle_logo_black.png">
+                </div>
+                <div class="row icons">
+                    <div class="">
+                        <a href="../Notification/index.html" data-position-to="window" id="notificationLogo">
+                            <img class="notificationLogo ui-btn-right" src="../../Assets/img/icons/notification.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /header -->
+
+        <div id="grad1">
+            <!--        <div class="logoAlign">-->
+            <!--            <img src="../../Assets/img/burger-shop.jpg" class="round" width="20%">-->
+            <!--            <div class="accountName">-->
+            <!--                Burger Shop-->
+            <!--            </div>-->
+
+
+            <!--    </div>-->
+            <div class="row">
+                <div class="column">
+                    <img src="../../Assets/img/burger-shop.jpg" class="round" width="50%">
+
+                </div>
+                <div class="column">
+                    <div class="accountName">
+                        <br> Burger Shop
+                        <br> Ratings: 4.5
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <div class="row2">
+            <div class="column1" style="background-color:#ffffff;">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/chat.png" width="33">
+                <br><br>
+                <!--                 <P id="margin-top-link"> helo</P>-->
+                <a href="#" data-icon="none" id="margin-top-link">Message</a>
+            </div>
+            <div class="column1" style="background-color:#ffffff;">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/comment.svg">
+                <br><br>
+                <a href="../VendorReview/" id="margin-top-link2">Reviews</a>
+            </div>
+            <div class="column1" style="background-color:#ffffff;">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/send-mail.svg">
+                <br><br>
+                <a href="#" id="margin-top-link3">Email</a>
+            </div>
+            <div class="column1" style="background-color:#ffffff;">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/top-three.svg">
+                <br><br>
+                <a href="../TopItems/" id="margin-top-link4-top">Top Items</a>
+
+            </div>
+        </div>
+
+        <br>
+        <div class="row3">
+            <div class="column2" style="background-color:#ffffff;">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/wallet.png" width="33">
+
+                <!--                 <P id="margin-top-link"> helo</P>-->
+                &nbsp; <a href="../Transactions/" data-icon="none" id="margin-top-link">Transaction History</a>
+                <hr>
+            </div>
+            <div class="column2" style="background-color:#ffffff;">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/museum.svg"> &nbsp;&nbsp;
+
+                <a href="#" id="margin-top-link2">Bank details</a>
+                <hr>
+            </div>
+            <div class="column2" style="background-color:#ffffff;">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/question.png" width="33"> &nbsp;
+
+                <a href="#" id="margin-top-link3">Help Center</a>
+                <hr>
+            </div>
+            <div class="column2" style="background-color:#ffffff;">
+
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/about-us.png"> &nbsp; &nbsp;<a href="../VendorAbout/" id="margin-top-link4">About Us</a>
+                <hr>
+
+            </div>
+            <div class="column2" style="background-color:#ffffff;">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/logout.png"> &nbsp;&nbsp;
+
+                <a href="../Login/" id="margin-top-link5">Sign Out</a>
+                <hr>
+
+            </div>
+        </div>
+
+        <div class="footer" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="../VendorOrders/" data-icon="none" class="ui-nodisc-icon ui-icon-orders-inactive" id="inactive" data-ajax="false">Orders</a></li>
+                    <li><a href="../VendorFoodList/" data-icon="none" class="ui-nodisc-icon ui-icon-foodlist-inactive" id="inactive" data-ajax="false">Food List</a></li>
+                    <li><a href="../VendorPromotion/" data-icon="none" class="ui-nodisc-icon ui-icon-promotions-inactive" id="inactive" data-ajax="false">Promotions</a></li>
+                    <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-profile-active" id="active" data-ajax="false">Account</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- /page -->
+
+    </div>
+</body>
+
+</html>

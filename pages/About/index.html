@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HOME CHEF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!--slider-->
+    <link rel="stylesheet" href="../../Assets/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="./about.css">
+    <!--slider-->
+</head>
+<style>
+    #info {
+        font-size: 11px;
+    }
+</style>
+
+<body>
+
+    <div data-role="page" id="aboutuspage">
+
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" id="header">
+
+            <div class="mhead">
+                <a class="back-btn" href="../UserAccount/">
+                    < Back</a>
+                        <img class="menu-ham2" src="../../Assets/img/rectangle_logo_black.png">
+            </div>
+            <!-- /grid-b -->
+        </div>
+        <!-- /header -->
+        <img src="../../Assets/img/about-us.jpg" id="mapcontact" style="width:100%">
+        <div data-role="content">
+            <div class="ui-grid-a" id="aboutus">
+                <h4 class="heading-name"><b>Who are we?</b></h4>
+                <p style="color:black" id="content">We are a team that believes in the goodness of home cooked food. Our mission is to promote home cooked food consumption among people by empowering home cooked food delivering start-ups. We are accomplishing our mission by connecting hungry
+                    stomachs with nearby amazing home cooked food vendors via the Home Chef common platform.</p>
+                <br>
+                <h4 class="heading-name"><b>Why choose Home Chef?</b></h4>
+                <iframe class="video" src="https://www.youtube.com/embed/5iFQz-z2n10?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br>
+                <h4 class="heading-name"><b>Our Team</b></h4>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div>
+                            <img src="../../Assets/img/dummy1.png" class="rounded" id="dummy1">
+                        </div>
+                        <div>
+                            <p class="text-center" id="dummy1-name">Maeve Wiley</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div>
+                            <img src="../../Assets/img/dummy2.jpg" class="rounded" id="dummy2">
+                        </div>
+                        <div>
+                            <p class="text-center" id="dummy2-name">Otis Milburn</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div>
+                            <img src="../../Assets/img/dummy1.png" class="rounded" id="dummy3">
+                        </div>
+                        <div>
+                            <p class="text-center">Hannah Baker</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div>
+                            <img src="../../Assets/img/dummy2.jpg" class="rounded" id="dummy4">
+                        </div>
+                        <div>
+                            <p class="text-center">Clay Jensen</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /grid-a -->
+
+        </div>
+
+    </div>
+    <!-- /page -->
+
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../../Assets/js/js.min.js"></script>
+
+
+
+</body>
+<script>
+    $('.menu-ham').click(function() {
+        $('.menu').animate({
+            left: '0px'
+        }, 100)
+    });
+
+    $('.close-menu').click(function() {
+        $('.menu').animate({
+            left: '-250px'
+        }, 100)
+    });
+</script>
+
+</html>

@@ -1,0 +1,97 @@
+/* Header */
+
+.logo {
+    float: left;
+    width: 120px !important;
+    padding-top: 5px;
+    margin-left: 3%;
+}
+
+.notificationLogo {
+    padding-top: 10px !important;
+    margin-right: 3% !important;
+    height: 35px !important;
+}
+
+.mhead {
+    margin: 3px 0px 5px 0px;
+}
+
+.menu-ham2 {
+    width: 120px;
+    margin: 5px 0 3px 135px;
+}
+
+
+/* Footer */
+
+.ui-icon-orders-active:after {
+    background-image: url("../../Assets/img/icons/orders-active.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+.ui-icon-orders-inactive:after {
+    background-image: url("../../Assets/img/icons/orders-inactive.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+.ui-icon-foodlist-inactive:after {
+    background-image: url("../../Assets/img/icons/food-list-inactive.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+.ui-icon-foodlist-active:after {
+    background-image: url("../../Assets/img/icons/food-list-active.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+.ui-icon-promotions-inactive:after {
+    background-image: url("../../Assets/img/icons/promotions-inactive.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+.ui-icon-promotions-active:after {
+    background-image: url("../../Assets/img/icons/promotions-active.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+.ui-icon-profile-inactive:after {
+    background-image: url("../../Assets/img/icons/account-inactive.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+.ui-icon-profile-active:after {
+    background-image: url("../../Assets/img/icons/account-active.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+#inactive {
+    color: #858282;
+    text-align: center;
+    font-family: Arial;
+    font-size: 100%;
+    background-color: white;
+}
+
+#active {
+    color: #fc9920;
+    font-family: Arial;
+    font-size: 100%;
+    background-color: white;
+}

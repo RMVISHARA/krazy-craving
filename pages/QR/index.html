@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./qr.js"></script>
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <!-- the three things that jQuery Mobile needs to work -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../../../Assets/css/common.user.css">
+    <!--<link rel="stylesheet" type="text/css" href="../../Assets/css/grid.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Assets/css/style.min.css">-->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <!--    <script src="../../Assets/js/js.min.js"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./qr.css">
+
+   
+
+</head>
+
+<body>
+    <div data-role="page" id="vr">
+
+        <!-- header -->
+        <div data-role="header" class="mhead" data-position="fixed" data-tap-toggle="false">
+            <div class="row">
+                <div class="">
+                    <img class="logo" src="../../Assets/img/rectangle_logo_black.png">
+                </div>
+                <div class="row icons">
+                    <div class="">
+                        <a href="#" data-position-to="window" id="notificationLogo">
+                            <img class="notificationLogo ui-btn-right" src="../../Assets/img/icons/notification.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <!-- /header -->
+
+
+        <div data-role="content">
+            
+            <div class="spinner-border spinner" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            
+                            <video id="preview"></video> 
+                            <div class="content">
+                                <img id="camera" src="../../Assets/img/icons/camera.svg">
+                                <br>
+                                <p id="scan-text">Please avoid shaking to get quick results</p>                           
+                            </div>  
+        </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+
+      scanner.addListener('scan', function (content) {
+
+        if (content.match(/^https?:\/\//i)) {
+    window.open(content);
+    window.location.href = "../Search/index.html";
+  }
+ 
+
+      });
+
+      Instascan.Camera.getCameras().then(function (cameras) {
+
+        if (cameras.length > 0) {
+
+          scanner.start(cameras[0]);
+
+        } else {
+
+          console.error('No cameras found.');
+
+        }
+
+      }).catch(function (e) {
+
+        console.error(e);
+
+      });
+</script>
+
+</html>

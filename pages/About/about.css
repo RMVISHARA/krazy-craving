@@ -1,0 +1,176 @@
+#header {
+    z-index: 1000;
+}
+
+.mhead {
+    margin: 3px 0px 5px 0px;
+}
+
+.menu-ham2 {
+    width: 120px;
+    margin: 5px 0 3px 15%
+}
+
+.back-btn {
+    margin-left: 2%;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.back-btn a:hover {
+    text-decoration: none !important;
+}
+
+.rounded {
+    width: 65%
+}
+
+#dummy2 {
+    margin-left: 11%;
+}
+
+#dummy3 {
+    margin-left: 11%;
+}
+
+#dummy4 {
+    margin-left: 11%;
+}
+
+#dummy1-name {
+    margin-right: 26%;
+}
+
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {}
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+    .video {
+        width: 60%;
+    }
+}
+
+
+/* Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    .rounded {
+        width: 55% !important;
+    }
+    .mhead {
+        margin: 3px 0px 5px 0px;
+    }
+    .menu-ham2 {
+        width: 150px;
+        margin: 5px 0 5px 222px !important;
+    }
+    .video {
+        width: 60%;
+        height: 50% !important;
+    }
+    #dummy2 {
+        margin-left: 10% !important;
+    }
+    #dummy3 {
+        margin-left: 20% !important;
+    }
+    #dummy4 {
+        margin-left: 30% !important;
+    }
+    #dummy1-name {
+        margin-right: 38% !important;
+    }
+    #dummy2-name {
+        margin-right: 23% !important;
+    }
+    .heading-name {
+        font-size: 28px;
+    }
+}
+
+
+/* ----------- iPad ----------- */
+
+@media only screen and (device-width: 768px) {
+    /* For general iPad layouts */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+    #dummy2 {
+        margin-left: 10% !important;
+    }
+    #dummy3 {
+        margin-left: 20% !important;
+    }
+    #dummy4 {
+        margin-left: 30% !important;
+    }
+    .heading-name {
+        font-size: 30px;
+    }
+    .video {
+        width: 50%;
+        height: 50% !important;
+    }
+    .rounded {
+        width: 50% !important;
+    }
+    #dummy1-name {
+        margin-right: 38% !important;
+    }
+    #dummy2-name {
+        margin-right: 23% !important;
+    }
+    #content {
+        font-size: 20px;
+    }
+    .menu-ham2 {
+        width: 150px;
+        margin: 5px 0 3px 244px;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
+    #dummy2 {
+        margin-left: 10% !important;
+    }
+    #dummy3 {
+        margin-left: 20% !important;
+    }
+    #dummy4 {
+        margin-left: 30% !important;
+    }
+    .heading-name {
+        font-size: 30px;
+    }
+    .video {
+        width: 50%;
+        height: 50% !important;
+    }
+    .rounded {
+        width: 50% !important;
+    }
+    #dummy1-name {
+        margin-right: 38% !important;
+    }
+    #dummy2-name {
+        margin-right: 23% !important;
+    }
+    #content {
+        font-size: 20px;
+    }
+    .menu-ham2 {
+        width: 150px;
+        margin: 5px 0 3px 360px;
+    }
+}

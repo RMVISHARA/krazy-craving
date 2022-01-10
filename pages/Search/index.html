@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HOME CHEF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="searchUser.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!--slider-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!--slider-->
+
+</head>
+
+<body>
+    <div data-role="page" id="searchUser">
+
+        <!-- header -->
+        <div data-role="header" class="mhead" data-position="fixed" data-tap-toggle="false">
+            <div class="row">
+                <div class="">
+                    <img class="logo" src="../../Assets/img/rectangle_logo_black.png">
+                </div>
+                <div class="row icons">
+                    <div class="">
+                        <a href="#" data-position-to="window" id="notificationLogo">
+                            <img class="notificationLogo ui-btn-right" src="../../Assets/img/icons/notification.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /header -->
+
+        <!-- content -->
+        <div data-role="content">
+            <!-- <a href="#popupForSearchFilter" data-rel="popup" data-position-to="window" data-transition="pop" ><img  class="sort ui-btn-left" src="../../Assets/img/icons/notification.svg" ></a>							
+         -->
+            <div class="container-fluid">
+                <div class="col-xs-10">
+                    <form>
+                        <input data-type="search" id="divOfPs-input">
+                    </form>
+                </div>
+                <div class="col-xs-2">
+                    <a href="../QR/index.html" data-ajax="false"><img id="camera" src="../../Assets/img/icons/camera.svg"></a>
+                </div>
+            </div>
+
+            <div class="elements container-fluid" data-filter="true" data-input="#divOfPs-input" data-filter-placeholder="Search">
+                <h1>Top categories</h1>
+                <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img class="category-images" src="../../Assets/img/sri_lankan.jpg" alt="Sri lankan" style="width:100%">
+                    <h2 id="food">Sri Lankan</h2>
+                </div>
+
+                <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img class="category-images" src="../../Assets/img/cakes.jpg" alt="Sri lankan" style="width:100%">
+                    <h2 id="food">Cakes</h2>
+                </div>
+
+
+                <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img class="category-images" src="../../Assets/img/burger_category.jpg" alt="Sri lankan" style="width:100%">
+                    <h2 id="food">Burgers</h2>
+                </div>
+
+                <div id="space-between-rows">This is Hidden</div>
+
+                <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img class="category-images" src="../../Assets/img/halal.jpg" alt="Halal" style="width:100%">
+                    <h2 id="food">Halal</h2>
+                </div>
+
+                <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img class="category-images" src="../../Assets/img/traditional.jpg" alt="Traditional" style="width:100%">
+                    <h2 id="food">Traditional</h2>
+                </div>
+
+                <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img class="category-images" src="../../Assets/img/drinks.jpg" alt="Beverages" style="width:100%">
+                    <h2 id="food">Beverages</h2>
+                </div>
+
+                <div id="space-between-rows">This is Hidden</div>
+
+                <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img class="category-images" src="../../Assets/img/sweets.jpg" alt="Sweets" style="width:100%">
+                    <h2 id="food">Sweets</h2>
+                </div>
+
+                <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img class="category-images" src="../../Assets/img/seafood.jpg" alt="Sea food" style="width:100%">
+                    <h2 id="food">Sea Food</h2>
+                </div>
+
+                <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img class="category-images" src="../../Assets/img/rice.jpg" alt="Rice Bowls" style="width:100%">
+                    <h2 id="food">Rice Bowls</h2>
+                </div>
+
+            </div>
+
+            <!-- iphone -->
+            <div class="elements-iphone container-fluid" data-filter="true" data-input="#divOfPs-input" data-filter-placeholder="Search">
+                <h2 style="text-align: center;">Top categories</h2>
+                <div class="card col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <img class="category-images" src="../../Assets/img/sri_lankan.jpg" alt="Sri lankan" style="width:100%">
+                    <h4 id="food">Sri Lankan</h4>
+                </div>
+
+                <div class="card col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <img class="category-images" src="../../Assets/img/cakes.jpg" alt="Sri lankan" style="width:100%">
+                    <h4 id="food">Cakes</h4>
+                </div>
+
+                <div id="space-between-rows">This is Hidden</div>
+
+                <div class="card col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <img class="category-images" src="../../Assets/img/burger_category.jpg" alt="Sri lankan" style="width:100%">
+                    <h4 id="food">Burgers</h4>
+                </div>
+
+                <div class="card col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <img class="category-images" src="../../Assets/img/halal.jpg" alt="Halal" style="width:100%">
+                    <h4 id="food">Halal</h4>
+                </div>
+
+                <div id="space-between-rows">This is Hidden</div>
+
+                <div class="card col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <img class="category-images" src="../../Assets/img/traditional.jpg" alt="Traditional" style="width:100%">
+                    <h4 id="food">Traditional</h4>
+                </div>
+
+                <div class="card col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <img class="category-images" src="../../Assets/img/drinks.jpg" alt="Beverages" style="width:100%">
+                    <h4 id="food">Beverages</h4>
+                </div>
+
+                <div id="space-between-rows">This is Hidden</div>
+
+                <div class="card col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <img class="category-images" src="../../Assets/img/sweets.jpg" alt="Sweets" style="width:100%">
+                    <h4 id="food">Sweets</h4>
+                </div>
+
+                <div class="card col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <img class="category-images" src="../../Assets/img/seafood.jpg" alt="Sea food" style="width:100%">
+                    <h4 id="food">Sea Food</h4>
+                </div>
+
+                <div id="space-between-rows">This is Hidden</div>
+
+                <div class="card col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <img class="category-images" src="../../Assets/img/rice.jpg" alt="Rice Bowls" style="width:100%">
+                    <h4 id="food">Rice Bowls</h4>
+                </div>
+
+            </div>
+            <!-- /iphone -->
+
+
+        </div>
+        <!-- /content -->
+
+        <div class="footer" data-role="footer" data-position="fixed">
+          <div data-role="navbar" >
+              <ul>
+                  <li><a href="../HomeUser" data-icon="none"  class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
+                  <li><a href="../Search" data-icon="none" class="ui-nodisc-icon ui-icon-search-active" id="active" data-ajax="false">Search</a></li>
+                  <li><a href="../CurrentOrder/" data-icon="none" class="ui-nodisc-icon ui-icon-track-inactive" id="inactive" data-ajax="false">Track Order</a></li>
+                  <li><a href="../UserAccount" data-icon="none" class="ui-nodisc-icon ui-icon-profile-inactive" id="inactive" data-ajax="false">Account</a></li>
+              </ul>
+          </div>
+      </div> <!-- /footer -->
+  
+
+    </div>
+    <!-- /page -->
+</body>
+
+</html>

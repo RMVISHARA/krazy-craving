@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HOME CHEF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="login.js"></script>
+</head>
+
+<style>
+    .ui-grid-b>.ui-block-a,
+    .ui-grid-b>.ui-block-c {
+        width: 30%;
+    }
+
+    .ui-grid-b>.ui-block-b {
+        width: 10%;
+    }
+
+</style>
+
+<body>
+    <div data-role="page" class="loginPage" id="loginpage">
+        <div data-role="content" align="center" class="logincontent">
+            <img src="../../Assets/img/Logo_final.png" class="logo" />
+            <form>
+                <div data-role="fieldcontain">
+                    <input type="email" name="email" id="email" value="" placeholder="Email" data-role=none required/> <br>
+                    <input type="password" name="password" id="password" value="" placeholder="Password" data-role=none required/>
+
+                </div>
+            </form>
+            <div class="ui-block-a">
+                <p id="aa"><a href="#forgot-password" data-rel="false">Forgot Your Password?</a></p>
+            </div><br>
+            <form>
+                <a  onclick="Login()" data-role="button" rel="external" id="login" >Sign in</a>
+            </form>
+            <div class="ui-grid-b" id="grid1">
+                <div class="ui-block-a">
+                    <hr size="1px" color="white">
+                </div>
+                <div class="ui-block-b">OR</div>
+                <div class="ui-block-c">
+                    <hr size="1px" color="white">
+                </div>
+            </div><!-- /grid-a -->
+            <table id="table1">
+                <tr>
+                    <td>
+                        <button id="facebook"
+                                class="ui-nodisc-icon ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-facebook"
+                                onclick="window.open('https://facebook.com')">Sign in with Facebook</button>
+                    </td>
+                    <td id="empty"></td>
+                    <td>
+                        <button id="google"
+                                class="ui-nodisc-icon ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-google"
+                                onclick="window.open('https://google.com')">Sign in with Google</button>
+                    </td>
+                </tr>
+            </table>
+            <div class="signup">
+                <p>New to Home Chef? <a href="../UserRegister">Sign up Now</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="forgot-password"
+         style="background-image: url('../../Assets/img/login.jpg'); background-repeat: no-repeat; background-attachment: fixed;  background-size: cover;">
+        <div data-role="content" align="center" class="forgot-password">
+
+            <a href="../Login" data-ajax="false"><img
+                    class="back ui-btn-left"
+                    src="../../Assets/img/icons/back1.svg"></a>
+
+                <h1 id="forgotPass">Forgot Password?</h1>
+
+                <p id="fgtContent">Enter your email and will send your
+                    instructions on how to reset it</p>
+                <form action="" method="post">
+                    <input type="email" name="email" id="email" value=""
+                           placeholder="Email" data-role=none required />
+                    <button type="submit" name="login" id="reset">RESET</button>
+                </form>
+
+        </div>
+    </div>
+</body>
+
+</html>

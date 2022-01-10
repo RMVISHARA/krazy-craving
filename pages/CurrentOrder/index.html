@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HOME CHEF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--slider-->
+</head>
+
+<style>
+    /* Always set the map height explicitly to define the size of the div
+           * element that contains the map. */
+    #map {
+        width: 90%;
+        height: 200px;
+        background-color: grey;
+        margin-bottom: 10px;
+        border-radius: 20px;
+    }
+
+</style>
+
+<body>
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="../../Assets/css/style.min.css">
+<link rel="stylesheet" href="currentOrder.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="../../Assets/js/js.min.js"></script>
+
+<div data-role="page" id="trackPastOrder">
+
+    <div data-role="header" class="mhead" data-position="fixed" data-tap-toggle="false">
+        <div class="row">
+            <div class="">
+                <img class="logo" src="../../Assets/img/rectangle_logo_black.png">
+            </div>
+            <div class="row icons">
+                <div class="">
+                    <a href="#" data-position-to="window" id="notificationLogo">
+                        <img class="notificationLogo ui-btn-right" src="../../Assets/img/icons/notification.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div><!-- /header -->
+
+
+    <div data-role="content" align="center">
+        <p class="pageTitle">Track Orders</p>
+        <div class="wrapper">
+            <div class="currentDiv">
+                <a href="#" data-role="button" rel="external" id="currentBtn">Current Order</a>
+            </div>
+            <div class="pastDiv">
+                <a href="../PastOrder" data-role="button" rel="external" id="pastBtn">Past Orders</a>
+            </div>
+        </div>
+        <div id="map"></div>
+        <div class="card">
+            <p class="title"><b>Arthur's Pizza</b></p>
+            <p class="delivery">Order will be delivered: <b>10:45 AM</b></p>
+            <p class="order"><b>Order Details</b></p>
+            <hr>
+            <div class="item ui-grid-a">
+                <p class="name ui-block-a">Cheese Pizza</p>
+                <p class="price ui-block-b">Rs. 1790</p>
+            </div>
+            <div class="item ui-grid-a">
+                <p class="name ui-block-a">Cheese Pizza</p>
+                <p class="price ui-block-b">Rs. 1790</p>
+            </div>
+            <hr>
+            <div class="item ui-grid-a">
+                <p class="total ui-block-a">Total</p>
+                <p class="totalPrice ui-block-b">Rs. 3690</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" data-role="footer" data-position="fixed">
+        <div data-role="navbar" >
+            <ul>
+                <li><a href="../HomeUser" data-icon="none"  class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
+                <li><a href="../Search" data-icon="none" class="ui-nodisc-icon ui-icon-search-inactive" id="inactive" data-ajax="false">Search</a></li>
+                <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-track-active" id="active" data-ajax="false">Track Order</a></li>
+                <li><a href="../UserAccount" data-icon="none" class="ui-nodisc-icon ui-icon-profile-inactive" id="inactive" data-ajax="false">Account</a></li>
+            </ul>
+        </div>
+    </div> <!-- /footer -->
+
+</div>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWb2Q5E16M1dqMb1RQ5EUciRjVpi4NMxI&callback=initMap">
+</script>
+<script>
+
+    function initMap() {
+        const myLatLng = { lat: 6.87, lng: 79.88};
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 18,
+            center: myLatLng,
+        });
+        var infowindow = new google.maps.InfoWindow({
+            content:"Arthur's Pizza"
+        });
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map,
+            title: "Arthur's Pizza",
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map,marker);
+        });
+    }
+</script>
+</body>
+
+</html>

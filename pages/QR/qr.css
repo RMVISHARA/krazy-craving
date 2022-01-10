@@ -1,0 +1,156 @@
+.logo {
+  width: 120px;
+  margin: 3px 0 3px 24% !important;
+}
+
+.mhead {
+  margin: 0px 0px 5px 0px;
+}
+
+
+
+
+/* footer */
+#inactive {
+  color: #858282;
+  text-align: center;
+  font-family: Arial;
+  font-size: 100%;
+
+}
+#active {
+  color: #fc9920;
+  font-family: Arial;
+  font-size: 100%;
+}
+.ui-icon-home:after {
+  background-image:  url("../../Assets/img/icons/home-inactive.svg");
+  background-size: 90%;
+  width: 25px !important;
+  height: 35px !important;
+
+}
+
+.ui-icon-home-active:after {
+  background-image:  url("../../Assets/img/icons/home-active.svg");
+  background-size: 90%;
+  width: 25px !important;
+  height: 35px !important;
+}
+
+
+.ui-icon-search-inactive:after {
+  background-image:  url("../../Assets/img/icons/search-inactive.svg");
+  background-size: 90%;
+  width: 25px !important;
+  height: 35px !important;
+}
+
+
+.ui-icon-search-active:after {
+  background-image:  url("../../Assets/img/icons/search-active.svg");
+  background-size: 90%;
+  width: 25px !important;
+  height: 35px !important;
+}
+
+.ui-icon-track-inactive:after {
+  background-image:  url("../../Assets/img/icons/track-inactive.svg");
+  background-size: 90%;
+  width: 25px !important;
+  height: 35px !important;
+}
+
+
+.ui-icon-track-active:after {
+  background-image:  url("../../Assets/img/icons/track-active.svg");
+  background-size: 90%;
+  width: 25px !important;
+  height: 35px !important;
+}
+
+
+.ui-icon-profile-inactive:after {
+  background-image:  url("../../Assets/img/icons/account-inactive.svg");
+  background-size: 90%;
+  width: 25px !important;
+  height: 35px !important;
+}
+
+.ui-icon-profile-active:after {
+  background-image:  url("../../Assets/img/icons/account-active.svg");
+  background-size: 90%;
+  width: 25px !important;
+  height: 35px !important;
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+    .notificationLogo {
+      padding-top: 10px;
+      padding-right: 10px;
+      height: 35px;
+  }
+
+  #preview {
+    position: fixed;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    
+  }
+
+  .spinner{
+    color: #FC9920;
+    margin-top: 55%;
+    margin-left: 45%;
+    width: 3rem; 
+    height: 3rem;
+  }
+
+
+  .content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 10px;
+    left:0;
+  }
+
+  #scan-text{
+    text-align: center;
+  }
+
+  #camera{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+
+    
+    
+}
+
+

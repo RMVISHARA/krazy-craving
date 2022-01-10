@@ -1,0 +1,668 @@
+.loginPage {
+    background-image: url(../../Assets/img/login.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 0px;
+}
+
+.logincontent{
+    background: rgba(0, 0, 0, 0.4);
+    height: 95.5%;
+}
+
+.logo{
+    vertical-align: middle;
+    width: 125px;
+    height: 140px;
+    border-radius: 50%;
+    background: transparent;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.signup {
+    width: 100%;
+    color: white;
+    font-size: 17px;
+    text-shadow:none;
+}
+#login {
+    font-family: Arial;
+    background-color: #fc9920;
+    font-size:18px;
+    font-weight: bold;
+    color:black;
+    width: 40%;
+    height: 22px;
+    border-radius: 10px;
+    border:none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-shadow:none;
+}
+#email, #password, #number, #username, #address {
+    font-family: Arial;
+    padding-left: 25px;
+    font-size: 18px;
+    font-style:normal;
+    color:black;
+    width:80% !important;
+    height:40px !important;
+    border-radius: 10px;
+    border: 2px solid white;
+    border-color: white;
+    margin: .9em 0;
+    text-shadow:none;
+}
+#aa {
+    font-family: Arial;
+    color: darkgrey;
+    font-size:14px;
+    text-decoration: none;
+    margin-top: 0px;
+    margin-left: 30px;
+}
+#aa> a {
+    color: darkgrey;
+    text-decoration: none;
+    text-shadow: none;
+}
+#grid1 {
+    font-family:Arial;
+    width: 100%;
+    font-size:15px;
+    color:white;
+    margin-top:18px;
+    margin-left: 57px;
+}
+.ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+    background-color:transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+}
+#facebook {
+    margin-top: 28px;
+    float: left;
+    background-color:#3d5a96;
+    color:white;
+    border:none;
+    font-size:10px;
+    font-style:normal;
+    border-radius: 10px;
+    width:155px;
+    height:37px;
+    text-shadow: none;
+}
+.ui-icon-facebook:after {
+    background-image:  url("../../Assets/img/icons/facebook.svg");
+    background-size: 20px 20px;
+}
+#google {
+    margin-top: 28px;
+    background-color:white;
+    color:black;
+    border:none;
+    font-size:10px;
+    font-style:normal;
+    border-radius: 10px;
+    width:155px;
+    height:37px;
+    text-shadow: none;
+
+}
+
+.ui-icon-google:after {
+    background-image:  url("../../Assets/img/icons/google-symbol.svg");
+    background-size: 18px 18px;
+}
+#empty{
+    width: 1px;
+}
+.forgot-password{
+    background: rgba(0, 0, 0, 0.4);
+    height: 587px;
+
+}
+#forgotPass {
+    font-family: Arial;
+    font-size: 24px;
+    color: white;
+    margin-top: 180px;
+    margin-bottom: 50px;
+}
+#fgtContent{
+    font-size: 20px;
+    text-shadow: none;
+    color: white;
+}
+.back {
+    margin-left: 29px;
+    margin-top: 50px;
+}
+#reset  {
+    font-family: Arial;
+    background-color: #fc9920;
+    font-size:18px;
+    font-weight: bold;
+    color: black;
+    width: 40%;
+    height:48px;
+    border-radius: 10px;
+    border:none;
+    margin: .5em 0;
+    text-shadow:none;
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+
+    .loginPage {
+        background-image: url(../../Assets/img/login.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 0px;
+    }
+
+    .logincontent{
+        background: rgba(0, 0, 0, 0.4);
+        height: 95.5%;
+    }
+
+    .logo{
+        vertical-align: middle;
+        width: 125px;
+        height: 140px;
+        border-radius: 50%;
+        background: transparent;
+        margin-top: 5% !important;
+        margin-bottom: 2%;
+    }
+    .signup {
+        width: 100%;
+        color: white;
+        font-size: 17px;
+        text-shadow:none;
+    }
+    #login {
+        font-family: Arial;
+        background-color: #fc9920;
+        font-size:18px;
+        font-weight: bold;
+        color:black;
+        width: 40%;
+        height: 22px;
+        border-radius: 10px;
+        border:none;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-shadow:none;
+    }
+    #email, #password, #number, #username, #address {
+        font-family: Arial;
+        padding-left: 25px;
+        font-size: 18px;
+        font-style:normal;
+        color:black;
+        width:90% !important;
+        height:40px !important;
+        border-radius: 10px;
+        border: 2px solid white;
+        border-color: white;
+        margin: .9em 0;
+        text-shadow:none;
+    }
+    #aa {
+        font-family: Arial;
+        color: darkgrey;
+        font-size:14px;
+        text-decoration: none;
+        margin-top: 0px;
+        margin-left: 90px !important;
+    }
+    #aa> a {
+        color: darkgrey;
+        text-decoration: none;
+        text-shadow: none;
+    }
+    #grid1 {
+        font-family:Arial;
+        width: 100%;
+        font-size:15px;
+        color:white;
+        margin-top:18px;
+        margin-left: 105px !important;
+    }
+    .ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+        background-color:transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-border-radius: 1em;
+        border-radius: 1em;
+    }
+    #facebook {
+        margin-top: 28px;
+        float: left;
+        background-color:#3d5a96;
+        color:white;
+        border:none;
+        font-size:10px;
+        font-style:normal;
+        border-radius: 10px;
+        width:245px !important;
+        height:37px;
+        text-shadow: none;
+    }
+    .ui-icon-facebook:after {
+        background-image:  url("../../Assets/img/icons/facebook.svg");
+        background-size: 20px 20px;
+    }
+    #google {
+        margin-top: 28px;
+        background-color:white;
+        color:black;
+        border:none;
+        font-size:10px;
+        font-style:normal;
+        border-radius: 10px;
+        width:245px !important;
+        height:37px;
+        text-shadow: none;
+
+    }
+
+    .ui-icon-google:after {
+        background-image:  url("../../Assets/img/icons/google-symbol.svg");
+        background-size: 18px 18px;
+    }
+    #empty{
+        width: 15px !important;
+    }
+    .forgot-password{
+        background: rgba(0, 0, 0, 0.4);
+        height: 587px;
+
+    }
+    #forgotPass {
+        font-family: Arial;
+        font-size: 24px;
+        color: white;
+        margin-top: 180px;
+        margin-bottom: 50px;
+    }
+    #fgtContent{
+        font-size: 20px;
+        text-shadow: none;
+        color: white;
+    }
+    .back {
+        margin-left: 29px;
+        margin-top: 50px;
+    }
+    #reset  {
+        font-family: Arial;
+        background-color: #fc9920;
+        font-size:18px;
+        font-weight: bold;
+        color: black;
+        width: 40%;
+        height:48px;
+        border-radius: 10px;
+        border:none;
+        margin: .5em 0;
+        text-shadow:none;
+    }
+}
+
+
+/* ----------- iPad ----------- */
+
+@media only screen and (device-width: 768px) {
+    /* For general iPad layouts */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+
+    .loginPage {
+        background-image: url(../../Assets/img/login.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 0px;
+    }
+
+    .logincontent{
+        background: rgba(0, 0, 0, 0.4);
+        height: 96.7%;
+    }
+
+    .logo{
+        vertical-align: middle;
+        width: 125px;
+        height: 140px;
+        border-radius: 50%;
+        background: transparent;
+        margin-top: 10%;
+    }
+    .signup {
+        width: 100%;
+        color: white;
+        font-size: 17px;
+        text-shadow:none;
+    }
+    #login {
+        font-family: Arial;
+        background-color: #fc9920;
+        font-size:18px;
+        font-weight: bold;
+        color:black;
+        width: 40%;
+        height: 22px;
+        border-radius: 10px;
+        border:none;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-shadow:none;
+    }
+    #email, #password, #number, #username, #address {
+        font-family: Arial;
+        padding-left: 25px;
+        font-size: 18px;
+        font-style:normal;
+        color:black;
+        width:70%;
+        height:40px;
+        border-radius: 10px;
+        border: 2px solid white;
+        border-color: white;
+        margin: .9em 0;
+        text-shadow:none;
+    }
+    #aa {
+        font-family: Arial;
+        color: darkgrey;
+        font-size:14px;
+        text-decoration: none;
+        margin-top: 0px;
+        margin-left: 100px;
+    }
+    #aa> a {
+        color: darkgrey;
+        text-decoration: none;
+        text-shadow: none;
+    }
+    #grid1 {
+        font-family:Arial;
+        width: 100%;
+        font-size:15px;
+        color:white;
+        margin-top:18px;
+        margin-left: 110px;
+    }
+    .ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+        background-color:transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-border-radius: 1em;
+        border-radius: 1em;
+    }
+    #facebook {
+        margin-top: 28px;
+        float: left;
+        background-color:#3d5a96;
+        color:white;
+        border:none;
+        font-size:15px;
+        font-style:normal;
+        border-radius: 10px;
+        width:265px;
+        height:37px;
+        text-shadow: none;
+    }
+    .ui-icon-facebook:after {
+        background-image:  url("../../Assets/img/icons/facebook.svg");
+        background-size: 20px 20px;
+    }
+    #google {
+        margin-top: 28px;
+        background-color:white;
+        color:black;
+        border:none;
+        font-size:15px;
+        font-style:normal;
+        border-radius: 10px;
+        width:265px;
+        height:37px;
+        text-shadow: none;
+
+    }
+
+    .ui-icon-google:after {
+        background-image:  url("../../Assets/img/icons/google-symbol.svg");
+        background-size: 18px 18px;
+    }
+    #empty{
+        width: 10px;
+    }
+    .forgot-password{
+        background: rgba(0, 0, 0, 0.4);
+        height: 587px;
+
+    }
+    #forgotPass {
+        font-family: Arial;
+        font-size: 24px;
+        color: white;
+        margin-top: 180px;
+        margin-bottom: 50px;
+    }
+    #fgtContent{
+        font-size: 20px;
+        text-shadow: none;
+        color: white;
+    }
+    .back {
+        margin-left: 29px;
+        margin-top: 50px;
+    }
+    #reset  {
+        font-family: Arial;
+        background-color: #fc9920;
+        font-size:18px;
+        font-weight: bold;
+        color: black;
+        width: 40%;
+        height:48px;
+        border-radius: 10px;
+        border:none;
+        margin: .5em 0;
+        text-shadow:none;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
+    .loginPage {
+        background-image: url(../../Assets/img/login.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 0px;
+    }
+
+    .logincontent{
+        background: rgba(0, 0, 0, 0.4);
+        height: 95.5%;
+    }
+
+    .logo{
+        vertical-align: middle;
+        width: 125px;
+        height: 140px;
+        border-radius: 50%;
+        background: transparent;
+        margin-top: 10%;
+        margin-bottom: 2%;
+    }
+    .signup {
+        width: 100%;
+        color: white;
+        font-size: 17px;
+        text-shadow:none;
+    }
+    #login {
+        font-family: Arial;
+        background-color: #fc9920;
+        font-size:18px;
+        font-weight: bold;
+        color:black;
+        width: 40%;
+        height: 22px;
+        border-radius: 10px;
+        border:none;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-shadow:none;
+    }
+    #email, #password, #number, #username, #address {
+        font-family: Arial;
+        padding-left: 25px;
+        font-size: 18px;
+        font-style:normal;
+        color:black;
+        width:70% !important;
+        height:40px !important;
+        border-radius: 10px;
+        border: 2px solid white;
+        border-color: white;
+        margin: .9em 0;
+        text-shadow:none;
+    }
+    #aa {
+        font-family: Arial;
+        color: darkgrey;
+        font-size:14px;
+        text-decoration: none;
+        margin-top: 0px;
+        margin-left: 140px;
+    }
+    #aa> a {
+        color: darkgrey;
+        text-decoration: none;
+        text-shadow: none;
+    }
+    #grid1 {
+        font-family:Arial;
+        width: 100%;
+        font-size:15px;
+        color:white;
+        margin-top:18px;
+        margin-left: 150px;
+    }
+    .ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+        background-color:transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-border-radius: 1em;
+        border-radius: 1em;
+    }
+    #facebook {
+        margin-top: 28px;
+        float: left;
+        background-color:#3d5a96;
+        color:white;
+        border:none;
+        font-size:15px;
+        font-style:normal;
+        border-radius: 10px;
+        width:310px;
+        height:37px;
+        text-shadow: none;
+    }
+    .ui-icon-facebook:after {
+        background-image:  url("../../Assets/img/icons/facebook.svg");
+        background-size: 20px 20px;
+    }
+    #google {
+        margin-top: 28px;
+        background-color:white;
+        color:black;
+        border:none;
+        font-size:15px;
+        font-style:normal;
+        border-radius: 10px;
+        width:310px;
+        height:37px;
+        text-shadow: none;
+
+    }
+
+    .ui-icon-google:after {
+        background-image:  url("../../Assets/img/icons/google-symbol.svg");
+        background-size: 18px 18px;
+    }
+    #empty{
+        width: 90px;
+    }
+    .forgot-password{
+        background: rgba(0, 0, 0, 0.4);
+        height: 587px;
+
+    }
+    #forgotPass {
+        font-family: Arial;
+        font-size: 24px;
+        color: white;
+        margin-top: 180px;
+        margin-bottom: 50px;
+    }
+    #fgtContent{
+        font-size: 20px;
+        text-shadow: none;
+        color: white;
+    }
+    .back {
+        margin-left: 29px;
+        margin-top: 50px;
+    }
+    #reset  {
+        font-family: Arial;
+        background-color: #fc9920;
+        font-size:18px;
+        font-weight: bold;
+        color: black;
+        width: 40%;
+        height:48px;
+        border-radius: 10px;
+        border:none;
+        margin: .5em 0;
+        text-shadow:none;
+    }
+}

@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HOME CHEF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--slider-->
+</head>
+
+<style>
+
+
+    .round {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    #ADD-btn {
+        margin-top: 10px;
+        background-color: #ff9700;
+        color: white;
+        font-weight: bold;
+        font-family: Arial;
+        border: none;
+        font-size: 12px;
+        font-style: normal;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-shadow: none;
+    }
+
+
+</style>
+
+<body>
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="../../Assets/css/style.min.css">
+<link rel="stylesheet" href="pastOrder.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="../../Assets/js/js.min.js"></script>
+<div data-role="page" id="trackPastOrder">
+
+    <div data-role="header" class="mhead" data-position="fixed" data-tap-toggle="false">
+        <div class="row">
+            <div class="">
+                <img class="logo" src="../../Assets/img/rectangle_logo_black.png">
+            </div>
+            <div class="row icons">
+                <div class="">
+                    <a href="#" data-position-to="window" id="notificationLogo">
+                        <img class="notificationLogo ui-btn-right" src="../../Assets/img/icons/notification.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div><!-- /header -->
+
+
+    <div data-role="content" align="center">
+        <p class="pageTitle">Track Orders</p>
+        <div class="wrapper">
+            <div class="currentDiv">
+                <a href="../CurrentOrder" data-role="button" rel="external" id="currentBtn">Current Order</a>
+            </div>
+            <div class="pastDiv">
+                <a href="#" data-role="button" rel="external" id="pastBtn">Past Orders</a>
+            </div>
+        </div>
+        <div class="elements container">
+            <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem1">
+                <div class="imageContent">
+                    <p class="name"><b>Arthur's Pizza</b></p>
+                    <p class="detail">12/12/2020</p>
+                    <p class="detail">Order#: 1234</p>
+                    <a  href="#rate-popup" data-role="button" data-position-to="window" id="rate-order" data-rel="popup" data-transition="pop" class="rate">Rate Order</a>
+                </div>
+            </div>
+            <div class=" card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem2">
+                <div class="imageContent">
+                    <p class="name"><b>Arthur's Pizza</b></p>
+                    <p class="detail">12/12/2020</p>
+                    <p class="detail">Order#: 1234</p>
+                    <a  href="#rate-popup" data-role="button" data-position-to="window" id="rate-order" data-rel="popup" data-transition="pop" class="rate">Rate Order</a>
+                </div>
+            </div>
+            <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem3">
+                <div class="imageContent">
+                    <p class="name"><b>Arthur's Pizza</b></p>
+                    <p class="detail">12/12/2020</p>
+                    <p class="detail">Order#: 1234</p>
+                    <a  href="#rate-popup" data-role="button" data-position-to="window" id="rate-order" data-rel="popup" data-transition="pop" class="rate">Rate Order</a>
+                </div>
+            </div>
+            <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem3">
+                <div class="imageContent">
+                    <p class="name"><b>Arthur's Pizza</b></p>
+                    <p class="detail">12/12/2020</p>
+                    <p class="detail">Order#: 1234</p>
+                    <a  href="#rate-popup" data-role="button" data-position-to="window" id="rate-order" data-rel="popup" data-transition="pop" class="rate">Rate Order</a>
+                </div>
+            </div>
+            <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem3">
+                <div class="imageContent">
+                    <p class="name"><b>Arthur's Pizza</b></p>
+                    <p class="detail">12/12/2020</p>
+                    <p class="detail">Order#: 1234</p>
+                    <a  href="#rate-popup" data-role="button" data-position-to="window" id="rate-order" data-rel="popup" data-transition="pop" class="rate">Rate Order</a>
+                </div>
+            </div>
+            <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem3">
+                <div class="imageContent">
+                    <p class="name"><b>Arthur's Pizza</b></p>
+                    <p class="detail">12/12/2020</p>
+                    <p class="detail">Order#: 1234</p>
+                    <a  href="#rate-popup" data-role="button" data-position-to="window" id="rate-order" data-rel="popup" data-transition="pop" class="rate">Rate Order</a>
+                </div>
+            </div>
+        </div>
+        <div data-role="popup" id="rate-popup">
+            <div data-role="content" >
+                <a href="#" data-rel="back" id="popupback"> <img src="../../Assets/img/icons/close.png" id="" height="15" width="15"></a>
+                <br>
+                <h1 id="header1">Rate Us</h1>
+                <form>
+                    <div data-role="fieldcontain">
+                        <div class='rating-stars text-center'>
+                            <ul id='stars'>
+                                <li class='star' title='Poor' data-value='1' onclick="getRating(1)">
+                                    <i class='fa fa-star fa-fw'></i>
+                                </li>
+                                <li class='star' title='Fair' data-value='2' onclick="getRating(2)">
+                                    <i class='fa fa-star fa-fw'></i>
+                                </li>
+                                <li class='star' title='Good' data-value='3' onclick="getRating(3)">
+                                    <i class='fa fa-star fa-fw'></i>
+                                </li>
+                                <li class='star' title='Excellent' data-value='4' onclick="getRating(4)">
+                                    <i class='fa fa-star fa-fw'></i>
+                                </li>
+                                <li class='star' title='WOW!!!' data-value='5' onclick="getRating(5)">
+                                    <i class='fa fa-star fa-fw'></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <center>
+                            <input type="textarea" name="message" id="message" value="" placeholder="Message" data-role=none />
+
+                            <a  href="#" data-role="button" data-rel="back" id="submit" onclick="onAddComment()" >SUBMIT</a></center>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" data-role="footer" data-position="fixed">
+        <div data-role="navbar" >
+            <ul>
+                <li><a href="../HomeUser" data-icon="none"  class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
+                <li><a href="../Search" data-icon="none" class="ui-nodisc-icon ui-icon-search-inactive" id="inactive" data-ajax="false">Search</a></li>
+                <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-track-active" id="active" data-ajax="false">Track Order</a></li>
+                <li><a href="../UserAccount" data-icon="none" class="ui-nodisc-icon ui-icon-profile-inactive" id="inactive" data-ajax="false">Account</a></li>
+            </ul>
+        </div>
+    </div> <!-- /footer -->
+
+</div>
+<script>
+    $(document).ready(function(){
+
+        /* 1. Visualizing things on Hover - See next part for action on click */
+        $('#stars li').on('mouseover', function(){
+            var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+
+            // Now highlight all the stars that's not after the current hovered star
+            $(this).parent().children('li.star').each(function(e){
+                if (e < onStar) {
+                    $(this).addClass('hover');
+                }
+                else {
+                    $(this).removeClass('hover');
+                }
+            });
+
+        }).on('mouseout', function(){
+            $(this).parent().children('li.star').each(function(e){
+                $(this).removeClass('hover');
+            });
+        });
+
+
+        /* 2. Action to perform on click */
+        $('#stars li').on('click', function(){
+            var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+            var stars = $(this).parent().children('li.star');
+
+            for (i = 0; i < stars.length; i++) {
+                $(stars[i]).removeClass('selected');
+            }
+
+            for (i = 0; i < onStar; i++) {
+                $(stars[i]).addClass('selected');
+            }
+
+        });
+
+
+    });
+</script>
+<script>
+    var rating = 0;
+    function getRating(rate) {
+        rating = rate
+    }
+    function onAddComment() {
+
+        var comment = document.getElementById("message").value;
+
+
+        if (comment == "") {
+            alert("Comment can not be empty!");
+            return;
+        }
+        var feedback = { "comment": comment, "rating": rating }
+        console.log(feedback)
+
+        let commentList = localStorage.getItem("commentList");
+        commentList = (commentList) ? JSON.parse(commentList) : []
+        commentList.push(feedback)
+
+        let vendorList = localStorage.getItem("vendorList");
+        vendorList = (vendorList) ? JSON.parse(vendorList) : []
+        var newRating = (45 + rating)/11;
+        var finalRate = newRating.toFixed(1)
+
+        for (var i = 0; i < vendorList.length; i++) {
+            if (vendorList[i].id === "1") {
+                vendorList[i].rating = finalRate.toString();
+                break;
+            }
+        }
+
+
+        localStorage.setItem("vendorList", JSON.stringify(vendorList))
+        localStorage.setItem("commentList", JSON.stringify(commentList))
+        console.log(JSON.parse(commentList)[0])
+        document.getElementById("message").value = ""
+
+    }
+</script>
+
+
+
+
+</body>
+
+</html>

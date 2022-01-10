@@ -1,0 +1,424 @@
+.back-btn {
+    margin-left: 2%;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+    #header {
+        z-index: 1000
+    }
+    .mhead {
+        margin: 3px 0px 5px 0px;
+    }
+    .menu-ham2 {
+        width: 120px;
+        margin: 5px 0 3px 17%;
+    }
+    #container1 {
+        box-shadow: -1px 1px 6px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+    }
+    #usergrid {
+        font-family: Arial !important;
+        font-size: 14px !important;
+    }
+    #v-promo-popup {
+        width: 320px;
+    }
+    #v-promo-popup-edit {
+        width: 320px;
+    }
+    #usergrid {
+        font-family: Arial !important;
+        font-size: 14px !important;
+    }
+    #sau {
+        font-family: Arial;
+        font-style: normal;
+        font-size: 12px;
+        font-weight: 100;
+    }
+    #Submit {
+        background-color: #fc9920;
+        color: #ffffff;
+        border: Black;
+        font-size: 11px;
+        font-style: normal;
+        border-radius: 25px;
+        width: 78px;
+        height: 28px;
+        text-shadow: none;
+        margin-top: -44px;
+        margin-bottom: 23px;
+        margin-left: 255px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    #un,
+    #us,
+    #ug,
+    #uk {
+        font-family: Arial;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        color: black;
+        width: 201px !important;
+        height: 32px !important;
+        border-radius: 25px;
+        background: #ffffff;
+        border: .9px solid #d0cfcf;
+        margin: .4em 0;
+        text-shadow: none;
+    }
+    #submit {
+        margin-top: 10px;
+        background-color: #ff9700;
+        color: white;
+        font-weight: bold;
+        font-family: Arial;
+        border: none;
+        font-size: 12px;
+        font-style: normal;
+        border-radius: 25px;
+        width: 201px;
+        text-shadow: none;
+    }
+    #he2 {
+        font-family: Arial !important;
+        font-size: 12px !important;
+        text-align: center !important;
+        margin-top: 0px !important;
+        font-weight: regular;
+    }
+    #header1 {
+        font-family: Arial !important;
+        font-size: 20px !important;
+        text-align: center !important;
+        margin-top: 20px !important;
+        font-weight: bold;
+    }
+    .ma {
+        margin-left: 106px;
+        margin-top: -114px;
+        padding-bottom: 0px;
+        padding-top: 61px;
+    }
+    .itemName {
+        color: #000000;
+        font-weight: bold;
+    }
+    .itemPrice {
+        color: #858282;
+        margin-top: -8px;
+        margin-bottom: -8px;
+
+    }
+    .round {
+        margin-top: 19px;
+    !important;
+        margin-left: 17px;
+    !important;
+    }
+}
+
+
+/* Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    .menu-ham2 {
+        width: 120px;
+        margin: 5px 0 3px 31% !important;
+    }
+}
+
+
+/* ----------- iPad ----------- */
+
+@media only screen and (device-width: 768px) {
+    /* For general iPad layouts */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+    .ma {
+        margin-top: -44px;
+        margin-left: 90px;
+        margin-bottom: -15px;
+    }
+    .round {
+        margin-top: 19px;
+        margin-left: 17px;
+    }
+    .ba {
+        margin-top: -94px;
+        margin-left: 590px;
+        position: relative;
+    }
+    .round {
+        margin-top: 19px;
+        margin-left: 17px;
+    }
+    #header {
+        z-index: 1000
+    }
+    .mhead {
+        margin: 3px 0px 5px 0px;
+    }
+    .menu-ham2 {
+        width: 120px;
+        margin: 5px 0 3px 31%;
+    }
+    #container1 {
+        box-shadow: -1px 1px 6px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+    }
+    #usergrid {
+        font-family: Arial !important;
+        font-size: 14px !important;
+    }
+    #v-promo-popup {
+        width: 350px;
+    }
+    #v-promo-popup-edit {
+        width: 350px;
+    }
+    #usergrid {
+        font-family: Arial !important;
+        font-size: 14px !important;
+    }
+    #sau {
+        font-family: Arial;
+        font-style: normal;
+        font-size: 12px;
+        font-weight: 100;
+    }
+    #Submit {
+        background-color: #fc9920;
+        color: #ffffff;
+        border: Black;
+        font-size: 11px;
+        font-style: normal;
+        border-radius: 25px;
+        top: -42px;
+        width: 98px;
+        height: 28px;
+        text-shadow: none;
+        margin-top: -30px;
+        margin-bottom: 0px;
+        margin-left: 580px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    #un,
+    #us,
+    #ug,
+    #uk {
+        font-family: Arial;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        color: black;
+        width: 201px !important;
+        height: 32px !important;
+        border-radius: 25px;
+        background: #ffffff;
+        border: .9px solid #d0cfcf;
+        margin: .4em 0;
+        text-shadow: none;
+    }
+    #submit {
+        margin-top: 10px;
+        background-color: #ff9700;
+        color: white;
+        font-weight: bold;
+        font-family: Arial;
+        border: none;
+        font-size: 12px;
+        font-style: normal;
+        border-radius: 25px;
+        width: 201px;
+        text-shadow: none;
+    }
+    #he2 {
+        font-family: Arial !important;
+        font-size: 12px !important;
+        text-align: center !important;
+        margin-top: 0px !important;
+        font-weight: regular;
+    }
+    #header1 {
+        font-family: Arial !important;
+        font-size: 20px !important;
+        text-align: center !important;
+        margin-top: 20px !important;
+        font-weight: bold;
+    }
+    .ma {
+        margin-left: 160px;
+        margin-top: -114px;
+        padding-bottom: 0px;
+        padding-top: 61px;
+    }
+    .itemName {
+        color: #000000;
+        font-weight: bold;
+    }
+    .itemPrice {
+        display: inline;
+        color: #858282;
+        margin-top: -8px;
+    }
+    .back-btn {
+        margin-left: 2%;
+        text-decoration: none;
+    }
+    .back-btn a:hover {
+        text-decoration: none;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
+    .ma {
+        margin-top: -44px;
+        margin-left: 90px;
+        margin-bottom: -15px;
+    }
+    .round {
+        margin-top: 19px;
+        margin-left: 17px;
+    }
+    .ba {
+        margin-top: -94px;
+        margin-left: 590px;
+        position: relative;
+    }
+    #header {
+        z-index: 1000
+    }
+    .mhead {
+        margin: 3px 0px 5px 0px;
+    }
+    .menu-ham2 {
+        width: 120px;
+        margin: 5px 0 3px 360px;
+    }
+    #container1 {
+        box-shadow: -1px 1px 6px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+    }
+    #usergrid {
+        font-family: Arial !important;
+        font-size: 14px !important;
+    }
+    #v-promo-popup {
+        width: 350px;
+    }
+    #v-promo-popup-edit {
+        width: 350px;
+    }
+    #usergrid {
+        font-family: Arial !important;
+        font-size: 14px !important;
+    }
+    #sau {
+        font-family: Arial;
+        font-style: normal;
+        font-size: 12px;
+        font-weight: 100;
+    }
+    #Submit {
+        background-color: #fc9920;
+        color: #ffffff;
+        border: Black;
+        font-size: 11px;
+        font-style: normal;
+        border-radius: 25px;
+        top: -42px;
+        width: 98px;
+        height: 28px;
+        text-shadow: none;
+        margin-top: -30px;
+        margin-bottom: 0px;
+        margin-left: 580px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    #un,
+    #us,
+    #ug,
+    #uk {
+        font-family: Arial;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        color: black;
+        width: 201px !important;
+        height: 32px !important;
+        border-radius: 25px;
+        background: #ffffff;
+        border: .9px solid #d0cfcf;
+        margin: .4em 0;
+        text-shadow: none;
+    }
+    #submit {
+        margin-top: 10px;
+        background-color: #ff9700;
+        color: white;
+        font-weight: bold;
+        font-family: Arial;
+        border: none;
+        font-size: 12px;
+        font-style: normal;
+        border-radius: 25px;
+        width: 201px;
+        text-shadow: none;
+    }
+    #he2 {
+        font-family: Arial !important;
+        font-size: 12px !important;
+        text-align: center !important;
+        margin-top: 0px !important;
+        font-weight: regular;
+    }
+    #header1 {
+        font-family: Arial !important;
+        font-size: 20px !important;
+        text-align: center !important;
+        margin-top: 20px !important;
+        font-weight: bold;
+    }
+    .ma {
+        margin-left: 160px;
+        margin-top: -114px;
+        padding-bottom: 0px;
+        padding-top: 61px;
+    }
+    .itemName {
+        color: #000000;
+        font-weight: bold;
+    }
+    .itemPrice {
+        display: inline;
+        color: #858282;
+        margin-top: -8px;
+    }
+    .back-btn {
+        margin-left: 2%;
+        text-decoration: none;
+    }
+    .back-btn a:hover {
+        text-decoration: none;
+    }
+}

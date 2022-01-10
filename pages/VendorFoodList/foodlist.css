@@ -1,0 +1,282 @@
+    .container-foodlist {
+        margin-bottom: 2%;
+        box-shadow: -1px 1px 6px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+    }
+    
+    #usergrid {
+        font-family: Arial;
+        font-size: 14px;
+    }
+    
+    .ma {
+        margin-left: 84px;
+        margin-top: -114px;
+        padding-bottom: 0px;
+        padding-top: 61px;
+    }
+    
+    .itemName {
+        margin-left: 2%;
+        color: #000000;
+        font-weight: bold;
+    }
+    
+    .itemPrice {
+        margin-left: 2%;
+        color: #858282;
+        margin-top: -2%;
+    }
+    
+    .round {
+        margin-left: 1%;
+        border-color: #fc9920;
+        border-radius: 50%;
+    }
+    
+    #Submit {
+        background-color: #fc9920;
+        color: #ffffff;
+        border: Black;
+        font-size: 11px;
+        font-style: normal;
+        border-radius: 25px;
+        width: 78px;
+        height: 28px;
+        text-shadow: none;
+        margin: -13% 0 6% 75%;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    #add-item {
+        margin-top: 10px;
+        background-color: #ff9700;
+        color: white;
+        font-weight: bold;
+        font-family: Arial;
+        border: none;
+        font-size: 12px;
+        font-style: normal;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-shadow: none;
+    }
+    
+    .add-icon {
+        margin-top: 17%;
+        font-size: 25px;
+    }
+    
+    #addItem-popup {
+        width: 324px;
+    }
+    
+    #un,
+    #us,
+    #ug,
+    #uk {
+        font-family: Arial;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        color: black;
+        width: 85%;
+        height: 32px;
+        border-radius: 25px;
+        background: #ffffff;
+        border: .9px solid #d0cfcf;
+        margin: .4em 0;
+        text-shadow: none;
+    }
+    
+    #submits {
+        margin-top: 10px;
+        background-color: #ff9700;
+        color: white;
+        font-weight: bold;
+        font-family: Arial;
+        border: none;
+        font-size: 12px;
+        font-style: normal;
+        border-radius: 25px;
+        width: 50%;
+        text-shadow: none;
+    }
+    
+    #add-popup-success {
+        width: 100%;
+    }
+    
+    #submits-edit {
+        margin-top: 10px;
+        background-color: #ff9700;
+        color: white;
+        font-weight: bold;
+        font-family: Arial;
+        border: none;
+        font-size: 12px;
+        font-style: normal;
+        border-radius: 25px;
+        width: 50%;
+        text-shadow: none;
+    }
+    
+    #foodlist-edit {
+        width: 324px;
+    }
+    
+    #edit-popup-success {
+        width: 100%;
+    }
+    
+    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+    
+    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+        .ma {
+            margin-left: 220px;
+            margin-bottom: 0% !important;
+        }
+        .round {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            margin-left: 2%;
+            border-color: #fc9920;
+            border-radius: 50%;
+        }
+        .itemName {
+            margin-top: -6%;
+            margin-left: 2% !important;
+            color: #000000;
+            font-weight: bold;
+        }
+        .itemPrice {
+            margin-left: 2% !important;
+            color: #858282;
+            margin-top: -2%;
+            padding-bottom: 4%;
+        }
+    }
+    
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+        .ma {
+            margin-left: 220px;
+            margin-bottom: 1%;
+        }
+        .round {
+            margin-top: 1%;
+            margin-left: 2%;
+            border-color: #fc9920;
+            border-radius: 50%;
+        }
+        .itemName {
+            font-size: 20px;
+            margin-top: -6%;
+            margin-left: 4%;
+            color: #000000;
+            font-weight: bold;
+        }
+        .itemPrice {
+            font-size: 20px;
+            margin-left: 4%;
+            color: #858282;
+            margin-top: -2%;
+            padding-bottom: 4%;
+        }
+        #Submit {
+            background-color: #fc9920;
+            color: #ffffff;
+            border: Black;
+            font-size: 16px;
+            font-style: normal;
+            border-radius: 25px;
+            width: 131px;
+            height: 50px;
+            text-shadow: none;
+            margin: -13% 0 6% 75%;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        #submits-edit {
+            font-size: 20px;
+        }
+        #foodlist-edit {
+            width: 600px;
+        }
+        #un,
+        #us,
+        #ug,
+        #uk {
+            font-size: 20px;
+            height: 55px;
+        }
+        #addItem-popup {
+            width: 600px;
+        }
+        #submits {
+            font-size: 20px;
+        }
+    }
+    
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+        .ma {
+            margin-left: 220px;
+            margin-bottom: 3%;
+        }
+        .round {
+            width: 15%;
+            margin-left: 2%;
+            border-color: #fc9920;
+            border-radius: 50%;
+        }
+        .itemName {
+            font-size: 20px;
+            margin-top: -6%;
+            margin-left: 5%;
+            color: #000000;
+            font-weight: bold;
+        }
+        .itemPrice {
+            font-size: 20px;
+            margin-left: 5%;
+            color: #858282;
+            margin-top: -2%;
+            padding-bottom: 4%;
+        }
+        #Submit {
+            background-color: #fc9920;
+            color: #ffffff;
+            border: Black;
+            font-size: 16px;
+            font-style: normal;
+            border-radius: 25px;
+            width: 131px;
+            height: 50px;
+            text-shadow: none;
+            margin: -13% 0 6% 75%;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        #submits-edit {
+            font-size: 20px;
+        }
+        #submits {
+            font-size: 20px;
+        }
+        #foodlist-edit {
+            width: 600px;
+        }
+        #un,
+        #us,
+        #ug,
+        #uk {
+            font-size: 20px;
+            height: 55px;
+        }
+        #addItem-popup {
+            width: 600px;
+        }
+    }

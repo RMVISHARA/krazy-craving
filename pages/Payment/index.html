@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HOME CHEF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="../../Assets/css/style.min.css">
+    <link rel="stylesheet" href="./payment.css">
+    <!--slider-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../../Assets/js/js.min.js"></script>
+    <!--slider-->
+
+    <style>
+        .rounded {
+            border-radius: 8px;
+        }
+        
+        .padding {
+            padding: 10px;
+        }
+        
+        #card {
+            border-radius: 25px;
+            box-shadow: none;
+            border: 1px solid grey;
+            padding: 4px;
+            padding-left: 10px;
+        }
+        
+        #MM {
+            border-radius: 25px;
+            box-shadow: none;
+            border: 1px solid grey;
+            padding: 4px;
+            width: 82px;
+            margin-top: 11px;
+            margin-left: 85px;
+            padding-left: 10px;
+            font-weight: 100;
+        }
+        
+        #CVV {
+            border-radius: 25px;
+            box-shadow: none;
+            border: 1px solid grey;
+            padding: 4px;
+            width: 82px;
+            margin-top: -2px;
+            margin-left: 60px;
+            padding-left: 10px;
+            font-weight: 100;
+        }
+        
+        #post {
+            border-radius: 25px;
+            box-shadow: none;
+            border: 1px solid grey;
+            padding: 4px;
+            width: 188px;
+            margin-top: 1px;
+            margin-left: 0px;
+            padding-left: 10px;
+        }
+        
+        #ADD {
+            margin-top: 10px;
+            background-color: #ff9700;
+            color: white;
+            font-weight: bold;
+            font-family: Arial;
+            border: none;
+            font-size: 12px;
+            font-style: normal;
+            border-radius: 25px;
+            width: 180px;
+            text-shadow: none;
+        }
+        
+        #ADD-payment {
+            margin-top: 10px;
+            background-color: #ff9700;
+            color: white;
+            font-weight: bold;
+            font-family: Arial;
+            border: none;
+            font-size: 12px;
+            font-style: normal;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-shadow: none;
+        }
+        
+        #select-blockdown {
+            padding-top: 10px;
+            margin-left: 32px;
+            padding-bottom: 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page" id="paymentpage">
+
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" id="header">
+
+            <div class="mhead">
+                <a class="back-btn" href="../UserAccount/index.html">
+                    < Back</a>
+                        <img class="menu-ham2" src="../../Assets/img/rectangle_logo_black.png">
+            </div>
+            <div class="menu">
+
+            </div>
+
+        </div>
+        <!-- /header -->
+
+        <div data-role="content">
+            <div class="header-topic">
+                <h4 class="text-center" id="header1">PAYMENT </h4>
+            </div>
+
+            <div id="container1">
+
+
+                <div style="padding:15px;">
+                    <h4><strong>Payment Methods</strong></h4>
+                </div>
+
+                <form>
+
+                    <div class="ui-grid-b" id="selection">
+                        <div class="ui-block-a" id="select-block1"><input type="radio" name="radio-choice-v-2" id="cash" checked="checked"> </div>
+                        <div class="ui-block-b" id="select-block2">Cash</div>
+                        <div class="ui-block-c" id="select-block3"><img src="../../Assets/img/icons/cash-payment.png" height="36" width="36"></div>
+                        <div class="ui-block-a" id="select-block1"><input type="radio" name="radio-choice-v-2" id="card1" checked="checked"> </div>
+                        <div class="ui-block-b" id="select-block2">Credit/Debit Card</div>
+                        <div class="ui-block-c" id="select-block3"><img src="../../Assets/img/icons/credit-card.png" height="36" width="36"></div>
+                    </div>
+                </form>
+                <br>
+            </div>
+            <br>
+            <div class="addPayment">
+                <a href="#rate-popup" data-position-to="window" data-role="button" data-rel="popup" data-transition="pop" id="ADD-payment">
+                    <i class="fas fa-plus add-icon"></i></a>
+                <p class="add-payment-text">Add New Card</p>
+            </div>
+            <div id="container1">
+                <div style="padding:15px;">
+                    <h4><strong>Credit/Debit Card Details</strong></h4>
+                </div>
+
+                <form>
+
+                    <div class="ui-grid-b" id="selection">
+                        <div class="ui-block-a" id="select-block1"><input type="radio" name="radio-choice-v-2" id="cash" checked="checked"> </div>
+                        <div class="ui-block-b" id="select-blockdown">
+                            <Span>.... 5248 1025</span>
+                        </div>
+                        <div class="ui-block-c" id="select-block3"><img src="../../Assets/img/icons/mastercard.png" height="36" width="36" padding="10"></div>
+                        <div class="ui-block-a" id="select-block1"><input type="radio" name="radio-choice-v-2" id="card1" checked="checked"> </div>
+                        <div class="ui-block-b" id="select-blockdown">.... 4668 2287</div>
+                        <div class="ui-block-c" id="select-block3"><img src="../../Assets/img/icons/visa.png" height="36" width="36"></div>
+                        <div class="ui-block-a" id="select-block1"><input type="radio" name="radio-choice-v-2" id="card1" checked="checked"> </div>
+                        <div class="ui-block-b" id="select-blockdown">.... 7568 1136</div>
+                        <div class="ui-block-c" id="select-block3"><img src="../../Assets/img/icons/visa.png" height="36" width="36"></div>
+                        <div class="ui-block-a" id="select-block1"><input type="radio" name="radio-choice-v-2" id="card1" checked="checked"> </div>
+                        <div class="ui-block-b" id="select-blockdown">.... 6652 8546</div>
+                        <div class="ui-block-c" id="select-block3"><img src="../../Assets/img/icons/mastercard.png" height="36" width="36"></div>
+                    </div>
+                </form>
+                <br>
+
+                <div data-role="popup" id="rate-popup">
+                    <div data-role="content">
+                        <a href="#" data-rel="back" id="popupback"> <img src="../../Assets/img/icons/close.png" id="" height="15" width="15"></a>
+                        <br>
+                        <h1 id="header1"><u>Add Credit/Debit Card</u></h1>
+                        <form>
+                            <div data-role="fieldcontain">
+                                <center>
+                                    <div class="input-field">
+                                        <input type="textarea" class="input" name="message" id="card" value="" placeholder="Name on the Card" data-role=none required />
+                                    </div>
+                                    <div class="input-name">
+                                        <input type="textarea" class="input" name="message" id="card" value="" placeholder="Card number" data-role=none required />
+                                    </div>
+                                    <div class="ui-grid-b">
+                                        <div class="ui-block-a" id="select-block1"><input type="number" class="input" name="message" id="MM" value="" placeholder="MM/YY" data-role=none max="4" required />
+                                        </div>
+                                        <div class="ui-block-b" id="select-block2"><input class="input" type="textarea" name="message" id="CVV" value="" placeholder="CVV" data-role=none required /></div>
+                                    </div>
+                                    <a href="#" data-role="button" type="submit" data-rel="back" id="ADD">ADD</a>
+                                </center>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /content -->
+
+    </div>
+    <!-- /page -->
+    <script>
+        $('.menu-ham').click(function() {
+            $('.menu').animate({
+                left: '0px'
+            }, 100)
+        });
+
+        $('.close-menu').click(function() {
+            $('.menu').animate({
+                left: '-250px'
+            }, 100)
+        });
+    </script>
+
+</body>
+
+</html>

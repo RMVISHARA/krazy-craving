@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+ 
+<head>
+  <meta charset="UTF-8">
+    <title>HOME CHEF</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- the three things that jQuery Mobile needs to work -->
+    <link rel="stylesheet" type="text/css" href="vendor.css?version=94">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!--<link rel="stylesheet" type="text/css" href="../../Assets/css/grid.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Assets/css/style.min.css">-->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <!--    <script src="../../Assets/js/js.min.js"></script>-->
+    <script src="vendor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div data-role="page" id="homeUser" >
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" id="header">
+
+            <div class="mhead">
+                <a class="back-btn" href="../HomeUser">
+                    < Back</a>
+                <img class="menu-ham2" src="../../Assets/img/rectangle_logo_black.png">
+            </div>
+            <!-- /grid-b -->
+        </div>
+        <div data-role="content" align="center">
+            <div class="vendorImage">
+                <div class="details" align="left">
+                    <p id="name">Arthur's Pizza</p>
+                    <p id="address">No 10, Temple's Road, Rathmalana</p>
+                    <div class="stars">
+                        <span class="fa fa-star checked fa-xs" style="color: #FFCC36; text-shadow: none; font-size: 1.3rem;"></span>
+                        <span class="fa checked fa-xs" id="address">2.2</span>
+                    </div>
+                </div>
+                <div>
+                    <img id="heart" src="../../Assets/img/icons/unlike-heart.svg" class="heart-icon" onclick="amend(0)">  
+                </div>
+                <div>
+                    <a href="" onclick="window.location.href ='../Cart/';">
+                        <img id="al" src="../../Assets/img/service-icon-cart.png">
+                    </a>
+                </div>
+            </div>
+
+            <div class="cardList" id="cardList">
+            </div>
+            <div class="reviewHead">
+                <span ><b>Reviews</b></span>
+            </div>
+
+                <div id="reviewlist" align="center">
+                </div>
+
+        </div>
+
+        </div>
+    </div>
+    <script>
+  function amend(val){
+      var x =JSON.parse(localStorage.getItem("isFavourite"));
+      console.log(x);
+        if(x===true){
+            document.getElementById("heart").src="../../Assets/img/icons/unlike-heart.svg";
+            localStorage.setItem("isFavourite", false);
+            console.log("changed fav to => ",false)
+        }
+        if(x===false){
+            document.getElementById("heart").src="../../Assets/img/icons/liked-heart.svg";
+            localStorage.setItem("isFavourite", true);
+            console.log("changed fav to => ",true)
+        }
+    }
+
+
+
+
+        function loadCommentList() {
+            let commentList = localStorage.getItem("commentList");
+            commentList = (commentList) ? JSON.parse(commentList) : []
+            console.log(commentList)
+
+            let outputHtml = ``;
+            commentList.map(x => {
+                outputHtml += `
+				<div class="ui-grid-a"id="usergrid">
+                        <img src="../../Assets/img/boy.jpg" class="round">
+                        <div class="ma">
+                            <p style="color: #000000; margin-top: 2px;">Jone Doe</p>
+                            <p style="color: #000000; margin-top: -8px;">${x.comment}</p>
+                            <div id="str">
+                                <span class="fa fa-star checked fa-xs" style="color: #FFCC36;margin-left:35%; font-size: 1.3rem; position: relative; margin-top: -13px;"></span>
+                                <span style="color: #FFCC36; font-size: 1.3rem; position: relative; margin-top: -13px; margin-left: 10px">${x.rating}/5</span>
+                            </div>
+                        </div>
+                    </div>
+					`
+            })
+            $("#reviewlist").html(outputHtml);
+        }
+        loadCommentList()
+    </script>
+</body>
+
+</html>

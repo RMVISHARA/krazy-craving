@@ -1,0 +1,253 @@
+#header {
+    z-index: 1000;
+}
+
+.mhead {
+    margin: 3px 0px 5px 0px;
+}
+
+.menu-ham2 {
+    width: 120px;
+    margin: 5px 0 3px 86px
+}
+
+.back-btn {
+    margin-left: 2%;
+    text-decoration: none;
+}
+
+.back-btn a:hover {
+    text-decoration: none;
+}
+
+.add-icon {
+    margin-top: 17%;
+    font-size: 25px;
+}
+
+.addPayment {
+    margin: 0 0 0 41%;
+}
+
+.add-payment-text {
+    margin-left: -28px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#container1 {
+    box-shadow: -1px 1px 6px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+
+#selection>#select-block1 {
+    width: 10%;
+}
+
+#select-block1 {
+    margin-top: -2px;
+    padding-bottom: 1px;
+    margin-left: 2px;
+}
+
+#select-block2 {
+    padding-top: 10px;
+    margin-left: 32px;
+    padding-bottom: 1px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#select-block3 {
+    padding-top: 10px;
+    padding-bottom: 1px;
+    margin-left: 10px;
+    text-align: right;
+}
+
+#popupback {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+#header1 {
+    font-family: Arial !important;
+    font-size: 20px !important;
+    text-align: center !important;
+    margin-top: 20px !important;
+    font-weight: bold;
+}
+
+.input-name {
+    margin-top: 2%;
+}
+
+.input {
+    border-color: #ff9700 !important;
+    border-width: 2px !important;
+}
+
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+    #CVV {
+        margin-left: 20px !important;
+    }
+}
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+    #card1 {
+        border-radius: 25px;
+        box-shadow: none;
+        border: 1px solid grey;
+        padding: 4px;
+        padding-left: 10px;
+    }
+    #MM {
+        margin-left: 54px !important;
+        margin-right: 55px !important;
+    }
+    .input {
+        border-color: #ff9700 !important;
+        border-width: 2px !important;
+        width: 80%;
+    }
+}
+
+
+/* Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    #select-block2 {
+        padding-top: 10px;
+        margin-left: 32px;
+        padding-bottom: 1px;
+        font-size: 14px;
+        font-weight: bold !important;
+    }
+    #select-block1 {
+        margin-top: -2px;
+        margin-left: 8%;
+    }
+    .menu-ham2 {
+        width: 150px;
+        margin: 5px 0 5px 222px !important;
+    }
+    .addPayment {
+        margin: 0 0 0 46%;
+    }
+    #card {
+        border-radius: 25px;
+        box-shadow: none;
+        border: 1px solid grey;
+        padding: 4px;
+        padding-left: 8px;
+        width: 209px;
+        margin-left: 16px;
+    }
+    #post {
+        border-radius: 25px;
+        box-shadow: none;
+        border: 1px solid grey;
+        padding: 4px;
+        width: 209px;
+        margin-top: 1px;
+        margin-left: 16px;
+        padding-left: 10px;
+    }
+    #ADD {
+        margin-left: 40% !important;
+    }
+    #MM {
+        margin-left: 10px !important;
+        margin-right: 40px !important;
+    }
+    #CVV {
+        margin-left: 0px !important;
+    }
+}
+
+
+/* ----------- iPad ----------- */
+
+@media only screen and (device-width: 768px) {
+    /* For general iPad layouts */
+    #MM {
+        margin-left: 20px !important;
+    }
+    #CVV {
+        margin-left: 20px !important;
+    }
+    .input {
+        width: 80% !important;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+    #select-block1 {
+        margin-top: -2px;
+        padding-bottom: 1px;
+        margin-left: 45px;
+    }
+    .menu-ham2 {
+        width: 150px;
+        margin: 5px 0 3px 244px;
+    }
+    .addPayment {
+        margin: 0 0 0 47%;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
+    #select-block1 {
+        margin-top: -2px;
+        padding-bottom: 1px;
+        margin-left: 80px;
+    }
+    .menu-ham2 {
+        width: 150px;
+        margin: 5px 0 3px 360px;
+    }
+    .addPayment {
+        margin: 0 0 0 47%;
+    }
+    #card {
+        width: 230px !important;
+        margin-left: 41px;
+    }
+    #post {
+        width: 230px !important;
+        margin-left: 41px;
+    }
+    #ADD {
+        margin-left: 41px !important;
+    }
+    #header1 {
+        margin-left: 41px !important;
+    }
+    .header-topic {
+        margin-right: 30px;
+    }
+    #MM {
+        margin-left: 20px !important;
+        margin-right: 40px !important;
+    }
+    #CVV {
+        margin-left: 0px !important;
+        margin-right: 47px;
+    }
+    .input-field .input {
+        width: 100% !important;
+    }
+    .input-name .input {
+        width: 100% !important;
+    }
+}
