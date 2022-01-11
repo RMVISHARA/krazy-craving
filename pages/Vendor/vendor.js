@@ -14,14 +14,19 @@ localStorage.setItem("isFavourite", false);
 
 $(document).ready(function(){
     var menuItems = [
-        {'id':'1','imageurl':'../../Assets/img/cheese.jpg','name':'Pizza 1','price':'1790', 'rating':'4.5'},
-        {'id':'2','imageurl':'../../Assets/img/cheese.jpg','name':'Pizza 2','price':'2150', 'rating':'4.2'},
-        {'id':'3','imageurl':'../../Assets/img/cheese.jpg','name':'Pizza 3','price':'1970', 'rating':'4.8'},
-        {'id':'4','imageurl':'../../Assets/img/cheese.jpg','name':'Pizza 4','price':'2700', 'rating':'4.5'},
-        {'id':'5','imageurl':'../../Assets/img/cheese.jpg','name':'Pizza 5','price':'1470', 'rating':'4.2'}
+        {'id':'1','imageurl':'../../Assets/img/cheeseLovers.jpg','name':'Cheese Lovers','price':'750', 'rating':'4.5'},
+        {'id':'2','imageurl':'../../Assets/img/sausageDelight.jpg','name':'Sausage Delight','price':'750', 'rating':'4.2'},
+        {'id':'3','imageurl':'../../Assets/img/blackChicken.jpg','name':'Black Chicken','price':'750', 'rating':'4.8'},
+        {'id':'4','imageurl':'../../Assets/img/hawaiianChicken.jpg','name':'Hawaiian Chicken','price':'750', 'rating':'4.5'},
+        {'id':'5','imageurl':'../../Assets/img/popcornChicken.jpg','name':'Popcorn Chicken','price':'750', 'rating':'4.2'}
     ]
+
+    localStorage.setItem("directingTo", 0);
+    localStorage.setItem("resItemList", JSON.stringify(menuItems))
+
     menuItems.forEach(function(obj) {
-        document.getElementById("cardList").innerHTML +='<a href="../Product/">\n' +
+        document.getElementById("cardList").innerHTML +=
+            '           <a href="" onclick="directToPage('+ obj.id +')"> \n' +
             '                <div class="card" id="cardItem">\n' +
             '                    <div class="row no-gutters">\n' +
             '                        <div class="image">\n' +
@@ -29,13 +34,8 @@ $(document).ready(function(){
             '                        </div>\n' +
             '                        <div class="desc">\n' +
             '                            <div class="card-body">\n' +
-            '                                <h5 class="card-title">'+obj.name+'</h5>\n' +
-            '                               <p class="card-text">Rs. '+obj.price+'</p>\n' +
-            '                            </div>\n' +
-            '                        </div>\n' +
-            '                        <div class="next">\n' +
-            '                            <div class="nextImage">\n' +
-            '                                <img src="../../Assets/img/icons/next.svg" class="nextIcon"alt="...">\n' +
+            '                                <h5 class="card-title">'+ obj.name +'</h5>\n' +
+            '                               <p class="card-text">Ranging from Rs. '+obj.price+'</p>\n' +
             '                            </div>\n' +
             '                        </div>\n' +
             '                    </div>\n' +

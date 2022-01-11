@@ -13,6 +13,8 @@ function Login() {
     });
 
     if(invalidLogins){
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
         alert("Invalid username and password");
     }
     

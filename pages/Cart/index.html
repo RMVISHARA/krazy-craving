@@ -44,7 +44,9 @@
             </div >
             <div id="subtotal">130.00</div>
         </div>-->
+
         <div id="cartlist"> </div>
+
         <hr class="style-eight" />
         <div class="wrapper" id="gamification">
             <div>
@@ -110,43 +112,40 @@
 </div><!--page-->
 <script>
     function loadcartList() {
-        let pList = localStorage.getItem("pList");
-        pList = (pList) ? JSON.parse(pList) : []
-        console.log(pList)
-
-        let aList = localStorage.getItem("aList");
-        aList = (aList) ? JSON.parse(aList) : []
-        console.log(aList)
+        let cartItems = localStorage.getItem("cartItems");
+        cartItems = (cartItems) ? JSON.parse(cartItems) : [];
 
         let outputHtml = ``;
-        var i = 0;
-        pList.map(x =>
+        cartItems.forEach(item =>
         {
             outputHtml += `
 						<div class="product" >
 							<div class="product-removal">
-								  <img src="../../Assets/img/icons/close.png" class="remove" height="17" width="17">
-								  <img src="../../Assets/img/cheese.jpg" class="cart-item" height="69" width="71">
+								  <img src="../../Assets/img/icons/close.png" id="${item.id}" class="remove" height="17" width="17">
+								  <img src="${item.itemImageurl}" class="cart-item" height="69" width="71">
 							</div>
-							<div id="foodtype"> ${x} </div>
-							<div id="price"> ${aList[i]}</div>
+							<div id="foodtype"> ${item.itemName} </div>
+							<div id="price"> ${item.price}</div>
 
 							<div class="adder">
 								 <img src="../../Assets/img/icons/add-button.svg" class="plus" height="20" width="20">
-								 <input type="number" name="number" id="qty" value="1" data-role=none disabled/>
+								 <input type="number" name="number" id="qty" value="${item.quantity}" data-role=none disabled/>
 								 <img src="../../Assets/img/icons/remove.svg" class="minus" height="20" width="20">
 							</div >
-							<div id="subtotal"> ${aList[i]}.00</div>
+							<div id="subtotal"> ${item.price * item.quantity}.00</div>
 						</div>
 							`
-            i++;
-        })
+        });
+
         $("#cartlist").html(outputHtml);
     }
+
     loadcartList()
+
 </script>
 <script>
-
+    var cartItems = localStorage.getItem("cartItems");
+    cartItems = (cartItems) ? JSON.parse(cartItems) : [];
     var taxRate = 0.15;
     var shippingRate = 20.00;
     var fadeTime = 100;
@@ -156,48 +155,30 @@
     });
 
     //On click Plus button
-
     $(document).ready(function() {
         $(".plus").click(function() {
-            var $n = $(this)
-                .parent(".adder")
-                .find("#qty");
-
-            $n.val(Number($n.val()) + 1);
-
+            var n = $(this).parent(".adder").find("#qty");
+            n.val(Number(n.val()) + 1);
             updateQuantity(this);
-
         });
     });
 
-
     // On click minus button
-
-
     $(document).ready(function() {
         $(".minus").click(function() {
-            var $n = $(this)
-                .parent(".adder")
-                .find("#qty");
-
+            var $n = $(this).parent(".adder").find("#qty");
             var amount = Number($n.val());
+
             if (amount > 1) {
                 $n.val(amount - 1);
-
                 updateQuantity(this);
-
-
             }
         });
     });
 
-
-
     // If removed button is clicked
-
-
     $('.remove').click(function() {
-        removeItem(this);
+        removeItem(this,this.id);
     });
 
     function redeemPoints() {
@@ -230,25 +211,18 @@
 
 
     /* Recalculate cart */
-
     function recalculateCart() {
         var subtotal = 0;
         var points = localStorage.getItem("points")
         points = (points) ? points : 0
-        /* Sum up row totals */
 
         $('.product').each(function() {
             subtotal += parseFloat($(this).children('#subtotal').text());
-
         });
-        /*$("#points").bind("change paste keyup", function() {
-            points = $(this).val()
-        });*/
 
         subtotal -= Number(points)
-        console.log(subtotal)
+    
         /* Calculate totals */
-
         var tax = subtotal * taxRate;
         var shipping = (subtotal < 300 ? shippingRate : 0);
         var total = subtotal + tax + shipping;
@@ -270,23 +244,14 @@
 
 
     /* Update quantity */
-
     function updateQuantity(quantityInput) {
         /* Calculate line price */
-
         var productRow = $(quantityInput).parent().parent();
         var price = parseFloat(productRow.children('#price').text());
-
-
-
         var quantity = productRow.find("#qty").val();
-
-
-
         var linePrice = price * quantity;
 
         /* Update line price display and recalc cart totals */
-
         productRow.children('#subtotal').each(function() {
             $(this).fadeOut(fadeTime, function() {
                 $(this).text(linePrice.toFixed(2));
@@ -298,7 +263,14 @@
 
 
     /* Remove item from cart */
-    function removeItem(removeButton) {
+    function removeItem(removeButton,id) {
+        var newCart = [];
+        cartItems.forEach(element => {
+            element.id != id ? newCart.push(element):"placeholder";
+        });
+        cartItems = newCart;
+        localStorage.setItem("cartItems",JSON.stringify(cartItems));
+
         /* Remove row from DOM and recalc cart total */
         var productRow = $(removeButton).parent().parent();
         productRow.slideUp(fadeTime, function() {

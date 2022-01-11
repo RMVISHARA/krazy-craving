@@ -26,25 +26,25 @@
             <!-- /grid-b -->
         </div>
         <div data-role="content" align="center">
-            <img class="productImage" src="../../Assets/img/pizza1.jpg"  />
+            <img class="productImage" id="customProductImage" src="" />
             <div id="container3">
-                <div id="p-name">Cheese Pizza</div>
+                <div id="p-name"></div>
                 <div id="input_div">
-                    <img src="../../Assets/img/icons/add-button.svg" class="plus-product" height="25" width="25" >
+                    <img src="../../Assets/img/icons/add-button.svg" class="plus-product" height="25" width="25" onclick="addFunction()" >
                     <input type="number" name="number" id="quantity" value="1" data-role=none disabled/>
-                    <img src="../../Assets/img/icons/remove.svg" class="minus-product"  height="25" width="25">
+                    <img src="../../Assets/img/icons/remove.svg" class="minus-product" onclick="removeFunction()" height="25" width="25">
                 </div>
                 <div id="p-amount">750</div>
 
                 <div id="p-head"><p> Size </p></div>
                 <div class="ui-grid-b" id="selection2">
-                    <div class="ui-block-a" id="select2-block1"><input type="radio" name="radio-choice" id="size1" checked="checked" value="750" > </div>
+                    <div class="ui-block-a" id="select2-block1"><input type="radio" name="radio-choice" id="size1" checked="checked" value="750" onclick="radioUpdates()"> </div>
                     <div class="ui-block-b" id="select2-block2">Small</div>
                     <div class="ui-block-c" id="select2-block3">Rs.750</div>
-                    <div class="ui-block-a" id="select2-block1"><input type="radio" name="radio-choice" id="size2" value="1390"> </div>
+                    <div class="ui-block-a" id="select2-block1"><input type="radio" name="radio-choice" id="size2" value="1390" onclick="radioUpdates()"> </div>
                     <div class="ui-block-b" id="select2-block2">Medium</div>
                     <div class="ui-block-c" id="select2-block3">Rs.1390</div>
-                    <div class="ui-block-a" id="select2-block1"><input type="radio" name="radio-choice" id="size3" value="1970"> </div>
+                    <div class="ui-block-a" id="select2-block1"><input type="radio" name="radio-choice" id="size3" value="1970" onclick="radioUpdates()"> </div>
                     <div class="ui-block-b" id="select2-block2">Large</div>
                     <div class="ui-block-c" id="select2-block3">Rs.1970</div>
                 </div>
@@ -58,67 +58,68 @@
     </div>
     </body>
     <script>
-        // On click plus button
-        $(document).ready(function() {
-            $(".plus-product").click(function() {
-                var $n = $(this)
-                    .parent("#input_div")
-                    .find("#quantity");
 
-                $n.val(Number($n.val()) + 1);
-
-                var sizes = document.getElementsByName("radio-choice");
-                var size;
-                for(var i = 0; i < sizes.length; i++){
-                    if(sizes[i].checked){
-                        size = sizes[i].value;
-                    }
-                }
-
-                var finalprice = Number($n.val())*Number(size)
-                document.getElementById("p-amount").innerHTML = finalprice;
-            });
-        });
-
-        // On click minus button
+        var selectedProduct;
+        var singlePrice;
 
         $(document).ready(function() {
-            $(".minus-product").click(function() {
-                var $n = $(this)
-                    .parent("#input_div")
-                    .find("#quantity");
+            var products = localStorage.getItem('resItemList');
+            products = JSON.parse(products);
 
-                var amount = Number($n.val());
-
-                if (amount > 1) {
-                    $n.val(amount - 1);
+            products.forEach(item => {
+                if(item.id == localStorage.getItem("directingTo")){
+                    selectedProduct = item 
                 }
-                var sizes = document.getElementsByName("radio-choice");
-                var size;
-                for(var i = 0; i < sizes.length; i++){
-                    if(sizes[i].checked){
-                        size = sizes[i].value;
-                    }
-                }
-
-                var finalprice = Number($n.val())*Number(size)
-                document.getElementById("p-amount").innerHTML = finalprice;
             });
+            
+            document.getElementById("p-name").innerHTML = `<strong>${selectedProduct.name}</strong>`
+            document.getElementById("customProductImage").src = selectedProduct.imageurl;
+            radioUpdates()
         });
+
+        function radioUpdates(){
+            var sizes = document.getElementsByName("radio-choice");
+            sizes.forEach(element => {
+                if(element.checked){
+                    singlePrice = element.value
+                }
+            });
+
+            var n = $(".plus-product").parent("#input_div").find("#quantity");
+            document.getElementById("p-amount").innerHTML = Number(n.val())* Number(singlePrice);
+        }
+
+        function addFunction(){
+                var n = $(".plus-product").parent("#input_div").find("#quantity");
+                n.val(Number(n.val()) + 1);
+                document.getElementById("p-amount").innerHTML = Number(n.val())* Number(singlePrice);
+        }
+
+        function removeFunction(){
+                var n = $(".minus-product").parent("#input_div").find("#quantity");
+                if ( Number(n.val()) > 1) {
+                    n.val( Number(n.val()) - 1 );
+                }
+                document.getElementById("p-amount").innerHTML = Number(n.val())* Number(singlePrice);
+        }
 
         function addtocart(){
-            var name = $("#p-name" ).text();
-            var price = $("#p-amount" ).text();
+            let cartItems = localStorage.getItem("cartItems");
+            cartItems = (cartItems) ? JSON.parse(cartItems) : [];
 
-            let pList = localStorage.getItem("pList");
-            pList = (pList) ? JSON.parse(pList) : []
-            pList.push(name)
-            localStorage.setItem("pList", JSON.stringify(pList))
+            var obj = {};
+            var id;        
+            cartItems.length > 0 ? id = cartItems[cartItems.length-1].id + 1 : id = 0;
 
-            let aList = localStorage.getItem("aList");
-            aList = (aList) ? JSON.parse(aList) : []
-            aList.push(price)
-            localStorage.setItem("aList", JSON.stringify(aList))
+            obj.id = id;
+            obj.itemId = selectedProduct.id;
+            obj.itemName = selectedProduct.name;
+            obj.itemImageurl = selectedProduct.imageurl;
+            obj.quantity = $("#quantity").val();
+            obj.price = singlePrice;
+            cartItems.push(obj);
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
             window.location.href = "../Cart/";
         }
     </script>
