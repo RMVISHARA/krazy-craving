@@ -11,13 +11,13 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <style>
         .landing {
-            padding-top: 50%;
+            padding-top: 5%;
         }
         
         .ui-btn-left {
             position: absolute;
-            top: 37.24em;
-            left: 18.4em;
+            top: 17.24em;
+            left: 19em;
         }
     </style>
 </head>
@@ -27,7 +27,7 @@
         <br>
         <div data-role="content" align="center">
             <img class="landing" src="./Assets/img/Logo_final.png" height="172px" width="143px" />
-            <a href="./pages/Landing-page/index.html" data-ajax="false"><img class="back ui-btn-left" src="./Assets/img/icons/right-arrow.png" width="15%"></a>
+            <!-- <a href="./pages/Landing-page/index.html" data-ajax="false"><img class="back ui-btn-left" src="./Assets/img/icons/right-arrow.png" width="15%"></a> -->
 
         </div>
         <!--content-->
@@ -35,5 +35,12 @@
     <!--indexpage-->
 
 </body>
+<script>
+    $(window).on('load', function() {
+        setTimeout(function () {
+            window.location.href = "./pages/Landing-page/index.html";
+        }, 3000);
+    })
+</script>
 
 </html>
