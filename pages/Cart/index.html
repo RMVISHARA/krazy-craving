@@ -122,9 +122,9 @@
 						<div class="product" >
 							<div class="product-removal">
 								  <img src="../../Assets/img/icons/close.png" id="${item.id}" class="remove" height="17" width="17">
-								  <img src="${item.itemImageurl}" class="cart-item" height="69" width="71">
+								  <img src="${item.itemImageurl}" id="product-image" class="cart-item" height="69" width="71">
 							</div>
-							<div id="foodtype"> ${item.itemName} </div>
+							<div id="foodtype">${item.itemName}</div>
 							<div id="price"> ${item.price}</div>
 
 							<div class="adder">
@@ -184,29 +184,27 @@
     function redeemPoints() {
         var val = document.getElementById("points").value
         var currentPoints = localStorage.getItem("totalPoint")
-
-        if(Number(currentPoints) >= Number(val)) {
-            var newPoints = Number(currentPoints) - Number(val)
-
-            //console.log(val)
-            localStorage.setItem("totalPoint", newPoints)
-            localStorage.setItem("points", val)
-            var message=("congratulations points redeemed successfully")
-            $('#message').text(message);
-            recalculateCart();
-            console.log(Number(val))
-        }
-        else if(Number(val)==0){
+        if(val){
+            if(Number(currentPoints) >= Number(val)) {
+                var newPoints = Number(currentPoints) - Number(val)
+                localStorage.setItem("totalPoint", newPoints)
+                localStorage.setItem("points", val)
+                var message=("congratulations points redeemed successfully")
+                $('#message').text(message);
+                recalculateCart();
+            }
+            else if(Number(val)==0){
+                var message=("Please enter a valid amount of points")
+                $('#message').text(message);
+            }
+            else {
+                var message=("Sorry insufficient Loyalty point balance")
+                $('#message').text(message);
+            }
+        }else{
             var message=("Please enter a valid amount of points")
-            console.log(Number(currentPoints))
             $('#message').text(message);
         }
-        else {
-            var message=("Sorry insufficient Loyalty point balance")
-            $('#message').text(message);
-        }
-
-
     }
 
 
@@ -281,8 +279,37 @@
 
     function myFunction() {
         var str = $("#cart-total" ).text();
+
+        var newOrder = {};
+        var orderDetails = [];
+        var orders = localStorage.getItem("ongoingOrders");
+        orders = (orders) ? JSON.parse(orders) : [];
+
+        if(cartItems.length > 0){
+            $('.product').each(function() {
+                var obj = {}
+                // obj.imageurl = $(this).children('.product-removal').children('#product-image').attr('src');
+                obj.qty = Number($(this).children('.adder').children('#qty').val());
+                obj.name = $(this).children('#foodtype').html();
+                obj.price = Number($(this).children('#price').html());
+                orderDetails.push(obj);
+            });
+
+            let date = new Date();
+            date.setHours( date.getHours() + 1 );
+            date = date.toLocaleString('en-US', {hour: 'numeric',minute: 'numeric',hour12: true});
+
+            newOrder.totalPrice = Number(document.getElementById("cart-total").innerHTML);
+            newOrder.orderDetails = orderDetails;
+            newOrder.deliveryTime = date;
+            orders.push(newOrder);
+
+            localStorage.setItem("ongoingOrders",JSON.stringify(orders));
+            localStorage.setItem("cartItems",JSON.stringify([]));
+        }
+        
         if(document.getElementById('cash').checked) {
-            document.getElementById('checkout').href = "../../pages/CurrentOrder/index.html";
+            document.getElementById('checkout').href = "../../pages/CurrentOrder/";
         }
         if(document.getElementById('card').checked) {
             jQuery(function($) {
@@ -295,7 +322,7 @@
                         //This will be printed when the transaction is successful. To charge, server side scripting is required.
                         if(token.id){
                             $("#thankyouPayment").html("Thank you, your payment was successful!");
-                            window.location.href = "../../pages/CurrentOrder/index.html";
+                            window.location.href = "../../pages/CurrentOrder/";
 
                             //You can also use the following code to re-submit the form content to another file for further processing
                             //$form.get(0).submit();
