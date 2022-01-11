@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>HOME CHEF</title>
+    <title>Krazy Cravings</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" type="text/css" href="cart.css">
@@ -82,7 +82,7 @@
                     <div class="ui-block-a" id="select-block1"><input type="radio" name="radio-choice-v-2" id="cash" checked="checked"> </div>
                     <div class="ui-block-b" id="select-block2">Cash</div>
                     <div class="ui-block-c" id="select-block3"><img src="../../Assets/img/icons/cash-payment.png"  height="36" width="36"></div>
-                    <div class="ui-block-a" id="select-block1"><input type="radio" name="radio-choice-v-2" id="card" checked="checked"> </div>
+                    <div class="ui-block-a" id="select-block1"><input type="radio" name="radio-choice-v-2" id="card"> </div>
                     <div class="ui-block-b" id="select-block2">Credit/Debit Card</div>
                     <div class="ui-block-c" id="select-block3"><img src="../../Assets/img/icons/card-payment.png"  height="21" width="33"></div>
                 </div>
@@ -91,7 +91,7 @@
             <br>
         </div>
         <div align="center">
-            <a  href="" data-role="button" onclick='myFunction()' class="checkout" id="checkout" >Place Order</a>
+            <a href="#v-promo-popup-success2" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" onclick='myFunction()' class="checkout" id="checkout" >Place Order</a>
         </div>
         <div data-role="popup" id="v-promo-popup-success">
             <div data-role="content" >
@@ -100,6 +100,18 @@
                 <br>
                 <center><img id="av" src="../../Assets/img/icons/gift-icon.png" width="85" height="85"></center>
                 <h1 id="header1"><span id="message"></span></h1>
+                <br>
+
+            </div>
+        </div>
+
+        <div data-role="popup" id="v-promo-popup-success2">
+            <div data-role="content" >
+
+                <!-- <a href="#" data-rel="back" id="popupback2"> <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15"></a> -->
+                <br>
+                <center><img id="av" src="../../Assets/img/icons/gift-icon.png" width="85" height="85"></center>
+                <h1 id="header1"><span id="message2"></span></h1>
                 <br>
 
             </div>
@@ -192,19 +204,21 @@
                 var message=("congratulations points redeemed successfully")
                 $('#message').text(message);
                 recalculateCart();
+                
             }
             else if(Number(val)==0){
                 var message=("Please enter a valid amount of points")
                 $('#message').text(message);
             }
             else {
-                var message=("Sorry insufficient Loyalty point balance")
+                var message=("Sorry insufficient Krazy point balance")
                 $('#message').text(message);
             }
         }else{
             var message=("Please enter a valid amount of points")
             $('#message').text(message);
         }
+        document.getElementById("points").value = ""
     }
 
 
@@ -219,7 +233,8 @@
         });
 
         subtotal -= Number(points)
-    
+        localStorage.setItem("points",0)
+
         /* Calculate totals */
         var tax = subtotal * taxRate;
         var shipping = (subtotal < 300 ? shippingRate : 0);
@@ -279,7 +294,7 @@
 
     function myFunction() {
         var str = $("#cart-total" ).text();
-
+        var transactionPoints = Math.ceil(str*0.05);
         var newOrder = {};
         var orderDetails = [];
         var orders = localStorage.getItem("ongoingOrders");
@@ -307,9 +322,21 @@
             localStorage.setItem("ongoingOrders",JSON.stringify(orders));
             localStorage.setItem("cartItems",JSON.stringify([]));
         }
-        
+
         if(document.getElementById('cash').checked) {
-            document.getElementById('checkout').href = "../../pages/CurrentOrder/";
+            var kPoints = localStorage.getItem("totalPoint");
+            kPoints = Number(kPoints) + transactionPoints;
+            localStorage.setItem("totalPoint",kPoints);
+
+            $("#message2").text(`
+                Thank you, your payment was successful!
+                You recived ${transactionPoints} Krazy points for this transaction.
+            `);
+            
+            setTimeout(function () {
+                window.location.href = "../../pages/CurrentOrder/";
+            }, 5000);
+
         }
         if(document.getElementById('card').checked) {
             jQuery(function($) {
@@ -321,8 +348,18 @@
 
                         //This will be printed when the transaction is successful. To charge, server side scripting is required.
                         if(token.id){
-                            $("#thankyouPayment").html("Thank you, your payment was successful!");
-                            window.location.href = "../../pages/CurrentOrder/";
+                            var kPoints = localStorage.getItem("totalPoint");
+                            kPoints = Number(kPoints) + transactionPoints;
+                            localStorage.setItem("totalPoint",kPoints);
+
+                            $("#message2").text(`
+                                Thank you, your payment was successful!
+                                You recived ${transactionPoints} Krazy points for this transaction.
+                            `);
+
+                            setTimeout(function () {
+                                window.location.href = "../../pages/CurrentOrder/"; 
+                            }, 5000);
 
                             //You can also use the following code to re-submit the form content to another file for further processing
                             //$form.get(0).submit();
@@ -334,7 +371,7 @@
                 });
                 //Open checkout with further options
                 handler.open({
-                    name: 'Home Chef',
+                    name: 'Krazy Cravings',
                     currency: 'LKR',
                     description: 'Make Payment',
                     amount: str * 100 ,
