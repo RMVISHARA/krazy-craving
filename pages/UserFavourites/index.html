@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>HOME CHEF</title>
+    <title>Krazy Cravings</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
@@ -52,101 +52,9 @@
             </div>
             <hr>
 
-            <div class="iphone">
-                <ul id="di" data-filter="true" data-input="#divOfPs-input" data-filter-placeholder="Search">
-                    <div id="item3" class="ui-child uu">
-                        <a href="#"  style="padding:0px; ;">
-                            <div style="position: relative;">
-                                <img src="../../Assets/img/kottu.jpg" id="img-fav">
-                                <img src="../../Assets/img/icons/liked-heart.svg" id="heart-unheart" class="heart-icon" width="33" height="33" onclick="amend(3)">
-                            </div >
-                            <h2 id="prod-n">Kottu Kottu</h2>
-                            <span id="address">No.4, W A Mawatha, Wellawatte</span>
-                            
-                        </a>
-                    </div>
-                    <div id="item2" class="ui-child uu">
-                        <a href="#"  data-ajax="false" >
-                            <div style="position: relative;">
-                                <img src="../../Assets/img/cupcakes.jpg" id="img-fav">
-                                <img src="../../Assets/img/icons/liked-heart.svg" id="heart-unheart" class="heart-icon" width="33" height="33" onclick="amend(2)">
-                            </div >
-                            <h2 id="prod-n">Cream Cakes</h2>
-                            <span id="address">No.6, Marine Drive, Colpetty</span>
-                            
-                        </a>
-                    </div>
-                    <div id="item1" class=" ui-child uu">
-                        <a href="#"  data-ajax="false" >
-                            <div style="position: relative;">
-                                <img src="../../Assets/img/pizza.jpg" id="img-fav">
-                                <img src="../../Assets/img/icons/liked-heart.svg" id="heart-unheart" class="heart-icon" width="33" height="33" onclick="amend(1)">
-                            </div >
-                            <h2 id="prod-n">Arthur's Pizza</h2>
-                            <span id="address">No.5, Temple's road, Rathmalana</span>
-                        </a>
-                    </div>
-                </ul>
-            </div>
+            <div class="iphone" id="iphoneDiv"></div>
 
-
-
-
-            <div class="container-fluid ipad">
-                <ul id="di" data-filter="true" data-input="#divOfPs-input" data-filter-placeholder="Search">
-
-                <div class="row">
-                    <div  class="col-md-6">
-                        <div id="item33" class="ui-child uu">
-                            <a href="#"  style="padding:0px; ;">
-                                <div style="position: relative;">
-                                    <img src="../../Assets/img/kottu.jpg" id="img-fav">
-                                    <img src="../../Assets/img/icons/liked-heart.svg" id="heart-unheart" class="heart-icon" width="33" height="33" onclick="amend(3)">
-                                </div >
-                                <h2 id="prod-n">Kottu Kottu</h2>
-                                <span id="address">No.4, W A Mawatha, Wellawatte</span>
-                                
-                            </a>
-                        </div>       
-                    </div>
-                    <div  class="col-md-6">
-                        <div id="item22" class="ui-child uu">
-                            <a href="#"  data-ajax="false" >
-                                <div style="position: relative;">
-                                    <img src="../../Assets/img/cupcakes.jpg" id="img-fav">
-                                    <img src="../../Assets/img/icons/liked-heart.svg" id="heart-unheart" class="heart-icon" width="33" height="33" onclick="amend(2)">
-                                </div >
-                                <h2 id="prod-n">Cream Cakes</h2>
-                                <span id="address">No.6, Marine Drive, Colpetty</span>
-                                
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div id="item11" class=" ui-child uu">
-                            <script type="text/javascript">
-                                if(JSON.parse(localStorage.getItem("isFavourite"))===true){
-                                    document.getElementById("item11").style.display="block";
-                                }
-                                else{
-                                    document.getElementById("item11").style.display="none";
-                                }
-                             </script>
-                            <a href="#"  data-ajax="false" >
-                                <div style="position: relative;">
-                                    <img src="../../Assets/img/pizza.jpg" id="img-fav">
-                                    <img src="../../Assets/img/icons/liked-heart.svg" id="heart-unheart" class="heart-icon" width="33" height="33" onclick="amend(1)">
-                                </div >
-                                <h2 id="prod-n">Arthur's Pizza</h2>
-                                <span id="address">No.5, Temple's road, Rathmalana</span>
-                            </a>
-                        </div> 
-                    </div> 
-                </div>
-             </ul>
-            </div>
+            <div class="container-fluid ipad" id="ipadDiv"></div>
                 		
             
 
@@ -241,27 +149,22 @@ var buttonClick = false;
         var x = JSON.parse(localStorage.getItem("favItems"));
         var y = x-1;
         localStorage.setItem('favItems', JSON.stringify(y));
-        
 
-        if(val === 1){
+        if(val == 1){
             localStorage.setItem("isFavourite", false);
             document.getElementById("item1").style.display="none";
             document.getElementById("item11").style.display="none";
-            
         }
-        else if(val === 2){
+        else if(val == 2){
             document.getElementById("item2").style.display="none";
             document.getElementById("item22").style.display="none";
-            console.log(val);
         }
-        else if(val === 3){
+        else if(val == 3){
             document.getElementById("item3").style.display="none";
             document.getElementById("item33").style.display="none";
-            console.log(val);
         }
 
-        if(y===0){
-           console.log("Empty");
+        if(y==0){
            document.getElementById("empty").style.display="block";
         }
         

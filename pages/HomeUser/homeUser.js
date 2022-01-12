@@ -3,7 +3,7 @@ $(document).ready(function() {
     totalPoint = Number(totalPoint);
     totalPoint == null || totalPoint == undefined ? totalPoint = 0 : totalPoint = totalPoint
     localStorage.setItem("totalPoint", totalPoint);
-    console.log('totalPoint : ', totalPoint)
+    // console.log('totalPoint : ', totalPoint)
     $('#totalPoint').text(totalPoint);
 })
 
@@ -15,7 +15,7 @@ $(document).ready(function() {
         { 'id': '3', 'imageurl': '../../Assets/img/drinks.jpg', 'name': 'Udeni\'s Juice Bar', 'address': '169, High level Rd, Nugegoda', 'rating': '4.8', 'time': 50, 'deliveryPrice' : 90 },
         { 'id': '4', 'imageurl': '../../Assets/img/pizza.jpg', 'name': 'Arthur\'s Pizza', 'address': 'No 10, Temple\'s Road, Rathmalana', 'rating': '4.5', 'time': 120, 'deliveryPrice' : 60},
         { 'id': '5', 'imageurl': '../../Assets/img/burger.jpg', 'name': 'Burger Palace', 'address': 'No 4, 3rd Lane, Koswatta', 'rating': '4.2', 'time': 120, 'deliveryPrice' : 120 }
-    ]
+    ];
 
     localStorage.setItem("vendorList", JSON.stringify(vendorList))
     vendorList.forEach(function(obj) {
