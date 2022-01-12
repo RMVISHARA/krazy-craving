@@ -19,7 +19,6 @@ $(document).ready(function() {
 
     localStorage.setItem("vendorList", JSON.stringify(vendorList))
     vendorList.forEach(function(obj) {
-        console.log(obj)
         document.getElementById("favourites").innerHTML += `
                 <a class="link" href="../Vendor/">
                     <div class="card" id="cardItem">
