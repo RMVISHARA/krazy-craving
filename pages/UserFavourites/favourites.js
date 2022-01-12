@@ -1,8 +1,7 @@
 var hiddenItems;
 window.onload = function() {
-   
+   console.log(localStorage.getItem("isFavourite"));
     if(localStorage.getItem("isFavourite")){
-    
         if(JSON.parse(localStorage.getItem("isFavourite"))===true){
             document.getElementById("item1").style.display="block";
             localStorage.setItem("favItems", 3);

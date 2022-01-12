@@ -232,8 +232,14 @@
             subtotal += parseFloat($(this).children('#subtotal').text());
         });
 
-        subtotal -= Number(points)
-        localStorage.setItem("points",0)
+        if(subtotal >= Number(points)){
+            subtotal -= Number(points)
+            localStorage.setItem("points",0)
+        }else{
+            points -= subtotal;
+            subtotal = 0;
+            localStorage.setItem("points",points)
+        }
 
         /* Calculate totals */
         var tax = subtotal * taxRate;
