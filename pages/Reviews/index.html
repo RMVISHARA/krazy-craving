@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Star Rating System</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="../../Assets/css/common.user.css">
+    <link rel="stylesheet" type="text/css" href="review.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="review.js"></script>
+
+
+    <!--<link rel="stylesheet" type="text/css" href="../../Assets/css/grid.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Assets/css/style.min.css">-->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!--    <script src="../../Assets/js/js.min.js"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div data-role="page" id="homeUser">
+        <div data-role="header" class="mhead" style="background-color: black" data-position="fixed" data-tap-toggle="false">
+    <div class="row">
+        <div class="col4">
+            <a onclick="history.back()" data-position-to="window" id="accountLogo">
+                <img  class="backButton" src="../../Assets/img/icons/backButton.svg">
+            </a>
+        </div>
+        <div class="col-7">
+            <img class="logo" src="../../Assets/img/LogoDark.png">
+        </div>
+        <div class="col-3">
+                                
+                <a href="../UserAccount/index.html" data-position-to="window" id="accountLogo">
+                    <img  class="accountLogo" src="../../Assets/img/icons/usa.svg">
+                </a>
+                <a href="../Search/index.html" >
+                    <img class="searchLogo" src="../../Assets/img/icons/search.png">
+                </a>
+        </div>
+    </div>
+</div>
+
+        <div class="bgimage">
+        </div>
+        <div class="box" id="blur">
+            <div class="raw one">
+                <div class="picColumn">
+                    <img src="../../Assets/img/wok-cheese-kottu.jpg" class="propic">
+                </div>
+                <div class="detailColumn">
+                    <h5 class="title">Sohani Restaurant</h5>
+                    <a href="#" id="myBtn">
+                        <img class="share" src="../../Assets/img/icons/icons8-share.svg">
+                    </a>
+                    <h7 class="catagory">Sri Lankan</h7>
+
+                    <div class="stars" data-rating="3" id='stars'>
+                        <span class="star" title='Poor' data-value='1' onclick="getRating(1)">&nbsp;</span>
+                        <span class="star" title='Fair' data-value='2' onclick="getRating(2)">&nbsp;</span>
+                        <span class="star" title='Good' data-value='3' onclick="getRating(3)">&nbsp;</span>
+                        <span class="star" title='Excellent' data-value='4' onclick="getRating(4)">&nbsp;</span>
+                        <span class="star" title='WOW!!!' data-value='5' onclick="getRating(5)">&nbsp;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="raw two">
+                <h6 class="cmnt">Any Comments ?</h6>
+                <center>
+                    <input type="textarea" class="message" name="message" id="message" value="" placeholder="Message"
+                        data-role=none />
+                    <br>
+                    <a href="#" class="submit" data-role="button" data-rel="back" id="submit"
+                        onclick="onAddComment()">SUBMIT</a>
+                </center>
+            </div>
+            <div class="raw three">
+                <div class="reviewHead">
+                    <span><b>Reviews</b></span>
+                </div>
+
+                <div id="reviewlist" align="center">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
+                    <li><a href="../PastOrder/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-orders-inactive" id="inactive" data-ajax="false">Orders</a></li>
+                    <li><a href="../UserFavourites/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive"data-ajax="false">Favourites</a></li>
+                    <li><a href="../Cart/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-cart-inactive" id="inactive" data-ajax="false">Cart</a></li>
+      
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- alternate codepen version https://codepen.io/mad-d/pen/aJMPWr?editors=0010 -->
+    <img id="heart" src="../../Assets/img/icons/unlike-heart.svg">
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <center>
+                <p>Scan QR Code to Share Restaurant</p>
+                <img class="qr" src="../../Assets/img/qrcode.png">
+            </center>
+
+        </div>
+
+    </div>
+
+    <script>
+        loadCommentList()
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

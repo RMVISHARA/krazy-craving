@@ -67,15 +67,15 @@ padding-top: 2px;
     height: 35px !important;
 }
 
-.ui-icon-search-inactive:after {
-    background-image: url("../../Assets/img/icons/search-inactive.svg");
+.ui-icon-orders-inactive:after {
+    background-image: url("../../Assets/img/icons/bag-dash.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
 
-.ui-icon-search-active:after {
-    background-image: url("../../Assets/img/icons/search-active.svg");
+.ui-icon-orders-active:after {
+    background-image: url("../../Assets/img/icons/bag-dash.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
@@ -95,20 +95,33 @@ padding-top: 2px;
     height: 35px !important;
 }
 
-.ui-icon-profile-inactive:after {
-    background-image: url("../../Assets/img/icons/account-inactive.svg");
+.ui-icon-cart-inactive:after {
+    background-image: url("../../Assets/img/icons/cart3.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
 
-.ui-icon-profile-active:after {
-    background-image: url("../../Assets/img/icons/account-active.svg");
+.ui-icon-cart-active:after {
+    background-image: url("../../Assets/img/icons/cart3.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
 
+.ui-icon-favourite-active:after {
+    background-image: url("../../Assets/img/icons/heart.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+.ui-icon-favourite-inactive:after {
+    background-image: url("../../Assets/img/icons/heart.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
 #inactive {
     color: #858282;
     text-align: center;
