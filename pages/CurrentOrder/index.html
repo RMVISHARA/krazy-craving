@@ -104,7 +104,6 @@
     }
 
     function generateCurrentOrders(){
-        var name = "Arthur's Pizza"
         let orders = localStorage.getItem("ongoingOrders");
         orders = (orders) ? JSON.parse(orders) : [];
 
@@ -115,7 +114,7 @@
         {
             outputHtml += 
             `
-                            <p class="title"><b>${name}</b></p>
+                            <p class="title"><b>${order.restaurent}</b></p>
                             <p class="delivery">Order will be delivered: <b>${order.deliveryTime}</b></p>
                             <p class="order"><b>Order Details</b></p>
                             <hr>

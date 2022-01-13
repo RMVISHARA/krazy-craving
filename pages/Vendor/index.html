@@ -33,17 +33,17 @@
             <!-- /grid-b -->
         </div>
         <div data-role="content" align="center">
-            <div class="vendorImage">
+            <div class="vendorImage" id="bgImage">
                 <div class="details" align="left">
-                    <p id="name">Pizza Hut</p>
-                    <p id="address">228A1/1 Colombo - Kandy Rd, 11300</p>
+                    <p id="name"></p>
+                    <p id="address" class="address"></p>
                     <div class="stars">
                         <span class="fa fa-star checked fa-xs" style="color: #FFCC36; text-shadow: none; font-size: 1.3rem;"></span>
-                        <span class="fa checked fa-xs" id="address">4.5</span>
+                        <span class="fa checked fa-xs address" id="ratings"></span>
                     </div>
                 </div>
                 <div>
-                    <img id="heart" src="../../Assets/img/icons/unlike-heart.svg" class="heart-icon" onclick="amend(0)">  
+                    <img id="heart" src="../../Assets/img/icons/unlike-heart.svg" class="heart-icon" onclick="amend()">  
                 </div>
                 <div>
                     <a href="" onclick="window.location.href ='../Cart/';">
@@ -67,18 +67,20 @@
         </div>
     </div>
     <script>
-        function amend(val){
-            var x =JSON.parse(localStorage.getItem("isFavourite"));
-            console.log(x);
-            if(x===true){
+        var selectedVendor = localStorage.getItem("selectedRestaurent");
+
+        function amend(){
+            var x = JSON.parse(localStorage.getItem("favVendors"));
+
+            if(x[selectedVendor]){
                 document.getElementById("heart").src="../../Assets/img/icons/unlike-heart.svg";
-                localStorage.setItem("isFavourite", false);
-                console.log("changed fav to => ",false)
+                x[selectedVendor] = false;
+                localStorage.setItem("favVendors",JSON.stringify(x));
             }
-            if(x===false){
+            else{
                 document.getElementById("heart").src="../../Assets/img/icons/liked-heart.svg";
-                localStorage.setItem("isFavourite", true);
-                console.log("changed fav to => ",true)
+                x[selectedVendor] = true;
+                localStorage.setItem("favVendors",JSON.stringify(x));
             }
         }
 

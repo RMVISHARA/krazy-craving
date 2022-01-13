@@ -30,7 +30,6 @@
   margin: 5px 0 3px 75px;
 }
 .vendorImage {
-  background-image: url("../../Assets/img/pizzaHut.jpg");
   background-size: cover;
   width: 380px;
   height: 400px;
@@ -46,7 +45,7 @@
   color: white;
   text-shadow: none;
 }
-#address {
+.address {
   height: 20px;
   font-size: 18px;
   color: white;
@@ -183,7 +182,6 @@
     margin: 5px 0 3px 215px !important;
   }
   .vendorImage {
-    background-image: url("../../Assets/img/pizzaHut.jpg");
     background-size: cover;
     width: 670px !important;
     height: 250px !important;
@@ -199,7 +197,7 @@
     color: white;
     text-shadow: none;
   }
-  #address {
+  .address {
     height: 20px;
     font-size: 18px;
     color: white;
@@ -323,7 +321,6 @@
       margin: 5px 0 3px 224px;
     }
     .vendorImage {
-      background-image: url("../../Assets/img/pizzaHut.jpg");
       background-size: cover;
       width: 700px;
       height: 500px;
@@ -339,7 +336,7 @@
       color: white;
       text-shadow: none;
     }
-    #address {
+    .address {
       height: 20px;
       font-size: 18px;
       color: white;
@@ -466,7 +463,6 @@
       margin: 5px 0 3px 374px;
     }
     .vendorImage {
-      background-image: url("../../Assets/img/pizzaHut.jpg");
       background-size: cover;
       width: 950px;
       height: 500px;
@@ -482,7 +478,7 @@
       color: white;
       text-shadow: none;
     }
-    #address {
+    .address {
       height: 20px;
       font-size: 18px;
       color: white;

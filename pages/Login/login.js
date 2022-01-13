@@ -8,6 +8,23 @@ function Login() {
             localStorage.setItem("totalPoint", 30);
             //console.log(localStorage.getItem("totalPoint"))
             invalidLogins = false;
+
+            var favVendors = {
+                '1':false,
+                '2':false,
+                '3':false,
+                '4':true,
+                '5':false,
+                '6':false,
+                '7':true,
+                '8':true,
+                '9':false,
+                '10':false,
+                '11':false,
+                '12':false,
+            };
+            localStorage.setItem("favVendors",JSON.stringify(favVendors));
+            
             window.location.href = "../HomeUser"
         }
     });

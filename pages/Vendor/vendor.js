@@ -1,30 +1,24 @@
-/*const vendorList = localStorage.getItem('vendorList');
-
-if(vendorList == null) {
-    vendorList = [
-        {'Id':'1','imageurl':'../../Assets/img/pizza.jpg','name':'Arthur\'s Pizza','address':'No 10, Temple\'s Road, Rathmalana', 'rating':'4.5'},
-        {'Id':'2','imageurl':'../../Assets/img/burger.jpg','name':'Burger Palace','address':'No 4, 3rd Lane, Koswatta', 'rating':'4.2'},
-        {'Id':'3','imageurl':'../../Assets/img/drinks.jpg','name':'Udeni\'s Juice Bar','address':'169, High level Rd, Nugegoda', 'rating':'4.8'},
-        {'Id':'1','imageurl':'../../Assets/img/pizza.jpg','name':'Arthur\'s Pizza','address':'No 10, Temple\'s Road, Rathmalana', 'rating':'4.5'},
-        {'Id':'2','imageurl':'../../Assets/img/burger.jpg','name':'Burger Palace','address':'No 4, 3rd Lane, Koswatta', 'rating':'4.2'}
-    ]
-}*/
-
-localStorage.setItem("isFavourite", false);
-
 $(document).ready(function(){
-    var menuItems = [
-        {'id':'1','imageurl':'../../Assets/img/cheeseLovers.jpg','name':'Cheese Lovers','price':'750', 'rating':'4.5'},
-        {'id':'2','imageurl':'../../Assets/img/sausageDelight.jpg','name':'Sausage Delight','price':'750', 'rating':'4.2'},
-        {'id':'3','imageurl':'../../Assets/img/blackChicken.jpg','name':'Black Chicken','price':'750', 'rating':'4.8'},
-        {'id':'4','imageurl':'../../Assets/img/hawaiianChicken.jpg','name':'Hawaiian Chicken','price':'750', 'rating':'4.5'},
-        {'id':'5','imageurl':'../../Assets/img/popcornChicken.jpg','name':'Popcorn Chicken','price':'750', 'rating':'4.2'}
-    ]
-
     localStorage.setItem("directingTo", 0);
-    localStorage.setItem("resItemList", JSON.stringify(menuItems))
 
-    menuItems.forEach(function(obj) {
+    var vendor;
+    var allVendors = localStorage.getItem("vendors");
+    var selectedVendor = localStorage.getItem("selectedRestaurent");
+    allVendors = JSON.parse(allVendors);
+    selectedVendor = Number(selectedVendor);
+
+    allVendors.forEach(element => {
+        if(element.id == selectedVendor){
+            vendor = element;
+        }
+    });
+
+    document.getElementById("name").innerHTML = vendor.name;
+    document.getElementById("address").innerHTML = vendor.address;
+    document.getElementById("ratings").innerHTML = vendor.rating;
+    document.getElementById("bgImage").style.backgroundImage = `url('${vendor.imageurl}')`;
+
+    vendor.menu.forEach(function(obj) {
         document.getElementById("cardList").innerHTML +=
             '           <a href="" onclick="directToPage('+ obj.id +')"> \n' +
             '                <div class="card" id="cardItem">\n' +
@@ -43,4 +37,13 @@ $(document).ready(function(){
             '            </a><hr>';
 
     });
+
+    var x = JSON.parse(localStorage.getItem("favVendors"));
+
+    if(x[String(selectedVendor)]){
+        document.getElementById("heart").src="../../Assets/img/icons/liked-heart.svg";
+    }
+    else{
+        document.getElementById("heart").src="../../Assets/img/icons/unlike-heart.svg";
+    }
 });

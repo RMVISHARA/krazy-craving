@@ -145,24 +145,18 @@ var buttonClick = false;
 
     } 
 
-    function amend(val){
+    function amend(val)
+    {
         var x = JSON.parse(localStorage.getItem("favItems"));
         var y = x-1;
         localStorage.setItem('favItems', JSON.stringify(y));
 
-        if(val == 1){
-            localStorage.setItem("isFavourite", false);
-            document.getElementById("item1").style.display="none";
-            document.getElementById("item11").style.display="none";
-        }
-        else if(val == 2){
-            document.getElementById("item2").style.display="none";
-            document.getElementById("item22").style.display="none";
-        }
-        else if(val == 3){
-            document.getElementById("item3").style.display="none";
-            document.getElementById("item33").style.display="none";
-        }
+        var favs = JSON.parse(localStorage.getItem("favVendors"));
+        favs[String(val)] = false;
+        localStorage.setItem('favVendors', JSON.stringify(favs));
+
+        document.getElementById(`item${val}`).style.display="none";
+        document.getElementById(`item${val}${val}`).style.display="none";
 
         if(y==0){
            document.getElementById("empty").style.display="block";

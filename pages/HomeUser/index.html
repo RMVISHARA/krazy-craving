@@ -134,6 +134,7 @@
                 navigator.geolocation.getCurrentPosition(showLoc, errHand);
             }
         }
+
         function showLoc(pos){
             latt = pos.coords.latitude;
             long = pos.coords.longitude;
@@ -167,6 +168,12 @@
                     break;
             }
         }
+
+        function restaurent(val){
+            localStorage.setItem("selectedRestaurent", val);
+            window.location.href = "../Vendor/";
+        }
+        
     </script>
 </body>
 

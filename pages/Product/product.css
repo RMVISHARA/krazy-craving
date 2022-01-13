@@ -34,7 +34,7 @@
   width: 370px;
   height: 320px;
 }
-#select2-block1{
+.select2-block1{
   margin-top: -7px;
   padding-bottom: 1px;
   margin-left: 21px;;
@@ -48,7 +48,7 @@
   font-weight: bold
 }
 
-#select2-block3{
+.select2-block3{
   padding-top: 5px;
   padding-bottom:1px;
   margin-left:-46px;
@@ -111,6 +111,15 @@
   color: #fc9920;
 }
 #p-amount:before{
+  content:"Rs. ";
+}
+#sm-block:before{
+  content:"Rs. ";
+}
+#md-block:before{
+  content:"Rs. ";
+}
+#lg-block:before{
   content:"Rs. ";
 }
 #input_div{
@@ -199,7 +208,7 @@
     width: 700px !important;
     height: 350px !important;
   }
-  #select2-block1{
+  .select2-block1{
     margin-top: -7px;
     padding-bottom: 1px;
     margin-left: 21px;;
@@ -213,7 +222,7 @@
     font-weight: bold
   }
 
-  #select2-block3{
+  .select2-block3{
     padding-top: 5px;
     padding-bottom:1px;
     margin-left:-46px;
@@ -276,7 +285,16 @@
     color: #fc9920;
   }
   #p-amount:before{
-    content:"Rs.";
+    content:"Rs. ";
+  }
+  #sm-block:before{
+    content:"Rs. ";
+  }
+  #md-block:before{
+    content:"Rs. ";
+  }
+  #lg-block:before{
+    content:"Rs. ";
   }
   #input_div{
     margin-left: 38px;
@@ -356,7 +374,7 @@
       width: 700px;
       height: 350px;
     }
-    #select2-block1{
+    .select2-block1{
       margin-top: -7px;
       padding-bottom: 1px;
       margin-left: 21px;;
@@ -370,7 +388,7 @@
       font-weight: bold
     }
 
-    #select2-block3{
+    .select2-block3{
       padding-top: 5px;
       padding-bottom:1px;
       margin-left:-46px;
@@ -434,7 +452,16 @@
       color: #fc9920;
     }
     #p-amount:before{
-      content:"Rs.";
+      content:"Rs. ";
+    }
+    #sm-block:before{
+      content:"Rs. ";
+    }
+    #md-block:before{
+      content:"Rs. ";
+    }
+    #lg-block:before{
+      content:"Rs. ";
     }
     #input_div{
       margin-left: 38px;
@@ -506,7 +533,7 @@
       width: 750px;
       height: 350px;
     }
-    #select2-block1{
+    .select2-block1{
       margin-top: -7px;
       padding-bottom: 1px;
       margin-left: 21px;;
@@ -520,7 +547,7 @@
       font-weight: bold
     }
 
-    #select2-block3{
+    .select2-block3{
       padding-top: 5px;
       padding-bottom:1px;
       margin-left:-46px;
@@ -583,7 +610,16 @@
       color: #fc9920;
     }
     #p-amount:before{
-      content:"Rs.";
+      content:"Rs. ";
+    }
+    #sm-block:before{
+      content:"Rs. ";
+    }
+    #md-block:before{
+      content:"Rs. ";
+    }
+    #lg-block:before{
+      content:"Rs. ";
     }
     #input_div{
       margin-left: 38px;

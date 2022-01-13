@@ -130,7 +130,7 @@
   
             </ul>
         </div>
-    </div>   <
+    </div>   
 </div><!--page-->
 <script>
     function loadcartList() {
@@ -333,6 +333,7 @@
             newOrder.totalPrice = Number(document.getElementById("cart-total").innerHTML);
             newOrder.orderDetails = orderDetails;
             newOrder.deliveryTime = date;
+            newOrder.restaurent = cartItems[0].restaurent;
             orders.push(newOrder);
 
             localStorage.setItem("ongoingOrders",JSON.stringify(orders));
@@ -400,7 +401,8 @@
                 });
             });
         }
-    }
+    };
+    
 </script>
 <script>
 
