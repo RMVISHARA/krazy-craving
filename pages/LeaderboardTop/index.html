@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Krazy Cravings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--slider-->
+</head>
+
+<style>
+    /* Always set the map height explicitly to define the size of the div
+           * element that contains the map. */
+    #map {
+        width: 90%;
+        height: 200px;
+        background-color: grey;
+        margin-bottom: 10px;
+        border-radius: 20px;
+    }
+
+</style>
+
+<body>
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="../../Assets/css/style.min.css">
+<link rel="stylesheet" href="leaderboardTop.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="../../Assets/js/js.min.js"></script>
+
+<div data-role="page" id="leaderboardtop">
+
+    <div data-role="header" class="mhead" data-position="fixed" data-tap-toggle="false">
+        <div class="row">
+            <div class="">
+                <img class="logo" src="../../Assets/img/rectangle_logo_black.png">
+            </div>
+            <div class="row icons">
+                <div class="">
+                    <a href="#" data-position-to="window" id="notificationLogo">
+                        <img class="notificationLogo ui-btn-right" src="../../Assets/img/icons/notification.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div><!-- /header -->
+
+
+    <div data-role="content" align="center">
+        <p class="pageTitle">Leaderboard</p>
+        <div class="wrapper">
+            <div class="currentDiv">
+                <a href="#" data-role="button" rel="external" id="currentBtn">Top 100</a>
+            </div>
+            <div class="pastDiv">
+                <a href="../LeaderboardUser/" data-role="button" rel="external" id="pastBtn">Your Rank</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" data-role="footer" data-position="fixed">
+        <div data-role="navbar" >
+            <ul>
+                <li><a href="../HomeUser" data-icon="none"  class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
+                <li><a href="../Search" data-icon="none" class="ui-nodisc-icon ui-icon-search-inactive" id="inactive" data-ajax="false">Search</a></li>
+                <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-track-inactive" id="inactive" data-ajax="false">Track Order</a></li>
+                <li><a href="../UserAccount" data-icon="none" class="ui-nodisc-icon ui-icon-profile-active" id="active" data-ajax="false">Account</a></li>
+            </ul>
+        </div>
+    </div> <!-- /footer -->
+
+</div>
+</body>
+</html>

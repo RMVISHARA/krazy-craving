@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>HOME CHEF</title>
+    <title>Krazy Cravings</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--slider-->
@@ -60,26 +60,10 @@
                 <a href="../PastOrder" data-role="button" rel="external" id="pastBtn">Past Orders</a>
             </div>
         </div>
+
         <div id="map"></div>
-        <div class="card">
-            <p class="title"><b>Arthur's Pizza</b></p>
-            <p class="delivery">Order will be delivered: <b>10:45 AM</b></p>
-            <p class="order"><b>Order Details</b></p>
-            <hr>
-            <div class="item ui-grid-a">
-                <p class="name ui-block-a">Cheese Pizza</p>
-                <p class="price ui-block-b">Rs. 1790</p>
-            </div>
-            <div class="item ui-grid-a">
-                <p class="name ui-block-a">Cheese Pizza</p>
-                <p class="price ui-block-b">Rs. 1790</p>
-            </div>
-            <hr>
-            <div class="item ui-grid-a">
-                <p class="total ui-block-a">Total</p>
-                <p class="totalPrice ui-block-b">Rs. 3690</p>
-            </div>
-        </div>
+
+        <div class="card" id="orders-card"></div>
     </div>
 
 
@@ -118,6 +102,49 @@
             infowindow.open(map,marker);
         });
     }
+
+    function generateCurrentOrders(){
+        var name = "Arthur's Pizza"
+        let orders = localStorage.getItem("ongoingOrders");
+        orders = (orders) ? JSON.parse(orders) : [];
+
+        let outputHtml = ``;
+        // console.log(orders);
+
+        orders.forEach(order =>
+        {
+            outputHtml += 
+            `
+                            <p class="title"><b>${name}</b></p>
+                            <p class="delivery">Order will be delivered: <b>${order.deliveryTime}</b></p>
+                            <p class="order"><b>Order Details</b></p>
+                            <hr>
+            `
+            order.orderDetails.forEach(item => {
+                outputHtml += 
+                `
+                            <div class="item ui-grid-a">
+                                <p class="name ui-block-a">${item.name}</p>
+                                <p class="price ui-block-b">${(item.qty*item.price).toFixed(2)}</p>
+                            </div>
+                `
+            });
+ 
+            outputHtml += 
+            `               <hr>
+                            <div class="item ui-grid-a">
+                                <p class="total ui-block-a">Total</p>
+                                <p class="totalPrice ui-block-b">Rs.${order.totalPrice.toFixed(2)}</p>
+                            </div>
+                            <br>
+            `
+        });
+
+        $("#orders-card").html(outputHtml);
+    }
+
+    generateCurrentOrders();
+
 </script>
 </body>
 

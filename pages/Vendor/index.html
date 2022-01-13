@@ -3,7 +3,7 @@
  
 <head>
   <meta charset="UTF-8">
-    <title>HOME CHEF</title>
+    <title>Krazy Cravings</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- the three things that jQuery Mobile needs to work -->
@@ -35,11 +35,11 @@
         <div data-role="content" align="center">
             <div class="vendorImage">
                 <div class="details" align="left">
-                    <p id="name">Arthur's Pizza</p>
-                    <p id="address">No 10, Temple's Road, Rathmalana</p>
+                    <p id="name">Pizza Hut</p>
+                    <p id="address">228A1/1 Colombo - Kandy Rd, 11300</p>
                     <div class="stars">
                         <span class="fa fa-star checked fa-xs" style="color: #FFCC36; text-shadow: none; font-size: 1.3rem;"></span>
-                        <span class="fa checked fa-xs" id="address">2.2</span>
+                        <span class="fa checked fa-xs" id="address">4.5</span>
                     </div>
                 </div>
                 <div>
@@ -54,35 +54,33 @@
 
             <div class="cardList" id="cardList">
             </div>
+
+            <!-- reviews section -->
             <div class="reviewHead">
                 <span ><b>Reviews</b></span>
             </div>
-
-                <div id="reviewlist" align="center">
-                </div>
+            <div id="reviewlist" align="center">
+            </div>
 
         </div>
 
         </div>
     </div>
     <script>
-  function amend(val){
-      var x =JSON.parse(localStorage.getItem("isFavourite"));
-      console.log(x);
-        if(x===true){
-            document.getElementById("heart").src="../../Assets/img/icons/unlike-heart.svg";
-            localStorage.setItem("isFavourite", false);
-            console.log("changed fav to => ",false)
+        function amend(val){
+            var x =JSON.parse(localStorage.getItem("isFavourite"));
+            console.log(x);
+            if(x===true){
+                document.getElementById("heart").src="../../Assets/img/icons/unlike-heart.svg";
+                localStorage.setItem("isFavourite", false);
+                console.log("changed fav to => ",false)
+            }
+            if(x===false){
+                document.getElementById("heart").src="../../Assets/img/icons/liked-heart.svg";
+                localStorage.setItem("isFavourite", true);
+                console.log("changed fav to => ",true)
+            }
         }
-        if(x===false){
-            document.getElementById("heart").src="../../Assets/img/icons/liked-heart.svg";
-            localStorage.setItem("isFavourite", true);
-            console.log("changed fav to => ",true)
-        }
-    }
-
-
-
 
         function loadCommentList() {
             let commentList = localStorage.getItem("commentList");
@@ -107,6 +105,12 @@
             })
             $("#reviewlist").html(outputHtml);
         }
+
+        function directToPage(val){
+            localStorage.setItem("directingTo", val);
+            window.location.href ='../Product/';
+        }
+
         loadCommentList()
     </script>
 </body>

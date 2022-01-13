@@ -10,7 +10,15 @@
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <style>
-
+        .landing {
+            padding-top: 5%;
+        }
+        
+        .ui-btn-left {
+            position: absolute;
+            top: 17.24em;
+            left: 19em;
+        }
         
         @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
             .landing {
@@ -76,9 +84,16 @@
             <img class="landing" src="./Assets/img/logoLanding.png" />
             
         <!--content-->
-    </div>
+    <!-- </div> -->
     <!--indexpage-->
 
 </body>
+<script>
+    $(window).on('load', function() {
+        setTimeout(function () {
+            window.location.href = "./pages/Landing-page/index.html";
+        }, 3000);
+    })
+</script>
 
 </html>
