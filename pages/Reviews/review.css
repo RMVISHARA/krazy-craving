@@ -1,0 +1,438 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.star {
+    color: goldenrod;
+    font-size: 31px;
+    padding: 0px;
+    /* space out the stars */
+}
+
+.star::before {
+    content: '\2606';
+    /* star outline */
+    cursor: pointer;
+}
+
+.star.rated::before {
+    /* the style for a selected star */
+    content: '\2605';
+    /* filled star */
+}
+
+.stars {
+    counter-reset: rateme 0;
+    font-size: 2.0rem;
+    font-weight: 900;
+    margin-top: 8px;
+}
+
+.star.rated {
+    counter-increment: rateme 1;
+}
+
+/* .stars::after{
+    content: counter(rateme) '/5';
+}*/
+
+.bgimage {
+    background-image: url(../../Assets/img/resBackground.jpg);
+    background-attachment: fixed;
+
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 30%;
+    background-repeat: no-repeat;
+    position: fixed;
+}
+
+.box#blur.active {
+    filter: blur(20px);
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    color: black;
+    margin-top: 40%;
+    font-family: sans-serif;
+    text-align: left;
+    background-color: white;
+    border-radius: 35px 35px 0px 0px;
+    ;
+}
+
+.propic {
+    position: relative;
+    width: 112px;
+    height: 107px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.picColumn {
+    float: left;
+    width: 35%;
+    padding-top: 10px;
+    height: 150px;
+
+}
+
+.detailColumn {
+    margin-top: 20px;
+    float: left;
+    width: 65%;
+    padding-top: 10px;
+    height: 150px;
+
+}
+
+.title{
+    font-weight: bold;
+    display: inline;
+}
+.catagory{
+    padding-top:10px;
+    display: block;
+    color: #888;
+}
+
+.share {
+    padding-left: 27px;
+    margin-top: -5px;
+}
+
+.raw {
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+.message {
+    width: 90%;
+    min-height: 100px;
+    max-height: fit-content;
+    border-radius: 10px;
+    border-width: 0px;
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+}
+
+.submit {
+    width: 40%;
+    height: 40px;
+    background-color: rgb(243, 178, 36);
+}
+
+#cardItem {
+    width: 95.5%;
+    height: 150px;
+    border-radius: 10px;
+}
+
+#al {
+    height: 55px;
+    width: 55px;
+    margin-top: -100px;
+    margin-bottom: 15px;
+    margin-left: 300px;
+    box-shadow: 0px 3px 8px #333;
+    border-radius: 72%;
+}
+
+#usergrid {
+    font-family: Arial !important;
+    font-size: 14px !important;
+    padding-bottom: 10px;
+
+}
+
+.ma {
+    position: relative;
+    width: 100%;
+    font-size: 18px;
+    margin-left: 0px;
+    margin-top: -75px;
+}
+
+.round {
+    position: relative;
+    border-radius: 35px;
+    width: 20%;
+    margin-top: 8px;
+    margin-right: 250px;
+}
+
+#str {
+    position: relative;
+    margin-bottom: 28px;
+    margin-left: 150px;
+    margin-top: -60px;
+}
+
+.reviewHead {
+    margin-right: 250px;
+    font-size: 20px;
+
+    font-family: Arial;
+    padding-bottom: 20px;
+}
+
+/* popup box */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: none;
+    margin:0%;
+    padding: 2px;
+    border: 0px solid #888;
+    width: 100%;
+    position: relative;
+    margin-top: 70px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+   
+    .bgimage {
+        background-image: url(../../Assets/img/resBackground.jpg);
+        background-attachment: fixed;
+    
+        background-position: top;
+        background-repeat: no-repeat ;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        position: fixed;
+    }
+    .box {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        color: black;
+        margin-top: 90px;
+        font-family: sans-serif;
+        text-align: left;
+        background-color: white;
+        border-radius: 35px 35px 0px 0px;
+        ;
+    }
+    .raw .one{
+        padding-left: 10px;
+        padding-right: 10px;
+        display: inline;
+    }
+    .raw .two{
+        
+        padding-left: 20px;
+        padding-right: 10px;
+        display: inline;
+    }
+    .raw .three{
+
+       width:10%;
+       height: fit-content;
+       align-items: left;
+       float: left;
+    }
+    .propic {
+        position: relative;
+        width: 101px;
+        height: 85px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    
+    .picColumn {
+        float: left;
+        width:fit-content;
+        padding-top: 10px;
+        height: 150px;
+    
+    }
+    
+    .detailColumn {
+        margin-top: 20px;
+        float: left;
+        width: fit-content;
+        padding-top: 10px;
+        height: 150px;
+        padding-left: 10px;
+    
+    }
+    
+    .title{
+        font-weight: bold;
+        display: inline;
+        font-size: 18px;
+    }
+    .catagory{
+        padding-top:10px;
+        display: block;
+        font-size: 15px;
+        
+    }
+    
+    .share {
+        position: relative;
+        float: right;
+       
+        margin-top: -5px;
+    }
+    .cmnt{
+        padding-top: 30px;
+        text-align: center;
+    }
+
+.message {
+    width: 50%;
+    min-height: 100px;
+    max-height: fit-content;
+    border-radius: 10px;
+    border-width: 0px;
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+    padding-bottom: 25px;
+
+}
+
+.lanCarditem{
+    margin-left:-55% !important;
+}
+
+#al {
+    height: 55px;
+    width: 55px;
+    margin-top: -100px;
+    margin-bottom: 15px;
+    margin-left: 300px;
+    box-shadow: 0px 3px 8px #333;
+    border-radius: 72%;
+}
+
+#usergrid {
+    font-size: 14px !important;
+    padding-bottom: 10px;
+    padding-top: 10px !important;
+    margin-right:40%;
+    max-width: 100% !important;
+
+}
+
+.ma {
+    position: relative;
+    width: 100%;
+    font-size: 18px;
+    margin-left: 0px;
+    margin-right: 10%;
+    margin-top: -75px;
+    float: left;
+}
+
+.round {
+    position: relative;
+    border-radius: 35px;
+    width: 12%;
+    padding-bottom: 20px;
+}
+
+#str {
+    position: relative;
+    margin-bottom: 28px;
+
+    margin-top: -60px;
+}
+
+.reviewHead {
+    margin-right: 250px;
+    font-size: 20px;
+
+    font-family: Arial;
+    padding-bottom: 20px;
+}
+
+/* popup box */
+.modal {
+    display: none; /* Hidden by default */
+    position: relative; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 10px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: fit-content; /* Full width */
+    height: 50%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: none;
+    margin:0%;
+    padding: 2px;
+    border: 0px solid #888;
+    width: fit-content;
+    position: relative;
+    margin-top: 70px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .qr{
+      width: 200px;
+      height: 200px;
+      
+  }
+
+  }
+
+  
