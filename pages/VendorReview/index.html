@@ -222,13 +222,12 @@
     });
 
     $(document).ready(function() {
+        
         let replyList = localStorage.getItem("replyList");
         replyList = (replyList) ? JSON.parse(replyList) : [];
         $("#submit").click(function() {
             let rply = $('.reply').val();
-            let rplyList = {
-                "rply": rply
-            }
+            let rplyList = {"rply": rply,"num":rply}
             replyList.push(rplyList)
             localStorage.setItem("replyList", JSON.stringify(rplyList));
             buttonClick = true;

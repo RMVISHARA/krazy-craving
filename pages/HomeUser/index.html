@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Krazy Cravings</title>
+    <title>HOME CHEF</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- the three things that jQuery Mobile needs to work -->
@@ -29,20 +29,21 @@
             <div class="row">
                 <div class="col4">
                     <a onclick="history.back()" data-position-to="window" id="accountLogo">
-                        <img  class="backButton" src="../../Assets/img/icons/backButton.svg">
+                        <img class="backButton" src="../../Assets/img/icons/backButton.svg">
                     </a>
                 </div>
                 <div class="col-7">
                     <img class="logo" src="../../Assets/img/LogoDark.png">
                 </div>
                 <div class="col-3">
-                                        
-                        <a href="../UserAccount/index.html" data-position-to="window" id="accountLogo">
-                            <img  class="accountLogo" src="../../Assets/img/icons/usa.svg">
-                        </a>
-                        <a href="../Search/index.html" >
-                            <img class="searchLogo" src="../../Assets/img/icons/search.png">
-                        </a>
+
+
+                    <a href="../Search/index.html">
+                        <img class="searchLogo" src="../../Assets/img/icons/search.png">
+                    </a>
+                    <a href="../UserAccount/index.html" data-position-to="window" id="accountLogo">
+                        <img class="accountLogo" src="../../Assets/img/icons/usa.svg">
+                    </a>
                 </div>
             </div>
         </div>
@@ -101,18 +102,19 @@
 
         </div>
         <div class="footer" data-role="footer" data-position="fixed">
-            <div data-role="navbar" >
+            <div data-role="navbar">
                 <ul>
                     <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-home-active" id="active" data-ajax="false">Home</a></li>
                     <li><a href="../PastOrder/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-orders-inactive" id="inactive" data-ajax="false">Orders</a></li>
-                    <li><a href="../UserFavourites/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive"data-ajax="false">Favourites</a></li>
+                    <li><a href="../UserFavourites/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive" data-ajax="false">Favourites</a></li>
                     <li><a href="../Cart/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-cart-inactive" id="inactive" data-ajax="false">Cart</a></li>
-      
+
                 </ul>
             </div>
-        </div>   <!-- /navbar -->
         </div>
-        <!--<div data-role="footer" data-position="fixed">
+        <!-- /navbar -->
+    </div>
+    <!--<div data-role="footer" data-position="fixed">
             <div data-role="navbar" >
         <div data-role="footer" data-position="fixed">
             <div data-role="navbar">
@@ -125,17 +127,20 @@
             </div>
         </div>-->
     </div>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWb2Q5E16M1dqMb1RQ5EUciRjVpi4NMxI&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWb2Q5E16M1dqMb1RQ5EUciRjVpi4NMxI&callback=initMap">
     </script>
     <script type="text/javascript">
-        function getlocation(){
-            if(navigator.geolocation){
+        function getlocation() {
+            if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showLoc, errHand);
             }
         }
 
+<<<<<<< HEAD
         function showLoc(pos){
+=======
+        function showLoc(pos) {
+>>>>>>> fc0b25e (review page media query)
             latt = pos.coords.latitude;
             long = pos.coords.longitude;
             var lattlong = new google.maps.LatLng(latt, long);
@@ -143,17 +148,23 @@
                 center: lattlong,
                 zoom: 18,
                 mapTypeControl: true,
-                navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL}
+                navigationControlOptions: {
+                    style: google.maps.NavigationControlStyle.SMALL
+                }
             }
             var mapg = new google.maps.Map(document.getElementById("currentmap"), OPTions);
             var markerg =
-                new google.maps.Marker({position:lattlong, map:mapg, title:"You are here!"});
+                new google.maps.Marker({
+                    position: lattlong,
+                    map: mapg,
+                    title: "You are here!"
+                });
         }
 
         function errHand(err) {
-            switch(err.code) {
+            switch (err.code) {
                 case err.PERMISSION_DENIED:
-                    result.innerHTML = "The application doesn't have the permission"  +
+                    result.innerHTML = "The application doesn't have the permission" +
                         "to make use of location services"
                     break;
                 case err.POSITION_UNAVAILABLE:
@@ -163,7 +174,7 @@
                     result.innerHTML = "The request to get user location timed out"
                     break;
                 case err.UNKNOWN_ERROR:
-                    result.innerHTML = "Time to fetch location information exceeded"+
+                    result.innerHTML = "Time to fetch location information exceeded" +
                         "the maximum timeout interval"
                     break;
             }

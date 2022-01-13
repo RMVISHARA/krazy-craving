@@ -3,11 +3,12 @@ $(document).ready(function() {
     totalPoint = Number(totalPoint);
     totalPoint == null || totalPoint == undefined ? totalPoint = 0 : totalPoint = totalPoint
     localStorage.setItem("totalPoint", totalPoint);
-    // console.log('totalPoint : ', totalPoint)
+    console.log('totalPoint : ', totalPoint)
     $('#totalPoint').text(totalPoint);
 })
 
 $(document).ready(function() {
+<<<<<<< HEAD
     var allVendors = localStorage.getItem("vendors");
     
     allVendors = (allVendors) ? JSON.parse(allVendors) : [
@@ -204,6 +205,16 @@ $(document).ready(function() {
             ] 
         },
     ];
+=======
+    var vendorList = localStorage.getItem("vendorList");
+    vendorList = (vendorList) ? JSON.parse(vendorList) : [
+        { 'id': '1', 'imageurl': '../../Assets/img/pizzaHut.jpg', 'name': 'Pizza Hut', 'address': '228A1/1 Colombo - Kandy Rd, 11300', 'rating': '4.5', 'time': 20, 'deliveryPrice' : 90},
+        { 'id': '2', 'imageurl': '../../Assets/img/sohaniRestaurent.jpg', 'name': 'Sohani Restaurant', 'address': '376/2/A, 5th Lane, Kelaniya', 'rating': '4.2', 'time': 30, 'deliveryPrice' : 100 },
+        { 'id': '3', 'imageurl': '../../Assets/img/drinks.jpg', 'name': 'Udeni\'s Juice Bar', 'address': '169, High level Rd, Nugegoda', 'rating': '4.8', 'time': 50, 'deliveryPrice' : 90 },
+        { 'id': '4', 'imageurl': '../../Assets/img/pizza.jpg', 'name': 'Arthur\'s Pizza', 'address': 'No 10, Temple\'s Road, Rathmalana', 'rating': '4.5', 'time': 120, 'deliveryPrice' : 60},
+        { 'id': '5', 'imageurl': '../../Assets/img/burger.jpg', 'name': 'Burger Palace', 'address': 'No 4, 3rd Lane, Koswatta', 'rating': '4.2', 'time': 120, 'deliveryPrice' : 120 }
+    ]
+>>>>>>> fc0b25e (review page media query)
 
     localStorage.setItem("vendors", JSON.stringify(allVendors));
 
