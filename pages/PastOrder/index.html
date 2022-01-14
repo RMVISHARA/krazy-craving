@@ -36,17 +36,6 @@
 
 <body>
 
-<<<<<<< HEAD
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<link rel="stylesheet" href="../../Assets/css/style.min.css">
-<link rel="stylesheet" href="pastOrder.css">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script src="../../Assets/js/js.min.js"></script>
-<script src="pastOrder.js"></script>
-<div data-role="page" id="trackPastOrder">
-=======
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="../../Assets/css/style.min.css">
     <link rel="stylesheet" href="pastOrder.css">
@@ -55,7 +44,6 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="../../Assets/js/js.min.js"></script>
     <div data-role="page" id="trackPastOrder">
->>>>>>> ba89c02 (veder page)
 
         <div data-role="header" class="mhead" style="background-color: black" data-position="fixed" data-tap-toggle="false">
             <div class="row">
@@ -75,55 +63,9 @@
                         <img class="accountLogo" src="../../Assets/img/icons/usa.svg">
                     </a>
 
-<<<<<<< HEAD
-
-    <div data-role="content" align="center">
-        <p class="pageTitle">Track Orders</p>
-        <div class="wrapper">
-            <div class="currentDiv">
-                <a href="../CurrentOrder" data-role="button" rel="external" id="currentBtn">Current Order</a>
-            </div>
-            <div class="pastDiv">
-                <a href="#" data-role="button" rel="external" id="pastBtn">Past Orders</a>
-            </div>
-        </div>
-
-        <div class="elements container" id="pastOrdersContainer"></div>
-
-        <!-- wtf is this used for ?? -->
-        <div data-role="popup" id="rate-popup">
-            <div data-role="content" >
-                <a href="#" data-rel="back" id="popupback"> <img src="../../Assets/img/icons/close.png" id="" height="15" width="15"></a>
-                <br>
-                <h1 id="header1">Rate Us</h1>
-                <form>
-                    <div data-role="fieldcontain">
-                        <div class='rating-stars text-center'>
-                            <ul id='stars'>
-                                <li class='star' title='Poor' data-value='1' onclick="getRating(1)">
-                                    <i class='fa fa-star fa-fw'></i>
-                                </li>
-                                <li class='star' title='Fair' data-value='2' onclick="getRating(2)">
-                                    <i class='fa fa-star fa-fw'></i>
-                                </li>
-                                <li class='star' title='Good' data-value='3' onclick="getRating(3)">
-                                    <i class='fa fa-star fa-fw'></i>
-                                </li>
-                                <li class='star' title='Excellent' data-value='4' onclick="getRating(4)">
-                                    <i class='fa fa-star fa-fw'></i>
-                                </li>
-                                <li class='star' title='WOW!!!' data-value='5' onclick="getRating(5)">
-                                    <i class='fa fa-star fa-fw'></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <center>
-                            <input type="textarea" name="message" id="message" value="" placeholder="Message" data-role=none />
-=======
                 </div>
             </div>
         </div>
->>>>>>> ba89c02 (veder page)
 
 
         <div data-role="content" align="center">
@@ -221,11 +163,6 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-
-    </div>
-=======
->>>>>>> ba89c02 (veder page)
 
 
         <div class="footer" data-role="footer" data-position="fixed">
@@ -286,28 +223,8 @@
     <script>
         var rating = 0;
 
-<<<<<<< HEAD
-
-    });
-</script>
-<script>
-    var rating = 0;
-    function getRating(rate) {
-        rating = rate
-    }
-
-    function onAddComment() {
-
-        var comment = document.getElementById("message").value;
-
-
-        if (comment == "") {
-            alert("Comment can not be empty!");
-            return;
-=======
         function getRating(rate) {
             rating = rate
->>>>>>> ba89c02 (veder page)
         }
 
         function onAddComment() {
@@ -348,36 +265,7 @@
             document.getElementById("message").value = ""
 
         }
-<<<<<<< HEAD
-
-
-        localStorage.setItem("vendorList", JSON.stringify(vendorList))
-        localStorage.setItem("commentList", JSON.stringify(commentList))
-        console.log(JSON.parse(commentList)[0])
-        document.getElementById("message").value = ""
-
-    }
-
-    function rateSelectedOrder(val){
-        var vendors = JSON.parse(localStorage.getItem("vendors"));
-        var selected = {};
-        
-        vendors.forEach(element => {
-            if(element.id == val){
-                selected.id = element.id;
-                selected.name = element.name;
-                selected.image = element.menu[0].imageurl;
-            }
-        });
-
-        localStorage.setItem("commentingOnRestuarent",JSON.stringify(selected));
-        window.location.href="../Reviews/index.html"
-    }
-
-</script>
-=======
     </script>
->>>>>>> ba89c02 (veder page)
 
 
 

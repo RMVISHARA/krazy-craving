@@ -1,34 +1,40 @@
-.bgimage {
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 30%;
-    background-repeat: no-repeat;
-    position: fixed;
+.back-btn {
+    margin-left: 2%;
+    text-decoration: none !important;
+    font-size: 18px;
 }
 
-.box#blur.active {
-    filter: blur(20px);
+.back-btn a:hover {
+    text-decoration: none !important;
 }
 
-.box {
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    color: black;
-    margin-top: 40%;
-    font-family: sans-serif;
-    text-align: left;
-    background-color: white !important;
-    border-radius: 35px 35px 0px 0px;
-    ;
+#header {
+    z-index: 1000;
+}
+
+.mhead {
+    margin: 3px 0px 5px 0px;
+}
+
+.back-btn {
+    margin-left: 2%;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.back-btn a:hover {
+    text-decoration: none;
 }
 
 .menu-ham2 {
     width: 120px;
     margin: 5px 0 3px 75px;
+}
+
+.vendorImage {
+    background-size: cover;
+    width: 380px;
+    height: 400px;
 }
 
 #img1 {
@@ -40,7 +46,7 @@
 #name {
     font-size: 22px;
     height: 12px;
-    color: black;
+    color: white;
     text-shadow: none;
 }
 
@@ -55,7 +61,7 @@
     width: 100%;
     height: 400px;
     padding-left: 20px;
-    padding-top: 30px;
+    padding-top: 300px;
     background: rgba(0, 0, 0, 0.4);
 }
 
@@ -141,18 +147,11 @@
 
 .heart-icon {
     position: absolute;
-    margin-top: -140px;
+    top: 20%;
     left: 82%;
     z-index: 2;
-    width: 40px;
-    height: 37px;
-}
-
-.image {
-    overflow: hidden !important;
-    height: 100px;
-    background-size: contain !important;
-    padding-top: 20px;
+    width: 35px;
+    height: 35px;
 }
 
 
@@ -172,15 +171,25 @@
 /* Landscape */
 
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    #header {
+        z-index: 1000;
+    }
+    .mhead {
+        margin: 3px 0px 5px 0px;
+    }
+    .back-btn {
+        margin-left: 2%;
+        text-decoration: none;
+        font-size: 18px;
+    }
     .menu-ham2 {
         width: 150px !important;
         margin: 5px 0 3px 215px !important;
     }
     .vendorImage {
         background-size: cover;
-        width: 100% !important;
+        width: 670px !important;
         height: 250px !important;
-        background-repeat: no-repeat;
     }
     #img1 {
         width: 670px !important;
@@ -275,11 +284,11 @@
     }
     .heart-icon {
         position: absolute;
-        margin-top: -140px;
-        left: 85%;
+        top: 17.2%!important;
+        left: 73%!important;
         z-index: 2;
-        width: 40px;
-        height: 37px;
+        width: 40px!important;
+        height: 40px!important;
     }
 }
 
@@ -290,7 +299,7 @@
     /* For general iPad layouts */
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
     /* For portrait layouts only */
     #header {
         z-index: 1000;
@@ -383,8 +392,8 @@
         margin-left: 74%;
     }
     /*#usergrid>#block1, #usergrid >#block2 {
-      width: 100% !important;
-    }*/
+        width: 100% !important;
+      }*/
     #usergrid {
         font-family: Arial !important;
         font-size: 14px !important;
@@ -417,15 +426,15 @@
     }
     .heart-icon {
         position: absolute;
-        margin-top: -108px;
-        left: 68%;
+        top: 26.2%!important;
+        left: 69%!important;
         z-index: 2;
-        width: 60px;
-        height: 65px;
+        width: 52px!important;
+        height: 52px!important;
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
     /* For landscape layouts only */
     #header {
         z-index: 1000;
@@ -518,8 +527,8 @@
         margin-left: 74%;
     }
     /*#usergrid>#block1, #usergrid >#block2 {
-      width: 100% !important;
-    }*/
+        width: 100% !important;
+      }*/
     #usergrid {
         font-family: Arial !important;
         font-size: 14px !important;
@@ -551,9 +560,11 @@
         padding-bottom: 20px;
     }
     .heart-icon {
-        margin-top: -108px;
-        left: 73%;
-        width: 60px;
-        height: 65px;
+        position: absolute;
+        top: 24.8%!important;
+        left: 76%!important;
+        z-index: 2;
+        width: 55px!important;
+        height: 55px!important;
     }
 }
