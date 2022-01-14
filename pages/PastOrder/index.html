@@ -5,9 +5,6 @@
     <meta charset="utf-8">
     <title>Krazy Cravings</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../../Assets/css/common.user.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
-
 
     <!--slider-->
 </head>
@@ -43,29 +40,24 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="../../Assets/js/js.min.js"></script>
+    <script src="pastOrder.js"></script>
     <div data-role="page" id="trackPastOrder">
 
-        <div data-role="header" class="mhead" style="background-color: black" data-position="fixed" data-tap-toggle="false">
+        <div data-role="header" class="mhead" data-position="fixed" data-tap-toggle="false">
             <div class="row">
-                <div class="col4">
-                    <a onclick="history.back()" data-position-to="window" id="accountLogo">
-                        <img class="backButton" src="../../Assets/img/icons/backButton.svg">
-                    </a>
+                <div class="">
+                    <img class="logo" src="../../Assets/img/rectangle_logo_black.png">
                 </div>
-                <div class="col-7">
-                    <img class="logo" src="../../Assets/img/LogoDark.png">
-                </div>
-                <div class="col-3">
-                    <a href="../Search/index.html">
-                        <img class="searchLogo" src="../../Assets/img/icons/search.png">
-                    </a>
-                    <a href="../UserAccount/index.html" data-position-to="window" id="accountLogo">
-                        <img class="accountLogo" src="../../Assets/img/icons/usa.svg">
-                    </a>
-
+                <div class="row icons">
+                    <div class="">
+                        <a href="#" data-position-to="window" id="notificationLogo">
+                            <img class="notificationLogo ui-btn-right" src="../../Assets/img/icons/notification.svg">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- /header -->
 
 
         <div data-role="content" align="center">
@@ -78,56 +70,10 @@
                     <a href="#" data-role="button" rel="external" id="pastBtn">Past Orders</a>
                 </div>
             </div>
-            <div class="elements container">
-                <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem1">
-                    <div class="imageContent">
-                        <p class="name"><b>Arthur's Pizza</b></p>
-                        <p class="detail">12/12/2020</p>
-                        <p class="detail">Order#: 1234</p>
-                        <a href="../Reviews/index.html" data-role="button" class="rate">Rate Order</a>
-                    </div>
-                </div>
-                <div class=" card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem2">
-                    <div class="imageContent">
-                        <p class="name"><b>Arthur's Pizza</b></p>
-                        <p class="detail">12/12/2020</p>
-                        <p class="detail">Order#: 1234</p>
-                        <a href="../Reviews/index.html" data-role="button" class="rate">Rate Order</a>
-                    </div>
-                </div>
-                <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem3">
-                    <div class="imageContent">
-                        <p class="name"><b>Arthur's Pizza</b></p>
-                        <p class="detail">12/12/2020</p>
-                        <p class="detail">Order#: 1234</p>
-                        <a href="../Reviews/index.html" data-role="button" class="rate">Rate Order</a>
-                    </div>
-                </div>
-                <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem3">
-                    <div class="imageContent">
-                        <p class="name"><b>Arthur's Pizza</b></p>
-                        <p class="detail">12/12/2020</p>
-                        <p class="detail">Order#: 1234</p>
-                        <a href="../Reviews/index.html" data-role="button" class="rate">Rate Order</a>
-                    </div>
-                </div>
-                <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem3">
-                    <div class="imageContent">
-                        <p class="name"><b>Arthur's Pizza</b></p>
-                        <p class="detail">12/12/2020</p>
-                        <p class="detail">Order#: 1234</p>
-                        <a href="../Reviews/index.html" data-role="button" class="rate">Rate Order</a>
-                    </div>
-                </div>
-                <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem3">
-                    <div class="imageContent">
-                        <p class="name"><b>Arthur's Pizza</b></p>
-                        <p class="detail">12/12/2020</p>
-                        <p class="detail">Order#: 1234</p>
-                        <a href="../Reviews/index.html" data-role="button" class="rate">Rate Order</a>
-                    </div>
-                </div>
-            </div>
+
+            <div class="elements container" id="pastOrdersContainer"></div>
+
+            <!-- wtf is this used for ?? -->
             <div data-role="popup" id="rate-popup">
                 <div data-role="content">
                     <a href="#" data-rel="back" id="popupback"> <img src="../../Assets/img/icons/close.png" id="" height="15" width="15"></a>
@@ -162,13 +108,14 @@
                     </form>
                 </div>
             </div>
+
         </div>
 
 
         <div class="footer" data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="../HomeUser/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
+                    <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
                     <li><a href="../PastOrder/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-orders-active" id="active" data-ajax="false">Orders</a></li>
                     <li><a href="../UserFavourites/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive" data-ajax="false">Favourites</a></li>
                     <li><a href="../Cart/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-cart-inactive" id="inactive" data-ajax="false">Cart</a></li>
@@ -264,6 +211,22 @@
             console.log(JSON.parse(commentList)[0])
             document.getElementById("message").value = ""
 
+        }
+
+        function rateSelectedOrder(val) {
+            var vendors = JSON.parse(localStorage.getItem("vendors"));
+            var selected = {};
+
+            vendors.forEach(element => {
+                if (element.id == val) {
+                    selected.id = element.id;
+                    selected.name = element.name;
+                    selected.image = element.menu[0].imageurl;
+                }
+            });
+
+            localStorage.setItem("commentingOnRestuarent", JSON.stringify(selected));
+            window.location.href = "../Reviews/index.html"
         }
     </script>
 

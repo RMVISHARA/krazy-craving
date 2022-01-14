@@ -12,35 +12,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="http://checkout.stripe.com/checkout.js"></script>
     <script src="../../Assets/js/js.min.js"></script>
-
+    <!--slider-->
+    <link rel="stylesheet" href="../../Assets/css/style.min.css">
+    <!--slider-->
     <link rel="stylesheet" type="text/css" href="../../Assets/css/common.user.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 
 </head>
 
 <body>
 
     <div data-role="page" id="cartpage">
-        <div data-role="header" class="mhead" style="background-color: black" data-position="fixed" data-tap-toggle="false">
-            <div class="row">
-                <div class="col4">
-                    <a onclick="history.back()" data-position-to="window" id="accountLogo">
-                        <img class="backButton" src="../../Assets/img/icons/backButton.svg">
-                    </a>
-                </div>
-                <div class="col-7">
-                    <img class="logo" src="../../Assets/img/LogoDark.png">
-                </div>
-                <div class="col-3">
-                    <a href="../Search/index.html">
-                        <img class="searchLogo" src="../../Assets/img/icons/search.png">
-                    </a>
-                    <a href="../UserAccount/index.html" data-position-to="window" id="accountLogo">
-                        <img class="accountLogo" src="../../Assets/img/icons/usa.svg">
-                    </a>
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" id="header">
 
-                </div>
+            <div class="mhead">
+                <a class="back-btn" href="../Vendor">
+                    < Back</a>
+                        <img class="menu-ham2" src="../../Assets/img/rectangle_logo_black.png">
             </div>
+            <!-- /grid-b -->
         </div>
         <div data-role="content" class="shopping-cart">
 
@@ -51,7 +40,6 @@
             </div>
             <div id="foodtype"> Pizza Parata </div>
             <div id="price"> 130 </div>
-
             <div class="adder">
                 <img src="../../Assets/img/icons/add-button.svg" class="plus" height="20" width="20">
                 <input type="number" name="number" id="qty" value="1" data-role=none disabled/>
@@ -93,16 +81,6 @@
                 <hr class="style-eight" />
                 <form>
 
-<<<<<<< HEAD
-            <br>
-        </div>
-        <div align="center">
-            <a href="#v-promo-popup-success2" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" onclick='myFunction()' class="checkout" id="checkout" >Place Order</a>
-        </div>
-        
-        <div data-role="popup" id="v-promo-popup-success">
-            <div data-role="content" >
-=======
                     <div class="ui-grid-b" id="selection">
                         <div class="ui-block-a" id="select-block1"><input type="radio" name="radio-choice-v-2" id="cash" checked="checked"> </div>
                         <div class="ui-block-b" id="select-block2">Cash</div>
@@ -112,13 +90,13 @@
                         <div class="ui-block-c" id="select-block3"><img src="../../Assets/img/icons/card-payment.png" height="21" width="33"></div>
                     </div>
                 </form>
->>>>>>> ba89c02 (veder page)
 
                 <br>
             </div>
             <div align="center">
                 <a href="#v-promo-popup-success2" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" onclick='myFunction()' class="checkout" id="checkout">Place Order</a>
             </div>
+
             <div data-role="popup" id="v-promo-popup-success">
                 <div data-role="content">
 
@@ -144,13 +122,14 @@
             </div>
 
         </div>
+        <!--content-->
         <div class="footer" data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="../HomeUser/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
+                    <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
                     <li><a href="../PastOrder/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-orders-inactive" id="inactive" data-ajax="false">Orders</a></li>
                     <li><a href="../UserFavourites/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive" data-ajax="false">Favourites</a></li>
-                    <li><a href="../Cart/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-cart-active" id="active" data-ajax="false">Cart</a></li>
+                    <li><a href="../Cart/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-cart-active" id="active" data-ajax="">Cart</a></li>
 
                 </ul>
             </div>
@@ -172,7 +151,6 @@
 							</div>
 							<div id="foodtype">${item.itemName}</div>
 							<div id="price"> ${item.price}</div>
-
 							<div class="adder">
 								 <img src="../../Assets/img/icons/add-button.svg" class="plus" height="20" width="20">
 								 <input type="number" name="number" id="qty" value="${item.quantity}" data-role=none disabled/>
