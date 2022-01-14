@@ -33,6 +33,7 @@
             </div>
             <!-- /grid-b -->
         </div>
+
         <div data-role="content" align="center">
             <div class="vendorImage" id="bgImage">
                 <div class="details" align="left">
@@ -61,6 +62,35 @@
                 <span><b>Reviews</b></span>
             </div>
             <div id="reviewlist" align="center">
+            </div>
+
+            <!-- modals -->
+            <div class="modal fade" id="v-promo-popup-success4" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div data-role="content" >
+                        <center><img id="av" src="../../Assets/img/icons/gift-icon.png" width="85" height="85"></center>
+                        <h1 id="header1"><span id="message3">Your Reply has been added successfully!!</span></h1>
+                        <br>
+                    </div>
+                </div>
+                </div>
+            </div>
+  
+            <div class="modal fade" id="popup-reply2" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="p-3">
+                        <input type="text" name="reply" id="reply" value="" placeholder="Your Reply..." /><br>
+                        <a href="" data-role="button" onclick='onAddRply()' class="submit pl-2 pt-2" id="submit" >
+                            Submit
+                        </a>
+                    </div>
+                </div>
+                </div>
             </div>
 
         </div>

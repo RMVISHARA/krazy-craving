@@ -82,7 +82,7 @@
                 <center>
                     <input type="textarea" class="message" name="message" id="message" value="" placeholder="Message" data-role=none />
                     <br>
-                    <a href="#v-promo-popup-success2" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" onclick='onAddComment()' class="submit" id="submit" >SUBMIT</a>
+                    <a href="" data-role="button"  onclick='onAddComment()' class="submit" id="submit" >SUBMIT</a>
                 </center>
 
                 <!-- success message -->
@@ -105,6 +105,18 @@
                         <br>
                     </div>
                 </div>
+
+                <div data-role="popup" id="popup-reply" data-theme="a" class="ui-corner-all" style="width: 390px;">
+                        <div class="p-3">
+                            <input type="text" name="reply" id="reply" value="" placeholder="Your Reply..." /><br>
+                            <a href="" data-role="button" onclick='onAddRply()' class="submit pl-2 pt-2" id="submit" >
+                                Submit
+                            </a>
+                        </div>
+                </div>
+
+
+
 
             </div>
             <div class="raw three">

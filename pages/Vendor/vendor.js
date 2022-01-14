@@ -70,13 +70,15 @@ function loadCommentList(){
                                 </div>
                             </div>
                             <div id="rplylist" align="center">
-                                <input type="textarea" class="reply" name="reply" id="reply${x.id}" value="" placeholder="reply"/>
-                                <button onclick="onAddRply(${x.id})"id="reply"> reply</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#popup-reply2"
+                                onclick="saveOgCommentId(${x.id})">
+                                    Reply
+                                </button>
                             </div>
                             `
                             x.replys.forEach(rep => {
                                     outputHtml += `
-                                            <div class="d-flex justify-content-center">
+                                            <div class="row">
                                                 <small>${rep}</small>
                                             </div>
                                     `;
@@ -91,15 +93,20 @@ function loadCommentList(){
     $("#reviewlist").html(outputHtml);
 };
 
-function onAddRply(val) 
+function onAddRply() 
 {
+    var val = JSON.parse(localStorage.getItem("ogCommentId"));
 
-    var reply = document.getElementById(`reply${val}`).value;
+    var reply = document.getElementById('reply').value;
     var index;
+
     if (reply == "") {
         alert("Reply can not be empty!");
         return;
-    }
+    };
+
+    $("#popup-reply2").modal('hide'); 
+    setTimeout(function(){$("#v-promo-popup-success4").modal("show");}, 1500);
 
     let commentList = JSON.parse(localStorage.getItem("commentList"));
     commentList.forEach((e,i) => {
@@ -109,7 +116,11 @@ function onAddRply(val)
     commentList[index].replys.push(reply);
     localStorage.setItem("commentList",JSON.stringify(commentList));
 
-    document.getElementById(`reply${val}`).value = "";
+    document.getElementById('reply').value = "";
     loadCommentList();
+};
+
+function saveOgCommentId(val){
+    localStorage.setItem("ogCommentId",val);
 };
 
