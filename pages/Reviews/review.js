@@ -49,19 +49,19 @@
 
     function onAddComment() {
 
-        // var comment = document.getElementById("message").value;
+        var comment = document.getElementById("message").value;
+        var id = 1;
 
+        if (comment == "") {
+            alert("Comment can not be empty!");
+            return;
+        }
 
-        // if (comment == "") {
-        //     alert("Comment can not be empty!");
-        //     return;
-        // }
-        // var feedback = { "comment": comment, "rating": rating, "bussiness": bussiness }
-        // console.log(feedback)
+        let commentList = localStorage.getItem("commentList");
+        commentList = (commentList) ? JSON.parse(commentList) : []
 
-        // let commentList = localStorage.getItem("commentList");
-        // commentList = (commentList) ? JSON.parse(commentList) : []
-        // commentList.push(feedback)
+        var feedback = { id: id, comment: comment, rating: rating, bussiness: bussiness, replys: [] };
+        commentList.push(feedback);
 
         $('#message2').text("Thank you for reviewing product!!");
 
@@ -78,9 +78,9 @@
         // }
         // localStorage.setItem("vendorList", JSON.stringify(vendorList))
 
-        // localStorage.setItem("commentList", JSON.stringify(commentList))
-        // document.getElementById("message").value = ""
-        // loadCommentList()
+        localStorage.setItem("commentList", JSON.stringify(commentList))
+        document.getElementById("message").value = ""
+        loadCommentList()
     }
 
 
@@ -88,7 +88,7 @@
         if(bussiness){
             let commentList = localStorage.getItem("commentList");
             commentList = (commentList) ? JSON.parse(commentList) : [];
-            console.log(commentList)
+            console.log("comments : ",commentList);
 
             let outputHtml = ``;
             commentList.map(x => {
@@ -105,30 +105,88 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr>
-                    `
+                            <div id="rplylist" align="center">
+                            <input type="textarea" class="reply" name="reply" id="reply" value="" placeholder="reply"/>
+                            <button onclick="onAddRply(${x.comment},${x.comment})"id="reply"> reply</button>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+					`;
                 }
             });
-            
+
             $("#reviewlist").html(outputHtml);
-        }
+        };
+        
     }
 
+    loadCommentList()
+
+    /*function loadRplyList() {
+        let commentList = localStorage.getItem("commentList");
+        commentList = (commentList) ? JSON.parse(commentList) : []
+        console.log(commentList)
     
-
-    window.onload = startInterval;
-
-    function startInterval()
-    {
-        setInterval("loadCommentList();", 10000);
+        let outputHtml = ``;
+        commentList.map(x => {
+            outputHtml += `
+                    <div class="ui-grid-a" class="lanCardItem" id="usergrid">
+                            <img src="../../Assets/img/boy.jpg" class="round">
+                            <div class="ma">
+                                <p style="color: #000000; margin-top: 3px;">Jone Doe</p>
+                                <p style="color: #000000; margin-top: -8px;">${x.comment}</p>
+                                <div id="str">
+                                    <span class="fa fa-star checked fa-xs" style="color: #FFCC36;margin-left:35%; font-size: 1.3rem; position: relative; margin-top: -13px;"></span>
+                                    <span style="color: #FFCC36; font-size: 1.3rem; position: relative; margin-top: -13px; margin-left: 10px">${x.rating}/5</span>
+                                </div>
+                                <div id="rplylist" align="center">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        `
+        })
+        $("#reviewlist").html(outputHtml);
     }
+    loadCommentList()*/
 
-    window.onload = function() {
-        if(!window.location.hash) {
-            window.location = window.location + '#loaded';
-            window.location.reload();
-        }
+function onAddRply(comment) {
+
+    let commentList = localStorage.getItem("commentList");
+    commentList = (commentList) ? JSON.parse(commentList) : []
+    var item = commentList.getRating();
+    var id = item.id;
+    var reply = document.getElementById("reply").value;
+
+    if (reply == "") {
+        alert("reply can not be empty!");
+        return;
     }
-;
+    var replyFeedBack = { "cmntId": reply }
+    console.log(replyFeedBack)
+
+    let replyMessageList = localStorage.getItem("replyMessageList");
+    replyMessageList = (replyMessageList) ? JSON.parse(replyMessageList) : []
+    replyMessageList.push(replyFeedBack)
+
+    /*  let vendorList = localStorage.getItem("vendorList");
+        vendorList = (vendorList) ? JSON.parse(vendorList) : []
+        var newRating = (45 + rating) / 11;
+        var finalRate = newRating.toFixed(1)
     
+        for (var i = 0; i < vendorList.length; i++) {
+            if (vendorList[i].id === "1") {
+                vendorList[i].rating = finalRate.toString();
+                break;
+            }
+        }*/
 
+
+
+    localStorage.setItem("replyMessageList", JSON.stringify(replyMessageList))
+        // console.log(JSON.parse(replyMessageList)[0])
+    document.getElementById("reply").value = ""
+        // loadreplyList()
+}
