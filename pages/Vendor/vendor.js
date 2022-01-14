@@ -38,8 +38,33 @@ $(document).ready(function(){
 
     });
 
-    var x = JSON.parse(localStorage.getItem("favVendors"));
 
+    let commentList = localStorage.getItem("commentList");
+    commentList = (commentList) ? JSON.parse(commentList) : []
+
+    let outputHtml = ``;
+    commentList.map(x => {
+        if(x.bussiness == selectedVendor){
+            outputHtml += `
+                            <div class="ui-grid-a"id="usergrid">
+                                    <img src="../../Assets/img/boy.jpg" class="round">
+                                    <div class="ma">
+                                        <p style="color: #000000; margin-top: 2px;">Jone Doe</p>
+                                        <p style="color: #000000; margin-top: -8px;">${x.comment}</p>
+                                        <div id="str">
+                                            <span class="fa fa-star checked fa-xs" style="color: #FFCC36;margin-left:35%; font-size: 1.3rem; position: relative; margin-top: -13px;"></span>
+                                            <span style="color: #FFCC36; font-size: 1.3rem; position: relative; margin-top: -13px; margin-left: 10px">${x.rating}/5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            `
+        }
+    })
+
+    $("#reviewlist").html(outputHtml);
+
+    var x = JSON.parse(localStorage.getItem("favVendors"));
+    
     if(x[String(selectedVendor)]){
         document.getElementById("heart").src="../../Assets/img/icons/liked-heart.svg";
     }

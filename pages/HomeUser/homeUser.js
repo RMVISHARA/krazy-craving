@@ -234,7 +234,8 @@ $(document).ready(function() {
     })
 
     topVendorList.forEach(function(obj) {
-        document.getElementById("topOutlets").innerHTML += `
+        document.getElementById("topOutlets").innerHTML += 
+            `
                 <a class="link" href="" onclick="restaurent(${obj.id})">
                     <div class="card" id="cardItem">
                         <img src="${obj.imageurl}" class="cardImage">

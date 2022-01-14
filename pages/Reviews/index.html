@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Star Rating System</title>
+    <title>Krazy Cravings</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="../../Assets/css/common.user.css">
     <link rel="stylesheet" type="text/css" href="review.css">
@@ -62,10 +62,10 @@
         <div class="box" id="blur">
             <div class="raw one">
                 <div class="picColumn">
-                    <img src="../../Assets/img/wok-cheese-kottu.jpg" class="propic">
+                    <img src="" class="propic" id="foodPic">
                 </div>
                 <div class="detailColumn">
-                    <h5 class="title">Sohani Restaurant</h5>
+                    <h5 class="title" id="bussinessName"></h5>
                     <a href="#" id="myBtn">
                         <img class="share" src="../../Assets/img/icons/icons8-share.svg">
                     </a>
@@ -86,9 +86,20 @@
                     <input type="textarea" class="message" name="message" id="message" value="" placeholder="Message"
                         data-role=none />
                     <br>
-                    <a href="#" class="submit" data-role="button" data-rel="back" id="submit"
-                        onclick="onAddComment()">SUBMIT</a>
+                    <a href="#v-promo-popup-success2" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" onclick='onAddComment()' class="submit" id="submit" >SUBMIT</a>
                 </center>
+
+                <!-- success message -->
+                <!-- <div data-role="popup" id="v-promo-popup-success2">
+                    <div data-role="content" >
+                        <a href="#" data-rel="back" id="popupback2"> <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15"></a>
+                        <br>
+                        <center><img id="av" src="../../Assets/img/icons/gift-icon.png" width="85" height="85"></center>
+                        <h1 id="header1"><span id="message3"></span></h1>
+                        <br>
+                    </div>
+                </div> -->
+
             </div>
             <div class="raw three">
                 <div class="reviewHead">
@@ -98,6 +109,7 @@
                 <div id="reviewlist" align="center">
                 </div>
             </div>
+
         </div>
 
         <div class="footer" data-role="footer" data-position="fixed">

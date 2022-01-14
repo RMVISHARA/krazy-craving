@@ -136,7 +136,6 @@
     margin-left: 20px;
 }
 .card {
-    background-image: url("../../Assets/img/pizza.jpg");
     width: 320px;
     border-radius: 20px;
     margin-right: 50px;
@@ -386,7 +385,6 @@
         margin-left: 8px !important;
     }
     .card {
-        background-image: url("../../Assets/img/pizza.jpg");
         width: 320px !important;
         border-radius: 20px  !important;
         margin-right: 15px !important;
@@ -633,7 +631,6 @@
         margin-left: 20px;
     }
     .card {
-        background-image: url("../../Assets/img/pizza.jpg");
         width: 320px;
         border-radius: 20px;
         margin-right: 20px;
@@ -875,7 +872,6 @@
         margin-left: 65px;
     }
     .card {
-        background-image: url("../../Assets/img/pizza.jpg");
         width: 400px;
         border-radius: 20px;
         margin-right: 50px;

@@ -43,6 +43,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="../../Assets/js/js.min.js"></script>
+<script src="pastOrder.js"></script>
 <div data-role="page" id="trackPastOrder">
 
     <div data-role="header" class="mhead" data-position="fixed" data-tap-toggle="false">
@@ -71,56 +72,10 @@
                 <a href="#" data-role="button" rel="external" id="pastBtn">Past Orders</a>
             </div>
         </div>
-        <div class="elements container">
-            <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem1">
-                <div class="imageContent">
-                    <p class="name"><b>Arthur's Pizza</b></p>
-                    <p class="detail">12/12/2020</p>
-                    <p class="detail">Order#: 1234</p>
-                    <a  href="../Reviews/index.html" data-role="button" class="rate">Rate Order</a>
-                </div>
-            </div>
-            <div class=" card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem2">
-                <div class="imageContent">
-                    <p class="name"><b>Arthur's Pizza</b></p>
-                    <p class="detail">12/12/2020</p>
-                    <p class="detail">Order#: 1234</p>
-                    <a  href="../Reviews/index.html" data-role="button" class="rate">Rate Order</a>
-                </div>
-            </div>
-            <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem3">
-                <div class="imageContent">
-                    <p class="name"><b>Arthur's Pizza</b></p>
-                    <p class="detail">12/12/2020</p>
-                    <p class="detail">Order#: 1234</p>
-                    <a  href="../Reviews/index.html" data-role="button" class="rate">Rate Order</a>
-                </div>
-            </div>
-            <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem3">
-                <div class="imageContent">
-                    <p class="name"><b>Arthur's Pizza</b></p>
-                    <p class="detail">12/12/2020</p>
-                    <p class="detail">Order#: 1234</p>
-                    <a  href="../Reviews/index.html" data-role="button" class="rate">Rate Order</a>
-                </div>
-            </div>
-            <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem3">
-                <div class="imageContent">
-                    <p class="name"><b>Arthur's Pizza</b></p>
-                    <p class="detail">12/12/2020</p>
-                    <p class="detail">Order#: 1234</p>
-                    <a  href="../Reviews/index.html" data-role="button" class="rate">Rate Order</a>
-                </div>
-            </div>
-            <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4" id="cardItem3">
-                <div class="imageContent">
-                    <p class="name"><b>Arthur's Pizza</b></p>
-                    <p class="detail">12/12/2020</p>
-                    <p class="detail">Order#: 1234</p>
-                    <a  href="../Reviews/index.html" data-role="button"  class="rate">Rate Order</a>
-                </div>
-            </div>
-        </div>
+
+        <div class="elements container" id="pastOrdersContainer"></div>
+
+        <!-- wtf is this used for ?? -->
         <div data-role="popup" id="rate-popup">
             <div data-role="content" >
                 <a href="#" data-rel="back" id="popupback"> <img src="../../Assets/img/icons/close.png" id="" height="15" width="15"></a>
@@ -155,6 +110,7 @@
                 </form>
             </div>
         </div>
+
     </div>
 
 
@@ -218,6 +174,7 @@
     function getRating(rate) {
         rating = rate
     }
+
     function onAddComment() {
 
         var comment = document.getElementById("message").value;
@@ -253,6 +210,23 @@
         document.getElementById("message").value = ""
 
     }
+
+    function rateSelectedOrder(val){
+        var vendors = JSON.parse(localStorage.getItem("vendors"));
+        var selected = {};
+        
+        vendors.forEach(element => {
+            if(element.id == val){
+                selected.id = element.id;
+                selected.name = element.name;
+                selected.image = element.menu[0].imageurl;
+            }
+        });
+
+        localStorage.setItem("commentingOnRestuarent",JSON.stringify(selected));
+        window.location.href="../Reviews/index.html"
+    }
+
 </script>
 
 
