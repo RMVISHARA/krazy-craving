@@ -38,14 +38,14 @@
         });
 
         document.querySelector('.stars').setAttribute('data-rating', num);
-    }
+    };
 
 
     var rating = 0;
 
     function getRating(rate) {
         rating = rate
-    }
+    };
 
     function onAddComment() {
 
@@ -56,6 +56,8 @@
             alert("Comment can not be empty!");
             return;
         };
+
+        $("#v-promo-popup-success2").popup("open"); 
 
         let commentList = localStorage.getItem("commentList");
         commentList = (commentList) ? JSON.parse(commentList) : []
@@ -80,14 +82,14 @@
         localStorage.setItem("commentList", JSON.stringify(commentList))
         document.getElementById("message").value = ""
         loadCommentList()
-    }
+    };
 
 
     function loadCommentList() {
         if(bussiness){
             let commentList = localStorage.getItem("commentList");
             commentList = (commentList) ? JSON.parse(commentList) : [];
-            // console.log("comments : ",commentList);
+            console.log("comments : ",commentList);
 
             let outputHtml = ``;
             commentList.map(x => {
@@ -105,9 +107,8 @@
                                 </div>
                             </div>
                             <div id="rplylist" align="center">
-                                <input type="textarea" class="reply" name="reply" id="reply${x.id}" value="" placeholder="reply"/>
-                                <button href="#v-promo-popup-success3" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" 
-                                onclick="onAddRply(${x.id}) "id="reply">reply</button>
+                                <a href="#popup-reply" data-rel="popup" data-role="button" data-position-to="window" data-transition="pop" 
+                                onclick="saveOgCommentId(${x.id})" id="replybtn" class="" >Reply</a>
                             </div>
                             `
                             x.replys.forEach(rep => {
@@ -127,20 +128,24 @@
             $("#reviewlist").html(outputHtml);
         };
         
-    }
+    };
 
     loadCommentList();
 
-    function onAddRply(val) 
+    function onAddRply() 
     {
+        var val = JSON.parse(localStorage.getItem("ogCommentId"));
 
-        var reply = document.getElementById(`reply${val}`).value;
+        var reply = document.getElementById('reply').value;
         var index;
 
         if (reply == "") {
             alert("Reply can not be empty!");
             return;
         };
+
+        $("#popup-reply").popup("close"); 
+        setTimeout(function(){$("#v-promo-popup-success3").popup("open");}, 1500);
 
         let commentList = JSON.parse(localStorage.getItem("commentList"));
         commentList.forEach((e,i) => {
@@ -150,6 +155,10 @@
         commentList[index].replys.push(reply);
         localStorage.setItem("commentList",JSON.stringify(commentList));
 
-        document.getElementById(`reply${val}`).value = ""
+        document.getElementById('reply').value = ""
         loadCommentList();
-    }
+    };
+
+    function saveOgCommentId(val){
+        localStorage.setItem("ogCommentId",val);
+    };
