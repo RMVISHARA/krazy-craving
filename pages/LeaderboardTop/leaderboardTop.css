@@ -16,67 +16,77 @@
     width: 120px;
     margin: 3px 0 3px 5%;
 }
+
 .locationLogo {
     padding-top: 10px;
     padding-right: 60px;
     height: 35px;
 }
+
 .notificationLogo {
     padding-top: 10px;
     padding-right: 10px;
     height: 35px;
 }
+
 .icons {
     padding-top: 0px;
 }
+
+
 /*footer*/
+
 .ui-icon-home-active:after {
-    background-image:  url("../../Assets/img/icons/home-active.svg");
-    background-size: 90%;
-    width: 25px !important;
-    height: 35px !important;
-}
-.ui-icon-home-inactive:after {
-    background-image:  url("../../Assets/img/icons/home-inactive.svg");
+    background-image: url("../../Assets/img/icons/home-active.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
 
-.ui-icon-search-inactive:after{
-    background-image:  url("../../Assets/img/icons/search-inactive.svg");
+.ui-icon-home-inactive:after {
+    background-image: url("../../Assets/img/icons/home-inactive.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
-.ui-icon-search-active:after{
-    background-image:  url("../../Assets/img/icons/search-active.svg");
+
+.ui-icon-search-inactive:after {
+    background-image: url("../../Assets/img/icons/search-inactive.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+.ui-icon-search-active:after {
+    background-image: url("../../Assets/img/icons/search-active.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
 
 .ui-icon-track-inactive:after {
-    background-image:  url("../../Assets/img/icons/track-inactive.svg");
+    background-image: url("../../Assets/img/icons/track-inactive.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
+
 .ui-icon-track-active:after {
-    background-image:  url("../../Assets/img/icons/track-active.svg");
+    background-image: url("../../Assets/img/icons/track-active.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
 
 .ui-icon-profile-inactive:after {
-    background-image:  url("../../Assets/img/icons/account-inactive.svg");
+    background-image: url("../../Assets/img/icons/account-inactive.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
+
 .ui-icon-profile-active:after {
-    background-image:  url("../../Assets/img/icons/account-active.svg");
+    background-image: url("../../Assets/img/icons/account-active.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
@@ -112,21 +122,31 @@
 
 #currentBtn {
     font-family: Arial;
-    background-color: #fc9920 ;
+    background-color: none;
     font-size: 18px;
     font-weight: bold;
-    color: white;
+    color: rgb(255, 136, 0);
     height: 50px;
-    border-radius: 9pt 0pt 0pt 9pt;
-    border: none;
     margin-top: 0px;
     margin-bottom: 10px;
     text-shadow: none;
 }
 
+hr.currentLine {
+    border-top: 2px solid rgb(255, 136, 0);
+}
+
 #pastBtn {
+    color: black;
+}
+
+hr.pastLine {
+    border-top: 1px solid rgb(0, 0, 0);
+}
+
+#currentBtn::onCl #pastBtn {
     font-family: Arial;
-    background-color: #858282  ;
+    background-color: #858282;
     font-size: 18px;
     font-weight: bold;
     color: black;
@@ -142,36 +162,86 @@
     font-size: 22px;
     font-weight: bold;
 }
+
 .card {
     background-color: white;
     border-radius: 20px;
     width: 90%;
     padding-bottom: 20px;
 }
-.title{
+
+.title {
     font-size: 18px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
 .delivery {
     font-size: 16px;
     padding-bottom: 15px;
 }
+
 .order {
     font-size: 16px;
     margin-right: 135px;
     margin-bottom: -15px;
 }
+
 .item {
     width: 70%;
     padding-bottom: 5px;
 }
+
 hr {
     height: 3px;
     border: 1px;
     box-shadow: inset 0 9px 9px -3px #ccc;
     width: 70%;
 }
+
+
+/* leader bord item */
+
+.number {
+    display: inline;
+    padding-right: 10px;
+}
+
+.name {
+    display: inline;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.score {
+    display: inline;
+    float: right;
+    margin-right: 80px;
+    margin-top: 15px;
+}
+
+.propic {
+    display: inline;
+    position: relative;
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.raw {
+    border-width: 0.5px;
+    border-color: rgb(172, 172, 172);
+    border-style: hidden hidden solid hidden;
+}
+
+.details {
+    padding-bottom: 10px;
+}
+
 
 /* Portrait and Landscape */
 
@@ -180,9 +250,7 @@ hr {
 
 /* Portrait */
 
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
-
-}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
 
 
 /* Landscape */
@@ -207,57 +275,53 @@ hr {
     }
     /*footer*/
     .ui-icon-home-active:after {
-        background-image:  url("../../Assets/img/icons/home-active.svg");
+        background-image: url("../../Assets/img/icons/home-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-home-inactive:after {
-        background-image:  url("../../Assets/img/icons/home-inactive.svg");
+        background-image: url("../../Assets/img/icons/home-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
-    .ui-icon-search-inactive:after{
-        background-image:  url("../../Assets/img/icons/search-inactive.svg");
+    .ui-icon-search-inactive:after {
+        background-image: url("../../Assets/img/icons/search-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-    .ui-icon-search-active:after{
-        background-image:  url("../../Assets/img/icons/search-active.svg");
+    .ui-icon-search-active:after {
+        background-image: url("../../Assets/img/icons/search-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     .ui-icon-track-inactive:after {
-        background-image:  url("../../Assets/img/icons/track-inactive.svg");
+        background-image: url("../../Assets/img/icons/track-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-track-active:after {
-        background-image:  url("../../Assets/img/icons/track-active.svg");
+        background-image: url("../../Assets/img/icons/track-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     .ui-icon-profile-inactive:after {
-        background-image:  url("../../Assets/img/icons/account-inactive.svg");
+        background-image: url("../../Assets/img/icons/account-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-profile-active:after {
-        background-image:  url("../../Assets/img/icons/account-active.svg");
+        background-image: url("../../Assets/img/icons/account-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     #inactive {
         color: #858282;
         text-align: center;
@@ -265,7 +329,6 @@ hr {
         font-size: 11pt;
         background-color: white;
     }
-
     #active {
         color: #fc9920;
         font-family: Arial;
@@ -276,43 +339,6 @@ hr {
         display: grid;
         grid-auto-flow: column;
     }
-
-    .currentDiv {
-        margin-left: 10%;
-    }
-
-    .pastDiv {
-        margin-right: 10%;
-    }
-
-    #currentBtn {
-        font-family: Arial;
-        background-color:  #fc9920;
-        font-size: 18px;
-        font-weight: bold;
-        color: white;
-        height: 50px;
-        border-radius: 9pt 0pt 0pt 9pt;
-        border: none;
-        margin-top: 0px;
-        margin-bottom: 10px;
-        text-shadow: none;
-    }
-
-    #pastBtn {
-        font-family: Arial;
-        background-color: #858282  ;
-        font-size: 18px;
-        font-weight: bold;
-        color: black;
-        height: 50px;
-        border-radius: 0pt 9pt 9pt 0pt;
-        border: none;
-        margin-top: 0px;
-        margin-bottom: 10px;
-        text-shadow: none;
-    }
-
     .pageTitle {
         font-size: 22px;
         font-weight: bold;
@@ -323,7 +349,7 @@ hr {
         width: 90%;
         padding-bottom: 20px;
     }
-    .title{
+    .title {
         font-size: 18px;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -356,7 +382,7 @@ hr {
     /* For general iPad layouts */
 }
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
     /* For portrait layouts only */
     #header {
         height: 70px;
@@ -379,57 +405,53 @@ hr {
     }
     /*footer*/
     .ui-icon-home-active:after {
-        background-image:  url("../../Assets/img/icons/home-active.svg");
+        background-image: url("../../Assets/img/icons/home-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-home-inactive:after {
-        background-image:  url("../../Assets/img/icons/home-inactive.svg");
+        background-image: url("../../Assets/img/icons/home-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
-    .ui-icon-search-inactive:after{
-        background-image:  url("../../Assets/img/icons/search-inactive.svg");
+    .ui-icon-search-inactive:after {
+        background-image: url("../../Assets/img/icons/search-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-    .ui-icon-search-active:after{
-        background-image:  url("../../Assets/img/icons/search-active.svg");
+    .ui-icon-search-active:after {
+        background-image: url("../../Assets/img/icons/search-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     .ui-icon-track-inactive:after {
-        background-image:  url("../../Assets/img/icons/track-inactive.svg");
+        background-image: url("../../Assets/img/icons/track-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-track-active:after {
-        background-image:  url("../../Assets/img/icons/track-active.svg");
+        background-image: url("../../Assets/img/icons/track-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     .ui-icon-profile-inactive:after {
-        background-image:  url("../../Assets/img/icons/account-inactive.svg");
+        background-image: url("../../Assets/img/icons/account-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-profile-active:after {
-        background-image:  url("../../Assets/img/icons/account-active.svg");
+        background-image: url("../../Assets/img/icons/account-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     #inactive {
         color: #858282;
         text-align: center;
@@ -437,7 +459,6 @@ hr {
         font-size: 11pt;
         background-color: white;
     }
-
     #active {
         color: #fc9920;
         font-family: Arial;
@@ -448,43 +469,6 @@ hr {
         display: grid;
         grid-auto-flow: column;
     }
-
-    .currentDiv {
-        margin-left: 10%;
-    }
-
-    .pastDiv {
-        margin-right: 10%;
-    }
-
-    #currentBtn {
-        font-family: Arial;
-        background-color: #fc9920 ;
-        font-size: 18px;
-        font-weight: bold;
-        color: white;
-        height: 50px;
-        border-radius: 9pt 0pt 0pt 9pt;
-        border: none;
-        margin-top: 0px;
-        margin-bottom: 10px;
-        text-shadow: none;
-    }
-
-    #pastBtn {
-        font-family: Arial;
-        background-color: #858282  ;
-        font-size: 18px;
-        font-weight: bold;
-        color: black;
-        height: 50px;
-        border-radius: 0pt 9pt 9pt 0pt;
-        border: none;
-        margin-top: 0px;
-        margin-bottom: 10px;
-        text-shadow: none;
-    }
-
     .pageTitle {
         font-size: 22px;
         font-weight: bold;
@@ -495,7 +479,7 @@ hr {
         width: 90%;
         padding-bottom: 20px;
     }
-    .title{
+    .title {
         font-size: 18px;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -519,10 +503,9 @@ hr {
         box-shadow: inset 0 9px 9px -3px #ccc;
         width: 50%;
     }
-
 }
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
     /* For landscape layouts only */
     #header {
         height: 70px;
@@ -545,57 +528,53 @@ hr {
     }
     /*footer*/
     .ui-icon-home-active:after {
-        background-image:  url("../../Assets/img/icons/home-active.svg");
+        background-image: url("../../Assets/img/icons/home-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-home-inactive:after {
-        background-image:  url("../../Assets/img/icons/home-inactive.svg");
+        background-image: url("../../Assets/img/icons/home-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
-    .ui-icon-search-inactive:after{
-        background-image:  url("../../Assets/img/icons/search-inactive.svg");
+    .ui-icon-search-inactive:after {
+        background-image: url("../../Assets/img/icons/search-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-    .ui-icon-search-active:after{
-        background-image:  url("../../Assets/img/icons/search-active.svg");
+    .ui-icon-search-active:after {
+        background-image: url("../../Assets/img/icons/search-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     .ui-icon-track-inactive:after {
-        background-image:  url("../../Assets/img/icons/track-inactive.svg");
+        background-image: url("../../Assets/img/icons/track-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-track-active:after {
-        background-image:  url("../../Assets/img/icons/track-active.svg");
+        background-image: url("../../Assets/img/icons/track-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     .ui-icon-profile-inactive:after {
-        background-image:  url("../../Assets/img/icons/account-inactive.svg");
+        background-image: url("../../Assets/img/icons/account-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-profile-active:after {
-        background-image:  url("../../Assets/img/icons/account-active.svg");
+        background-image: url("../../Assets/img/icons/account-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     #inactive {
         color: #858282;
         text-align: center;
@@ -603,55 +582,16 @@ hr {
         font-size: 11pt;
         background-color: white;
     }
-
     #active {
         color: #fc9920;
         font-family: Arial;
         font-size: 11pt;
         background-color: white;
     }
-
     .wrapper {
         display: grid;
         grid-auto-flow: column;
     }
-
-    .currentDiv {
-        margin-left: 10%;
-    }
-
-    .pastDiv {
-        margin-right: 10%;
-    }
-
-    #currentBtn {
-        font-family: Arial;
-        background-color: #fc9920  ;
-        font-size: 18px;
-        font-weight: bold;
-        color: white;
-        height: 50px;
-        border-radius: 9pt 0pt 0pt 9pt;
-        border: none;
-        margin-top: 0px;
-        margin-bottom: 10px;
-        text-shadow: none;
-    }
-
-    #pastBtn {
-        font-family: Arial;
-        background-color: #858282;
-        font-size: 18px;
-        font-weight: bold;
-        color: black;
-        height: 50px;
-        border-radius: 0pt 9pt 9pt 0pt;
-        border: none;
-        margin-top: 0px;
-        margin-bottom: 10px;
-        text-shadow: none;
-    }
-
     .pageTitle {
         font-size: 22px;
         font-weight: bold;
@@ -662,7 +602,7 @@ hr {
         width: 90%;
         padding-bottom: 20px;
     }
-    .title{
+    .title {
         font-size: 18px;
         padding-top: 20px;
         padding-bottom: 20px;
