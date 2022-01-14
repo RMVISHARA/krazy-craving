@@ -38,30 +38,7 @@ $(document).ready(function(){
 
     });
 
-
-    let commentList = localStorage.getItem("commentList");
-    commentList = (commentList) ? JSON.parse(commentList) : []
-
-    let outputHtml = ``;
-    commentList.map(x => {
-        if(x.bussiness == selectedVendor){
-            outputHtml += `
-                            <div class="ui-grid-a"id="usergrid">
-                                    <img src="../../Assets/img/boy.jpg" class="round">
-                                    <div class="ma">
-                                        <p style="color: #000000; margin-top: 2px;">Jone Doe</p>
-                                        <p style="color: #000000; margin-top: -8px;">${x.comment}</p>
-                                        <div id="str">
-                                            <span class="fa fa-star checked fa-xs" style="color: #FFCC36;margin-left:35%; font-size: 1.3rem; position: relative; margin-top: -13px;"></span>
-                                            <span style="color: #FFCC36; font-size: 1.3rem; position: relative; margin-top: -13px; margin-left: 10px">${x.rating}/5</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            `
-        }
-    })
-
-    $("#reviewlist").html(outputHtml);
+    loadCommentList();
 
     var x = JSON.parse(localStorage.getItem("favVendors"));
     
@@ -72,3 +49,67 @@ $(document).ready(function(){
         document.getElementById("heart").src="../../Assets/img/icons/unlike-heart.svg";
     }
 });
+
+function loadCommentList(){
+    let commentList = localStorage.getItem("commentList");
+    commentList = (commentList) ? JSON.parse(commentList) : []
+
+    let outputHtml = ``;
+    commentList.map(x => {
+        if(x.bussiness == selectedVendor){
+            outputHtml += `
+                            <div class="ui-grid-a" id="usergrid">
+                                <img src="../../Assets/img/boy.jpg" class="round">
+                                <div class="ma">
+                                    <p style="color: #000000; margin-top: 2px;">Jone Doe</p>
+                                    <p style="color: #000000; margin-top: -8px;">${x.comment}</p>
+                                    <div id="str">
+                                        <span class="fa fa-star checked fa-xs" style="color: #FFCC36;margin-left:35%; font-size: 1.3rem; position: relative; margin-top: -13px;"></span>
+                                        <span style="color: #FFCC36; font-size: 1.3rem; position: relative; margin-top: -13px; margin-left: 10px">${x.rating}/5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="rplylist" align="center">
+                                <input type="textarea" class="reply" name="reply" id="reply${x.id}" value="" placeholder="reply"/>
+                                <button onclick="onAddRply(${x.id})"id="reply"> reply</button>
+                            </div>
+                            `
+                            x.replys.forEach(rep => {
+                                    outputHtml += `
+                                            <div class="d-flex justify-content-center">
+                                                <small>${rep}</small>
+                                            </div>
+                                    `;
+                            });
+                            
+                            `
+                            <hr>
+                        `;
+        }
+    });
+
+    $("#reviewlist").html(outputHtml);
+};
+
+function onAddRply(val) 
+{
+
+    var reply = document.getElementById(`reply${val}`).value;
+    var index;
+    if (reply == "") {
+        alert("Reply can not be empty!");
+        return;
+    }
+
+    let commentList = JSON.parse(localStorage.getItem("commentList"));
+    commentList.forEach((e,i) => {
+        e.id == val ? index = i : "";
+    });
+    
+    commentList[index].replys.push(reply);
+    localStorage.setItem("commentList",JSON.stringify(commentList));
+
+    document.getElementById(`reply${val}`).value = "";
+    loadCommentList();
+};
+
