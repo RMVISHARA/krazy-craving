@@ -139,6 +139,9 @@
     background-color: white;
 }
 
+
+/* iphone landscape */
+
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
     .accountLogo {
         margin-top: 0px;
@@ -171,7 +174,7 @@
 
 /* Ipad potrait */
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
     .accountLogo {
         margin-top: 13px;
         padding-top: 10px !important;
@@ -189,7 +192,7 @@
 
 /* Ipad landscape */
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
     .accountLogo {
         margin-top: 13px;
         padding-top: 10px !important;
