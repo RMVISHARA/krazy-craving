@@ -106,7 +106,7 @@ function onAddRply()
     };
 
     $("#popup-reply2").modal('hide'); 
-    setTimeout(function(){$("#v-promo-popup-success4").modal("show");}, 1500);
+    setTimeout(function(){$("#v-promo-popup-success4").modal("show");}, 1000);
 
     let commentList = JSON.parse(localStorage.getItem("commentList"));
     commentList.forEach((e,i) => {
