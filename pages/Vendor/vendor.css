@@ -1,293 +1,286 @@
-.back-btn {
-  margin-left: 2%;
-  text-decoration: none !important;
-  font-size: 18px;
+.bgimage {
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 30%;
+    background-repeat: no-repeat;
+    position: fixed;
 }
 
-.back-btn a:hover {
-  text-decoration: none !important;
+.box#blur.active {
+    filter: blur(20px);
 }
 
-#header {
-  z-index: 1000;
-}
-
-.mhead {
-  margin: 3px 0px 5px 0px;
-}
-.back-btn {
-  margin-left: 2%;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.back-btn a:hover {
-  text-decoration: none;
+.box {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    color: black;
+    margin-top: 40%;
+    font-family: sans-serif;
+    text-align: left;
+    background-color: white !important;
+    border-radius: 35px 35px 0px 0px;
+    ;
 }
 
 .menu-ham2 {
-  width: 120px;
-  margin: 5px 0 3px 75px;
+    width: 120px;
+    margin: 5px 0 3px 75px;
 }
-.vendorImage {
-  background-size: cover;
-  width: 380px;
-  height: 400px;
-}
+
 #img1 {
-  width: 380px;
-  height: 400px;
-  /* margin-left: 132px; */
-}
-#name {
-  font-size: 22px;
-  height: 12px;
-  color: white;
-  text-shadow: none;
-}
-.address {
-  height: 20px;
-  font-size: 18px;
-  color: white;
-  text-shadow: none;
-}
-.details {
-  width: 100%;
-  height: 400px;
-  padding-left: 20px;
-  padding-top: 300px;
-  background: rgba(0, 0, 0, 0.4);
-}
-.cardList {
-  margin-top: 20px;
-}
-.image {
-  margin-left: 20px;
-  margin-top: 15px;
-  width: 120px;
-  border-radius: 10px;
-}
-.desc{
-  padding-top: 20px;
-  padding-left: 10px;
-  color: black;
-}
-.next{
-  padding-top: 20px;
-  float: right;
-}
-.nextImage {
-  margin-left: 55px;
-  margin-top: 35px;
-  width: 33px;
-}
-#cardItem {
-  width: 95.5%;
-  height: 150px;
-  border-radius: 10px;
-}
-#al {
-  height: 55px;
-  width: 55px;
-  margin-top: -100px;
-  margin-bottom: 15px;
-  margin-left: 300px;
-  box-shadow: 0px 3px 8px #333;
-  border-radius: 72%;
-}
-#usergrid {
-  font-family:Arial !important;
-  font-size:14px !important;
-  padding-bottom: 10px;
-
-}
-.ma {
-  position: relative;
-  width: 100%;
-  font-size: 18px;
-  margin-left: 0px;
-  margin-top: -75px;
-}
-
-.round {
-  position: relative;
-  border-radius: 35px;
-  width: 20%;
-  margin-top: 8px;
-  margin-right:250px;
-}
-
-#str {
-  position: relative;
-  margin-bottom: 28px;
-  margin-left: 150px;
-  margin-top: -60px;
-}
-.reviewHead {
-  margin-right: 250px;
-  font-size: 20px;
-
-  font-family:Arial;
-  padding-bottom: 20px;
-}
-
-.heart-icon {
-  position: absolute;
-    top: 20%;
-    left: 82%;
-    z-index: 2;
-    width: 35px;
-    height: 35px;
-}
-
-/* ----------- iPhone 6+, 7+ and 8+ ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) {
-}
-
-/* Portrait */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) {
-
-}
-
-/* Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) {
-
-  #header {
-    z-index: 1000;
-  }
-
-  .mhead {
-    margin: 3px 0px 5px 0px;
-  }
-  .back-btn {
-    margin-left: 2%;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  .menu-ham2 {
-    width: 150px !important;
-    margin: 5px 0 3px 215px !important;
-  }
-  .vendorImage {
-    background-size: cover;
-    width: 670px !important;
-    height: 250px !important;
-  }
-  #img1 {
-    width: 670px !important;
-    height: 250px !important;
+    width: 380px;
+    height: 400px;
     /* margin-left: 132px; */
-  }
-  #name {
+}
+
+#name {
     font-size: 22px;
     height: 12px;
-    color: white;
+    color: black;
     text-shadow: none;
-  }
-  .address {
+}
+
+.address {
     height: 20px;
     font-size: 18px;
     color: white;
     text-shadow: none;
-  }
-  .details {
+}
+
+.details {
     width: 100%;
-    height: 250px !important;
+    height: 400px;
     padding-left: 20px;
-    padding-top: 150px !important;
-    background: rgba(0, 0, 0, 0.4) !important;
-  }
-  .cardList {
+    padding-top: 30px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.cardList {
     margin-top: 20px;
-  }
-  .image {
+}
+
+.image {
     margin-left: 20px;
     margin-top: 15px;
     width: 120px;
     border-radius: 10px;
-  }
-  .desc{
-    padding-top: 20px;
-    padding-left: 30px;
-    color: black;
-  }
-  .next{
-    padding-top: 20px !important;
-    float: right !important;
-  }
-  .nextImage {
-    margin-left: 320px !important;
-    margin-top: 35px !important;
-    width: 33px !important;
-  }
-  #cardItem {
-    width: 95.5% !important;
-    height: 150px !important;
-    border-radius: 10px !important;
-  }
-  #al {
-    height: 60px !important;
-    width: 60px !important;
-    margin-top: -100px !important;
-    margin-bottom: 15px !important;
-    margin-left: 550px !important;
-    box-shadow: 0px 3px 8px #333 !important;
-    border-radius: 72% !important;
-  }
-  #usergrid {
-    font-family:Arial !important;
-    font-size:14px !important;
+}
 
-  }
-  .ma {
+.desc {
+    padding-top: 20px;
+    padding-left: 10px;
+    color: black;
+}
+
+.next {
+    padding-top: 20px;
+    float: right;
+}
+
+.nextImage {
+    margin-left: 55px;
+    margin-top: 35px;
+    width: 33px;
+}
+
+#cardItem {
+    width: 95.5%;
+    height: 150px;
+    border-radius: 10px;
+}
+
+#al {
+    height: 55px;
+    width: 55px;
+    margin-top: -100px;
+    margin-bottom: 15px;
+    margin-left: 300px;
+    box-shadow: 0px 3px 8px #333;
+    border-radius: 72%;
+}
+
+#usergrid {
+    font-family: Arial !important;
+    font-size: 14px !important;
+    padding-bottom: 10px;
+}
+
+.ma {
     position: relative;
     width: 100%;
-    margin-top: -125px;
-    padding-bottom: 0px;
-    padding-top: 61px;
     font-size: 18px;
-  }
+    margin-left: 0px;
+    margin-top: -75px;
+}
 
-  .round {
-    border-radius: 35px;
-    width: 8%;
-    margin-top: 8px;
-    margin-right: 550px !important;
-  }
-
-  #str {
-    margin-top: -64px;
+.round {
     position: relative;
-    margin-left: 500px;
+    border-radius: 35px;
+    width: 20%;
+    margin-top: 8px;
+    margin-right: 250px;
+}
+
+#str {
+    position: relative;
     margin-bottom: 28px;
-  }
-  .reviewHead {
-    margin-right: 550px !important;
-    font-size: 20px ;
-    font-family:Arial;
+    margin-left: 150px;
+    margin-top: -60px;
+}
+
+.reviewHead {
+    margin-right: 250px;
+    font-size: 20px;
+    font-family: Arial;
     padding-bottom: 20px;
-  }
-  .heart-icon{
+}
+
+.heart-icon {
     position: absolute;
-    top: 17.2%!important;
-    left: 73%!important;
+    margin-top: -140px;
+    left: 82%;
     z-index: 2;
-    width: 40px!important;
-    height: 40px!important;
-  }
+    width: 40px;
+    height: 37px;
+}
+
+.image {
+    overflow: hidden !important;
+    height: 100px;
+    background-size: contain !important;
+    padding-top: 20px;
+}
+
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {}
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+
+
+/* Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    .menu-ham2 {
+        width: 150px !important;
+        margin: 5px 0 3px 215px !important;
+    }
+    .vendorImage {
+        background-size: cover;
+        width: 100% !important;
+        height: 250px !important;
+        background-repeat: no-repeat;
+    }
+    #img1 {
+        width: 670px !important;
+        height: 250px !important;
+        /* margin-left: 132px; */
+    }
+    #name {
+        font-size: 22px;
+        height: 12px;
+        color: white;
+        text-shadow: none;
+    }
+    .address {
+        height: 20px;
+        font-size: 18px;
+        color: white;
+        text-shadow: none;
+    }
+    .details {
+        width: 100%;
+        height: 250px !important;
+        padding-left: 20px;
+        padding-top: 150px !important;
+        background: rgba(0, 0, 0, 0.4) !important;
+    }
+    .cardList {
+        margin-top: 20px;
+    }
+    .image {
+        margin-left: 20px;
+        margin-top: 15px;
+        width: 120px;
+        border-radius: 10px;
+    }
+    .desc {
+        padding-top: 20px;
+        padding-left: 30px;
+        color: black;
+    }
+    .next {
+        padding-top: 20px !important;
+        float: right !important;
+    }
+    .nextImage {
+        margin-left: 320px !important;
+        margin-top: 35px !important;
+        width: 33px !important;
+    }
+    #cardItem {
+        width: 95.5% !important;
+        height: 150px !important;
+        border-radius: 10px !important;
+    }
+    #al {
+        height: 60px !important;
+        width: 60px !important;
+        margin-top: -100px !important;
+        margin-bottom: 15px !important;
+        margin-left: 550px !important;
+        box-shadow: 0px 3px 8px #333 !important;
+        border-radius: 72% !important;
+    }
+    #usergrid {
+        font-family: Arial !important;
+        font-size: 14px !important;
+    }
+    .ma {
+        position: relative;
+        width: 100%;
+        margin-top: -125px;
+        padding-bottom: 0px;
+        padding-top: 61px;
+        font-size: 18px;
+    }
+    .round {
+        border-radius: 35px;
+        width: 8%;
+        margin-top: 8px;
+        margin-right: 550px !important;
+    }
+    #str {
+        margin-top: -64px;
+        position: relative;
+        margin-left: 500px;
+        margin-bottom: 28px;
+    }
+    .reviewHead {
+        margin-right: 550px !important;
+        font-size: 20px;
+        font-family: Arial;
+        padding-bottom: 20px;
+    }
+    .heart-icon {
+        position: absolute;
+        margin-top: -140px;
+        left: 85%;
+        z-index: 2;
+        width: 40px;
+        height: 37px;
+    }
 }
 
 
@@ -295,289 +288,272 @@
 
 @media only screen and (device-width: 768px) {
     /* For general iPad layouts */
-  }
-  
-  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
     /* For portrait layouts only */
     #header {
-      z-index: 1000;
+        z-index: 1000;
     }
-
     .mhead {
-      margin: 3px 0px 5px 0px;
+        margin: 3px 0px 5px 0px;
     }
     .back-btn {
-      margin-left: 2%;
-      text-decoration: none;
-      font-size: 18px;
+        margin-left: 2%;
+        text-decoration: none;
+        font-size: 18px;
     }
-
     .back-btn a:hover {
-      text-decoration: none;
+        text-decoration: none;
     }
-
     .menu-ham2 {
-      width: 150px;
-      margin: 5px 0 3px 224px;
+        width: 150px;
+        margin: 5px 0 3px 224px;
     }
     .vendorImage {
-      background-size: cover;
-      width: 700px;
-      height: 500px;
+        background-size: cover;
+        width: 700px;
+        height: 500px;
     }
     #img1 {
-      width: 700px;
-      height: 500px;
-      /* margin-left: 132px; */
+        width: 700px;
+        height: 500px;
+        /* margin-left: 132px; */
     }
     #name {
-      font-size: 22px;
-      height: 12px;
-      color: white;
-      text-shadow: none;
+        font-size: 22px;
+        height: 12px;
+        color: white;
+        text-shadow: none;
     }
     .address {
-      height: 20px;
-      font-size: 18px;
-      color: white;
-      text-shadow: none;
+        height: 20px;
+        font-size: 18px;
+        color: white;
+        text-shadow: none;
     }
     .details {
-      width: 100%;
-      height: 500px;
-      padding-left: 20px;
-      padding-top: 380px;
-      background: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 500px;
+        padding-left: 20px;
+        padding-top: 380px;
+        background: rgba(0, 0, 0, 0.4);
     }
     .cardList {
-      margin-top: 20px;
+        margin-top: 20px;
     }
     .image {
-      margin-left: 20px;
-      margin-top: 15px;
-      width: 120px;
-      border-radius: 10px;
+        margin-left: 20px;
+        margin-top: 15px;
+        width: 120px;
+        border-radius: 10px;
     }
-    .desc{
-      padding-top: 20px;
-      padding-left: 30px;
-      color: black;
+    .desc {
+        padding-top: 20px;
+        padding-left: 30px;
+        color: black;
     }
-    .next{
-      padding-top: 20px;
-      float: right;
+    .next {
+        padding-top: 20px;
+        float: right;
     }
     .nextImage {
-      margin-left: 350px;
-      margin-top: 35px;
-      width: 40px;
+        margin-left: 350px;
+        margin-top: 35px;
+        width: 40px;
     }
     #cardItem {
-      width: 95.5%;
-      height: 150px;
-      border-radius: 10px;
+        width: 95.5%;
+        height: 150px;
+        border-radius: 10px;
     }
     #al {
-      position: relative;
-      height: 87px;
-      width: 95px;
-      margin-top: -156px;
-      margin-bottom: 15px;
-      margin-left: 550px;
-      box-shadow: 0px 3px 8px #333;
-      border-radius: 72%;
+        position: relative;
+        height: 87px;
+        width: 95px;
+        margin-top: -156px;
+        margin-bottom: 15px;
+        margin-left: 550px;
+        box-shadow: 0px 3px 8px #333;
+        border-radius: 72%;
     }
     #seeall {
-      color: #B4AAAA;
-      font-size: 12px;
-      margin-left: 74%;
+        color: #B4AAAA;
+        font-size: 12px;
+        margin-left: 74%;
     }
     /*#usergrid>#block1, #usergrid >#block2 {
       width: 100% !important;
     }*/
-
     #usergrid {
-      font-family:Arial !important;
-      font-size:14px !important;
-
+        font-family: Arial !important;
+        font-size: 14px !important;
     }
     .ma {
-      position: relative;
-      width: 100%;
-      margin-top: -125px;
-      padding-bottom: 0px;
-      padding-top: 61px;
-      font-size: 18px;
+        position: relative;
+        width: 100%;
+        margin-top: -125px;
+        padding-bottom: 0px;
+        padding-top: 61px;
+        font-size: 18px;
     }
-
     .round {
-      border-radius: 35px;
-      width: 8%;
-      margin-top: 8px;
-      margin-right: 600px;
+        border-radius: 35px;
+        width: 8%;
+        margin-top: 8px;
+        margin-right: 600px;
     }
-
     #str {
-      margin-top: -64px;
-      position: relative;
-      margin-left: 500px;
-      margin-bottom: 28px;
+        margin-top: -64px;
+        position: relative;
+        margin-left: 500px;
+        margin-bottom: 28px;
     }
     .reviewHead {
-      margin-right: 600px;
-      font-size: 20px;
-      font-family:Arial;
-      padding-bottom: 20px;
+        margin-right: 600px;
+        font-size: 20px;
+        font-family: Arial;
+        padding-bottom: 20px;
     }
-    .heart-icon{
-      position: absolute;
-    top: 26.2%!important;
-    left: 69%!important;
-    z-index: 2;
-    width: 52px!important;
-    height: 52px!important;
+    .heart-icon {
+        position: absolute;
+        margin-top: -108px;
+        left: 68%;
+        z-index: 2;
+        width: 60px;
+        height: 65px;
     }
-  }
-  
-  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
     /* For landscape layouts only */
     #header {
-      z-index: 1000;
+        z-index: 1000;
     }
-
     .mhead {
-      margin: 3px 0px 5px 0px;
+        margin: 3px 0px 5px 0px;
     }
     .back-btn {
-      margin-left: 2%;
-      text-decoration: none;
-      font-size: 18px;
+        margin-left: 2%;
+        text-decoration: none;
+        font-size: 18px;
     }
-
     .back-btn a:hover {
-      text-decoration: none;
+        text-decoration: none;
     }
-
     .menu-ham2 {
-      width: 150px;
-      margin: 5px 0 3px 374px;
+        width: 150px;
+        margin: 5px 0 3px 374px;
     }
     .vendorImage {
-      background-size: cover;
-      width: 950px;
-      height: 500px;
+        background-size: cover;
+        width: 950px;
+        height: 500px;
     }
     #img1 {
-      width: 950px;
-      height: 500px;
-      /* margin-left: 132px; */
+        width: 950px;
+        height: 500px;
+        /* margin-left: 132px; */
     }
     #name {
-      font-size: 22px;
-      height: 12px;
-      color: white;
-      text-shadow: none;
+        font-size: 22px;
+        height: 12px;
+        color: white;
+        text-shadow: none;
     }
     .address {
-      height: 20px;
-      font-size: 18px;
-      color: white;
-      text-shadow: none;
+        height: 20px;
+        font-size: 18px;
+        color: white;
+        text-shadow: none;
     }
     .details {
-      width: 100%;
-      height: 500px;
-      padding-left: 20px;
-      padding-top: 380px;
-      background: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 500px;
+        padding-left: 20px;
+        padding-top: 380px;
+        background: rgba(0, 0, 0, 0.4);
     }
     .cardList {
-      margin-top: 20px;
+        margin-top: 20px;
     }
     .image {
-      margin-left: 20px;
-      margin-top: 15px;
-      width: 120px;
-      border-radius: 10px;
+        margin-left: 20px;
+        margin-top: 15px;
+        width: 120px;
+        border-radius: 10px;
     }
-    .desc{
-      padding-top: 20px;
-      padding-left: 50px;
-      color: black;
+    .desc {
+        padding-top: 20px;
+        padding-left: 50px;
+        color: black;
     }
-    .next{
-      padding-top: 20px;
-      float: right;
+    .next {
+        padding-top: 20px;
+        float: right;
     }
     .nextImage {
-      margin-left: 580px;
-      margin-top: 35px;
-      width: 40px;
+        margin-left: 580px;
+        margin-top: 35px;
+        width: 40px;
     }
     #cardItem {
-      width: 95.5%;
-      height: 150px;
-      border-radius: 10px;
+        width: 95.5%;
+        height: 150px;
+        border-radius: 10px;
     }
     #al {
-      position: relative;
-      height: 87px;
-      width: 95px;
-      margin-top: -156px;
-      margin-bottom: 15px;
-      margin-left: 789px;
-      box-shadow: 0px 3px 8px #333;
-      border-radius: 72%;
+        position: relative;
+        height: 87px;
+        width: 95px;
+        margin-top: -156px;
+        margin-bottom: 15px;
+        margin-left: 789px;
+        box-shadow: 0px 3px 8px #333;
+        border-radius: 72%;
     }
     #seeall {
-      color: #B4AAAA;
-      font-size: 12px;
-      margin-left: 74%;
+        color: #B4AAAA;
+        font-size: 12px;
+        margin-left: 74%;
     }
     /*#usergrid>#block1, #usergrid >#block2 {
       width: 100% !important;
     }*/
-
     #usergrid {
-      font-family:Arial !important;
-      font-size:14px !important;
-
+        font-family: Arial !important;
+        font-size: 14px !important;
     }
     .ma {
-      position: relative;
-      width: 100%;
-      margin-top: -125px;
-      padding-bottom: 0px;
-      padding-top: 61px;
-      font-size: 18px;
+        position: relative;
+        width: 100%;
+        margin-top: -125px;
+        padding-bottom: 0px;
+        padding-top: 61px;
+        font-size: 18px;
     }
-
     .round {
-      border-radius: 35px;
-      width: 8%;
-      margin-top: 8px;
-      margin-right: 700px;
+        border-radius: 35px;
+        width: 8%;
+        margin-top: 8px;
+        margin-right: 700px;
     }
-
     #str {
-      margin-top: -64px;
-      position: relative;
-      margin-left: 500px;
-      margin-bottom: 28px;
+        margin-top: -64px;
+        position: relative;
+        margin-left: 500px;
+        margin-bottom: 28px;
     }
     .reviewHead {
-      margin-right: 800px;
-      font-size: 20px;
-      font-family:Arial;
-      padding-bottom: 20px;
+        margin-right: 800px;
+        font-size: 20px;
+        font-family: Arial;
+        padding-bottom: 20px;
     }
-
-    .heart-icon{
-      position: absolute;
-    top: 24.8%!important;
-    left: 76%!important;
-    z-index: 2;
-    width: 55px!important;
-    height: 55px!important;
+    .heart-icon {
+        margin-top: -108px;
+        left: 73%;
+        width: 60px;
+        height: 65px;
     }
-  }
+}

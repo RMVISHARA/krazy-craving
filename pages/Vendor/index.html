@@ -1,12 +1,12 @@
 <!doctype html>
 <html>
- 
-<head>
-  <meta charset="UTF-8">
-    <title>Krazy Cravings</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- the three things that jQuery Mobile needs to work -->
+<head>
+    <meta charset="UTF-8">
+    <title>Krazy Cravings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- the three things that jQuery Mobile needs to work -->
     <link rel="stylesheet" type="text/css" href="vendor.css?version=94">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
@@ -19,37 +19,53 @@
     <!--    <script src="../../Assets/js/js.min.js"></script>-->
     <script src="vendor.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Assets/css/common.user.css">
 
 </head>
-<body>
-    <div data-role="page" id="homeUser" >
-        <div data-role="header" data-position="fixed" data-tap-toggle="false" id="header">
 
-            <div class="mhead">
-                <a class="back-btn" href="../HomeUser">
-                    < Back</a>
-                <img class="menu-ham2" src="../../Assets/img/rectangle_logo_black.png">
-            </div>
-            <!-- /grid-b -->
-        </div>
-        <div data-role="content" align="center">
-            <div class="vendorImage" id="bgImage">
-                <div class="details" align="left">
-                    <p id="name"></p>
-                    <p id="address" class="address"></p>
-                    <div class="stars">
-                        <span class="fa fa-star checked fa-xs" style="color: #FFCC36; text-shadow: none; font-size: 1.3rem;"></span>
-                        <span class="fa checked fa-xs address" id="ratings"></span>
-                    </div>
-                </div>
-                <div>
-                    <img id="heart" src="../../Assets/img/icons/unlike-heart.svg" class="heart-icon" onclick="amend()">  
-                </div>
-                <div>
-                    <a href="" onclick="window.location.href ='../Cart/';">
-                        <img id="al" src="../../Assets/img/service-icon-cart.png">
+<body>
+    <div data-role="page" id="homeUser">
+        <div data-role="header" class="mhead" style="background-color: black" data-position="fixed" data-tap-toggle="false">
+            <div class="row">
+                <div class="col4">
+                    <a onclick="history.back()" data-position-to="window" id="accountLogo">
+                        <img class="backButton" src="../../Assets/img/icons/backButton.svg">
                     </a>
                 </div>
+                <div class="col-7">
+                    <img class="logo" src="../../Assets/img/LogoDark.png">
+                </div>
+                <div class="col-3">
+                    <a href="../Search/index.html">
+                        <img class="searchLogo" src="../../Assets/img/icons/search.png">
+                    </a>
+                    <a href="../UserAccount/index.html" data-position-to="window" id="accountLogo">
+                        <img class="accountLogo" src="../../Assets/img/icons/usa.svg">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="bgimage" class="vendorImage" id="bgImage">
+        </div>
+
+        <div class="box" id="blur">
+            <div class="details">
+                <p id="name"></p>
+                <p id="address" class="address"></p>
+                <div class="stars">
+                    <span class="fa fa-star checked fa-xs" style="color: #FFCC36; text-shadow: none; font-size: 1.3rem;"></span>
+                    <span class="fa checked fa-xs address" id="ratings"></span>
+                </div>
+            </div>
+            <div>
+                <img id="heart" src="../../Assets/img/icons/unlike-heart.svg" class="heart-icon" onclick="amend()">
+            </div>
+            <div>
+                <a href="" onclick="window.location.href ='../Cart/';">
+                    <img id="al" src="../../Assets/img/service-icon-cart.png">
+                </a>
             </div>
 
             <div class="cardList" id="cardList">
@@ -57,36 +73,73 @@
 
             <!-- reviews section -->
             <div class="reviewHead">
-                <span ><b>Reviews</b></span>
+                <span><b>Reviews</b></span>
             </div>
             <div id="reviewlist" align="center">
             </div>
-
         </div>
 
+        <div class="footer" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="../HomeUser/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
+                    <li><a href="../PastOrder/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-orders-inactive" id="inactive" data-ajax="false">Orders</a></li>
+                    <li><a href="../UserFavourites/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive" data-ajax="false">Favourites</a></li>
+                    <li><a href="../Cart/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-cart-inactive" id="inactive" data-ajax="false">Cart</a></li>
+
+                </ul>
+            </div>
         </div>
+    </div>
     </div>
     <script>
         var selectedVendor = localStorage.getItem("selectedRestaurent");
 
-        function amend(){
+        function amend() {
             var x = JSON.parse(localStorage.getItem("favVendors"));
 
-            if(x[selectedVendor]){
-                document.getElementById("heart").src="../../Assets/img/icons/unlike-heart.svg";
+            if (x[selectedVendor]) {
+                document.getElementById("heart").src = "../../Assets/img/icons/unlike-heart.svg";
                 x[selectedVendor] = false;
-                localStorage.setItem("favVendors",JSON.stringify(x));
-            }
-            else{
-                document.getElementById("heart").src="../../Assets/img/icons/liked-heart.svg";
+                localStorage.setItem("favVendors", JSON.stringify(x));
+            } else {
+                document.getElementById("heart").src = "../../Assets/img/icons/liked-heart.svg";
                 x[selectedVendor] = true;
-                localStorage.setItem("favVendors",JSON.stringify(x));
+                localStorage.setItem("favVendors", JSON.stringify(x));
             }
         }
 
+<<<<<<< HEAD
         function directToPage(val){
+=======
+        function loadCommentList() {
+            let commentList = localStorage.getItem("commentList");
+            commentList = (commentList) ? JSON.parse(commentList) : []
+            console.log(commentList)
+
+            let outputHtml = ``;
+            commentList.map(x => {
+                outputHtml += `
+				<div class="ui-grid-a"id="usergrid">
+                        <img src="../../Assets/img/boy.jpg" class="round">
+                        <div class="ma">
+                            <p style="color: #000000; margin-top: 2px;">Jone Doe</p>
+                            <p style="color: #000000; margin-top: -8px;">${x.comment}</p>
+                            <div id="str">
+                                <span class="fa fa-star checked fa-xs" style="color: #FFCC36;margin-left:35%; font-size: 1.3rem; position: relative; margin-top: -13px;"></span>
+                                <span style="color: #FFCC36; font-size: 1.3rem; position: relative; margin-top: -13px; margin-left: 10px">${x.rating}/5</span>
+                            </div>
+                        </div>
+                    </div>
+					`
+            })
+            $("#reviewlist").html(outputHtml);
+        }
+
+        function directToPage(val) {
+>>>>>>> ba89c02 (veder page)
             localStorage.setItem("directingTo", val);
-            window.location.href ='../Product/';
+            window.location.href = '../Product/';
         }
 
     </script>
