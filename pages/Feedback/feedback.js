@@ -25,6 +25,16 @@ function submitFeedback()
         return
     };
 
+    var feedback = localStorage.getItem("userFeedbacks");
+    feedback = (feedback) ? JSON.parse(feedback) : [];
+
+    feedback.push({
+        rating: checkedCount,
+        text: suggestion
+    });
+
+    localStorage.setItem("userFeedbacks",JSON.stringify(feedback));
+
     $("#feedbackPopup").popup("open");
 
     document.getElementById("userInput").value = "";
