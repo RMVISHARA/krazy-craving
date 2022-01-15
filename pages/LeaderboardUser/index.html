@@ -30,6 +30,58 @@
         text-shadow: none;
     }
 </style>
+<style>
+    /* Always set the map height explicitly to define the size of the div
+           * element that contains the map. */
+    
+    #map {
+        width: 90%;
+        height: 200px;
+        background-color: grey;
+        margin-bottom: 10px;
+        border-radius: 20px;
+    }
+    
+    .number {
+        display: inline;
+        padding-right: 10px;
+    }
+    
+    .name {
+        display: inline;
+        margin-left: 10px;
+    }
+    
+    .score {
+        display: inline;
+        float: right;
+        margin-top: 10px;
+    }
+    
+    .propic {
+        display: inline;
+        position: relative;
+        width: 46px;
+        height: 46px;
+        border-radius: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .raw {
+        padding: 5px 0px;
+        border-width: 0.5px;
+        border-color: rgb(172, 172, 172);
+        border-style: hidden hidden solid hidden;
+    }
+    
+    .details {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 25px;
+        border-radius: 50px;
+    }
+</style>
 
 <body>
 
@@ -43,6 +95,7 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="../../Assets/js/js.min.js"></script>
+    <script src="leaderboardUser.js"></script>
 
 
     <div data-role="page" id="leaderboarduser">
@@ -83,6 +136,9 @@
             </div>
         </div>
 
+        <div data-role="content">
+            <div id="leaderboardRankings"></div>
+        </div>
 
         <div class="footer" data-role="footer" data-position="fixed">
             <div data-role="navbar">
