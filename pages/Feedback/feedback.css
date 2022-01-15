@@ -1,0 +1,681 @@
+.mhead {
+    margin: 0px 0px 5px 0px;
+    background-color: black;
+}
+
+.star {
+    color: goldenrod;
+    font-size: 31px;
+    padding: 0px;
+    /* space out the stars */
+}
+
+.stars {
+    counter-reset: rateme 0;
+    font-size: 2.0rem;
+    font-weight: 900;
+    margin-top: 8px;
+}
+
+.starsNew {
+    font-size: 4.0rem;
+    font-weight: 900;
+}
+
+.locationLogo {
+    padding-top: 10px;
+    padding-right: 60px;
+    height: 35px;
+}
+.notificationLogo {
+    padding-top: 10px;
+    padding-right: 10px;
+    height: 35px;
+}
+.icons {
+    padding-top: 0px;
+}
+.promos {
+    width: 100%;
+}
+.title {
+    font-size: 20px;
+}
+.pad {
+    text-align: left;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding-left: 3px;
+}
+.name {
+    font-size: 16px;
+    height: 12px;
+    color: #858282;
+    text-shadow: none;
+}
+.address {
+    height: 20px;
+    font-size: 14px;
+    color: #858282;
+    width: 20px;
+    text-shadow: none;
+}
+.desc {
+    position: relative;
+    float: left;
+    width: 2px !important;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 63px;
+}
+.link {
+    font-weight: normal !important;
+    color: #858282 !important;
+}
+.stars {
+    position: relative;
+    float: right;
+    margin-left: 195px;
+    margin-top: 10px;
+}
+.cardImage {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.lists {
+    overflow-x: scroll !important;
+    white-space: nowrap !important;
+}
+#cardItem {
+    min-width: 270px;
+    height: 270px;
+    display: inline-block;
+    background-color: transparent;
+    border-color: transparent;
+    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+}
+#customCard {
+    width: 100%;
+    background-color: white !important;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+/*footer*/
+.ui-icon-home-active:after {
+    background-image:  url("../../Assets/img/icons/home-active.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+.ui-icon-home-inactive:after {
+    background-image:  url("../../Assets/img/icons/home-inactive.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+.ui-icon-search-inactive:after{
+    background-image:  url("../../Assets/img/icons/search-inactive.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+.ui-icon-search-active:after{
+    background-image:  url("../../Assets/img/icons/search-active.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+.ui-icon-track-inactive:after {
+    background-image:  url("../../Assets/img/icons/track-inactive.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+.ui-icon-track-active:after {
+    background-image:  url("../../Assets/img/icons/track-active.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+.ui-icon-profile-inactive:after {
+    background-image:  url("../../Assets/img/icons/account-inactive.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+.ui-icon-profile-active:after {
+    background-image:  url("../../Assets/img/icons/account-active.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+#inactive {
+    color: #858282;
+    text-align: center;
+    font-family: Arial;
+    font-size: 11pt;
+    background-color: white;
+}
+
+#active {
+    color: #fc9920;
+    font-family: Arial;
+    font-size: 11pt;
+    background-color: white;
+}
+.card {
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 5px 0px lightgray;
+    border-radius: 10px;
+
+
+}
+
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {}
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+
+}
+
+
+/* Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    .menu-ham2 {
+        width: 120px;
+        margin: 5px 0 3px 31%;
+    }
+    .mhead {
+        margin: 0px 0px 5px 0px;
+    }
+    .locationLogo {
+        padding-top: 10px !important;
+        margin-right: 80px !important;
+        height: 30px !important;
+    }
+    .notificationLogo {
+        padding-top: 10px !important;
+        margin-right: 10px !important;
+        height: 30px !important;
+    }
+    .promos {
+        width: 100%;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .pad {
+        text-align: left;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        padding-left: 10px!important;
+    }
+    .name {
+        font-size: 16px;
+        height: 12px;
+        color: #858282;
+    }
+    .address {
+        height: 20px;
+        font-size: 14px;
+        color: #858282;
+    }
+    .desc {
+        position: relative;
+        float: left;
+        width: 2px !important;
+        text-align: left;
+        margin-top: 5px;
+        margin-left: 5px;
+        height: 80px!important;
+    }
+    .link {
+        font-weight: normal !important;
+        color: #858282 !important;
+    }
+    .stars {
+        position: relative;
+        float: right;
+        margin-left: 210px!important;
+        margin-top: 10px;
+    }
+    .cardImage {
+        width: 100%;
+        height: 200px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .lists {
+        overflow-x: scroll !important;
+        white-space: nowrap !important;
+        margin: auto;
+    }
+    #cardItem {
+        min-width: 270px;
+        height: 270px!important;
+        display: inline-block;
+        background-color: transparent;
+        border-color: transparent;
+        /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+    }
+    #customCard {
+        width: 100%;
+        background-color: white !important;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    /*footer*/
+    .ui-icon-home-active:after {
+        background-image:  url("../../Assets/img/icons/home-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-home-inactive:after {
+        background-image:  url("../../Assets/img/icons/home-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+
+    .ui-icon-search-inactive:after{
+        background-image:  url("../../Assets/img/icons/search-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-search-active:after{
+        background-image:  url("../../Assets/img/icons/search-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+
+    .ui-icon-track-inactive:after {
+        background-image:  url("../../Assets/img/icons/track-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-track-active:after {
+        background-image:  url("../../Assets/img/icons/track-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+
+    .ui-icon-profile-inactive:after {
+        background-image:  url("../../Assets/img/icons/account-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-profile-active:after {
+        background-image:  url("../../Assets/img/icons/account-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+
+    #inactive {
+        color: #858282;
+        text-align: center;
+        font-family: Arial;
+        font-size: 11pt;
+        background-color: white;
+    }
+
+    #active {
+        color: #fc9920;
+        font-family: Arial;
+        font-size: 11pt;
+        background-color: white;
+    }
+    .card {
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 5px 5px 0px lightgray;
+        border-radius: 10px;
+
+    }
+}
+
+
+/* ----------- iPad ----------- */
+
+@media only screen and (device-width: 768px) {
+    /* For general iPad layouts */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+    #header {
+        height: 70px;
+    }
+    .logo {
+        float: left;
+        width: 150px;
+        padding-top: 5px;
+        margin-left: 40px;
+    }
+    .locationLogo {
+        padding-top: 15px;
+        padding-right: 80px;
+        height: 48px;
+    }
+    .notificationLogo {
+        padding-top: 15px;
+        padding-right: 15px;
+        height: 48px;
+    }
+    .promos {
+        width: 100%;
+    }
+    .title {
+        font-size: 28px;
+    }
+    .pad {
+        text-align: left;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        padding-left: 10px;
+    }
+    .name {
+        font-size: 18px;
+        height: 12px;
+        color: #858282;
+    }
+    .address {
+        height: 20px;
+        font-size: 14px;
+        color: #858282;
+    }
+    .desc {
+        position: relative;
+        float: left;
+        width: 2px !important;
+        text-align: left;
+        margin-top: 5px;
+        margin-left: 5px;
+        height: 65px;
+    }
+    .link {
+        font-weight: normal !important;
+        color: #858282 !important;
+    }
+    .stars {
+        position: relative;
+        float: right;
+        margin-left: 320px;
+        margin-top: 10px;
+    }
+    .cardImage {
+        width: 100%;
+        height: 280px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .lists {
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+    #cardItem {
+        min-width: 400px;
+        height: 350px;
+        display: inline-block;
+        background-color: transparent;
+        border-color: transparent;
+        /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+    }
+    #customCard {
+        width: 100%;
+        background-color: white !important;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    /*footer*/
+    .ui-icon-home-active:after {
+        background-image:  url("../../Assets/img/icons/home-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-home-inactive:after {
+        background-image:  url("../../Assets/img/icons/home-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+
+    .ui-icon-search-inactive:after{
+        background-image:  url("../../Assets/img/icons/search-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-search-active:after{
+        background-image:  url("../../Assets/img/icons/search-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+
+    .ui-icon-track-inactive:after {
+        background-image:  url("../../Assets/img/icons/track-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-track-active:after {
+        background-image:  url("../../Assets/img/icons/track-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+
+    .ui-icon-profile-inactive:after {
+        background-image:  url("../../Assets/img/icons/account-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-profile-active:after {
+        background-image:  url("../../Assets/img/icons/account-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+
+    #inactive {
+        color: #858282;
+        text-align: center;
+        font-family: Arial;
+        font-size: 11pt;
+        background-color: white;
+    }
+
+    #active {
+        color: #fc9920;
+        font-family: Arial;
+        font-size: 11pt;
+        background-color: white;
+    }
+    .card {
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 5px 5px 0px lightgray;
+        border-radius: 10px;
+
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
+    #header {
+        height: 70px;
+    }
+    .logo {
+        width: 150px !important;
+        padding-top: 5px;
+        margin-left: 25%;
+    }
+    .locationLogo {
+        padding-top: 10px !important;
+        margin-right: 100px !important;
+        height: 50px !important;
+    }
+    .notificationLogo {
+        padding-top: 10px !important;
+        margin-right: 3% !important;
+        height: 50px !important;
+    }
+    .promos {
+        width: 70%;
+    }
+    .title {
+        font-size: 28px;
+    }
+    .pad {
+        text-align: left;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        padding-left: 10px;
+    }
+    .name {
+        font-size: 18px;
+        height: 12px;
+        color: #858282;
+    }
+    .address {
+        height: 20px;
+        font-size: 14px;
+        color: #858282;
+    }
+    .desc {
+        position: relative;
+        float: left;
+        width: 2px !important;
+        text-align: left;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    .link {
+       font-weight: normal !important;
+        color: #858282 !important;
+    }
+    .stars {
+        position: relative;
+        float: right;
+        margin-left: 210px!important;
+        margin-top: 10px;
+    }
+    .cardImage {
+        width: 100%;
+        height: 180px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .lists {
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+    #cardItem {
+        min-width: 280px;
+        display: inline-block;
+        background-color: transparent;
+        border-color: transparent;
+        /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+    }
+    #customCard {
+        width: 100%;
+        background-color: white !important;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    /*footer*/
+    .ui-icon-home-active:after {
+        background-image:  url("../../Assets/img/icons/home-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-home-inactive:after {
+        background-image:  url("../../Assets/img/icons/home-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+
+    .ui-icon-search-inactive:after{
+        background-image:  url("../../Assets/img/icons/search-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-search-active:after{
+        background-image:  url("../../Assets/img/icons/search-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+
+    .ui-icon-track-inactive:after {
+        background-image:  url("../../Assets/img/icons/track-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-track-active:after {
+        background-image:  url("../../Assets/img/icons/track-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+
+    .ui-icon-profile-inactive:after {
+        background-image:  url("../../Assets/img/icons/account-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-profile-active:after {
+        background-image:  url("../../Assets/img/icons/account-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+
+    #inactive {
+        color: #858282;
+        text-align: center;
+        font-family: Arial;
+        font-size: 11pt;
+        background-color: white;
+    }
+
+    #active {
+        color: #fc9920;
+        font-family: Arial;
+        font-size: 11pt;
+        background-color: white;
+    }
+    .card {
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 5px 5px 0px lightgray;
+        border-radius: 10px;
+
+    }
+}

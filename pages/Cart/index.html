@@ -231,6 +231,7 @@
         }
 
 
+<<<<<<< HEAD
         /* Recalculate cart */
         function recalculateCart() {
             var subtotal = 0;
@@ -350,6 +351,10 @@
 
                 $("#message2").text(`
                 Thank you, your payment was successful!
+=======
+            $("#message2").text(`
+                Your Order has been placed.
+>>>>>>> ab42b4a (feedback page content)
                 You recived ${transactionPoints} Krazy points for this transaction.
             `);
 
@@ -366,6 +371,7 @@
                             //Use the token to create te charge with a server side script.
                             // You can access the token ID with 'token.id'
 
+<<<<<<< HEAD
                             //This will be printed when the transaction is successful. To charge, server side scripting is required.
                             if (token.id) {
                                 var kPoints = localStorage.getItem("totalPoint");
@@ -374,6 +380,10 @@
 
                                 $("#message2").text(`
                                 Thank you, your payment was successful!
+=======
+                            $("#message2").text(`
+                                Your Order has been placed.
+>>>>>>> ab42b4a (feedback page content)
                                 You recived ${transactionPoints} Krazy points for this transaction.
                             `);
 
