@@ -1,0 +1,114 @@
+        * {
+            box-sizing: border-box
+        }
+        
+        .pageTitle {
+            font-size: 22px;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 30px;
+        }
+        
+        .skills {
+            color: white;
+            width: 100%;
+            border-radius: 10px;
+            margin-left: -15px;
+            height: 12px;
+            overflow: hidden;
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+        
+        .html {
+            width: 80%;
+            background-color: #ff9100;
+        }
+        
+        .container {
+            width: 100%;
+            background-color: #ddd;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            height: 14px;
+            border: 1px solid;
+            margin-top: 10px;
+        }
+        
+        .level {
+            text-align: center;
+            padding-bottom: 5px;
+            display: inline;
+        }
+        
+        .points {
+            text-align: center;
+            padding-top: 5px;
+        }
+        
+        table {
+            width: 60%;
+            text-align: justify;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 30px;
+        }
+        
+        td {
+            width: 100px;
+            padding-bottom: 30px;
+            vertical-align: top;
+        }
+        
+        .arrow {
+            width: 13px;
+            height: 13px;
+            display: inline;
+            position: relative;
+        }
+        
+        .left {
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+        
+        .right {
+            margin-left: -10px;
+            margin-top: 10px;
+        }
+        
+        .levelIcon {
+            width: 20px;
+            height: 20px;
+            display: inline;
+        }
+        
+        @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+            .left {
+                margin-left: 90px !important;
+            }
+            table {
+                width: 60%;
+            }
+        }
+        /* Ipad potrait */
+        
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+            .left {
+                margin-left: 100px !important;
+            }
+            table {
+                width: 60%;
+            }
+        }
+        /* Ipad landscape */
+        
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+            .left {
+                margin-left: 140px !important;
+            }
+            table {
+                width: 60%;
+            }
+        }
