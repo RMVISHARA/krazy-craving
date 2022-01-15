@@ -231,6 +231,7 @@
         }
 
 
+
         /* Recalculate cart */
         function recalculateCart() {
             var subtotal = 0;
@@ -348,8 +349,8 @@
                 kPoints = Number(kPoints) + transactionPoints;
                 localStorage.setItem("totalPoint", kPoints);
 
-                $("#message2").text(`
-                Thank you, your payment was successful!
+            $("#message2").text(`
+                Your Order has been placed.
                 You recived ${transactionPoints} Krazy points for this transaction.
             `);
 

@@ -82,19 +82,51 @@
                 <center>
                     <input type="textarea" class="message" name="message" id="message" value="" placeholder="Message" data-role=none />
                     <br>
-                    <a href="#v-promo-popup-success2" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" onclick='onAddComment()' class="submit" id="submit" >SUBMIT</a>
+                    <a href="" data-role="button"  onclick='onAddComment()' class="submit" id="submit" >SUBMIT</a>
                 </center>
 
                 <!-- success message -->
-                <!-- <div data-role="popup" id="v-promo-popup-success2">
+                <div data-role="popup" id="v-promo-popup-success2">
                     <div data-role="content" >
                         <a href="#" data-rel="back" id="popupback2"> <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15"></a>
                         <br>
                         <center><img id="av" src="../../Assets/img/icons/gift-icon.png" width="85" height="85"></center>
-                        <h1 id="header1"><span id="message3"></span></h1>
+                        <h1 id="header1"><span id="message2">Your Reviews and Ratings have been published !!</span></h1>
                         <br>
                     </div>
-                </div> -->
+                </div>
+
+                <div data-role="popup" id="v-promo-popup-success3">
+                    <div data-role="content" >
+                        <a href="#" data-rel="back" id="popupback2"> <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15"></a>
+                        <br>
+                        <center><img id="av" src="../../Assets/img/icons/gift-icon.png" width="85" height="85"></center>
+                        <h1 id="header1"><span id="message3">Your Reply have been published !!</span></h1>
+                        <br>
+                    </div>
+                </div>
+
+                <div data-role="popup" id="v-promo-popup-success3">
+                    <div data-role="content" >
+                        <a href="#" data-rel="back" id="popupback2"> <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15"></a>
+                        <br>
+                        <center><img id="av" src="../../Assets/img/icons/gift-icon.png" width="85" height="85"></center>
+                        <h1 id="header1"><span id="message3">Your Reply have been published !!</span></h1>
+                        <br>
+                    </div>
+                </div>
+
+                <div data-role="popup" id="popup-reply" data-theme="a" class="ui-corner-all" style="width: 390px;">
+                        <div class="p-3">
+                            <input type="text" name="reply" id="reply" value="" placeholder="Your Reply..." /><br>
+                            <a href="" data-role="button" onclick='onAddRply()' class="submit pl-2 pt-2" id="submit" >
+                                Submit
+                            </a>
+                        </div>
+                </div>
+
+
+
 
             </div>
             <div class="raw three">

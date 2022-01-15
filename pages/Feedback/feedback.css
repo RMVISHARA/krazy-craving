@@ -3,6 +3,25 @@
     background-color: black;
 }
 
+.star {
+    color: goldenrod;
+    font-size: 31px;
+    padding: 0px;
+    /* space out the stars */
+}
+
+.stars {
+    counter-reset: rateme 0;
+    font-size: 2.0rem;
+    font-weight: 900;
+    margin-top: 8px;
+}
+
+.starsNew {
+    font-size: 4.0rem;
+    font-weight: 900;
+}
+
 .locationLogo {
     padding-top: 10px;
     padding-right: 60px;

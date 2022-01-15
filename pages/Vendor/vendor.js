@@ -1,3 +1,14 @@
+var promos = [
+    {
+        id: 2,
+        calc : "*2"
+    },
+    {
+        id: 5,
+        calc : "*0.2"
+    }
+];
+
 $(document).ready(function(){
     localStorage.setItem("directingTo", 0);
 
@@ -38,30 +49,7 @@ $(document).ready(function(){
 
     });
 
-
-    let commentList = localStorage.getItem("commentList");
-    commentList = (commentList) ? JSON.parse(commentList) : []
-
-    let outputHtml = ``;
-    commentList.map(x => {
-        if(x.bussiness == selectedVendor){
-            outputHtml += `
-                            <div class="ui-grid-a"id="usergrid">
-                                    <img src="../../Assets/img/boy.jpg" class="round">
-                                    <div class="ma">
-                                        <p style="color: #000000; margin-top: 2px;">Jone Doe</p>
-                                        <p style="color: #000000; margin-top: -8px;">${x.comment}</p>
-                                        <div id="str">
-                                            <span class="fa fa-star checked fa-xs" style="color: #FFCC36;margin-left:35%; font-size: 1.3rem; position: relative; margin-top: -13px;"></span>
-                                            <span style="color: #FFCC36; font-size: 1.3rem; position: relative; margin-top: -13px; margin-left: 10px">${x.rating}/5</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            `
-        }
-    })
-
-    $("#reviewlist").html(outputHtml);
+    loadCommentList();
 
     var x = JSON.parse(localStorage.getItem("favVendors"));
     
@@ -72,3 +60,78 @@ $(document).ready(function(){
         document.getElementById("heart").src="../../Assets/img/icons/unlike-heart.svg";
     }
 });
+
+function loadCommentList(){
+    let commentList = localStorage.getItem("commentList");
+    commentList = (commentList) ? JSON.parse(commentList) : []
+
+    let outputHtml = ``;
+    commentList.map(x => {
+        if(x.bussiness == selectedVendor){
+            outputHtml += `
+                            <div class="ui-grid-a" id="usergrid">
+                                <img src="../../Assets/img/boy.jpg" class="round">
+                                <div class="ma">
+                                    <p style="color: #000000; margin-top: 2px;">Jone Doe</p>
+                                    <p style="color: #000000; margin-top: -8px;">${x.comment}</p>
+                                    <div id="str">
+                                        <span class="fa fa-star checked fa-xs" style="color: #FFCC36;margin-left:35%; font-size: 1.3rem; position: relative; margin-top: -13px;"></span>
+                                        <span style="color: #FFCC36; font-size: 1.3rem; position: relative; margin-top: -13px; margin-left: 10px">${x.rating}/5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="rplylist" align="center">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#popup-reply2"
+                                onclick="saveOgCommentId(${x.id})">
+                                    Reply
+                                </button>
+                            </div>
+                            `
+                            x.replys.forEach(rep => {
+                                    outputHtml += `
+                                            <div class="row">
+                                                <small>${rep}</small>
+                                            </div>
+                                    `;
+                            });
+                            
+                            `
+                            <hr>
+                        `;
+        }
+    });
+
+    $("#reviewlist").html(outputHtml);
+};
+
+function onAddRply() 
+{
+    var val = JSON.parse(localStorage.getItem("ogCommentId"));
+
+    var reply = document.getElementById('reply').value;
+    var index;
+
+    if (reply == "") {
+        alert("Reply can not be empty!");
+        return;
+    };
+
+    $("#popup-reply2").modal('hide'); 
+    setTimeout(function(){$("#v-promo-popup-success4").modal("show");}, 1000);
+
+    let commentList = JSON.parse(localStorage.getItem("commentList"));
+    commentList.forEach((e,i) => {
+        e.id == val ? index = i : "";
+    });
+    
+    commentList[index].replys.push(reply);
+    localStorage.setItem("commentList",JSON.stringify(commentList));
+
+    document.getElementById('reply').value = "";
+    loadCommentList();
+};
+
+function saveOgCommentId(val){
+    localStorage.setItem("ogCommentId",val);
+};
+
