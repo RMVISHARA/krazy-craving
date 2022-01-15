@@ -8,6 +8,17 @@
             padding-top: 10px;
             padding-bottom: 30px;
         }
+
+        .title {
+            font-size: 14px;
+            font-weight: 1000;
+        }
+
+        .leaderboardLink{
+            font-size: 14px;
+            font-weight: 1000;
+            color: #ff9100 !important;
+        }
         
         .skills {
             color: white;
