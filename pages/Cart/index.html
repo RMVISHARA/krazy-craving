@@ -11,34 +11,35 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="http://checkout.stripe.com/checkout.js"></script>
-    <script src="../../Assets/js/js.min.js"></script> <!--slider-->
-    <link rel="stylesheet" href="../../Assets/css/style.min.css"> <!--slider-->
+    <script src="../../Assets/js/js.min.js"></script>
+    <!--slider-->
+    <link rel="stylesheet" href="../../Assets/css/style.min.css">
+    <!--slider-->
     <link rel="stylesheet" type="text/css" href="../../Assets/css/common.user.css">
 
 </head>
 
 <body>
 
-<div data-role="page" id="cartpage" >
-    <div data-role="header" data-position="fixed" data-tap-toggle="false" id="header">
+    <div data-role="page" id="cartpage">
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" id="header">
 
-        <div class="mhead">
-            <a class="back-btn" href="../Vendor">
-                < Back</a>
-            <img class="menu-ham2" src="../../Assets/img/rectangle_logo_black.png">
+            <div class="mhead">
+                <a class="back-btn" href="../Vendor">
+                    < Back</a>
+                        <img class="menu-ham2" src="../../Assets/img/rectangle_logo_black.png">
+            </div>
+            <!-- /grid-b -->
         </div>
-        <!-- /grid-b -->
-    </div>
-    <div data-role="content" class="shopping-cart">
+        <div data-role="content" class="shopping-cart">
 
-        <!--<div class="product" >
+            <!--<div class="product" >
             <div class="product-removal">
                 <img src="../../Assets/img/icons/close.png" class="remove" height="17" width="17">
                 <img src="../../Assets/img/cheese.jpg" class="cart-item" height="69" width="71">
             </div>
             <div id="foodtype"> Pizza Parata </div>
             <div id="price"> 130 </div>
-
             <div class="adder">
                 <img src="../../Assets/img/icons/add-button.svg" class="plus" height="20" width="20">
                 <input type="number" name="number" id="qty" value="1" data-role=none disabled/>
@@ -47,101 +48,102 @@
             <div id="subtotal">130.00</div>
         </div>-->
 
-        <div id="cartlist"> </div>
+            <div id="cartlist"> </div>
 
-        <hr class="style-eight" />
-        <div class="wrapper" id="gamification">
-            <div>
-            <input id="points" type="textarea" placeholder="Enter redeem points..."  maxlength="5">
-            </div>
-            <div>
-            <a  href="#v-promo-popup-success" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" class="addPoints" onclick='redeemPoints()'>Add</a>
-            </div>
-        </div>
-        <hr class="style-eight" />
-        <div id="promo">
-            <input id="promo-code" type="textarea" placeholder="Enter promo code..."  maxlength="5">
-        </div>
-        <hr class="style-eight" />
-        <div id="totals">
-            <div class="totals-item ui-grid-a" id="total-grid">
-                <div class="subtotal ui-block-a" id="total-block1">Subtotal</div>
-                <div class="totals-value ui-block-b" id="cart-subtotal">71.97</div>
-                <div class="tax ui-block-a" id="total-block1">Tax (5%)</div>
-                <div class="totals-value ui-block-b" id="cart-tax">3.60</div>
-                <div class="delivery ui-block-a" id="total-block1">Delivery fee</div>
-                <div class="totals-value ui-block-b" id="cart-shipping">15.00</div>
-                <div class="total ui-block-a" id="total-block1">Total</div>
-                <div class="totals-value ui-block-b" id="cart-total" name="cart_total" value="90.57" >90.57</div>
-            </div>
-        </div>
-        <div id="payment">
-            <p id="payment-header"> Payment</p>
             <hr class="style-eight" />
-            <form>
-
-                <div class="ui-grid-b" id="selection">
-                    <div class="ui-block-a" id="select-block1"><input type="radio" name="radio-choice-v-2" id="cash" checked="checked"> </div>
-                    <div class="ui-block-b" id="select-block2">Cash</div>
-                    <div class="ui-block-c" id="select-block3"><img src="../../Assets/img/icons/cash-payment.png"  height="36" width="36"></div>
-                    <div class="ui-block-a" id="select-block1"><input type="radio" name="radio-choice-v-2" id="card"> </div>
-                    <div class="ui-block-b" id="select-block2">Credit/Debit Card</div>
-                    <div class="ui-block-c" id="select-block3"><img src="../../Assets/img/icons/card-payment.png"  height="21" width="33"></div>
+            <div class="wrapper" id="gamification">
+                <div>
+                    <input id="points" type="textarea" placeholder="Enter redeem points..." maxlength="5">
                 </div>
-            </form>
+                <div>
+                    <a href="#v-promo-popup-success" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" class="addPoints" onclick='redeemPoints()'>Add</a>
+                </div>
+            </div>
+            <hr class="style-eight" />
+            <div id="promo">
+                <input id="promo-code" type="textarea" placeholder="Enter promo code..." maxlength="5">
+            </div>
+            <hr class="style-eight" />
+            <div id="totals">
+                <div class="totals-item ui-grid-a" id="total-grid">
+                    <div class="subtotal ui-block-a" id="total-block1">Subtotal</div>
+                    <div class="totals-value ui-block-b" id="cart-subtotal">71.97</div>
+                    <div class="tax ui-block-a" id="total-block1">Tax (5%)</div>
+                    <div class="totals-value ui-block-b" id="cart-tax">3.60</div>
+                    <div class="delivery ui-block-a" id="total-block1">Delivery fee</div>
+                    <div class="totals-value ui-block-b" id="cart-shipping">15.00</div>
+                    <div class="total ui-block-a" id="total-block1">Total</div>
+                    <div class="totals-value ui-block-b" id="cart-total" name="cart_total" value="90.57">90.57</div>
+                </div>
+            </div>
+            <div id="payment">
+                <p id="payment-header"> Payment</p>
+                <hr class="style-eight" />
+                <form>
 
-            <br>
-        </div>
-        <div align="center">
-            <a href="#v-promo-popup-success2" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" onclick='myFunction()' class="checkout" id="checkout" >Place Order</a>
-        </div>
-        
-        <div data-role="popup" id="v-promo-popup-success">
-            <div data-role="content" >
+                    <div class="ui-grid-b" id="selection">
+                        <div class="ui-block-a" id="select-block1"><input type="radio" name="radio-choice-v-2" id="cash" checked="checked"> </div>
+                        <div class="ui-block-b" id="select-block2">Cash</div>
+                        <div class="ui-block-c" id="select-block3"><img src="../../Assets/img/icons/cash-payment.png" height="36" width="36"></div>
+                        <div class="ui-block-a" id="select-block1"><input type="radio" name="radio-choice-v-2" id="card"> </div>
+                        <div class="ui-block-b" id="select-block2">Credit/Debit Card</div>
+                        <div class="ui-block-c" id="select-block3"><img src="../../Assets/img/icons/card-payment.png" height="21" width="33"></div>
+                    </div>
+                </form>
 
-                <a href="#" data-rel="back" id="popupback"> <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15"></a>
                 <br>
-                <center><img id="av" src="../../Assets/img/icons/gift-icon.png" width="85" height="85"></center>
-                <h1 id="header1"><span id="message"></span></h1>
-                <br>
+            </div>
+            <div align="center">
+                <a href="#v-promo-popup-success2" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" onclick='myFunction()' class="checkout" id="checkout">Place Order</a>
+            </div>
 
+            <div data-role="popup" id="v-promo-popup-success">
+                <div data-role="content">
+
+                    <a href="#" data-rel="back" id="popupback"> <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15"></a>
+                    <br>
+                    <center><img id="av" src="../../Assets/img/icons/gift-icon.png" width="85" height="85"></center>
+                    <h1 id="header1"><span id="message"></span></h1>
+                    <br>
+
+                </div>
+            </div>
+
+            <div data-role="popup" id="v-promo-popup-success2">
+                <div data-role="content">
+
+                    <!-- <a href="#" data-rel="back" id="popupback2"> <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15"></a> -->
+                    <br>
+                    <center><img id="av" src="../../Assets/img/icons/gift-icon.png" width="85" height="85"></center>
+                    <h1 id="header1"><span id="message2"></span></h1>
+                    <br>
+
+                </div>
+            </div>
+
+        </div>
+        <!--content-->
+        <div class="footer" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
+                    <li><a href="../PastOrder/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-orders-inactive" id="inactive" data-ajax="false">Orders</a></li>
+                    <li><a href="../UserFavourites/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive" data-ajax="false">Favourites</a></li>
+                    <li><a href="../Cart/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-cart-active" id="active" data-ajax="">Cart</a></li>
+
+                </ul>
             </div>
         </div>
+    </div>
+    <!--page-->
+    <script>
+        function loadcartList() {
+            let cartItems = localStorage.getItem("cartItems");
+            cartItems = (cartItems) ? JSON.parse(cartItems) : [];
 
-        <div data-role="popup" id="v-promo-popup-success2">
-            <div data-role="content" >
-
-                <!-- <a href="#" data-rel="back" id="popupback2"> <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15"></a> -->
-                <br>
-                <center><img id="av" src="../../Assets/img/icons/gift-icon.png" width="85" height="85"></center>
-                <h1 id="header1"><span id="message2"></span></h1>
-                <br>
-
-            </div>
-        </div>
-
-    </div><!--content-->
-    <div class="footer" data-role="footer" data-position="fixed">
-        <div data-role="navbar" >
-            <ul>
-                <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
-                <li><a href="../PastOrder/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-orders-inactive" id="inactive" data-ajax="false">Orders</a></li>
-                <li><a href="../UserFavourites/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive"data-ajax="false">Favourites</a></li>
-                <li><a href="../Cart/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-cart-active" id="active" data-ajax="">Cart</a></li>
-  
-            </ul>
-        </div>
-    </div>   
-</div><!--page-->
-<script>
-    function loadcartList() {
-        let cartItems = localStorage.getItem("cartItems");
-        cartItems = (cartItems) ? JSON.parse(cartItems) : [];
-
-        let outputHtml = ``;
-        cartItems.forEach(item =>
-        {
-            outputHtml += `
+            let outputHtml = ``;
+            cartItems.forEach(item => {
+                outputHtml += `
 						<div class="product" >
 							<div class="product-removal">
 								  <img src="../../Assets/img/icons/close.png" id="${item.id}" class="remove" height="17" width="17">
@@ -149,7 +151,6 @@
 							</div>
 							<div id="foodtype">${item.itemName}</div>
 							<div id="price"> ${item.price}</div>
-
 							<div class="adder">
 								 <img src="../../Assets/img/icons/add-button.svg" class="plus" height="20" width="20">
 								 <input type="number" name="number" id="qty" value="${item.quantity}" data-role=none disabled/>
@@ -158,256 +159,257 @@
 							<div id="subtotal"> ${item.price * item.quantity}.00</div>
 						</div>
 							`
-        });
-
-        $("#cartlist").html(outputHtml);
-    }
-
-    loadcartList()
-
-</script>
-<script>
-    var cartItems = localStorage.getItem("cartItems");
-    cartItems = (cartItems) ? JSON.parse(cartItems) : [];
-    var taxRate = 0.15;
-    var shippingRate = 20.00;
-    var fadeTime = 100;
-
-    $(document).ready(function() {
-        recalculateCart();
-    });
-
-    //On click Plus button
-    $(document).ready(function() {
-        $(".plus").click(function() {
-            var n = $(this).parent(".adder").find("#qty");
-            n.val(Number(n.val()) + 1);
-            updateQuantity(this);
-        });
-    });
-
-    // On click minus button
-    $(document).ready(function() {
-        $(".minus").click(function() {
-            var $n = $(this).parent(".adder").find("#qty");
-            var amount = Number($n.val());
-
-            if (amount > 1) {
-                $n.val(amount - 1);
-                updateQuantity(this);
-            }
-        });
-    });
-
-    // If removed button is clicked
-    $('.remove').click(function() {
-        removeItem(this,this.id);
-    });
-
-    function redeemPoints() {
-        var val = document.getElementById("points").value
-        var currentPoints = localStorage.getItem("totalPoint")
-        if(val){
-            if(Number(currentPoints) >= Number(val)) {
-                var newPoints = Number(currentPoints) - Number(val)
-                localStorage.setItem("totalPoint", newPoints)
-                localStorage.setItem("points", val)
-                var message=("congratulations points redeemed successfully")
-                $('#message').text(message);
-                recalculateCart();
-                
-            }
-            else if(Number(val)==0){
-                var message=("Please enter a valid amount of points")
-                $('#message').text(message);
-            }
-            else {
-                var message=("Sorry insufficient Krazy point balance")
-                $('#message').text(message);
-            }
-        }else{
-            var message=("Please enter a valid amount of points")
-            $('#message').text(message);
-        }
-        document.getElementById("points").value = ""
-    }
-
-
-    /* Recalculate cart */
-    function recalculateCart() {
-        var subtotal = 0;
-        var points = localStorage.getItem("points")
-        points = (points) ? points : 0
-
-        $('.product').each(function() {
-            subtotal += parseFloat($(this).children('#subtotal').text());
-        });
-
-        if(subtotal >= Number(points)){
-            subtotal -= Number(points)
-            localStorage.setItem("points",0)
-        }else{
-            points -= subtotal;
-            subtotal = 0;
-            localStorage.setItem("points",points)
-        }
-
-        /* Calculate totals */
-        var tax = subtotal * taxRate;
-        var shipping = (subtotal < 300 ? shippingRate : 0);
-        var total = subtotal + tax + shipping;
-
-        /* Update totals display */
-        $('.totals-value').fadeOut(fadeTime, function() {
-            $('#cart-subtotal').html(subtotal.toFixed(2));
-            $('#cart-tax').html(tax.toFixed(2));
-            $('#cart-shipping').html(shipping.toFixed(2));
-            $('#cart-total').html(total.toFixed(2));
-            if (total == 0) {
-                $('.checkout').fadeOut(fadeTime);
-            } else {
-                $('.checkout').fadeIn(fadeTime);
-            }
-            $('.totals-value').fadeIn(fadeTime);
-        });
-    }
-
-
-    /* Update quantity */
-    function updateQuantity(quantityInput) {
-        /* Calculate line price */
-        var productRow = $(quantityInput).parent().parent();
-        var price = parseFloat(productRow.children('#price').text());
-        var quantity = productRow.find("#qty").val();
-        var linePrice = price * quantity;
-
-        /* Update line price display and recalc cart totals */
-        productRow.children('#subtotal').each(function() {
-            $(this).fadeOut(fadeTime, function() {
-                $(this).text(linePrice.toFixed(2));
-                recalculateCart();
-                $(this).fadeIn(fadeTime);
             });
-        });
-    }
 
+            $("#cartlist").html(outputHtml);
+        }
 
-    /* Remove item from cart */
-    function removeItem(removeButton,id) {
-        var newCart = [];
-        cartItems.forEach(element => {
-            element.id != id ? newCart.push(element):"placeholder";
-        });
-        cartItems = newCart;
-        localStorage.setItem("cartItems",JSON.stringify(cartItems));
+        loadcartList()
+    </script>
+    <script>
+        var cartItems = localStorage.getItem("cartItems");
+        cartItems = (cartItems) ? JSON.parse(cartItems) : [];
+        var taxRate = 0.15;
+        var shippingRate = 20.00;
+        var fadeTime = 100;
 
-        /* Remove row from DOM and recalc cart total */
-        var productRow = $(removeButton).parent().parent();
-        productRow.slideUp(fadeTime, function() {
-            productRow.remove();
+        $(document).ready(function() {
             recalculateCart();
         });
-    }
 
-    function myFunction() {
-        var str = $("#cart-total" ).text();
-        var transactionPoints = Math.ceil(str*0.05);
-        var newOrder = {};
-        var orderDetails = [];
-        var orders = localStorage.getItem("ongoingOrders");
-        orders = (orders) ? JSON.parse(orders) : [];
-
-        if(cartItems.length > 0){
-            $('.product').each(function() {
-                var obj = {}
-                // obj.imageurl = $(this).children('.product-removal').children('#product-image').attr('src');
-                obj.qty = Number($(this).children('.adder').children('#qty').val());
-                obj.name = $(this).children('#foodtype').html();
-                obj.price = Number($(this).children('#price').html());
-                orderDetails.push(obj);
+        //On click Plus button
+        $(document).ready(function() {
+            $(".plus").click(function() {
+                var n = $(this).parent(".adder").find("#qty");
+                n.val(Number(n.val()) + 1);
+                updateQuantity(this);
             });
+        });
 
-            let date = new Date();
-            date.setHours( date.getHours() + 1 );
-            date = date.toLocaleString('en-US', {hour: 'numeric',minute: 'numeric',hour12: true});
+        // On click minus button
+        $(document).ready(function() {
+            $(".minus").click(function() {
+                var $n = $(this).parent(".adder").find("#qty");
+                var amount = Number($n.val());
 
-            newOrder.totalPrice = Number(document.getElementById("cart-total").innerHTML);
-            newOrder.orderDetails = orderDetails;
-            newOrder.deliveryTime = date;
-            newOrder.restaurent = cartItems[0].restaurent;
-            orders.push(newOrder);
+                if (amount > 1) {
+                    $n.val(amount - 1);
+                    updateQuantity(this);
+                }
+            });
+        });
 
-            localStorage.setItem("ongoingOrders",JSON.stringify(orders));
-            localStorage.setItem("cartItems",JSON.stringify([]));
+        // If removed button is clicked
+        $('.remove').click(function() {
+            removeItem(this, this.id);
+        });
+
+        function redeemPoints() {
+            var val = document.getElementById("points").value
+            var currentPoints = localStorage.getItem("totalPoint")
+            if (val) {
+                if (Number(currentPoints) >= Number(val)) {
+                    var newPoints = Number(currentPoints) - Number(val)
+                    localStorage.setItem("totalPoint", newPoints)
+                    localStorage.setItem("points", val)
+                    var message = ("congratulations points redeemed successfully")
+                    $('#message').text(message);
+                    recalculateCart();
+
+                } else if (Number(val) == 0) {
+                    var message = ("Please enter a valid amount of points")
+                    $('#message').text(message);
+                } else {
+                    var message = ("Sorry insufficient Krazy point balance")
+                    $('#message').text(message);
+                }
+            } else {
+                var message = ("Please enter a valid amount of points")
+                $('#message').text(message);
+            }
+            document.getElementById("points").value = ""
         }
 
-        if(document.getElementById('cash').checked) {
-            var kPoints = localStorage.getItem("totalPoint");
-            kPoints = Number(kPoints) + transactionPoints;
-            localStorage.setItem("totalPoint",kPoints);
+
+
+        /* Recalculate cart */
+        function recalculateCart() {
+            var subtotal = 0;
+            var points = localStorage.getItem("points")
+            points = (points) ? points : 0
+
+            $('.product').each(function() {
+                subtotal += parseFloat($(this).children('#subtotal').text());
+            });
+
+            if (subtotal >= Number(points)) {
+                subtotal -= Number(points)
+                localStorage.setItem("points", 0)
+            } else {
+                points -= subtotal;
+                subtotal = 0;
+                localStorage.setItem("points", points)
+            }
+
+            /* Calculate totals */
+            var tax = subtotal * taxRate;
+            var shipping = (subtotal < 300 ? shippingRate : 0);
+            var total = subtotal + tax + shipping;
+
+            /* Update totals display */
+            $('.totals-value').fadeOut(fadeTime, function() {
+                $('#cart-subtotal').html(subtotal.toFixed(2));
+                $('#cart-tax').html(tax.toFixed(2));
+                $('#cart-shipping').html(shipping.toFixed(2));
+                $('#cart-total').html(total.toFixed(2));
+                if (total == 0) {
+                    $('.checkout').fadeOut(fadeTime);
+                } else {
+                    $('.checkout').fadeIn(fadeTime);
+                }
+                $('.totals-value').fadeIn(fadeTime);
+            });
+        }
+
+
+        /* Update quantity */
+        function updateQuantity(quantityInput) {
+            /* Calculate line price */
+            var productRow = $(quantityInput).parent().parent();
+            var price = parseFloat(productRow.children('#price').text());
+            var quantity = productRow.find("#qty").val();
+            var linePrice = price * quantity;
+
+            /* Update line price display and recalc cart totals */
+            productRow.children('#subtotal').each(function() {
+                $(this).fadeOut(fadeTime, function() {
+                    $(this).text(linePrice.toFixed(2));
+                    recalculateCart();
+                    $(this).fadeIn(fadeTime);
+                });
+            });
+        }
+
+
+        /* Remove item from cart */
+        function removeItem(removeButton, id) {
+            var newCart = [];
+            cartItems.forEach(element => {
+                element.id != id ? newCart.push(element) : "placeholder";
+            });
+            cartItems = newCart;
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+            /* Remove row from DOM and recalc cart total */
+            var productRow = $(removeButton).parent().parent();
+            productRow.slideUp(fadeTime, function() {
+                productRow.remove();
+                recalculateCart();
+            });
+        }
+
+        function myFunction() {
+            var str = $("#cart-total").text();
+            var transactionPoints = Math.ceil(str * 0.05);
+            var newOrder = {};
+            var orderDetails = [];
+            var orders = localStorage.getItem("ongoingOrders");
+            orders = (orders) ? JSON.parse(orders) : [];
+
+            if (cartItems.length > 0) {
+                $('.product').each(function() {
+                    var obj = {}
+                        // obj.imageurl = $(this).children('.product-removal').children('#product-image').attr('src');
+                    obj.qty = Number($(this).children('.adder').children('#qty').val());
+                    obj.name = $(this).children('#foodtype').html();
+                    obj.price = Number($(this).children('#price').html());
+                    orderDetails.push(obj);
+                });
+
+                let date = new Date();
+                date.setHours(date.getHours() + 1);
+                date = date.toLocaleString('en-US', {
+                    hour: 'numeric',
+                    minute: 'numeric',
+                    hour12: true
+                });
+
+                newOrder.totalPrice = Number(document.getElementById("cart-total").innerHTML);
+                newOrder.orderDetails = orderDetails;
+                newOrder.deliveryTime = date;
+                newOrder.restaurent = cartItems[0].restaurent;
+                orders.push(newOrder);
+
+                localStorage.setItem("ongoingOrders", JSON.stringify(orders));
+                localStorage.setItem("cartItems", JSON.stringify([]));
+            }
+
+            if (document.getElementById('cash').checked) {
+                var kPoints = localStorage.getItem("totalPoint");
+                kPoints = Number(kPoints) + transactionPoints;
+                localStorage.setItem("totalPoint", kPoints);
 
             $("#message2").text(`
                 Your Order has been placed.
                 You recived ${transactionPoints} Krazy points for this transaction.
             `);
-            
-            setTimeout(function () {
-                window.location.href = "../../pages/CurrentOrder/";
-            }, 5000);
 
-        }
-        if(document.getElementById('card').checked) {
-            jQuery(function($) {
-                var handler = StripeCheckout.configure({
-                    key: 'pk_test_cp21BcECf4kMMUbSlRlZlsMo',
-                    token: function(token) {
-                        //Use the token to create te charge with a server side script.
-                        // You can access the token ID with 'token.id'
+                setTimeout(function() {
+                    window.location.href = "../../pages/CurrentOrder/";
+                }, 5000);
 
-                        //This will be printed when the transaction is successful. To charge, server side scripting is required.
-                        if(token.id){
-                            var kPoints = localStorage.getItem("totalPoint");
-                            kPoints = Number(kPoints) + transactionPoints;
-                            localStorage.setItem("totalPoint",kPoints);
+            }
+            if (document.getElementById('card').checked) {
+                jQuery(function($) {
+                    var handler = StripeCheckout.configure({
+                        key: 'pk_test_cp21BcECf4kMMUbSlRlZlsMo',
+                        token: function(token) {
+                            //Use the token to create te charge with a server side script.
+                            // You can access the token ID with 'token.id'
 
-                            $("#message2").text(`
-                                Your Order has been placed.
+                            //This will be printed when the transaction is successful. To charge, server side scripting is required.
+                            if (token.id) {
+                                var kPoints = localStorage.getItem("totalPoint");
+                                kPoints = Number(kPoints) + transactionPoints;
+                                localStorage.setItem("totalPoint", kPoints);
+
+                                $("#message2").text(`
+                                Thank you, your payment was successful!
                                 You recived ${transactionPoints} Krazy points for this transaction.
                             `);
 
-                            setTimeout(function () {
-                                window.location.href = "../../pages/CurrentOrder/"; 
-                            }, 5000);
+                                setTimeout(function() {
+                                    window.location.href = "../../pages/CurrentOrder/";
+                                }, 5000);
 
-                            //You can also use the following code to re-submit the form content to another file for further processing
-                            //$form.get(0).submit();
+                                //You can also use the following code to re-submit the form content to another file for further processing
+                                //$form.get(0).submit();
 
-                            //Or save form data locally, using local storage.
+                                //Or save form data locally, using local storage.
 
+                            }
                         }
-                    }
-                });
-                //Open checkout with further options
-                handler.open({
-                    name: 'Krazy Cravings',
-                    currency: 'LKR',
-                    description: 'Make Payment',
-                    amount: str * 100 ,
-                });
-                e.preventDefault();
+                    });
+                    //Open checkout with further options
+                    handler.open({
+                        name: 'Krazy Cravings',
+                        currency: 'LKR',
+                        description: 'Make Payment',
+                        amount: str * 100,
+                    });
+                    e.preventDefault();
 
-                // Close Checkout on page navigation
-                $(window).on('popstate', function(){
-                    handler.close();
+                    // Close Checkout on page navigation
+                    $(window).on('popstate', function() {
+                        handler.close();
+                    });
                 });
-            });
-        }
-    };
-    
-</script>
-<script>
-
-</script>
-<iframe frameborder="0" allowtransparency="true" src="./stripe_files/index-af884f1198ee56a57968.html" name="stripe_checkout_app" class="stripe_checkout_app" style="z-index: 2147483647; display: none; background: rgba(0, 0, 0, 0.00392157); border: 0px none transparent; overflow-x: hidden; overflow-y: auto; visibility: visible; margin: 0px; padding: 0px; -webkit-tap-highlight-color: transparent; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%;"></iframe>
+            }
+        };
+    </script>
+    <script>
+    </script>
+    <iframe frameborder="0" allowtransparency="true" src="./stripe_files/index-af884f1198ee56a57968.html" name="stripe_checkout_app" class="stripe_checkout_app" style="z-index: 2147483647; display: none; background: rgba(0, 0, 0, 0.00392157); border: 0px none transparent; overflow-x: hidden; overflow-y: auto; visibility: visible; margin: 0px; padding: 0px; -webkit-tap-highlight-color: transparent; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%;"></iframe>
 </body>
+
 </html>

@@ -1,89 +1,86 @@
-.back-btn {
-    margin-left: 2%;
-    text-decoration: none !important;
-    font-size: 18px;
-}
-
-.back-btn a:hover {
-    text-decoration: none !important;
-}
 .wrapper {
     display: grid;
     grid-auto-flow: column;
 }
-#header {
-    z-index: 1000;
-}
-#header1{
-    font-family:Arial !important;
-    font-size:20px !important;
-    text-align:center !important;
+
+#header1 {
+    font-family: Arial !important;
+    font-size: 20px !important;
+    text-align: center !important;
     margin-top: 20px !important;
     font-weight: bold;
 }
 
-.menu-ham2 {
-    width: 120px;
-    margin: 5px 0 3px 75px;
-}
 .shopping-cart {
     background-color: white;
     margin: 20px;
     height: 670px;
 }
-.product{
-    box-shadow: -1px 1px -1px 2px rgba(0,0,0,0.2);
+
+.product {
+    box-shadow: -1px 1px -1px 2px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    height:100px;
-    background-color:white;
+    height: 100px;
+    background-color: white;
     color: black;
-    margin-bottom:5px;
+    margin-bottom: 5px;
 }
-.remove{
+
+.remove {
     margin-left: 5px;
     position: relative;
 }
+
 .cart-item {
     margin-top: 15px;
     margin-left: 10px;
     border-radius: 5px;
 }
-#foodtype{
+
+#foodtype {
     position: relative;
     margin-left: 123px;
     margin-top: -55px;
     text-decoration: none;
     text-shadow: none;
-    color:black;
-    font-size:15px;
-    font-weight:bold;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
 }
+
 #price {
     position: relative;
     margin-left: 122px;
     margin-top: 4px;
     text-decoration: none;
     text-shadow: none;
-    color:#FF9700;
-    font-size:11px;
-    font-weight:bold;
+    color: #FF9700;
+    font-size: 11px;
+    font-weight: bold;
 }
-#price:before, #subtotal:before{
+
+#price:before,
+#subtotal:before {
     content: 'LKR ';
 }
-.adder{
+
+.adder {
     margin-left: 220px;
     margin-top: -65px;
     position: relative;
-    color:black;
+    color: black;
 }
-.plus{
+
+.plus {
     margin-top: 3px;
     margin-left: 40px;
 }
-.plus-product, .minus-product{
-    margin-top:-3px;
+
+.plus-product,
+.minus-product {
+    margin-top: -3px;
 }
+
 #qty {
     text-decoration: none;
     font-size: 11px !important;
@@ -95,10 +92,12 @@
     margin-top: 20px;
     background-color: transparent;
 }
-.minus{
+
+.minus {
     margin-top: 3px;
 }
-#subtotal{
+
+#subtotal {
     position: relative;
     margin-left: 260px;
     margin-top: 13px;
@@ -108,57 +107,67 @@
     font-size: 13;
     font-weight: bold;
 }
-#cart-subtotal:before, #cart-tax:before, #cart-shipping:before, #cart-total:before {
+
+#cart-subtotal:before,
+#cart-tax:before,
+#cart-shipping:before,
+#cart-total:before {
     content: 'LKR ';
 }
-.total, #cart-total {
-    font-weight:bold;
+
+.total,
+#cart-total {
+    font-weight: bold;
 }
-#gamification{
+
+#gamification {
     border-radius: 5px;
-    background-color:white;
+    background-color: white;
     color: black;
-    margin-bottom:5px;
-    padding:5px 5px 5px 5px;
+    margin-bottom: 5px;
+    padding: 5px 5px 5px 5px;
     height: 60px;
     width: 100%;
 }
-#promo{
+
+#promo {
     border-radius: 5px;
-    background-color:white;
+    background-color: white;
     color: black;
-    margin-bottom:5px;
-    padding:5px 5px 5px 5px;
+    margin-bottom: 5px;
+    padding: 5px 5px 5px 5px;
     height: 50px;
     width: 100%;
 }
-#promo-code{
+
+#promo-code {
     text-decoration: none;
     font-size: 14px !important;
     font-weight: bold;
     line-height: 20px;
     padding-left: 20px;
     background-color: transparent;
-    color:black;
+    color: black;
     border-width: 0.5px;
     margin-left: 10px;
     width: 50%;
     margin-bottom: 10px;
-
 }
-#points{
+
+#points {
     text-decoration: none;
     font-size: 14px !important;
     font-weight: bold;
     line-height: 20px;
     padding-left: 20px;
     background-color: transparent;
-    color:black;
+    color: black;
     border-width: 0.5px;
     margin-left: 10px;
     width: 60%;
     margin-bottom: 5px;
 }
+
 .addPoints {
     background-color: #fc9920 !important;
     color: white !important;
@@ -175,33 +184,37 @@
     margin-bottom: 18px;
     margin-left: -80px!important;
 }
-#totals{
-    box-shadow: -1px 1px -1px 2px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    background-color:white;
-    color: black;
-    padding-bottom:10px;
-    padding-left: 20px;
 
+#totals {
+    box-shadow: -1px 1px -1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    padding-bottom: 10px;
+    padding-left: 20px;
 }
+
 #total-grid>#total-block1 {
-    float:left;
+    float: left;
 }
+
 #track-grid>.totals-value {
-    float:right;
+    float: right;
 }
 
 .totals-value {
     text-align: right;
     padding-top: 10px;
     padding-right: 34px;
-    font-size:14px;
+    font-size: 14px;
 }
-#payment-header{
-    font-size:19px;
-    font-weight:bold;
+
+#payment-header {
+    font-size: 19px;
+    font-weight: bold;
     padding: 4px 10px 0px 26px
 }
+
 hr.style-eight {
     height: 3px;
     margin-top: 5px;
@@ -213,34 +226,34 @@ hr.style-eight {
     -o-border-radius: 5px;
     border-radius: 5px;
 }
-#selection {
-}
-#selection>#select-block1{
-    width:10%;
 
+#selection {}
+
+#selection>#select-block1 {
+    width: 10%;
 }
 
-#select-block1{
+#select-block1 {
     margin-top: -2px;
-    padding-bottom:1px;
-    margin-left:5px;
+    padding-bottom: 1px;
+    margin-left: 5px;
 }
 
-#select-block2{
+#select-block2 {
     padding-top: 10px;
-    margin-left:10px;
-    padding-bottom:1px;
-    font-size:14px;
-    font-weight:bold;
+    margin-left: 10px;
+    padding-bottom: 1px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-#select-block3{
+#select-block3 {
     padding-top: 10px;
-    padding-bottom:1px;
-    margin-left:30px;
+    padding-bottom: 1px;
+    margin-left: 30px;
     text-align: right;
-
 }
+
 .checkout {
     margin-top: 10px !important;
     background-color: #fc9920 !important;
@@ -256,44 +269,33 @@ hr.style-eight {
     text-shadow: none !important;
 }
 
+
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
-/* Portrait and Landscape */
-@media only screen
-and (min-device-width: 414px)
-and (max-device-width: 736px)
-and (-webkit-min-device-pixel-ratio: 3) {
 
-}
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {}
+
 
 /* Portrait */
-@media only screen
-and (min-device-width: 414px)
-and (max-device-width: 736px)
-and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: portrait) {
 
-}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+
 
 /* Landscape */
-@media only screen
-and (min-device-width: 414px)
-and (max-device-width: 736px)
-and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: landscape) {
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
     #header {
         z-index: 1000;
     }
-    #header1{
-        font-family:Arial !important;
-        font-size:20px !important;
-        text-align:center !important;
+    #header1 {
+        font-family: Arial !important;
+        font-size: 20px !important;
+        text-align: center !important;
         margin-top: 20px !important;
         font-weight: bold;
     }
-
-    
-    
     .menu-ham2 {
         width: 150px !important;
         margin: 5px 0 3px 215px !important;
@@ -303,15 +305,15 @@ and (orientation: landscape) {
         margin: 20px;
         height: 900px;
     }
-    .product{
-        box-shadow: -1px 1px -1px 2px rgba(0,0,0,0.2);
+    .product {
+        box-shadow: -1px 1px -1px 2px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
-        height:100px;
-        background-color:white;
+        height: 100px;
+        background-color: white;
         color: black;
-        margin-bottom:5px;
+        margin-bottom: 5px;
     }
-    .remove{
+    .remove {
         margin-left: 11px;
         position: relative;
     }
@@ -320,15 +322,15 @@ and (orientation: landscape) {
         margin-left: 10px;
         border-radius: 5px;
     }
-    #foodtype{
+    #foodtype {
         position: relative;
         margin-left: 123px;
         margin-top: -55px;
         text-decoration: none;
         text-shadow: none;
-        color:black;
-        font-size:15px;
-        font-weight:bold;
+        color: black;
+        font-size: 15px;
+        font-weight: bold;
     }
     #price {
         position: relative;
@@ -336,25 +338,27 @@ and (orientation: landscape) {
         margin-top: 4px;
         text-decoration: none;
         text-shadow: none;
-        color:#FF9700;
-        font-size:11px;
-        font-weight:bold;
+        color: #FF9700;
+        font-size: 11px;
+        font-weight: bold;
     }
-    #price:before, #subtotal:before{
+    #price:before,
+    #subtotal:before {
         content: 'LKR ';
     }
-    .adder{
+    .adder {
         margin-left: 220px;
         margin-top: -65px;
         position: relative;
-        color:black;
+        color: black;
     }
-    .plus{
+    .plus {
         margin-top: 3px;
         margin-left: 360px !important;
     }
-    .plus-product, .minus-product{
-        margin-top:-3px;
+    .plus-product,
+    .minus-product {
+        margin-top: -3px;
     }
     #qty {
         text-decoration: none;
@@ -367,10 +371,10 @@ and (orientation: landscape) {
         margin-top: 20px;
         background-color: transparent;
     }
-    .minus{
+    .minus {
         margin-top: 3px;
     }
-    #subtotal{
+    #subtotal {
         position: relative;
         margin-left: 582px !important;
         margin-top: 13px;
@@ -380,53 +384,55 @@ and (orientation: landscape) {
         font-size: 13;
         font-weight: bold;
     }
-    #cart-subtotal:before, #cart-tax:before, #cart-shipping:before, #cart-total:before {
+    #cart-subtotal:before,
+    #cart-tax:before,
+    #cart-shipping:before,
+    #cart-total:before {
         content: 'LKR ';
     }
-    .total, #cart-total {
-        font-weight:bold;
+    .total,
+    #cart-total {
+        font-weight: bold;
     }
-
-    #gamification{
+    #gamification {
         border-radius: 5px;
-        background-color:white;
+        background-color: white;
         color: black;
-        margin-bottom:5px;
-        padding:5px 5px 5px 5px;
+        margin-bottom: 5px;
+        padding: 5px 5px 5px 5px;
         height: 100px;
         width: 100%;
     }
-    #promo{
+    #promo {
         border-radius: 5px;
-        background-color:white;
+        background-color: white;
         color: black;
-        margin-bottom:5px;
-        padding:5px 5px 5px 5px;
+        margin-bottom: 5px;
+        padding: 5px 5px 5px 5px;
         height: 80px;
         width: 100%;
     }
-    #promo-code{
+    #promo-code {
         text-decoration: none;
         font-size: 14px !important;
         font-weight: bold;
         line-height: 20px;
         padding-left: 20px;
         background-color: transparent;
-        color:black;
+        color: black;
         border-width: 0.5px;
         margin-left: 10px;
         width: 50%;
         margin-bottom: 10px;
-
     }
-    #points{
+    #points {
         text-decoration: none;
         font-size: 14px !important;
         font-weight: bold;
         line-height: 20px;
         padding-left: 20px;
         background-color: transparent;
-        color:black;
+        color: black;
         border-width: 0.5px;
         margin-left: 10px;
         width: 50%;
@@ -449,31 +455,29 @@ and (orientation: landscape) {
         margin-bottom: 18px;
         margin-left: -200px!important;
     }
-    #totals{
-        box-shadow: -1px 1px -1px 2px rgba(0,0,0,0.2);
+    #totals {
+        box-shadow: -1px 1px -1px 2px rgba(0, 0, 0, 0.2);
         border-radius: 5px;
-        background-color:white;
+        background-color: white;
         color: black;
-        padding-bottom:10px;
+        padding-bottom: 10px;
         padding-left: 20px;
-
     }
     #total-grid>#total-block1 {
-        float:left;
+        float: left;
     }
     #track-grid>.totals-value {
-        float:right;
+        float: right;
     }
-
     .totals-value {
         text-align: right;
         padding-top: 10px;
         padding-right: 34px;
-        font-size:14px;
+        font-size: 14px;
     }
-    #payment-header{
-        font-size:19px;
-        font-weight:bold;
+    #payment-header {
+        font-size: 19px;
+        font-weight: bold;
         padding: 4px 10px 0px 26px
     }
     hr.style-eight {
@@ -490,31 +494,26 @@ and (orientation: landscape) {
     #selection {
         padding-bottom: 40px;
     }
-    #selection>#select-block1{
-        width:10%;
-
+    #selection>#select-block1 {
+        width: 10%;
     }
-
-    #select-block1{
+    #select-block1 {
         margin-top: -2px;
-        padding-bottom:1px;
-        margin-left:30px;
+        padding-bottom: 1px;
+        margin-left: 30px;
     }
-
-    #select-block2{
+    #select-block2 {
         padding-top: 10px;
-        margin-left:-20px;
-        padding-bottom:1px;
-        font-size:14px;
-        font-weight:bold;
+        margin-left: -20px;
+        padding-bottom: 1px;
+        font-size: 14px;
+        font-weight: bold;
     }
-
-    #select-block3{
+    #select-block3 {
         padding-top: 10px;
-        padding-bottom:1px;
-        margin-left:90px !important;
+        padding-bottom: 1px;
+        margin-left: 90px !important;
         text-align: right;
-
     }
     .checkout {
         margin-top: 10px !important;
@@ -538,21 +537,20 @@ and (orientation: landscape) {
 @media only screen and (device-width: 768px) {
     /* For general iPad layouts */
 }
-#header1{
-    font-family:Arial !important;
-    font-size:20px !important;
-    text-align:center !important;
+
+#header1 {
+    font-family: Arial !important;
+    font-size: 20px !important;
+    text-align: center !important;
     margin-top: 20px !important;
     font-weight: bold;
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
     /* For portrait layouts only */
-
     #header {
         z-index: 1000;
     }
-
     .mhead {
         margin: 3px 0px 5px 0px;
     }
@@ -561,11 +559,9 @@ and (orientation: landscape) {
         text-decoration: none;
         font-size: 18px;
     }
-
     .back-btn a:hover {
         text-decoration: none;
     }
-
     .menu-ham2 {
         width: 150px;
         margin: 5px 0 3px 224px;
@@ -575,15 +571,15 @@ and (orientation: landscape) {
         margin: 20px;
         height: 900px;
     }
-    .product{
-        box-shadow: -1px 1px -1px 2px rgba(0,0,0,0.2);
+    .product {
+        box-shadow: -1px 1px -1px 2px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
-        height:100px;
-        background-color:white;
+        height: 100px;
+        background-color: white;
         color: black;
-        margin-bottom:5px;
+        margin-bottom: 5px;
     }
-    .remove{
+    .remove {
         margin-left: 11px;
         position: relative;
     }
@@ -592,15 +588,15 @@ and (orientation: landscape) {
         margin-left: 10px;
         border-radius: 5px;
     }
-    #foodtype{
+    #foodtype {
         position: relative;
         margin-left: 123px;
         margin-top: -55px;
         text-decoration: none;
         text-shadow: none;
-        color:black;
-        font-size:15px;
-        font-weight:bold;
+        color: black;
+        font-size: 15px;
+        font-weight: bold;
     }
     #price {
         position: relative;
@@ -608,25 +604,27 @@ and (orientation: landscape) {
         margin-top: 4px;
         text-decoration: none;
         text-shadow: none;
-        color:#FF9700;
-        font-size:11px;
-        font-weight:bold;
+        color: #FF9700;
+        font-size: 11px;
+        font-weight: bold;
     }
-    #price:before, #subtotal:before{
+    #price:before,
+    #subtotal:before {
         content: 'LKR ';
     }
-    .adder{
+    .adder {
         margin-left: 220px;
         margin-top: -65px;
         position: relative;
-        color:black;
+        color: black;
     }
-    .plus{
+    .plus {
         margin-top: 3px;
         margin-left: 360px;
     }
-    .plus-product, .minus-product{
-        margin-top:-3px;
+    .plus-product,
+    .minus-product {
+        margin-top: -3px;
     }
     #qty {
         text-decoration: none;
@@ -639,10 +637,10 @@ and (orientation: landscape) {
         margin-top: 20px;
         background-color: transparent;
     }
-    .minus{
+    .minus {
         margin-top: 3px;
     }
-    #subtotal{
+    #subtotal {
         position: relative;
         margin-left: 582px;
         margin-top: 13px;
@@ -652,53 +650,55 @@ and (orientation: landscape) {
         font-size: 13;
         font-weight: bold;
     }
-    #cart-subtotal:before, #cart-tax:before, #cart-shipping:before, #cart-total:before {
+    #cart-subtotal:before,
+    #cart-tax:before,
+    #cart-shipping:before,
+    #cart-total:before {
         content: 'LKR ';
     }
-    .total, #cart-total {
-        font-weight:bold;
+    .total,
+    #cart-total {
+        font-weight: bold;
     }
-
-    #gamification{
+    #gamification {
         border-radius: 5px;
-        background-color:white;
+        background-color: white;
         color: black;
-        margin-bottom:5px;
-        padding:5px 5px 5px 5px;
+        margin-bottom: 5px;
+        padding: 5px 5px 5px 5px;
         height: 60px;
         width: 100%;
     }
-    #promo{
+    #promo {
         border-radius: 5px;
-        background-color:white;
+        background-color: white;
         color: black;
-        margin-bottom:5px;
-        padding:5px 5px 5px 5px;
+        margin-bottom: 5px;
+        padding: 5px 5px 5px 5px;
         height: 40px;
         width: 100%;
     }
-    #promo-code{
+    #promo-code {
         text-decoration: none;
         font-size: 14px !important;
         font-weight: bold;
         line-height: 20px;
         padding-left: 20px;
         background-color: transparent;
-        color:black;
+        color: black;
         border-width: 0.5px;
         margin-left: 10px;
         width: 50%;
         margin-bottom: 10px;
-
     }
-    #points{
+    #points {
         text-decoration: none;
         font-size: 14px !important;
         font-weight: bold;
         line-height: 20px;
         padding-left: 20px;
         background-color: transparent;
-        color:black;
+        color: black;
         border-width: 0.5px;
         margin-left: 10px;
         width: 50%;
@@ -721,31 +721,29 @@ and (orientation: landscape) {
         margin-bottom: 18px;
         margin-left: -200px;
     }
-    #totals{
-        box-shadow: -1px 1px -1px 2px rgba(0,0,0,0.2);
+    #totals {
+        box-shadow: -1px 1px -1px 2px rgba(0, 0, 0, 0.2);
         border-radius: 5px;
-        background-color:white;
+        background-color: white;
         color: black;
-        padding-bottom:10px;
+        padding-bottom: 10px;
         padding-left: 20px;
-
     }
     #total-grid>#total-block1 {
-        float:left;
+        float: left;
     }
     #track-grid>.totals-value {
-        float:right;
+        float: right;
     }
-
     .totals-value {
         text-align: right;
         padding-top: 10px;
         padding-right: 34px;
-        font-size:14px;
+        font-size: 14px;
     }
-    #payment-header{
-        font-size:19px;
-        font-weight:bold;
+    #payment-header {
+        font-size: 19px;
+        font-weight: bold;
         padding: 4px 10px 0px 26px
     }
     hr.style-eight {
@@ -762,31 +760,26 @@ and (orientation: landscape) {
     #selection {
         padding-bottom: 40px;
     }
-    #selection>#select-block1{
-        width:10%;
-
+    #selection>#select-block1 {
+        width: 10%;
     }
-
-    #select-block1{
+    #select-block1 {
         margin-top: -2px;
-        padding-bottom:1px;
-        margin-left:30px;
+        padding-bottom: 1px;
+        margin-left: 30px;
     }
-
-    #select-block2{
+    #select-block2 {
         padding-top: 10px;
-        margin-left:-20px;
-        padding-bottom:1px;
-        font-size:14px;
-        font-weight:bold;
+        margin-left: -20px;
+        padding-bottom: 1px;
+        font-size: 14px;
+        font-weight: bold;
     }
-
-    #select-block3{
+    #select-block3 {
         padding-top: 10px;
-        padding-bottom:1px;
-        margin-left:90px;
+        padding-bottom: 1px;
+        margin-left: 90px;
         text-align: right;
-
     }
     .checkout {
         margin-top: 10px !important;
@@ -806,18 +799,16 @@ and (orientation: landscape) {
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
     /* For landscape layouts only */
-
     #header {
         z-index: 1000;
     }
-    #header1{
-        font-family:Arial !important;
-        font-size:20px !important;
-        text-align:center !important;
+    #header1 {
+        font-family: Arial !important;
+        font-size: 20px !important;
+        text-align: center !important;
         margin-top: 20px !important;
         font-weight: bold;
     }
-
     .mhead {
         margin: 3px 0px 5px 0px;
     }
@@ -826,11 +817,9 @@ and (orientation: landscape) {
         text-decoration: none;
         font-size: 18px;
     }
-
     .back-btn a:hover {
         text-decoration: none;
     }
-
     .menu-ham2 {
         width: 150px;
         margin: 5px 0 3px 374px;
@@ -840,15 +829,15 @@ and (orientation: landscape) {
         margin: 20px;
         height: 650px;
     }
-    .product{
-        box-shadow: -1px 1px -1px 2px rgba(0,0,0,0.2);
+    .product {
+        box-shadow: -1px 1px -1px 2px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
-        height:100px;
-        background-color:white;
+        height: 100px;
+        background-color: white;
         color: black;
-        margin-bottom:5px;
+        margin-bottom: 5px;
     }
-    .remove{
+    .remove {
         margin-left: 11px;
         position: relative;
     }
@@ -857,15 +846,15 @@ and (orientation: landscape) {
         margin-left: 10px;
         border-radius: 5px;
     }
-    #foodtype{
+    #foodtype {
         position: relative;
         margin-left: 123px;
         margin-top: -55px;
         text-decoration: none;
         text-shadow: none;
-        color:black;
-        font-size:15px;
-        font-weight:bold;
+        color: black;
+        font-size: 15px;
+        font-weight: bold;
     }
     #price {
         position: relative;
@@ -873,25 +862,27 @@ and (orientation: landscape) {
         margin-top: 4px;
         text-decoration: none;
         text-shadow: none;
-        color:#FF9700;
-        font-size:11px;
-        font-weight:bold;
+        color: #FF9700;
+        font-size: 11px;
+        font-weight: bold;
     }
-    #price:before, #subtotal:before{
+    #price:before,
+    #subtotal:before {
         content: 'LKR ';
     }
-    .adder{
+    .adder {
         margin-left: 220px;
         margin-top: -65px;
         position: relative;
-        color:black;
+        color: black;
     }
-    .plus{
+    .plus {
         margin-top: 3px;
         margin-left: 630px;
     }
-    .plus-product, .minus-product{
-        margin-top:-3px;
+    .plus-product,
+    .minus-product {
+        margin-top: -3px;
     }
     #qty {
         text-decoration: none;
@@ -904,10 +895,10 @@ and (orientation: landscape) {
         margin-top: 20px;
         background-color: transparent;
     }
-    .minus{
+    .minus {
         margin-top: 3px;
     }
-    #subtotal{
+    #subtotal {
         position: relative;
         margin-left: 850px;
         margin-top: 13px;
@@ -917,51 +908,54 @@ and (orientation: landscape) {
         font-size: 13;
         font-weight: bold;
     }
-    #cart-subtotal:before, #cart-tax:before, #cart-shipping:before, #cart-total:before {
+    #cart-subtotal:before,
+    #cart-tax:before,
+    #cart-shipping:before,
+    #cart-total:before {
         content: 'LKR ';
     }
-    .total, #cart-total {
-        font-weight:bold;
+    .total,
+    #cart-total {
+        font-weight: bold;
     }
-    #gamification{
+    #gamification {
         border-radius: 5px;
-        background-color:white;
+        background-color: white;
         color: black;
-        margin-bottom:5px;
-        padding:5px 5px 5px 5px;
+        margin-bottom: 5px;
+        padding: 5px 5px 5px 5px;
         height: 60px;
         width: 100%;
     }
-    #promo{
+    #promo {
         border-radius: 5px;
-        background-color:white;
+        background-color: white;
         color: black;
-        margin-bottom:5px;
-        padding:5px 5px 5px 5px;
+        margin-bottom: 5px;
+        padding: 5px 5px 5px 5px;
         height: 50px;
         width: 100%;
     }
-    #promo-code{
+    #promo-code {
         text-decoration: none;
         font-size: 14px !important;
         font-weight: bold;
         line-height: 20px;
         padding-left: 20px;
         background-color: transparent;
-        color:black;
+        color: black;
         border-width: 0.5px;
         margin-left: 10px;
         width: 50%;
         margin-bottom: 10px;
-
     }
-    #points{
+    #points {
         text-decoration: none;
         font-size: 16px !important;
         font-weight: bold;
         padding-left: 20px;
         background-color: transparent;
-        color:black;
+        color: black;
         height: 30px;
         border-width: 0.5px;
         margin-left: 10px;
@@ -982,31 +976,29 @@ and (orientation: landscape) {
         margin-bottom: 18px;
         margin-left: -330px;
     }
-    #totals{
-        box-shadow: -1px 1px -1px 2px rgba(0,0,0,0.2);
+    #totals {
+        box-shadow: -1px 1px -1px 2px rgba(0, 0, 0, 0.2);
         border-radius: 5px;
-        background-color:white;
+        background-color: white;
         color: black;
-        padding-bottom:10px;
+        padding-bottom: 10px;
         padding-left: 20px;
-
     }
     #total-grid>#total-block1 {
-        float:left;
+        float: left;
     }
     #track-grid>.totals-value {
-        float:right;
+        float: right;
     }
-
     .totals-value {
         text-align: right;
         padding-top: 10px;
         padding-right: 34px;
-        font-size:14px;
+        font-size: 14px;
     }
-    #payment-header{
-        font-size:19px;
-        font-weight:bold;
+    #payment-header {
+        font-size: 19px;
+        font-weight: bold;
         padding: 4px 10px 0px 26px
     }
     hr.style-eight {
@@ -1020,33 +1012,27 @@ and (orientation: landscape) {
         -o-border-radius: 5px;
         border-radius: 5px;
     }
-    #selection {
+    #selection {}
+    #selection>#select-block1 {
+        width: 10%;
     }
-    #selection>#select-block1{
-        width:10%;
-
-    }
-
-    #select-block1{
+    #select-block1 {
         margin-top: -2px;
-        padding-bottom:1px;
-        margin-left:30px;
+        padding-bottom: 1px;
+        margin-left: 30px;
     }
-
-    #select-block2{
+    #select-block2 {
         padding-top: 10px;
-        margin-left:-20px;
-        padding-bottom:1px;
-        font-size:14px;
-        font-weight:bold;
+        margin-left: -20px;
+        padding-bottom: 1px;
+        font-size: 14px;
+        font-weight: bold;
     }
-
-    #select-block3{
+    #select-block3 {
         padding-top: 10px;
-        padding-bottom:1px;
-        margin-left:160px;
+        padding-bottom: 1px;
+        margin-left: 160px;
         text-align: right;
-
     }
     .checkout {
         margin-top: 10px !important;
@@ -1062,6 +1048,4 @@ and (orientation: landscape) {
         height: 45px !important;
         text-shadow: none !important;
     }
-
-
 }
