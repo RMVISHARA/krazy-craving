@@ -27,9 +27,9 @@ $(document).ready(function()
         // );
 
         if( i != 20 ){
-            users.push({ bgcolor: "ffffff", rank: i+1, image: "../../Assets/img/boy.jpg", name: "Jhon Doe", points: points});
+            users.push({ bgcolor: "ffffff", rank: i+1, image: "../../Assets/img/boy.jpg", name: "Paul Simons", points: points});
         }else{
-            users.push({ bgcolor: "fc9920", rank: i+1, image: "../../Assets/img/boy2.jpg", name: "Udara Nayana", points: points})
+            users.push({ bgcolor: "fc9920", rank: i+1, image: "../../Assets/img/boy2.jpg", name: "Jhon Doe", points: points})
         }
         
         points = points - ( 1 + Math.floor(Math.random() * 21) );

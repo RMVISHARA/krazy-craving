@@ -1,14 +1,3 @@
-var promos = [
-    {
-        id: 2,
-        calc : "*2"
-    },
-    {
-        id: 5,
-        calc : "*0.2"
-    }
-];
-
 $(document).ready(function(){
     localStorage.setItem("directingTo", 0);
 

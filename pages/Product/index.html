@@ -61,6 +61,16 @@
                     <a  href=""  data-role="button" class="add-cart" id="add-cart" onclick="addtocart()">Add To Cart</a>
                     <br>
                 </div>
+
+                <div data-role="popup" id="addedToCartPopup">
+                    <div data-role="content">
+                        <br>
+                        <center><img id="av" src="../../Assets/img/icons/addCart.png" width="85" height="85"></center>
+                        <h1 id="header1"><span id="messagez">Item added to Cart !!</span></h1>
+                        <br>
+    
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -138,11 +148,16 @@
             obj.quantity = $("#quantity").val();
             obj.price = singlePrice;
             obj.time = restaurent.time;
+            obj.resId = restaurent.id;
             obj.restaurent = restaurent.name;
             cartItems.push(obj);
             localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
-            window.location.href = "../Cart/";
+            $("#addedToCartPopup").popup("open"); 
+            setTimeout(function(){
+                $("#addedToCartPopup").popup("close");
+                window.location.href = "../Cart/";
+            }, 2000);
         }
     </script>
 

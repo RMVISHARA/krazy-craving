@@ -89,7 +89,7 @@
         if(bussiness){
             let commentList = localStorage.getItem("commentList");
             commentList = (commentList) ? JSON.parse(commentList) : [];
-            console.log("comments : ",commentList);
+            // console.log("comments : ",commentList);
 
             let outputHtml = ``;
             commentList.map(x => {
