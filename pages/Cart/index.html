@@ -14,23 +14,36 @@
     <script src="../../Assets/js/js.min.js"></script>
     <script src="cart.js"></script>
     <!--slider-->
-    <link rel="stylesheet" href="../../Assets/css/style.min.css">
     <!--slider-->
     <link rel="stylesheet" type="text/css" href="../../Assets/css/common.user.css">
+    <link rel="stylesheet" type="text/css" href="../../Assets/css/common.user.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 
 </head>
 
 <body>
 
     <div data-role="page" id="cartpage">
-        <div data-role="header" data-position="fixed" data-tap-toggle="false" id="header">
+        <div data-role="header" class="mhead" style="background-color: black" data-position="fixed" data-tap-toggle="false">
+            <div class="row">
+                <div class="col4">
+                    <a onclick="history.back()" data-position-to="window" id="accountLogo">
+                        <img class="backButton" src="../../Assets/img/icons/backButton.svg">
+                    </a>
+                </div>
+                <div class="col-7">
+                    <img class="logo" src="../../Assets/img/LogoDark.png">
+                </div>
+                <div class="col-3">
+                    <a href="../Search/index.html">
+                        <img class="searchLogo" src="../../Assets/img/icons/search.png">
+                    </a>
+                    <a href="../UserAccount/index.html" data-position-to="window" id="accountLogo">
+                        <img class="accountLogo" src="../../Assets/img/icons/usa.svg">
+                    </a>
 
-            <div class="mhead">
-                <a class="back-btn" href="../Vendor">
-                    < Back</a>
-                        <img class="menu-ham2" src="../../Assets/img/rectangle_logo_black.png">
+                </div>
             </div>
-            <!-- /grid-b -->
         </div>
         <div data-role="content" class="shopping-cart">
 
@@ -101,31 +114,31 @@
             <!-- modals -->
             <div class="modal fade" id="errorMessegePopup" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <div class="p-3">
-                        <center><img id="commonModal" src="" width="85" height="85"></center>
-                        <h1 id="header1"><span id="errormessage"></span></h1>
-                        <br>
+                        <div class="p-3">
+                            <center><img id="commonModal" src="" width="85" height="85"></center>
+                            <h1 id="header1"><span id="errormessage"></span></h1>
+                            <br>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
 
             <div class="modal fade" id="successMessegePopup" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <div class="p-3">
-                        <center><img id="av" src="../../Assets/img/icons/bankNote.png" width="85" height="85"></center>
-                        <h1 id="header1"><span id="succmessage">congratulations!! <br> Points redeemed successfully.</span></h1>
-                        <br>
+                        <div class="p-3">
+                            <center><img id="av" src="../../Assets/img/icons/bankNote.png" width="85" height="85"></center>
+                            <h1 id="header1"><span id="succmessage">congratulations!! <br> Points redeemed successfully.</span></h1>
+                            <br>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
 
@@ -146,7 +159,7 @@
         <div class="footer" data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
+                    <li><a href="../HomeUser/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
                     <li><a href="../PastOrder/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-orders-inactive" id="inactive" data-ajax="false">Orders</a></li>
                     <li><a href="../UserFavourites/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive" data-ajax="false">Favourites</a></li>
                     <li><a href="../Cart/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-cart-active" id="active" data-ajax="">Cart</a></li>
@@ -158,7 +171,7 @@
     <!--page-->
     <script>
         function loadcartList() {
-            var promotions = [2,5];
+            var promotions = [2, 5];
 
             let cartItems = localStorage.getItem("cartItems");
             cartItems = (cartItems) ? JSON.parse(cartItems) : [];
@@ -167,10 +180,10 @@
 
             cartItems.forEach(item => {
                 var promoCalcs;
-                if(item.resId == promotions[0]){
-                    promoCalcs = item.price - (item.price*0.2);
+                if (item.resId == promotions[0]) {
+                    promoCalcs = item.price - (item.price * 0.2);
 
-                }else{
+                } else {
                     promoCalcs = item.price
                 }
 
@@ -204,7 +217,7 @@
         var taxRate = 0.15;
         var shippingRate = 20.00;
         var fadeTime = 100;
-        var promos = [2,5];
+        var promos = [2, 5];
 
         $(document).ready(function() {
             recalculateCart();
@@ -325,7 +338,7 @@
             if (cartItems.length > 0) {
                 $('.product').each(function() {
                     var obj = {}
-                    // obj.imageurl = $(this).children('.product-removal').children('#product-image').attr('src');
+                        // obj.imageurl = $(this).children('.product-removal').children('#product-image').attr('src');
                     obj.qty = Number($(this).children('.adder').children('#qty').val());
                     obj.name = $(this).children('#foodtype').html();
                     obj.price = Number($(this).children('#price').html());
@@ -334,10 +347,10 @@
                 });
 
                 orderDetails.forEach(element => {
-                    if(element.resId == promos[1]){
-                        transactionPoints += Math.ceil((element.price*element.qty) * 0.05)*2;
-                    }else{
-                        transactionPoints += Math.ceil((element.price*element.qty) * 0.05);
+                    if (element.resId == promos[1]) {
+                        transactionPoints += Math.ceil((element.price * element.qty) * 0.05) * 2;
+                    } else {
+                        transactionPoints += Math.ceil((element.price * element.qty) * 0.05);
                     }
                 });
 
