@@ -171,7 +171,7 @@
     <!--page-->
     <script>
         function loadcartList() {
-            var promotions = [2, 5];
+            var promotions = [2, 5, 7];
 
             let cartItems = localStorage.getItem("cartItems");
             cartItems = (cartItems) ? JSON.parse(cartItems) : [];
@@ -182,7 +182,8 @@
                 var promoCalcs;
                 if (item.resId == promotions[0]) {
                     promoCalcs = item.price - (item.price * 0.2);
-
+                }else if (item.resId == promotions[1]) {
+                    promoCalcs = item.price - (item.price * 0.3);
                 } else {
                     promoCalcs = item.price
                 }
@@ -347,7 +348,7 @@
                 });
 
                 orderDetails.forEach(element => {
-                    if (element.resId == promos[1]) {
+                    if (element.resId == promos[2]) {
                         transactionPoints += Math.ceil((element.price * element.qty) * 0.05) * 2;
                     } else {
                         transactionPoints += Math.ceil((element.price * element.qty) * 0.05);
