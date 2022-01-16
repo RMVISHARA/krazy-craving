@@ -28,10 +28,10 @@
     margin-top: 8px;
 }
 
-#header1{
-    font-family:Arial !important;
-    font-size:20px !important;
-    text-align:center !important;
+#header1 {
+    font-family: Arial !important;
+    font-size: 20px !important;
+    text-align: center !important;
     margin-top: 20px !important;
     font-weight: bold;
 }
@@ -244,6 +244,37 @@
     cursor: pointer;
 }
 
+.replyMessage {
+    margin-left: 33%;
+    margin-top: -10PX;
+    margin-bottom: 20PX;
+    font-size: medium;
+}
+
+.replyImg {
+    position: relative;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    display: inline;
+    float: left;
+    margin-left: 20%;
+}
+
+.replyName {
+    display: inline;
+    float: left;
+    margin-left: 2%;
+    margin-top: 5px;
+}
+
+.replyBtn {
+    width: 40% !important;
+    height: fit-content !important;
+    background-color: rgb(243, 178, 36) !important;
+    border-radius: 15px !important;
+}
+
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
     .bgimage {
         background-image: url(../../Assets/img/resBackground.jpg);
@@ -430,6 +461,9 @@
         width: 200px;
         height: 200px;
     }
+    .replyMessage {
+        margin-left: 29%;
+    }
 }
 
 
@@ -521,6 +555,9 @@
     .ma p {
         margin-left: -300px;
     }
+    .replyMessage {
+        margin-left: 28%;
+    }
 }
 
 
@@ -608,5 +645,12 @@
     }
     .ma p {
         margin-left: -550px;
+    }
+    .replyMessage {
+        margin-left: 27%;
+    }
+    .replyBtn {
+        width: 30% !important;
+        font-size: large;
     }
 }
