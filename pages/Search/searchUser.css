@@ -11,6 +11,84 @@
   min-height: 100%!important;
 }
 
+.title {
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.ui-child{
+  -webkit-border-top-right-radius: 10px; 
+  border-top-right-radius: 10px; 
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px
+}
+
+.pad {
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  padding-left: 3px;
+}
+.name {
+  font-size: 16px;
+  height: 12px;
+  color: #858282;
+  text-shadow: none;
+}
+.address {
+  height: 20px;
+  font-size: 14px;
+  color: #858282;
+  width: 20px;
+  text-shadow: none;
+}
+.desc {
+  position: relative;
+  float: left;
+  width: 2px !important;
+  text-align: left;
+  margin-top: 5px;
+  margin-left: 5px;
+  height: 63px;
+}
+.link {
+  font-weight: normal !important;
+  color: #858282 !important;
+}
+.stars {
+  position: relative;
+  float: right;
+  margin-left: 195px;
+  margin-top: 10px;
+}
+.cardImage {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+.lists {
+  overflow-x: scroll !important;
+  white-space: nowrap !important;
+}
+#cardItem {
+  min-width: 270px;
+  height: 270px;
+  display: inline-block;
+  background-color: transparent;
+  border-color: transparent;
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+}
+#customCard {
+  width: 100%;
+  background-color: white !important;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
