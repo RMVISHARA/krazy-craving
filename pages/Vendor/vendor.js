@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
     localStorage.setItem("directingTo", 0);
 
     var vendor;
@@ -8,7 +8,7 @@ $(document).ready(function(){
     selectedVendor = Number(selectedVendor);
 
     allVendors.forEach(element => {
-        if(element.id == selectedVendor){
+        if (element.id == selectedVendor) {
             vendor = element;
         }
     });
@@ -20,16 +20,16 @@ $(document).ready(function(){
 
     vendor.menu.forEach(function(obj) {
         document.getElementById("cardList").innerHTML +=
-            '           <a href="" onclick="directToPage('+ obj.id +')"> \n' +
+            '           <a href="" onclick="directToPage(' + obj.id + ')"> \n' +
             '                <div class="card" id="cardItem">\n' +
             '                    <div class="row no-gutters">\n' +
             '                        <div class="image">\n' +
-            '                            <img src="'+obj.imageurl+'" class="card-img" style="border-radius: 10px" alt="...">\n' +
+            '                            <img src="' + obj.imageurl + '" class="card-img" style="border-radius: 10px" alt="...">\n' +
             '                        </div>\n' +
-            '                        <div class="desc">\n' +
+            '                        <div class="desc1">\n' +
             '                            <div class="card-body">\n' +
-            '                                <h5 class="card-title">'+ obj.name +'</h5>\n' +
-            '                               <p class="card-text">Ranging from Rs. '+obj.price+'</p>\n' +
+            '                                <h5 class="card-title">' + obj.name + '</h5>\n' +
+            '                               <p class="card-text">Ranging from Rs. ' + obj.price + '</p>\n' +
             '                            </div>\n' +
             '                        </div>\n' +
             '                    </div>\n' +
@@ -41,22 +41,21 @@ $(document).ready(function(){
     loadCommentList();
 
     var x = JSON.parse(localStorage.getItem("favVendors"));
-    
-    if(x[String(selectedVendor)]){
-        document.getElementById("heart").src="../../Assets/img/icons/liked-heart.svg";
-    }
-    else{
-        document.getElementById("heart").src="../../Assets/img/icons/unlike-heart.svg";
+
+    if (x[String(selectedVendor)]) {
+        document.getElementById("heart").src = "../../Assets/img/icons/liked-heart.svg";
+    } else {
+        document.getElementById("heart").src = "../../Assets/img/icons/unlike-heart.svg";
     }
 });
 
-function loadCommentList(){
+function loadCommentList() {
     let commentList = localStorage.getItem("commentList");
     commentList = (commentList) ? JSON.parse(commentList) : []
 
     let outputHtml = ``;
     commentList.map(x => {
-        if(x.bussiness == selectedVendor){
+        if (x.bussiness == selectedVendor) {
             outputHtml += `
                             <div class="ui-grid-a" id="usergrid">
                                 <img src="../../Assets/img/boy.jpg" class="round">
@@ -70,21 +69,24 @@ function loadCommentList(){
                                 </div>
                             </div>
                             <div id="rplylist" align="center">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#popup-reply2"
+                                <button type="button" class="replyBtn" data-toggle="modal" data-target="#popup-reply2"
                                 onclick="saveOgCommentId(${x.id})">
                                     Reply
                                 </button>
                             </div>
                             `
-                            x.replys.forEach(rep => {
-                                    outputHtml += `
-                                            <div class="row">
-                                                <small>${rep}</small>
-                                            </div>
-                                    `;
-                            });
-                            
-                            `
+            x.replys.forEach(rep => {
+                outputHtml += `
+                <div class="row">
+                <img src="../../Assets/img/boy.jpg" class="replyImg"><p div class="replyName">Jone Doe</p>
+                </div>
+                                                <div class="row">
+                                                 <small class="replyMessage">${rep}</small>
+                                                </div>
+                                        `;
+            });
+
+            `
                             <hr>
                         `;
         }
@@ -93,8 +95,7 @@ function loadCommentList(){
     $("#reviewlist").html(outputHtml);
 };
 
-function onAddRply() 
-{
+function onAddRply() {
     var val = JSON.parse(localStorage.getItem("ogCommentId"));
 
     var reply = document.getElementById('reply').value;
@@ -105,22 +106,21 @@ function onAddRply()
         return;
     };
 
-    $("#popup-reply2").modal('hide'); 
-    setTimeout(function(){$("#v-promo-popup-success4").modal("show");}, 1000);
+    $("#popup-reply2").modal('hide');
+    setTimeout(function() { $("#v-promo-popup-success4").modal("show"); }, 1000);
 
     let commentList = JSON.parse(localStorage.getItem("commentList"));
-    commentList.forEach((e,i) => {
+    commentList.forEach((e, i) => {
         e.id == val ? index = i : "";
     });
-    
+
     commentList[index].replys.push(reply);
-    localStorage.setItem("commentList",JSON.stringify(commentList));
+    localStorage.setItem("commentList", JSON.stringify(commentList));
 
     document.getElementById('reply').value = "";
     loadCommentList();
 };
 
-function saveOgCommentId(val){
-    localStorage.setItem("ogCommentId",val);
+function saveOgCommentId(val) {
+    localStorage.setItem("ogCommentId", val);
 };
-
