@@ -19,7 +19,7 @@
 
 <body>
     <div data-role="page" id="homeUser">
-        <div data-role="header" class="mhead" style="background-color: black" data-position="fixed" data-tap-toggle="false">
+        <div data-role="header" class="mhead" style="background-color: black;position:fixed;" data-position="fixed" data-tap-toggle="false">
             <div class="row">
                 <div class="col4">
                     <a onclick="history.back()" data-position-to="window" id="accountLogo">
@@ -57,19 +57,19 @@
                 <div class="ui-grid-b" id="selection2">
 
                     <div class="ui-block-a select2-block1">
-                        <input type="radio" name="radio-choice" id="size1" checked="checked" value="" onclick="radioUpdates()">
+                        <input type="radio" name="radio-choice" id="size1" checked="checked" style="margin-top: 5px;" value="" onclick="radioUpdates()">
                     </div>
                     <div class="ui-block-b" id="select2-block2">Small</div>
                     <div class="ui-block-c select2-block3" id="sm-block"></div>
 
                     <div class="ui-block-a select2-block1" id="block02">
-                        <input type="radio" name="radio-choice" id="size2" value="" onclick="radioUpdates()">
+                        <input type="radio" style="margin-top: 5px;" name="radio-choice" id="size2" value="" onclick="radioUpdates()">
                     </div>
                     <div class="ui-block-b" id="select2-block2">Medium</div>
                     <div class="ui-block-c select2-block3" id="md-block"></div>
 
                     <div class="ui-block-a select2-block1">
-                        <input type="radio" name="radio-choice" id="size3" value="" onclick="radioUpdates()">
+                        <input type="radio" style="margin-top: 5px;" name="radio-choice" id="size3" value="" onclick="radioUpdates()">
                     </div>
                     <div class="ui-block-b" id="select2-block2">Large</div>
                     <div class="ui-block-c select2-block3" id="lg-block"></div>
@@ -83,7 +83,7 @@
                     <div data-role="content">
                         <br>
                         <center><img id="av" src="../../Assets/img/icons/addCart.png" width="85" height="85"></center>
-                        <h1 id="header1"><span id="messagez">Item added to Cart !!</span></h1>
+                        <h5 id="header1"><span id="messagez">Item added to Cart !!</span></h5>
                         <br>
 
                     </div>
@@ -91,7 +91,7 @@
             </div>
 
         </div>
-        <div class="footer" data-role="footer" data-position="fixed">
+        <div class="footer" data-role="footer" data-position="fixed" style="position:fixed;">
             <div data-role="navbar">
                 <ul>
                     <li><a href="../HomeUser/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
