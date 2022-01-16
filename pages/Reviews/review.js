@@ -1,14 +1,14 @@
     var bussiness;
 
     //initial setup
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         var selected = JSON.parse(localStorage.getItem("commentingOnRestuarent"));
         document.getElementById('bussinessName').innerHTML = `${selected.name}`
         document.getElementById('foodPic').src = `${selected.image}`
         bussiness = selected.id;
 
         let stars = document.querySelectorAll('.star');
-        stars.forEach(function (star) {
+        stars.forEach(function(star) {
             star.addEventListener('click', setRating);
         });
 
@@ -24,7 +24,7 @@
         let stars = document.querySelectorAll('.star');
         let match = false;
         let num = 0;
-        stars.forEach(function (star, index) {
+        stars.forEach(function(star, index) {
             if (match) {
                 star.classList.remove('rated');
             } else {
@@ -57,11 +57,11 @@
             return;
         };
 
-        $("#v-promo-popup-success2").popup("open"); 
+        $("#v-promo-popup-success2").popup("open");
 
         let commentList = localStorage.getItem("commentList");
         commentList = (commentList) ? JSON.parse(commentList) : []
-        commentList.length > 0 ? id = commentList[commentList.length-1].id + 1 : id = 0;
+        commentList.length > 0 ? id = commentList[commentList.length - 1].id + 1 : id = 0;
 
         var feedback = { id: id, comment: comment, rating: rating, bussiness: bussiness, replys: [] };
         commentList.push(feedback);
@@ -86,14 +86,14 @@
 
 
     function loadCommentList() {
-        if(bussiness){
+        if (bussiness) {
             let commentList = localStorage.getItem("commentList");
             commentList = (commentList) ? JSON.parse(commentList) : [];
             // console.log("comments : ",commentList);
 
             let outputHtml = ``;
             commentList.map(x => {
-                if(x.bussiness == Number(bussiness)){
+                if (x.bussiness == Number(bussiness)) {
                     outputHtml += `
                             <div class="ui-grid-a" class="lanCardItem" id="usergrid">
                                 <img src="../../Assets/img/boy.jpg" class="round">
@@ -107,32 +107,37 @@
                                 </div>
                             </div>
                             <div id="rplylist" align="center">
-                                <a href="" data-role="button" onclick="saveOgCommentId(${x.id})" id="replybtn" class="" >Reply</a>
+                                <a href="" data-role="button" onclick="saveOgCommentId(${x.id})" id="replybtn" class="replyBtn" >Reply</a>
                             </div>
+                           
                             `
-                            x.replys.forEach(rep => {
-                                    outputHtml += `
-                                            <div class="row">
-                                                <small>${rep}</small>
-                                            </div>
+
+                    x.replys.forEach(rep => {
+                        outputHtml += `
+                        <div class="row">
+                        <img src="../../Assets/img/boy.jpg" class="replyImg"><p div class="replyName">Jone Doe</p>
+                        </div>
+                                                        <div class="row">
+                                                         <small class="replyMessage">${rep}</small>
+                                                        </div>
+                                                `;
+                    });
+
+                    `
+                          
+                                    <hr>
                                     `;
-                            });
-                            
-                            `
-                            <hr>
-					        `;
                 }
             });
 
             $("#reviewlist").html(outputHtml);
         };
-        
+
     };
 
     loadCommentList();
 
-    function onAddRply() 
-    {
+    function onAddRply() {
         var val = JSON.parse(localStorage.getItem("ogCommentId"));
 
         var reply = document.getElementById('reply').value;
@@ -143,22 +148,22 @@
             return;
         };
 
-        $("#popup-reply").popup("close"); 
-        setTimeout(function(){$("#v-promo-popup-success3").popup("open");}, 1000);
+        $("#popup-reply").popup("close");
+        setTimeout(function() { $("#v-promo-popup-success3").popup("open"); }, 1000);
 
         let commentList = JSON.parse(localStorage.getItem("commentList"));
-        commentList.forEach((e,i) => {
+        commentList.forEach((e, i) => {
             e.id == val ? index = i : "";
         });
-        
+
         commentList[index].replys.push(reply);
-        localStorage.setItem("commentList",JSON.stringify(commentList));
+        localStorage.setItem("commentList", JSON.stringify(commentList));
 
         document.getElementById('reply').value = ""
         loadCommentList();
     };
 
-    function saveOgCommentId(val){
-        $("#popup-reply").popup("open"); 
-        localStorage.setItem("ogCommentId",val);
+    function saveOgCommentId(val) {
+        $("#popup-reply").popup("open");
+        localStorage.setItem("ogCommentId", val);
     };
