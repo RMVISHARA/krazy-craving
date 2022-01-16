@@ -7,35 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="../../Assets/css/style.min.css">
     <link rel="stylesheet" href="userAccount.css">
+    <link rel="stylesheet" type="text/css" href="../../Assets/css/common.user.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+
     <!--    <link rel="stylesheet" type="text/css" href="searchUser.css">-->
     <!--slider-->
     <!--    <link rel="stylesheet" type="text/css" href="../css/home-eats-stylesheet.css">-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <style>
-        .round {
-            border-radius: 50%;
-            margin: 15px 0 3px 25px;
-        }
-    </style>
+
 
 </head>
 
 <body>
     <div data-role="page" id="vendoraccountpage">
         <!-- header -->
-        <div data-role="header" data-position="fixed" data-tap-toggle="false" id="header">
-            <div class="mhead">
-                <div class="">
-                    <img class="logo" src="../../Assets/img/rectangle_logo_black.png">
+        <div data-role="header" class="mhead" style="background-color: black" data-position="fixed" data-tap-toggle="false">
+            <div class="row">
+                <div class="col4">
+                    <a onclick="history.back()" data-position-to="window" id="accountLogo">
+                        <img class="backButton" src="../../Assets/img/icons/backButton.svg">
+                    </a>
                 </div>
-                <div class="row icons">
-                    <div class="">
-                        <a href="../UserNotification/index.html" data-position-to="window" id="notificationLogo">
-                            <img class="notificationLogo ui-btn-right" src="../../Assets/img/icons/notification.svg">
-                        </a>
-                    </div>
+                <div class="col-7">
+                    <img class="logo" src="../../Assets/img/LogoDark.png">
+                </div>
+                <div class="col-3">
+                    <a href="../Search/index.html">
+                        <img class="searchLogo" src="../../Assets/img/icons/search.png">
+                    </a>
+                    <a href="../UserAccount/index.html" data-position-to="window" id="accountLogo">
+                        <img class="accountLogo" src="../../Assets/img/icons/usa.svg">
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -44,77 +48,62 @@
         <div id="grad1">
             <div class="row">
                 <div class="column">
-                    <img src="../../Assets/img/john.png" class="round" width="50%">
+                    <img src="../../Assets/img/profile_user.jpg" class="round">
 
                 </div>
-                <div class="col-8">
+                <div class="col-8" style="float: left; margin-left: -20px;">
                     <div class="accountName">
                         <br> John Doe
-                        <br> Krazy Points: <a class="" style="color: white;" href="../Rewards/" id="totalPoint"></a>
+                        <br> Krazy Points:
+                        <a class="" style="color: black;" href="../Rewards/" id="totalPoint"></a>
                     </div>
                 </div>
 
             </div>
-        </div>
-        <br>
-        <div class="row2">
-            <div class="column1" style="background-color:#ffffff;">
-
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/chat.png" width="33">
-                <br><br>
-                <!--                 <P id="margin-top-link"> helo</P>-->
-                <a href="#" data-icon="none" id="margin-top-link">Messages</a>
-            </div>
-            <div class="column1" style="background-color:#ffffff;">
-
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/promotions-inactive.svg" height="33" width="33">
-                <br><br>
-                <a href="#" id="margin-top-link2">Promotions</a>
-            </div>
-            <div class="column1" style="background-color:#ffffff;">
-
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/like.svg" width="33" height="33">
-                <br><br>
-                <a href="../UserFavourites/" id="margin-top-link3">Favourites</a>
-            </div>
-
+            <hr>
         </div>
 
-        <br>
-        <div class="row3">
-            <div class="column2" style="background-color:#ffffff;">
 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/comment.svg">
 
-                <!--                 <P id="margin-top-link"> helo</P>-->
-                &nbsp; <a href="../Feedback/" data-icon="none" id="margin-top-link">Feedbacks</a>
+
+        <div class="row3" style="color: black;">
+
+            <div class="column2">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/like.svg" width="33" height="33"> &nbsp; <a href="../UserFavourites/index.html" data-icon="none" id="margin-top-link1">Favourites</a>
                 <hr>
             </div>
+
             <div class="column2" style="background-color:#ffffff;">
 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/wallet.png" width="33"> &nbsp;&nbsp;
-
-                <a href="../Payment/index.html" id="margin-top-link2">Payements</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/promotions-inactive.svg" width="33" height="33"> &nbsp; <a href="" data-icon="none" id="margin-top-link2">Promotions</a>
                 <hr>
             </div>
+
+            <div class="column2" style="background-color:#ffffff;">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/comment.svg"> &nbsp; <a href="../Feedback/" data-icon="none" id="margin-top-link3">Feedbacks</a>
+                <hr>
+            </div>
+
             <div class="column2" style="background-color:#ffffff;">
 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/question.png" width="33"> &nbsp;
 
-                <a href="#" id="margin-top-link3">Help Center</a>
+                <a href="#" id="margin-top-link4">Help Center</a>
                 <hr>
             </div>
             <div class="column2" style="background-color:#ffffff;">
 
-                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/about-us.png"> &nbsp; &nbsp;<a href="../About/" id="margin-top-link4">About Us</a>
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/about-us.png"> &nbsp; &nbsp;<a href="../About/" id="margin-top-link5">About Us</a>
                 <hr>
 
             </div>
-            <div class="column2" style="background-color:#ffffff;">
+            <div class="column2" style=" background-color: #fc9920;">
 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../Assets/img/icons/logout.png"> &nbsp;&nbsp;
 
-                <a href="../Login/index.html" id="margin-top-link5">Sign Out</a>
+                <a href="../Login/index.html" id="margin-top-link6">Sign Out</a>
                 <hr>
 
             </div>
@@ -124,9 +113,10 @@
             <div data-role="navbar">
                 <ul>
                     <li><a href="../HomeUser/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
-                    <li><a href="../Search/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-search-inactive" id="inactive" data-ajax="false">Search</a></li>
-                    <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-like-inactive" id="inactive" data-ajax="false">Track Order</a></li>
-                    <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-profile-active" id="active" data-ajax="false">Account</a></li>
+                    <li><a href="../PastOrder/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-orders-inactive" id="inactive" data-ajax="false">Orders</a></li>
+                    <li><a href="../UserFavourites/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive" data-ajax="false">Favourites</a></li>
+                    <li><a href="../Cart/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-cart-inactive" id="inactive" data-ajax="false">Cart</a></li>
+
                 </ul>
             </div>
         </div>

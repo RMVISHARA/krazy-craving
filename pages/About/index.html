@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <!--slider-->
-    <link rel="stylesheet" href="../../Assets/css/style.min.css">
     <link rel="stylesheet" type="text/css" href="./about.css">
+    <link rel="stylesheet" type="text/css" href="../../Assets/css/common.user.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+
     <!--slider-->
 </head>
 <style>
@@ -21,64 +23,54 @@
 
     <div data-role="page" id="aboutuspage">
 
-        <div data-role="header" data-position="fixed" data-tap-toggle="false" id="header">
+        <div data-role="header" class="mhead" style="background-color: black" data-position="fixed" data-tap-toggle="false">
+            <div class="row">
+                <div class="col4">
+                    <a onclick="history.back()" data-position-to="window" id="accountLogo">
+                        <img class="backButton" src="../../Assets/img/icons/backButton.svg">
+                    </a>
+                </div>
+                <div class="col-7">
+                    <img class="logo" src="../../Assets/img/LogoDark.png">
+                </div>
+                <div class="col-3">
+                    <a href="../Search/index.html">
+                        <img class="searchLogo" src="../../Assets/img/icons/search.png">
+                    </a>
+                    <a href="../UserAccount/index.html" data-position-to="window" id="accountLogo">
+                        <img class="accountLogo" src="../../Assets/img/icons/usa.svg">
+                    </a>
 
-            <div class="mhead">
-                <a class="back-btn" href="../UserAccount/">
-                    < Back</a>
-                        <img class="menu-ham2" src="../../Assets/img/rectangle_logo_black.png">
+                </div>
             </div>
-            <!-- /grid-b -->
         </div>
+
         <!-- /header -->
         <img src="../../Assets/img/about-us.jpg" id="mapcontact" style="width:100%">
         <div data-role="content">
             <div class="ui-grid-a" id="aboutus">
-                <h4 class="heading-name"><b>Who are we?</b></h4>
-                <p style="color:black" id="content">We are a team that believes in the goodness of home cooked food. Our mission is to promote home cooked food consumption among people by empowering home cooked food delivering start-ups. We are accomplishing our mission by connecting hungry
-                    stomachs with nearby amazing home cooked food vendors via the Home Chef common platform.</p>
+                <h4 class="heading-name"><b>Who are we ?</b></h4>
+                <p style="color:black;text-align: justify;" id="content">We are a team that believes in the goodness of home cooked food. Our mission is to promote home cooked food consumption among people by empowering home cooked food delivering start-ups. We are accomplishing our mission by connecting hungry
+                    stomachs with nearby amazing home cooked food vendors via the Krazy Craving common platform.</p>
                 <br>
-                <h4 class="heading-name"><b>Why choose Home Chef?</b></h4>
+                <h4 class="heading-name"><b>Why choose Krazy Craving ?</b></h4>
                 <iframe class="video" src="https://www.youtube.com/embed/5iFQz-z2n10?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <br>
-                <h4 class="heading-name"><b>Our Team</b></h4>
-                <div class="row">
-                    <div class="col-xs-3">
-                        <div>
-                            <img src="../../Assets/img/dummy1.png" class="rounded" id="dummy1">
-                        </div>
-                        <div>
-                            <p class="text-center" id="dummy1-name">Maeve Wiley</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <div>
-                            <img src="../../Assets/img/dummy2.jpg" class="rounded" id="dummy2">
-                        </div>
-                        <div>
-                            <p class="text-center" id="dummy2-name">Otis Milburn</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <div>
-                            <img src="../../Assets/img/dummy1.png" class="rounded" id="dummy3">
-                        </div>
-                        <div>
-                            <p class="text-center">Hannah Baker</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <div>
-                            <img src="../../Assets/img/dummy2.jpg" class="rounded" id="dummy4">
-                        </div>
-                        <div>
-                            <p class="text-center">Clay Jensen</p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <!-- /grid-a -->
 
+        </div>
+        <div class="footer" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="../HomeUser/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>
+                    <li><a href="../PastOrder/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-orders-inactive" id="inactive" data-ajax="false">Orders</a></li>
+                    <li><a href="../UserFavourites/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive" data-ajax="false">Favourites</a></li>
+                    <li><a href="../Cart/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-cart-inactive" id="inactive" data-ajax="false">Cart</a></li>
+
+                </ul>
+            </div>
         </div>
 
     </div>
