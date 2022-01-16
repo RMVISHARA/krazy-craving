@@ -261,8 +261,7 @@ $(document).ready(function() {
                                     <b>${obj.name}</b>
                                 </p>
                                 <span class="address">Rs.${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
-                                <p class="itemDesc">good food item list from <br>restura
-                                ntsjfsfsfsfsjf df djfsdfsdff</p>
+                                <p class="itemDesc">${obj.shortDescription}</p>
                             </div>
                             <div class="stars">
                                 <span class="fa fa-star checked fa-xs" style="color: #FFCC36;margin-left:19%; font-size: 1rem;"></span>
@@ -287,6 +286,7 @@ $(document).ready(function() {
                                     <b>${obj.name}</b>
                                 </p>
                                 <span class="address">Rs.${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
+                                <p class="itemDesc">${obj.shortDescription}</p>
                             </div>
                             <div class="stars">
                                 <span class="fa fa-star checked fa-xs" style="color: #FFCC36;margin-left:19%; font-size: 1rem;"></span>
