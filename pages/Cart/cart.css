@@ -227,8 +227,6 @@ hr.style-eight {
     border-radius: 5px;
 }
 
-#selection {}
-
 #selection>#select-block1 {
     width: 10%;
 }
@@ -797,7 +795,7 @@ hr.style-eight {
     }
 }
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
     /* For landscape layouts only */
     #header {
         z-index: 1000;
@@ -933,8 +931,8 @@ hr.style-eight {
         color: black;
         margin-bottom: 5px;
         padding: 5px 5px 5px 5px;
-        height: 50px;
-        width: 100%;
+        height: 70px !important;
+        width: 75%;
     }
     #promo-code {
         text-decoration: none;
@@ -971,10 +969,10 @@ hr.style-eight {
         border-radius: 10px !important;
         text-shadow: none !important;
         height: 40px;
-        width: 20%;
+        width: 15%;
         margin-top: -5px;
         margin-bottom: 18px;
-        margin-left: -330px;
+        margin-left: -170px !important;
     }
     #totals {
         box-shadow: -1px 1px -1px 2px rgba(0, 0, 0, 0.2);
@@ -1012,7 +1010,6 @@ hr.style-eight {
         -o-border-radius: 5px;
         border-radius: 5px;
     }
-    #selection {}
     #selection>#select-block1 {
         width: 10%;
     }
@@ -1047,5 +1044,8 @@ hr.style-eight {
         width: 250px !important;
         height: 45px !important;
         text-shadow: none !important;
+    }
+    #subtotal {
+        margin-left: 820px !important;
     }
 }
