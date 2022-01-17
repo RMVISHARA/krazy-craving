@@ -234,15 +234,15 @@
             <div class="modal fade" id="noRes" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close pr-2" data-dismiss="modal" aria-label="Close" style="text-align: right !important;">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <div data-role="content" >
                         <center>
                             <!-- <img id="av" src="../../Assets/img/icons/gift-icon.png" width="85" height="85"> -->
-                            <img id="av" src="../../Assets/img/icons/noResults.png" width="85" height="85">
+                            <img id="av" src="../../Assets/img/icons/noResults.png" width="65" height="65">
                         </center>
-                        <h1 id="header1"><span id="message3">No Results found !!</span></h1>
+                        <h3 id="header1" class="text-center pt-5"><span id="message3">No Results found !!</span></h3>
                         <br>
                     </div>
                 </div>
@@ -251,22 +251,26 @@
             <div class="modal fade" id="filtersModal" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close pr-2" data-dismiss="modal" aria-label="Close" style="text-align: right !important;">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <div data-role="content" >
                         <center><h2>Filters</h2></center>
                         <form>
-                            <label for="distSlider"><h3>Distance (Km) :</h3></label>
+                            <label for="distSlider" class="pt-5"><h5>Distance (Km) :</h5></label>
                             <input type="range" name="distSlider" id="distSlider" data-highlight="true" min="0" max="10" value="10">
-                            <label for="distSlider"><h3>Time (Mins) :</h3></label>
+                            <label for="distSlider" class="pt-5"><h5>Time (Mins) :</h5></label>
                             <input type="range" name="timeSlider" id="timeSlider" data-highlight="true" min="20" max="120" value="120">
-                            <label for="distSlider"><h3>Price (LKR) :</h3></label>
+                            <label for="distSlider" class="pt-5"><h5>Price (LKR) :</h5></label>
                             <input type="range" name="priceSlider" id="priceSlider" data-highlight="true" min="100" max="5000" value="2000">
                         </form>
-                        <div class="row">
-                            <div class="col"><a href="" class="pt-4" data-role="button" onclick="filterSelections()" >Apply</a></div>
-                            <div class="col"><a href="" class="pt-4" data-role="button" onclick="ResetFilters()" >Reset</a></div>
+                        <div class="row pt-5">
+                            <div class="col">
+                                <button type="button" class="btn btn-warning" onclick="filterSelections()">Apply</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-info" onclick="ResetFilters()">Reset</button>
+                            </div>
                         </div>
                     </div>
                 </div>

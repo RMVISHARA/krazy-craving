@@ -69,7 +69,9 @@
                 <p>
                     <h6>What do you suggest need to be improved ?</h6>
                 </p>
-                <textarea name="userInput" id="userInput" cols="10" rows="90" placeholder="Write your suggestions here" value=""></textarea>
+                <div class="form-group">
+                    <textarea class="form-control h-100" id="userInput" rows="8" cols="45" placeholder="Write your suggestions here..."></textarea>
+                </div>
             </div>
 
             <div class="row d-flex justify-content-center">
@@ -78,15 +80,21 @@
                 </a>
             </div>
 
-            <div data-role="popup" id="feedbackPopup">
-                <div data-role="content">
-                    <a href="#" data-rel="back" id="popupback2"> <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15"></a>
-                    <br>
-                    <center><img id="av" src="../../Assets/img/icons/thankYouFeedback2.jpg" width="85" height="85"></center>
-                    <h5 id="header1" class="text-center"><span id="messageFeedback" >
-                        Thank you for your valuable feedback.<br>
-                        We will continue to improve our services upon your suggestions !!</span></h5>
-                    <br>
+            <div class="modal fade" id="feedbackPopup" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="close pr-3" data-dismiss="modal" aria-label="Close" style="text-align: right !important;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div data-role="content">
+                            <center><img id="av" src="../../Assets/img/icons/thankYouFeedback2.jpg" width="85" height="85"></center>
+                            <h5 id="header1" class="text-center pt-3"><span id="messageFeedback" >
+                                Thank you for your valuable feedback.<br>
+                                We will continue to improve our services upon your suggestions !!</span></h5>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
                 </div>
             </div>
 
