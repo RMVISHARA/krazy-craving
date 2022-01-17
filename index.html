@@ -11,7 +11,7 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <style>
         .landing {
-            padding-top: 5%;
+            padding-top: 2%;
         }
         
         .ui-btn-left {
@@ -22,77 +22,73 @@
         
         @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
             .landing {
-                height:200px;
-                width:330px;
+                height: 200px;
+                width: 330px;
                 transform: translate(50%, 40%);
-                       }
-
+                background-position: center;
+                margin-top: -15px;
+                margin-left: 20px;
+            }
             .ui-btn-left {
-
                 margin-top: 40%;
                 margin-left: 43%;
             }
-
             .img {
                 width: fit-content;
                 height: fit-content;
                 object-fit: cover;
             }
-
             .bgimg {
                 background-image: url(./Assets/img/loginPotrait.jpg);
-                filter: brightness(50%);
+                filter: blur(2px) brightness(50%);
                 background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+                background-repeat: no-repeat;
+                background-size: cover;
                 width: 100%;
                 height: 100%;
                 background-repeat: no-repeat;
-                position: fixed;
+                position: absolute;
                 overflow: hidden;
-            }         
-
+            }
         }
-
+        
         @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
             .landing {
-                height:200px;
-                width:330px;
+                height: 200px;
+                width: 330px;
                 transform: translate(6%, 120%);
-                       }
-
+            }
             .bgimg {
                 background-image: url(./Assets/img/loginPotrait.jpg);
-                filter: brightness(50%);
+                filter: blur(2px) brightness(50%);
                 background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+                background-repeat: no-repeat;
+                background-size: cover;
                 width: 100%;
                 height: 100%;
                 background-repeat: no-repeat;
                 position: fixed;
                 overflow: hidden;
-            }         
-
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="bgimg"></div>
-        <br>
-            <img class="landing" src="./Assets/img/logoLanding.png" />
-            
-        <!--content-->
+    <br>
+    <img class="landing" src="./Assets/img/logoLanding.png" />
+
+    <!--content-->
     <!-- </div> -->
     <!--indexpage-->
 
 </body>
 <script>
     $(window).on('load', function() {
-        setTimeout(function () {
+        setTimeout(function() {
             window.location.href = "./pages/Landing-page/index.html";
-        }, 7000);
+        }, 3000);
     })
 </script>
 

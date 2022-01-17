@@ -14,7 +14,7 @@ function redeemPoints() {
             document.getElementById("commonModal").src = "../../Assets/img/icons/error.png"
             $("#errorMessegePopup").modal("show");
         } else {
-            var message = (`Sorry, Insufficient Krazy point balance !!
+            var message = (`Sorry, Insufficient Krazy point balance!!
             <br> You only have ${currentPoints} Krazy Points left.`);
             $('#errormessage').html(message);
             document.getElementById("commonModal").src = "../../Assets/img/icons/error.png"

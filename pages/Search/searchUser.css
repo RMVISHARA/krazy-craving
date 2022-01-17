@@ -1,490 +1,484 @@
-.logo {
-  width: 120px;
-  margin: 3px 0 3px 6.5% !important;
-}
-
-.mhead {
-  margin: 0px 0px 5px 0px;
-}
-
-#searchUser{
-  min-height: 100%!important;
+#searchUser {
+    min-height: 100%!important;
 }
 
 .title {
-  font-size: 20px;
-  padding-left: 10px;
+    font-size: 20px;
+    padding-left: 10px;
 }
 
-.ui-child{
-  -webkit-border-top-right-radius: 10px; 
-  border-top-right-radius: 10px; 
-  -webkit-border-top-left-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px
+.ui-child {
+    -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px
 }
 
 .pad {
-  text-align: left;
-  margin-bottom: 5px;
-  margin-top: 10px;
-  padding-left: 3px;
-}
-.name {
-  font-size: 16px;
-  height: 12px;
-  color: #858282;
-  text-shadow: none;
-}
-.address {
-  height: 20px;
-  font-size: 14px;
-  color: #858282;
-  width: 20px;
-  text-shadow: none;
-}
-.desc {
-  position: relative;
-  float: left;
-  width: 2px !important;
-  text-align: left;
-  margin-top: 5px;
-  margin-left: 5px;
-  height: 63px;
-}
-.link {
-  font-weight: normal !important;
-  color: #858282 !important;
-}
-.stars {
-  position: relative;
-  float: right;
-  margin-left: 195px;
-  margin-top: 10px;
-}
-.cardImage {
-  width: 100%;
-  height: 200px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+    text-align: left;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding-left: 3px;
 }
 
+.name {
+    font-size: 16px;
+    height: 12px;
+    color: #858282;
+    text-shadow: none;
+}
+
+.address {
+    height: 20px;
+    font-size: 14px;
+    color: #858282;
+    width: 20px;
+    text-shadow: none;
+}
+
+.desc {
+    position: relative;
+    float: left;
+    width: 2px !important;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 63px;
+}
+
+.link {
+    font-weight: normal !important;
+    color: #858282 !important;
+}
+
+.stars {
+    position: relative;
+    float: right;
+    margin-left: 195px;
+    margin-top: 10px;
+}
+
+.cardImage {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
 
 .lists {
-  overflow-x: scroll !important;
-  white-space: nowrap !important;
+    overflow-x: scroll !important;
+    white-space: nowrap !important;
 }
+
 #cardItem {
-  min-width: 270px;
-  height: 270px;
-  display: inline-block;
-  background-color: transparent;
-  border-color: transparent;
-  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+    min-width: 270px;
+    height: 270px;
+    display: inline-block;
+    background-color: transparent;
+    border-color: transparent;
+    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
 }
+
 #customCard {
-  width: 100%;
-  background-color: white !important;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+    width: 100%;
+    background-color: white !important;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
+
+.findBtn {
+    width: 55px!important;
+    margin-left: -9px !important;
+    height: 34px !important;
+    margin-top: -1px;
+    text-align: center;
+}
+
+.filterBtn {
+    width: 42px!important;
+    margin-left: -13px !important;
+    height: 34px !important;
+    margin-top: -1px;
+    text-align: center;
+}
+
+.filter {
+    width: 50px !important;
+    height: 37px!important;
+    float: left !important;
+    margin-left: -20px !important;
+    object-fit: contain;
+    display: inline;
+}
+
+.filtersymbol {
+    width: 30px;
+    height: 30px !important;
+    object-fit: cover;
+    display: inline;
+}
+
+.camera {
+    float: left;
+    margin-left: -50px !important;
+    display: inline;
+}
+
+.searchbox {
+    width: 50%;
+}
+
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
 
-}
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {}
+
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
 
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
     .notificationLogo {
-      padding-top: 10px;
-      padding-right: 10px;
-      height: 35px;
-  }
-    #camera{
-      width: 25px; 
-      height: 25px;
-      margin-top: 15px;
+        padding-top: 10px;
+        padding-right: 10px;
+        height: 35px;
     }
-    .elements{
-      display: none;
+    #camera {
+        width: 25px;
+        height: 25px;
+        margin-top: 15px;
     }
-    .category-images{
-      height: 100px;
-      border-radius: 9px;
-      filter: brightness(60%);
+    .elements {
+        display: none;
     }
-    #food{
-      position: absolute;
-      bottom: 30px;
-      right: 50px;
-      color: white;
-      padding-left: 20px;
-      
+    .category-images {
+        height: 100px;
+        border-radius: 9px;
+        filter: brightness(60%);
     }
-    #space-between-rows{
-      padding-top: 50px;
-      visibility:hidden;
+    #food {
+        position: absolute;
+        bottom: 30px;
+        right: 50px;
+        color: white;
+        padding-left: 20px;
     }
-    
+    #space-between-rows {
+        padding-top: 50px;
+        visibility: hidden;
+    }
     /*footer*/
     .ui-icon-home-active:after {
-      background-image:  url("../../Assets/img/icons/home-active.svg");
-      background-size: 90%;
-      width: 25px !important;
-      height: 35px !important;
-  }
-  .ui-icon-home-inactive:after {
-      background-image:  url("../../Assets/img/icons/home-inactive.svg");
-      background-size: 90%;
-      width: 25px !important;
-      height: 35px !important;
-  }
-
-  .ui-icon-search-inactive:after{
-      background-image:  url("../../Assets/img/icons/search-inactive.svg");
-      background-size: 90%;
-      width: 25px !important;
-      height: 35px !important;
-  }
-  .ui-icon-search-active:after{
-      background-image:  url("../../Assets/img/icons/search-active.svg");
-      background-size: 90%;
-      width: 25px !important;
-      height: 35px !important;
-  }
-
-  .ui-icon-track-inactive:after {
-      background-image:  url("../../Assets/img/icons/track-inactive.svg");
-      background-size: 90%;
-      width: 25px !important;
-      height: 35px !important;
-  }
-  .ui-icon-track-active:after {
-      background-image:  url("../../Assets/img/icons/track-active.svg");
-      background-size: 90%;
-      width: 25px !important;
-      height: 35px !important;
-  }
-
-  .ui-icon-profile-inactive:after {
-      background-image:  url("../../Assets/img/icons/account-inactive.svg");
-      background-size: 90%;
-      width: 25px !important;
-      height: 35px !important;
-  }
-  .ui-icon-profile-active:after {
-      background-image:  url("../../Assets/img/icons/account-active.svg");
-      background-size: 90%;
-      width: 25px !important;
-      height: 35px !important;
-  }
-
-  #inactive {
-      color: #858282;
-      text-align: center;
-      font-family: Arial;
-      font-size: 11pt;
-      background-color: white;
-  }
-
-  #active {
-      color: #fc9920;
-      font-family: Arial;
-      font-size: 11pt;
-      background-color: white;
-  }
+        background-image: url("../../Assets/img/icons/home-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-home-inactive:after {
+        background-image: url("../../Assets/img/icons/home-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-search-inactive:after {
+        background-image: url("../../Assets/img/icons/search-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-search-active:after {
+        background-image: url("../../Assets/img/icons/search-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-track-inactive:after {
+        background-image: url("../../Assets/img/icons/track-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-track-active:after {
+        background-image: url("../../Assets/img/icons/track-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-profile-inactive:after {
+        background-image: url("../../Assets/img/icons/account-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-profile-active:after {
+        background-image: url("../../Assets/img/icons/account-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    #inactive {
+        color: #858282;
+        text-align: center;
+        font-family: Arial;
+        font-size: 11pt;
+        background-color: white;
+    }
+    #active {
+        color: #fc9920;
+        font-family: Arial;
+        font-size: 11pt;
+        background-color: white;
+    }
 }
+
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    .elements-iphone{
-      display: none;
-    }
-    #food{
-      position: absolute;
-      bottom: 50px!important;
-      right: 35px!important;
-      color: white;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
 
-    .category-images{
-      height: 150px!important;
-      border-radius: 9px;
-      widows: 100px;
-      filter: brightness(60%);
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    .elements-iphone {
+        display: none;
     }
-
+    #food {
+        position: absolute;
+        bottom: 50px!important;
+        right: 35px!important;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .category-images {
+        height: 150px!important;
+        border-radius: 9px;
+        widows: 100px;
+        filter: brightness(60%);
+    }
 }
-
-
-
-
-
-
 
 
 /* ----------- iPad ----------- */
 
-  
-  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
     /* For portrait layouts only */
-    #header {
-      height: 75px;
-      z-index: 1000
-  }
-  .logo {
-      float: left;
-      width: 150px !important;
-      padding-top: 5px;
-      margin-left: 3%;
-  }
-  .notificationLogo {
-      padding-top: 10px !important;
-      margin-right: 3% !important;
-      height: 50px !important;
-  }
-    
-    #camera{
-      width: 40px;
-    height: 40px;
-    margin-top: 5px;
-    margin-left: 70px;
+    .notificationLogo {
+        padding-top: 10px !important;
+        margin-right: 3% !important;
+        height: 50px !important;
     }
-    .elements-iphone{
-      display: none;
+    #camera {
+        width: 40px;
+        height: 40px;
+        margin-top: 5px;
+        margin-left: 70px;
     }
-    .category-images{
-      height: 180px!important;
-      border-radius: 9px;
-      widows: 100px;
-      filter: brightness(60%);
+    .elements-iphone {
+        display: none;
     }
-    #food{
-      position: absolute;
-      bottom: 65px;
-      right: 35px;
-      color: white;
-      padding-left: 20px;
-      padding-right: 20px;
+    .category-images {
+        height: 180px!important;
+        border-radius: 9px;
+        widows: 100px;
+        filter: brightness(60%);
     }
-    #space-between-rows{
-      padding-top: 50px;
-      visibility:hidden;
+    #food {
+        position: absolute;
+        bottom: 65px;
+        right: 35px;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
     }
-   /*footer*/
-   .ui-icon-home-active:after {
-    background-image:  url("../../Assets/img/icons/home-active.svg");
-    background-size: 90%;
-    width: 33px !important;
-    height: 37px !important;
-}
-.ui-icon-home-inactive:after {
-    background-image:  url("../../Assets/img/icons/home-inactive.svg");
-    background-size: 90%;
-    width: 33px !important;
-    height: 37px !important;
+    #space-between-rows {
+        padding-top: 50px;
+        visibility: hidden;
+    }
+    /*footer*/
+    .ui-icon-home-active:after {
+        background-image: url("../../Assets/img/icons/home-active.svg");
+        background-size: 90%;
+        width: 33px !important;
+        height: 37px !important;
+    }
+    .ui-icon-home-inactive:after {
+        background-image: url("../../Assets/img/icons/home-inactive.svg");
+        background-size: 90%;
+        width: 33px !important;
+        height: 37px !important;
+    }
+    .ui-icon-search-inactive:after {
+        background-image: url("../../Assets/img/icons/search-inactive.svg");
+        background-size: 90%;
+        width: 33px !important;
+        height: 37px !important;
+    }
+    .ui-icon-search-active:after {
+        background-image: url("../../Assets/img/icons/search-active.svg");
+        background-size: 90%;
+        width: 33px !important;
+        height: 37px !important;
+    }
+    .ui-icon-track-inactive:after {
+        background-image: url("../../Assets/img/icons/track-inactive.svg");
+        background-size: 90%;
+        width: 33px !important;
+        height: 37px !important;
+    }
+    .ui-icon-track-active:after {
+        background-image: url("../../Assets/img/icons/track-active.svg");
+        background-size: 90%;
+        width: 33px !important;
+        height: 37px !important;
+    }
+    .ui-icon-profile-inactive:after {
+        background-image: url("../../Assets/img/icons/account-inactive.svg");
+        background-size: 90%;
+        width: 33px !important;
+        height: 37px !important;
+    }
+    .ui-icon-profile-active:after {
+        background-image: url("../../Assets/img/icons/account-active.svg");
+        background-size: 90%;
+        width: 33px !important;
+        height: 37px !important;
+    }
+    #inactive {
+        color: #858282;
+        text-align: center;
+        font-family: Arial;
+        font-size: 13pt;
+        background-color: white;
+    }
+    #active {
+        color: #fc9920;
+        font-family: Arial;
+        font-size: 13pt;
+        background-color: white;
+    }
+    .ui-body-a,
+    .ui-page-theme-a .ui-body-inherit,
+    html .ui-bar-a .ui-body-inherit,
+    html .ui-body-a .ui-body-inherit,
+    html body .ui-group-theme-a .ui-body-inherit,
+    html .ui-panel-page-container-a {
+        width: 108%;
+    }
+    .h1,
+    h1 {
+        margin-left: 30%!important;
+        margin-bottom: 5%!important;
+    }
 }
 
-.ui-icon-search-inactive:after{
-    background-image:  url("../../Assets/img/icons/search-inactive.svg");
-    background-size: 90%;
-    width: 33px !important;
-    height: 37px !important;
-}
-.ui-icon-search-active:after{
-    background-image:  url("../../Assets/img/icons/search-active.svg");
-    background-size: 90%;
-    width: 33px !important;
-    height: 37px !important;
-}
-
-.ui-icon-track-inactive:after {
-    background-image:  url("../../Assets/img/icons/track-inactive.svg");
-    background-size: 90%;
-    width: 33px !important;
-    height: 37px !important;
-}
-.ui-icon-track-active:after {
-    background-image:  url("../../Assets/img/icons/track-active.svg");
-    background-size: 90%;
-    width: 33px !important;
-    height: 37px !important;
-}
-
-.ui-icon-profile-inactive:after {
-    background-image:  url("../../Assets/img/icons/account-inactive.svg");
-    background-size: 90%;
-    width: 33px !important;
-    height: 37px !important;
-}
-.ui-icon-profile-active:after {
-    background-image:  url("../../Assets/img/icons/account-active.svg");
-    background-size: 90%;
-    width: 33px !important;
-    height: 37px !important;
-}
-
-#inactive {
-    color: #858282;
-    text-align: center;
-    font-family: Arial;
-    font-size: 13pt;
-    background-color: white;
-}
-
-#active {
-    color: #fc9920;
-    font-family: Arial;
-    font-size: 13pt;
-    background-color: white;
-}
-    .ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a{
-      width: 108%;
-    }
-
-    .h1, h1{
-      margin-left: 30%!important;
-    margin-bottom: 5%!important;
-    }
-    
-  }
-  
-  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
     /* For landscape layouts only */
-    #header {
-      height: 75px;
-      z-index: 1000
-  }
-  .logo {
-      float: left;
-      width: 150px !important;
-      padding-top: 5px;
-      margin-left: 3%;
-  }
-  .notificationLogo {
-      padding-top: 10px !important;
-      margin-right: 3% !important;
-      height: 50px !important;
-  }
-    
-    #camera{
-      width: 40px;
-    height: 40px;
-    margin-top: 5px;
-    margin-left: 70px;
+    .notificationLogo {
+        padding-top: 10px !important;
+        margin-right: 3% !important;
+        height: 50px !important;
     }
-    .elements-iphone{
-      display: none;
+    #camera {
+        width: 40px;
+        height: 40px;
+        margin-top: 5px;
+        margin-left: 70px;
     }
-    .category-images{
-      height: 200px;
-      border-radius: 9px;
-      widows: 100px;
-      filter: brightness(60%);
+    .elements-iphone {
+        display: none;
     }
-    #food{
-      position: absolute;
-      bottom: 65px;
-      right: 75px;
-      color: white;
-      padding-left: 20px;
-      padding-right: 20px;
+    .category-images {
+        height: 200px;
+        border-radius: 9px;
+        widows: 100px;
+        filter: brightness(60%);
     }
-    #space-between-rows{
-      padding-top: 50px;
-      visibility:hidden;
+    #food {
+        position: absolute;
+        bottom: 65px;
+        right: 75px;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
     }
-   /*footer*/
-   .ui-icon-home-active:after {
-    background-image:  url("../../Assets/img/icons/home-active.svg");
-    background-size: 90%;
-    width: 25px !important;
-    height: 35px !important;
-}
-.ui-icon-home-inactive:after {
-    background-image:  url("../../Assets/img/icons/home-inactive.svg");
-    background-size: 90%;
-    width: 25px !important;
-    height: 35px !important;
-}
-
-.ui-icon-search-inactive:after{
-    background-image:  url("../../Assets/img/icons/search-inactive.svg");
-    background-size: 90%;
-    width: 25px !important;
-    height: 35px !important;
-}
-.ui-icon-search-active:after{
-    background-image:  url("../../Assets/img/icons/search-active.svg");
-    background-size: 90%;
-    width: 25px !important;
-    height: 35px !important;
-}
-
-.ui-icon-track-inactive:after {
-    background-image:  url("../../Assets/img/icons/track-inactive.svg");
-    background-size: 90%;
-    width: 25px !important;
-    height: 35px !important;
-}
-.ui-icon-track-active:after {
-    background-image:  url("../../Assets/img/icons/track-active.svg");
-    background-size: 90%;
-    width: 25px !important;
-    height: 35px !important;
-}
-
-.ui-icon-profile-inactive:after {
-    background-image:  url("../../Assets/img/icons/account-inactive.svg");
-    background-size: 90%;
-    width: 25px !important;
-    height: 35px !important;
-}
-.ui-icon-profile-active:after {
-    background-image:  url("../../Assets/img/icons/account-active.svg");
-    background-size: 90%;
-    width: 25px !important;
-    height: 35px !important;
-}
-
-#inactive {
-    color: #858282;
-    text-align: center;
-    font-family: Arial;
-    font-size: 11pt;
-    background-color: white;
-}
-
-#active {
-    color: #fc9920;
-    font-family: Arial;
-    font-size: 11pt;
-    background-color: white;
-}
-    .ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a{
-      width: 108%;
+    #space-between-rows {
+        padding-top: 50px;
+        visibility: hidden;
     }
-
-    .h1, h1{
-      margin-left: 30%!important;
-    margin-bottom: 5%!important;
+    /*footer*/
+    .ui-icon-home-active:after {
+        background-image: url("../../Assets/img/icons/home-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
     }
-  }
+    .ui-icon-home-inactive:after {
+        background-image: url("../../Assets/img/icons/home-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-search-inactive:after {
+        background-image: url("../../Assets/img/icons/search-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-search-active:after {
+        background-image: url("../../Assets/img/icons/search-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-track-inactive:after {
+        background-image: url("../../Assets/img/icons/track-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-track-active:after {
+        background-image: url("../../Assets/img/icons/track-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-profile-inactive:after {
+        background-image: url("../../Assets/img/icons/account-inactive.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    .ui-icon-profile-active:after {
+        background-image: url("../../Assets/img/icons/account-active.svg");
+        background-size: 90%;
+        width: 25px !important;
+        height: 35px !important;
+    }
+    #inactive {
+        color: #858282;
+        text-align: center;
+        font-family: Arial;
+        font-size: 11pt;
+        background-color: white;
+    }
+    #active {
+        color: #fc9920;
+        font-family: Arial;
+        font-size: 11pt;
+        background-color: white;
+    }
+    .ui-body-a,
+    .ui-page-theme-a .ui-body-inherit,
+    html .ui-bar-a .ui-body-inherit,
+    html .ui-body-a .ui-body-inherit,
+    html body .ui-group-theme-a .ui-body-inherit,
+    html .ui-panel-page-container-a {
+        width: 108%;
+    }
+    .h1,
+    h1 {
+        margin-left: 30%!important;
+        margin-bottom: 5%!important;
+    }
+}

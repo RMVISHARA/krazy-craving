@@ -7,8 +7,8 @@
 }
 
 .logincontent{
-    background: rgba(0, 0, 0, 0.4);
-    height: 95.5%;
+    background: white;
+    /* height: 95.5%; */
 }
 
 .logo{
@@ -22,7 +22,7 @@
 }
 .signup {
     width: 100%;
-    color: white;
+    color: #fc9920;
     font-size: 17px;
     text-shadow:none;
 }
@@ -191,8 +191,8 @@ and (orientation: landscape) {
     }
 
     .logincontent{
-        background: rgba(0, 0, 0, 0.4);
-        height: 95.5%;
+        background: white;
+        /* height: 95.5%; */
     }
 
     .logo{
@@ -359,8 +359,8 @@ and (orientation: landscape) {
     }
 
     .logincontent{
-        background: rgba(0, 0, 0, 0.4);
-        height: 96.7%;
+        background: white;
+        /* height: 96.7%; */
     }
 
     .logo{
@@ -518,8 +518,8 @@ and (orientation: landscape) {
     }
 
     .logincontent{
-        background: rgba(0, 0, 0, 0.4);
-        height: 95.5%;
+        background: white;
+        /* height: 95.5%; */
     }
 
     .logo{

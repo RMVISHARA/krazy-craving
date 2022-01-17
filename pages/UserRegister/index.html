@@ -26,16 +26,13 @@
 
 <body>
     <div data-role="page" class="loginPage" id="loginpage">
-        <div data-role="content" align="center" class="logincontent">
-            <img src="../../Assets/img/Logo_final.png" class="logo" />
-            <div class="wrapper">
-                <div class="vendorDiv">
-                    <a href="#" data-role="button" rel="external" id="userBtn">User</a>
-                </div>
-                <div class="userDiv">
-                    <a href="../VendorRegister/" data-role="button" rel="external" id="vendorBtn">Vendor</a>
-                </div>
+        <div data-role="header" style="background-color: black" data-position="fixed" data-tap-toggle="false">
+            <div class="row d-flex justify-content-center">
+                <img style="width: 210px; height: 130px;" src="../../Assets/img/LogoDark.png">
             </div>
+        </div>
+
+        <div data-role="content" align="center" class="logincontent">
             <form>
                 <div data-role="fieldcontain">
                     <input type="email" name="name" id="number" value="" placeholder="Name" data-role=none required/>
@@ -51,7 +48,7 @@
             </form>
 
             <div class="signup">
-                <p>Already have an account? <a href="../Login">Sign in</a></p>
+                <p>Already have an account? <a href="../Login" style="color: black;">Sign in</a></p>
             </div>
         </div>
     </div>
