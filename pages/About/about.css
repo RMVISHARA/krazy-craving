@@ -45,6 +45,26 @@
     width: 100%;
 }
 
+.member {
+    width: 90%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: rgb(136, 136, 136);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.memberPic {
+    width: 150px;
+    height: 150px;
+    border-radius: 25%;
+    float: left;
+}
+
+.name {}
+
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
