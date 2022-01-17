@@ -113,7 +113,7 @@ $(document).ready(function() {
             'imageurl': '../../Assets/img/omik.jpg', 
             'name': 'Omik', 
             'address': '342 Waragoda Rd, Peliyagoda',
-            'shortDescription': `This  restaurant serves a mix of the Sri Lankan and Oriental cuisine`,
+            'shortDescription': `This  restaurant serves amix of the Sri Lankan and Oriental cuisine`,
             'longDescription': `Based in Peliyagoda this small restaurant serves a mix of the Sri Lankan and Oriental cuisine, spiced to Sri Lankan taste. 
                                 The restaurant offers good  food for an affordable price.`, 
             'rating': '4.3', 
@@ -132,7 +132,7 @@ $(document).ready(function() {
             'imageurl': '../../Assets/img/kottu.jpg', 
             'name': 'Kottu Kottu', 
             'address': "No 10, Temple's Road, Dompe", 
-            'shortDescription': `A Lankan street classic , nobody does a good late night kottu the way they do.`,
+            'shortDescription': `A Lankan street classic, nobody does a good late night kottu the way they do.`,
             'longDescription': `A Lankan street classic, 
                                 Nobody does a good late night kottu the way they do. 
                                 Based in a corner of Bambalapitiya, be sure to check out their Cheese Kottu. `,
@@ -172,7 +172,7 @@ $(document).ready(function() {
             'imageurl': '../../Assets/img/rajaBojun.jpg', 
             'name': 'Raja Bojun', 
             'address': '61 Robert Gunawardena Mawatha, Colombo 00500',
-            'shortDescription': `The unique feature of this restaurant is the buffet  option for its customers in addition to a la Carte .`,
+            'shortDescription': `The unique feature of this restaurant is the buffet option for its customers in addition to a la Carte .`,
             'longDescription': `This widely popular Sri Lankan restaurant serves its customers the Sri Lankan cuisine.
                                 The unique feature of this restaurant is the buffet  option for its customers in addition to a la Carte.`, 
             'rating': '4.0', 
@@ -253,7 +253,7 @@ $(document).ready(function() {
     vendorList.forEach(function(obj) {
         document.getElementById("favourites").innerHTML += `
                 <a class="link" href="" onclick="restaurent(${obj.id})">
-                    <div class="card" id="cardItem">
+                    <div class="card" id="cardItem" style="height: 350px !important;">
                         <img src="${obj.imageurl}" class="cardImage">
                         <div class="row" id="customCard">
                             <div class="desc">
@@ -261,7 +261,7 @@ $(document).ready(function() {
                                     <b>${obj.name}</b>
                                 </p>
                                 <span class="address">Rs.${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
-                                <p class="itemDesc">${obj.shortDescription}</p>
+                                <div class="text-wrap itemDesc pt-2" style="width: 18.5rem;">${obj.shortDescription}</div>
                             </div>
                             <div class="stars">
                                 <span class="fa fa-star checked fa-xs" style="color: #FFCC36;margin-left:19%; font-size: 1rem;"></span>
@@ -278,7 +278,7 @@ $(document).ready(function() {
         document.getElementById("topOutlets").innerHTML +=
             `
                 <a class="link" href="" onclick="restaurent(${obj.id})">
-                    <div class="card" id="cardItem">
+                    <div class="card" id="cardItem" style="height: 350px !important;">
                         <img src="${obj.imageurl}" class="cardImage">
                         <div class="row" id="customCard">
                             <div class="desc">
@@ -286,7 +286,7 @@ $(document).ready(function() {
                                     <b>${obj.name}</b>
                                 </p>
                                 <span class="address">Rs.${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
-                                <p class="itemDesc">${obj.shortDescription}</p>
+                                <div class="text-wrap itemDesc pt-2" style="width: 18.5rem;">${obj.shortDescription}</div>
                             </div>
                             <div class="stars">
                                 <span class="fa fa-star checked fa-xs" style="color: #FFCC36;margin-left:19%; font-size: 1rem;"></span>
