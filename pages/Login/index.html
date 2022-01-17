@@ -26,8 +26,13 @@
 
 <body>
     <div data-role="page" class="loginPage" id="loginpage">
+        <div data-role="header" style="background-color: black" data-position="fixed" data-tap-toggle="false">
+            <div class="row d-flex justify-content-center">
+                <img style="width: 210px; height: 130px;" src="../../Assets/img/LogoDark.png">
+            </div>
+        </div>
+
         <div data-role="content" align="center" class="logincontent">
-            <img src="../../Assets/img/Logo_final.png" class="logo" />
             <form>
                 <div data-role="fieldcontain">
                     <input type="email" name="email" id="email" value="" placeholder="Email" data-role=none required/> <br>
@@ -43,11 +48,11 @@
             </form>
             <div class="ui-grid-b" id="grid1">
                 <div class="ui-block-a">
-                    <hr size="1px" color="white">
+                    <hr size="1px" color="black">
                 </div>
-                <div class="ui-block-b">OR</div>
+                <div class="ui-block-b" style="color: black;">OR</div>
                 <div class="ui-block-c">
-                    <hr size="1px" color="white">
+                    <hr size="1px" color="black">
                 </div>
             </div><!-- /grid-a -->
             <table id="table1">
@@ -66,7 +71,7 @@
                 </tr>
             </table>
             <div class="signup">
-                <p>New to Krazy cravings? <a href="../UserRegister">Sign up Now</a></p>
+                <p>New to Krazy cravings? <a href="../UserRegister" style="color: black;">Sign up Now</a></p>
             </div>
         </div>
     </div>
