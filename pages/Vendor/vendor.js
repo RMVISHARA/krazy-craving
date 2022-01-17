@@ -16,7 +16,7 @@ $(document).ready(function() {
     document.getElementById("name").innerHTML = vendor.name;
     document.getElementById("address").innerHTML = vendor.address;
     document.getElementById("ratings").innerHTML = vendor.rating;
-    document.getElementById("longDescription").innerHTML = vendor.longDescription;
+    document.getElementById("longDescription").innerHTML = `<p>${vendor.longDescription}</p>`;
     document.getElementById("bgImage").style.backgroundImage = `url('${vendor.imageurl}')`;
 
     vendor.menu.forEach(function(obj) {

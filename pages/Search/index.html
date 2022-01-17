@@ -302,7 +302,7 @@
             price: 2000,
             time: 120
         };
-        var currentSearchResults = [];
+        // var currentSearchResults = [];
         var prevSearch = ['Sohani', 'pizza', 'Sea Food'];
         var resObj = [{
             'id': '1',
@@ -524,7 +524,7 @@
             });
 
             var newResults = addingFilters(results);
-            currentSearchResults = newResults;
+            // currentSearchResults = newResults;
 
             if (newResults.length == 0) {
                 document.getElementById("resultsContainer").style.display = "none";
@@ -579,7 +579,15 @@
             filterOPtions.time = document.getElementById("timeSlider").value;
             filterOPtions.price = document.getElementById("priceSlider").value;
 
-            displayResults(currentSearchResults);
+            var similarResults = [];
+
+            resObj.forEach(e => {
+                if (e.keyword.includes(prevSearch[2])) {
+                    similarResults.push(e);
+                };
+            });
+
+            displayResults(similarResults);
         };
 
         function ResetFilters() {
