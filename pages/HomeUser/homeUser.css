@@ -8,32 +8,39 @@
     padding-right: 60px;
     height: 35px;
 }
+
 .notificationLogo {
     padding-top: 10px;
     padding-right: 10px;
     height: 35px;
 }
+
 .icons {
     padding-top: 0px;
 }
+
 .promos {
     width: 100%;
 }
+
 .title {
     font-size: 20px;
 }
+
 .pad {
     text-align: left;
     margin-bottom: 5px;
     margin-top: 10px;
     padding-left: 3px;
 }
+
 .name {
     font-size: 16px;
     height: 12px;
     color: #858282;
     text-shadow: none;
 }
+
 .address {
     height: 20px;
     font-size: 14px;
@@ -41,6 +48,7 @@
     width: 20px;
     text-shadow: none;
 }
+
 .desc {
     position: relative;
     float: left;
@@ -50,16 +58,19 @@
     margin-left: 5px;
     height: 63px;
 }
+
 .link {
     font-weight: normal !important;
     color: #858282 !important;
 }
+
 .stars {
     position: relative;
     float: right;
     margin-left: 195px;
     margin-top: 10px;
 }
+
 .cardImage {
     width: 100%;
     height: 200px;
@@ -67,73 +78,85 @@
     border-top-right-radius: 10px;
 }
 
-
 .lists {
     overflow-x: scroll !important;
     white-space: nowrap !important;
 }
+
 #cardItem {
     min-width: 270px;
-    height: 270px;
+    height: fit-content;
     display: inline-block;
     background-color: transparent;
     border-color: transparent;
     /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
 }
+
 #customCard {
     width: 100%;
     background-color: white !important;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-/*footer*/
-.ui-icon-home-active:after {
-    background-image:  url("../../Assets/img/icons/home-active.svg");
-    background-size: 90%;
-    width: 25px !important;
-    height: 35px !important;
+
+.itemDesc {
+    padding-bottom: 10px;
 }
-.ui-icon-home-inactive:after {
-    background-image:  url("../../Assets/img/icons/home-inactive.svg");
+
+
+/*footer*/
+
+.ui-icon-home-active:after {
+    background-image: url("../../Assets/img/icons/home-active.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
 
-.ui-icon-search-inactive:after{
-    background-image:  url("../../Assets/img/icons/search-inactive.svg");
+.ui-icon-home-inactive:after {
+    background-image: url("../../Assets/img/icons/home-inactive.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
-.ui-icon-search-active:after{
-    background-image:  url("../../Assets/img/icons/search-active.svg");
+
+.ui-icon-search-inactive:after {
+    background-image: url("../../Assets/img/icons/search-inactive.svg");
+    background-size: 90%;
+    width: 25px !important;
+    height: 35px !important;
+}
+
+.ui-icon-search-active:after {
+    background-image: url("../../Assets/img/icons/search-active.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
 
 .ui-icon-track-inactive:after {
-    background-image:  url("../../Assets/img/icons/track-inactive.svg");
+    background-image: url("../../Assets/img/icons/track-inactive.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
+
 .ui-icon-track-active:after {
-    background-image:  url("../../Assets/img/icons/track-active.svg");
+    background-image: url("../../Assets/img/icons/track-active.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
 
 .ui-icon-profile-inactive:after {
-    background-image:  url("../../Assets/img/icons/account-inactive.svg");
+    background-image: url("../../Assets/img/icons/account-inactive.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
 }
+
 .ui-icon-profile-active:after {
-    background-image:  url("../../Assets/img/icons/account-active.svg");
+    background-image: url("../../Assets/img/icons/account-active.svg");
     background-size: 90%;
     width: 25px !important;
     height: 35px !important;
@@ -153,12 +176,11 @@
     font-size: 11pt;
     background-color: white;
 }
+
 .card {
-    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 5px 5px 0px lightgray;
     border-radius: 10px;
-
-
 }
 
 
@@ -169,9 +191,7 @@
 
 /* Portrait */
 
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
-
-}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
 
 
 /* Landscape */
@@ -262,57 +282,53 @@
     }
     /*footer*/
     .ui-icon-home-active:after {
-        background-image:  url("../../Assets/img/icons/home-active.svg");
+        background-image: url("../../Assets/img/icons/home-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-home-inactive:after {
-        background-image:  url("../../Assets/img/icons/home-inactive.svg");
+        background-image: url("../../Assets/img/icons/home-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
-    .ui-icon-search-inactive:after{
-        background-image:  url("../../Assets/img/icons/search-inactive.svg");
+    .ui-icon-search-inactive:after {
+        background-image: url("../../Assets/img/icons/search-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-    .ui-icon-search-active:after{
-        background-image:  url("../../Assets/img/icons/search-active.svg");
+    .ui-icon-search-active:after {
+        background-image: url("../../Assets/img/icons/search-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     .ui-icon-track-inactive:after {
-        background-image:  url("../../Assets/img/icons/track-inactive.svg");
+        background-image: url("../../Assets/img/icons/track-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-track-active:after {
-        background-image:  url("../../Assets/img/icons/track-active.svg");
+        background-image: url("../../Assets/img/icons/track-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     .ui-icon-profile-inactive:after {
-        background-image:  url("../../Assets/img/icons/account-inactive.svg");
+        background-image: url("../../Assets/img/icons/account-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-profile-active:after {
-        background-image:  url("../../Assets/img/icons/account-active.svg");
+        background-image: url("../../Assets/img/icons/account-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     #inactive {
         color: #858282;
         text-align: center;
@@ -320,7 +336,6 @@
         font-size: 11pt;
         background-color: white;
     }
-
     #active {
         color: #fc9920;
         font-family: Arial;
@@ -328,10 +343,9 @@
         background-color: white;
     }
     .card {
-        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 5px 5px 0px lightgray;
         border-radius: 10px;
-
     }
 }
 
@@ -430,57 +444,53 @@
     }
     /*footer*/
     .ui-icon-home-active:after {
-        background-image:  url("../../Assets/img/icons/home-active.svg");
+        background-image: url("../../Assets/img/icons/home-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-home-inactive:after {
-        background-image:  url("../../Assets/img/icons/home-inactive.svg");
+        background-image: url("../../Assets/img/icons/home-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
-    .ui-icon-search-inactive:after{
-        background-image:  url("../../Assets/img/icons/search-inactive.svg");
+    .ui-icon-search-inactive:after {
+        background-image: url("../../Assets/img/icons/search-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-    .ui-icon-search-active:after{
-        background-image:  url("../../Assets/img/icons/search-active.svg");
+    .ui-icon-search-active:after {
+        background-image: url("../../Assets/img/icons/search-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     .ui-icon-track-inactive:after {
-        background-image:  url("../../Assets/img/icons/track-inactive.svg");
+        background-image: url("../../Assets/img/icons/track-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-track-active:after {
-        background-image:  url("../../Assets/img/icons/track-active.svg");
+        background-image: url("../../Assets/img/icons/track-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     .ui-icon-profile-inactive:after {
-        background-image:  url("../../Assets/img/icons/account-inactive.svg");
+        background-image: url("../../Assets/img/icons/account-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-profile-active:after {
-        background-image:  url("../../Assets/img/icons/account-active.svg");
+        background-image: url("../../Assets/img/icons/account-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     #inactive {
         color: #858282;
         text-align: center;
@@ -488,7 +498,6 @@
         font-size: 11pt;
         background-color: white;
     }
-
     #active {
         color: #fc9920;
         font-family: Arial;
@@ -496,10 +505,9 @@
         background-color: white;
     }
     .card {
-        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 5px 5px 0px lightgray;
         border-radius: 10px;
-
     }
 }
 
@@ -554,7 +562,7 @@
         margin-left: 5px;
     }
     .link {
-       font-weight: normal !important;
+        font-weight: normal !important;
         color: #858282 !important;
     }
     .stars {
@@ -588,57 +596,53 @@
     }
     /*footer*/
     .ui-icon-home-active:after {
-        background-image:  url("../../Assets/img/icons/home-active.svg");
+        background-image: url("../../Assets/img/icons/home-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-home-inactive:after {
-        background-image:  url("../../Assets/img/icons/home-inactive.svg");
+        background-image: url("../../Assets/img/icons/home-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
-    .ui-icon-search-inactive:after{
-        background-image:  url("../../Assets/img/icons/search-inactive.svg");
+    .ui-icon-search-inactive:after {
+        background-image: url("../../Assets/img/icons/search-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-    .ui-icon-search-active:after{
-        background-image:  url("../../Assets/img/icons/search-active.svg");
+    .ui-icon-search-active:after {
+        background-image: url("../../Assets/img/icons/search-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     .ui-icon-track-inactive:after {
-        background-image:  url("../../Assets/img/icons/track-inactive.svg");
+        background-image: url("../../Assets/img/icons/track-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-track-active:after {
-        background-image:  url("../../Assets/img/icons/track-active.svg");
+        background-image: url("../../Assets/img/icons/track-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     .ui-icon-profile-inactive:after {
-        background-image:  url("../../Assets/img/icons/account-inactive.svg");
+        background-image: url("../../Assets/img/icons/account-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
     .ui-icon-profile-active:after {
-        background-image:  url("../../Assets/img/icons/account-active.svg");
+        background-image: url("../../Assets/img/icons/account-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
-
     #inactive {
         color: #858282;
         text-align: center;
@@ -646,7 +650,6 @@
         font-size: 11pt;
         background-color: white;
     }
-
     #active {
         color: #fc9920;
         font-family: Arial;
@@ -654,9 +657,8 @@
         background-color: white;
     }
     .card {
-        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 5px 5px 0px lightgray;
         border-radius: 10px;
-
     }
 }
