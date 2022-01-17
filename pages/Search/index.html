@@ -61,10 +61,10 @@
                     </form>
                 </div>
                 <div class="col-xs-2 col-2">
-                    <a href=""  data-role="button" onclick="searchItems()" >Find</a>
+                    <a href="" data-role="button" class="findBtn" onclick="searchItems()">Find</a>
                 </div>
                 <div class="col-xs-1 col-1">
-                    <a  data-role="button" data-toggle="modal" data-target="#filtersModal"><img id="filter" width="20" height="20" src="../../Assets/img/icons/filter.png"></a>
+                    <a data-role="button" data-toggle="modal" class="filter" data-target="#filtersModal"><img id="filter" class="filtersymbol" src="../../Assets/img/icons/filter.svg"></a>
                 </div>
                 <div class="col-xs-2 col-2">
                     <a href="../QR/index.html" data-ajax="false"><img id="camera" src="../../Assets/img/icons/camera.svg"></a>
@@ -134,12 +134,12 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-    
+
                     <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
@@ -233,6 +233,7 @@
             <!-- modals -->
             <div class="modal fade" id="noRes" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
+<<<<<<< HEAD
                 <div class="modal-content">
                     <button type="button" class="close pr-2" data-dismiss="modal" aria-label="Close" style="text-align: right !important;">
                         <span aria-hidden="true">&times;</span>
@@ -244,12 +245,26 @@
                         </center>
                         <h3 id="header1" class="text-center pt-5"><span id="message3">No Results found !!</span></h3>
                         <br>
+=======
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                        <div data-role="content">
+                            <center>
+                                <!-- <img id="av" src="../../Assets/img/icons/gift-icon.png" width="85" height="85"> -->
+                                <img id="av" src="../../Assets/img/icons/noResults.png" width="85" height="85">
+                            </center>
+                            <h1 id="header1"><span id="message3">No Results found !!</span></h1>
+                            <br>
+                        </div>
+>>>>>>> e6c1fa0b5979103e588ec2c920068555137536ab
                     </div>
-                </div>
                 </div>
             </div>
             <div class="modal fade" id="filtersModal" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
+<<<<<<< HEAD
                 <div class="modal-content">
                     <button type="button" class="close pr-2" data-dismiss="modal" aria-label="Close" style="text-align: right !important;">
                         <span aria-hidden="true">&times;</span>
@@ -270,10 +285,30 @@
                             </div>
                             <div class="col">
                                 <button type="button" class="btn btn-info" onclick="ResetFilters()">Reset</button>
+=======
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                        <div data-role="content">
+                            <center>
+                                <h2>Filters</h2>
+                            </center>
+                            <form>
+                                <label for="distSlider"><h3>Distance (Km) :</h3></label>
+                                <input type="range" name="distSlider" id="distSlider" data-highlight="true" min="0" max="10" value="10">
+                                <label for="distSlider"><h3>Time (Mins) :</h3></label>
+                                <input type="range" name="timeSlider" id="timeSlider" data-highlight="true" min="20" max="120" value="120">
+                                <label for="distSlider"><h3>Price (LKR) :</h3></label>
+                                <input type="range" name="priceSlider" id="priceSlider" data-highlight="true" min="100" max="5000" value="2000">
+                            </form>
+                            <div class="row">
+                                <div class="col"><a href="" class="pt-4" data-role="button" onclick="filterSelections()">Apply</a></div>
+                                <div class="col"><a href="" class="pt-4" data-role="button" onclick="ResetFilters()">Reset</a></div>
+>>>>>>> e6c1fa0b5979103e588ec2c920068555137536ab
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
 
@@ -297,265 +332,242 @@
 
     </div>
 
-<script type="text/javascript">
-
-var filterOPtions = {dist: 10,price: 2000,time: 120};
-var currentSearchResults = [];
-var prevSearch = ['Sohani','pizza','Sea Food'];
-var resObj = [
-        { 
-            'id': '1', 
-            'imageurl': '../../Assets/img/pizzaHut.jpg', 
-            'name': 'Pizza Hut', 
+    <script type="text/javascript">
+        var filterOPtions = {
+            dist: 10,
+            price: 2000,
+            time: 120
+        };
+        var currentSearchResults = [];
+        var prevSearch = ['Sohani', 'pizza', 'Sea Food'];
+        var resObj = [{
+            'id': '1',
+            'imageurl': '../../Assets/img/pizzaHut.jpg',
+            'name': 'Pizza Hut',
             'address': '228A1/1 Colombo - Kandy Rd, 11300',
-            'rating': '4.5', 
-            'time': 20, 
+            'rating': '4.5',
+            'time': 20,
             'deliveryPrice': 90,
             dist: 2,
             price: [750],
-            keyword: ['pizza','pizza hut','Pizza Hut','Pizza hut','Pizza']
-        },
-        { 
-            'id': '2', 
-            'imageurl': '../../Assets/img/sohaniRestaurent.jpg', 
-            'name': 'Sohani Restaurant', 
-            'address': '376/2/A, 5th Lane, Kelaniya', 
-            'rating': '4.2', 
-            'time': 30, 
-            'deliveryPrice': 100 ,
+            keyword: ['pizza', 'pizza hut', 'Pizza Hut', 'Pizza hut', 'Pizza']
+        }, {
+            'id': '2',
+            'imageurl': '../../Assets/img/sohaniRestaurent.jpg',
+            'name': 'Sohani Restaurant',
+            'address': '376/2/A, 5th Lane, Kelaniya',
+            'rating': '4.2',
+            'time': 30,
+            'deliveryPrice': 100,
             dist: 3,
-            price: [150,400,300,550,800],
-            keyword: ['sohani','Sohani','Sohani Restaurent','srilankan','traditional','rice','kottu']
-        },
-        { 
-            'id': '3', 
-            'imageurl': '../../Assets/img/drinks.jpg', 
-            'name': 'Udeni\'s Juice Bar', 
-            'address': '169, High level Rd, Nugegoda', 
-            'rating': '4.8', 
-            'time': 50, 
+            price: [150, 400, 300, 550, 800],
+            keyword: ['sohani', 'Sohani', 'Sohani Restaurent', 'srilankan', 'traditional', 'rice', 'kottu']
+        }, {
+            'id': '3',
+            'imageurl': '../../Assets/img/drinks.jpg',
+            'name': 'Udeni\'s Juice Bar',
+            'address': '169, High level Rd, Nugegoda',
+            'rating': '4.8',
+            'time': 50,
             'deliveryPrice': 90,
             dist: 5,
-            price: [150,250,400],
-            keyword: ['udeni','Udeni','Udenis','srilankan','sweets','drinks']
-        },
-        { 
-            'id': '4', 
-            'imageurl': '../../Assets/img/pizza.jpg', 
-            'name': 'Arthur\'s Pizza', 
-            'address': 'No 10, Temple\'s Road, Rathmalana', 
-            'rating': '4.5', 
-            'time': 120, 
+            price: [150, 250, 400],
+            keyword: ['udeni', 'Udeni', 'Udenis', 'srilankan', 'sweets', 'drinks']
+        }, {
+            'id': '4',
+            'imageurl': '../../Assets/img/pizza.jpg',
+            'name': 'Arthur\'s Pizza',
+            'address': 'No 10, Temple\'s Road, Rathmalana',
+            'rating': '4.5',
+            'time': 120,
             'deliveryPrice': 60,
             dist: 2,
             price: [750],
-            keyword: ['pizza','arthurs','Arthurs','arthur','Arthur','srilankan','burger','Pizza']
-        },
-        { 
-            'id': '5', 
-            'imageurl': '../../Assets/img/burger.jpg', 
-            'name': 'Burger Palace', 
+            keyword: ['pizza', 'arthurs', 'Arthurs', 'arthur', 'Arthur', 'srilankan', 'burger', 'Pizza']
+        }, {
+            'id': '5',
+            'imageurl': '../../Assets/img/burger.jpg',
+            'name': 'Burger Palace',
             'address': 'No 4, 3rd Lane, Koswatta',
-            'rating': '4.2', 
-            'time': 120, 
+            'rating': '4.2',
+            'time': 120,
             'deliveryPrice': 120,
             dist: 5,
-            price: [250,200,400],
-            keyword: ['burger','Burger','burger palace','Burger Palace','Burger palace','drinks']
-        },
-        { 
-            'id': '6', 
-            'imageurl': '../../Assets/img/omik.jpg', 
-            'name': 'Omik', 
+            price: [250, 200, 400],
+            keyword: ['burger', 'Burger', 'burger palace', 'Burger Palace', 'Burger palace', 'drinks']
+        }, {
+            'id': '6',
+            'imageurl': '../../Assets/img/omik.jpg',
+            'name': 'Omik',
             'address': '342 Waragoda Rd, Peliyagoda',
-            'rating': '4.3', 
-            'time': 30, 
+            'rating': '4.3',
+            'time': 30,
             'deliveryPrice': 60,
             dist: 10,
-            price: [320,400,460,450],
-            keyword: ['Omik','omik','srilankan','traditional','rice','kottu']
-        },
-        { 
-            'id': '7', 
-            'imageurl': '../../Assets/img/kottu.jpg', 
-            'name': 'Kottu Kottu', 
-            'address': "No 10, Temple's Road, Dompe", 
-            'rating': '4.5', 
-            'time': 20, 
+            price: [320, 400, 460, 450],
+            keyword: ['Omik', 'omik', 'srilankan', 'traditional', 'rice', 'kottu']
+        }, {
+            'id': '7',
+            'imageurl': '../../Assets/img/kottu.jpg',
+            'name': 'Kottu Kottu',
+            'address': "No 10, Temple's Road, Dompe",
+            'rating': '4.5',
+            'time': 20,
             'deliveryPrice': 90,
             dist: 8,
-            price: [300,400,350,460,450],
-            keyword: ['Kottu','srilankan','fastfood','fast','kottu']
-        },
-        { 
-            'id': '8', 
-            'imageurl': '../../Assets/img/cupcakes.jpg', 
-            'name': 'Cream Cakes', 
+            price: [300, 400, 350, 460, 450],
+            keyword: ['Kottu', 'srilankan', 'fastfood', 'fast', 'kottu']
+        }, {
+            'id': '8',
+            'imageurl': '../../Assets/img/cupcakes.jpg',
+            'name': 'Cream Cakes',
             'address': 'No ,5 4th Lane, Kottawa',
-            'rating': '4.2', 
-            'time': 40, 
+            'rating': '4.2',
+            'time': 40,
             'deliveryPrice': 120,
             dist: 5,
-            price: [800,200,1000],
-            keyword: ['Cream cakes','cream cakes','srilankan','fastfood','fast','cake','sweets']
-        },
-        { 
-            'id': '9', 
-            'imageurl': '../../Assets/img/rajaBojun.jpg', 
-            'name': 'Raja Bojun', 
+            price: [800, 200, 1000],
+            keyword: ['Cream cakes', 'cream cakes', 'srilankan', 'fastfood', 'fast', 'cake', 'sweets']
+        }, {
+            'id': '9',
+            'imageurl': '../../Assets/img/rajaBojun.jpg',
+            'name': 'Raja Bojun',
             'address': '61 Robert Gunawardena Mawatha, Colombo 00500',
-            'rating': '4.0', 
-            'time': 40, 
-            'deliveryPrice': 140, 
+            'rating': '4.0',
+            'time': 40,
+            'deliveryPrice': 140,
             dist: 9,
-            price: [320,150,500],
-            keyword: ['raja','Raja','Raja bojun','raja bojun','srilankan','traditional','rice','seafood','Seafood','sea food','Sea food']
-        },
-        { 
-            'id': '10', 
-            'imageurl': '../../Assets/img/kamaSutra.jpg', 
-            'name': 'Kaema Sutra', 
-            'address': 'Independence Ave, Colombo 00700', 
-            'rating': '4.8', 
-            'time': 120, 
+            price: [320, 150, 500],
+            keyword: ['raja', 'Raja', 'Raja bojun', 'raja bojun', 'srilankan', 'traditional', 'rice', 'seafood', 'Seafood', 'sea food', 'Sea food']
+        }, {
+            'id': '10',
+            'imageurl': '../../Assets/img/kamaSutra.jpg',
+            'name': 'Kaema Sutra',
+            'address': 'Independence Ave, Colombo 00700',
+            'rating': '4.8',
+            'time': 120,
             'deliveryPrice': 120,
             dist: 4,
-            price: [1300,1500,1700],
-            keyword: ['kama','Kama','Kaema','kaema','kaema sutra','Kaema sutra','srilankan','traditional','rice','seafood','drinks','Seafood','sea food','Sea food']
-        },
-        { 
-            'id': '11', 
-            'imageurl': '../../Assets/img/palmyrah.jpeg', 
-            'name': 'Palmyrah', 
+            price: [1300, 1500, 1700],
+            keyword: ['kama', 'Kama', 'Kaema', 'kaema', 'kaema sutra', 'Kaema sutra', 'srilankan', 'traditional', 'rice', 'seafood', 'drinks', 'Seafood', 'sea food', 'Sea food']
+        }, {
+            'id': '11',
+            'imageurl': '../../Assets/img/palmyrah.jpeg',
+            'name': 'Palmyrah',
             'address': '328 Galle Road, Kollupitiya, Colombo 3',
-            'rating': '4.5', 
-            'time': 100, 
+            'rating': '4.5',
+            'time': 100,
             'deliveryPrice': 140,
             dist: 5,
-            price: [850,900,1000,1100,1650],
-            keyword: ['palmyrah','pal','Pal','Palmyrah','srilankan','traditional','rice','seafood','drinks','Seafood','sea food','Sea food']
-        },
-        { 
-            'id': '12', 
-            'imageurl': '../../Assets/img/gingerkafe.jpeg', 
-            'name': 'Ginger Kafe', 
-            'address': 'Dharmapala Mawatha, 145, Colombo 00700', 
-            'rating': '4.3', 
-            'time': 120, 
+            price: [850, 900, 1000, 1100, 1650],
+            keyword: ['palmyrah', 'pal', 'Pal', 'Palmyrah', 'srilankan', 'traditional', 'rice', 'seafood', 'drinks', 'Seafood', 'sea food', 'Sea food']
+        }, {
+            'id': '12',
+            'imageurl': '../../Assets/img/gingerkafe.jpeg',
+            'name': 'Ginger Kafe',
+            'address': 'Dharmapala Mawatha, 145, Colombo 00700',
+            'rating': '4.3',
+            'time': 120,
             'deliveryPrice': 90,
             dist: 3,
-            price: [4000,2200,1800,2900,1200],
-            keyword: ['Ginger','ginger','Ginger kafe','ginger kafe','Ginger Kafe','srilankan','seafood','drinks','cake','Seafood','sea food','Sea food']
-        },
-    ];
+            price: [4000, 2200, 1800, 2900, 1200],
+            keyword: ['Ginger', 'ginger', 'Ginger kafe', 'ginger kafe', 'Ginger Kafe', 'srilankan', 'seafood', 'drinks', 'cake', 'Seafood', 'sea food', 'Sea food']
+        }, ];
 
-var resultsObj = [
-    {
-        id: 1,
-        keyword : 'srilankan'
-    },
-    {
-        id: 2,
-        keyword : 'cake'
-    },
-    {
-        id: 3,
-        keyword : 'burger'
-    },
-    {
-        id: 4,
-        keyword : 'traditional'
-    },
-    {
-        id: 5,
-        keyword : 'drinks'
-    },
-    {
-        id: 6,
-        keyword :'sweets'
-    },
-    {
-        id: 7,
-        keyword : 'seafood'
-    },
-    {
-        id: 8,
-        keyword : 'rice'
-    },
-];
+        var resultsObj = [{
+            id: 1,
+            keyword: 'srilankan'
+        }, {
+            id: 2,
+            keyword: 'cake'
+        }, {
+            id: 3,
+            keyword: 'burger'
+        }, {
+            id: 4,
+            keyword: 'traditional'
+        }, {
+            id: 5,
+            keyword: 'drinks'
+        }, {
+            id: 6,
+            keyword: 'sweets'
+        }, {
+            id: 7,
+            keyword: 'seafood'
+        }, {
+            id: 8,
+            keyword: 'rice'
+        }, ];
 
-function categorySelection(ctgry)
-{
-    var similarResults = [];
-    var key;
-    resultsObj.forEach(e => {
-        e.id == ctgry ? key = e.keyword: "";
-    });
+        function categorySelection(ctgry) {
+            var similarResults = [];
+            var key;
+            resultsObj.forEach(e => {
+                e.id == ctgry ? key = e.keyword : "";
+            });
 
-    resObj.forEach(e => {
-        if(e.keyword.includes(key)){
-            similarResults.push(e);
+            resObj.forEach(e => {
+                if (e.keyword.includes(key)) {
+                    similarResults.push(e);
+                };
+            });
+
+            prevSearch = [String(prevSearch[1]), String(prevSearch[2]), String(key)];
+            displayResults(similarResults);
         };
-    });
 
-    prevSearch = [String(prevSearch[1]),String(prevSearch[2]),String(key)];
-    displayResults(similarResults);
-};
+        function cookieSearch(key) {
+            var similarResults = [];
 
-function cookieSearch(key)
-{
-    var similarResults = [];
+            resObj.forEach(e => {
+                if (e.keyword.includes(key)) {
+                    similarResults.push(e);
+                };
+            });
 
-    resObj.forEach(e => {
-        if(e.keyword.includes(key)){
-            similarResults.push(e);
+            prevSearch = [String(prevSearch[1]), String(prevSearch[2]), String(key)];
+            displayResults(similarResults);
         };
-    });
 
-    prevSearch = [String(prevSearch[1]),String(prevSearch[2]),String(key)];
-    displayResults(similarResults);
-};
+        function searchItems() {
+            var similarResults = [];
+            var key = document.getElementById('divOfPs-input').value;
 
-function searchItems(){
-    var similarResults = [];
-    var key = document.getElementById('divOfPs-input').value;
+            if (key != "") {
+                resObj.forEach(e => {
+                    if (e.keyword.includes(key)) {
+                        similarResults.push(e);
+                    };
+                });
 
-    if(key != ""){
-        resObj.forEach(e => {
-            if(e.keyword.includes(key)){
-                similarResults.push(e);
-            };
-        });
+                prevSearch = [String(prevSearch[1]), String(prevSearch[2]), String(key)];
+                // document.getElementById('divOfPs-input').value = "";
+                displayResults(similarResults);
+            }
+        };
 
-        prevSearch = [String(prevSearch[1]),String(prevSearch[2]),String(key)];
-        // document.getElementById('divOfPs-input').value = "";
-        displayResults(similarResults);
-    }
-};
+        function displayResults(results) {
+            document.getElementById("showResults").innerHTML = ``;
+            document.getElementById("prevSearchDiv").innerHTML = ``;
+            document.getElementById("recommendationArea").innerHTML = `<b>Results for "${prevSearch[2]}"</b>`;
 
-function displayResults(results)
-{
-    document.getElementById("showResults").innerHTML = ``;
-    document.getElementById("prevSearchDiv").innerHTML = ``;
-    document.getElementById("recommendationArea").innerHTML = `<b>Results for "${prevSearch[2]}"</b>`;
-
-    prevSearch.forEach(e => {
-            document.getElementById("prevSearchDiv").innerHTML += `
+            prevSearch.forEach(e => {
+                document.getElementById("prevSearchDiv").innerHTML += `
                     <div onclick="cookieSearch('${e}')" class="pl-3 pb-2">
                         <img id="av" src="../../Assets/img/icons/search.png" width="20" height="20" class="pr-1">${e}</div>
-                `
-            ;
-    });
+                `;
+            });
 
-    var newResults = addingFilters(results);
-    currentSearchResults = newResults;
+            var newResults = addingFilters(results);
+            currentSearchResults = newResults;
 
-    if(newResults.length == 0){
-        document.getElementById("resultsContainer").style.display = "none";
-        $("#noRes").modal('show'); 
-    }else{
-        newResults.forEach(function(obj) {
-            document.getElementById("showResults").innerHTML += `
+            if (newResults.length == 0) {
+                document.getElementById("resultsContainer").style.display = "none";
+                $("#noRes").modal('show');
+            } else {
+                newResults.forEach(function(obj) {
+                    document.getElementById("showResults").innerHTML += `
                     <a class="link" href="" onclick="restaurent(${obj.id})">
                         <div class="card" id="cardItem">
                             <img src="${obj.imageurl}" class="cardImage">
@@ -573,56 +585,56 @@ function displayResults(results)
                             </div>
                         </div>
                     </a>
-                `
-            ;
-        })
-        document.getElementById("resultsContainer").style.display = "block";
-    };
-    
-};
+                `;
+                })
+                document.getElementById("resultsContainer").style.display = "block";
+            };
 
-function addingFilters(data){
-    var filteredData = []
+        };
 
-    data.forEach(e => {
-        if(e.dist <= filterOPtions.dist & e.time <= filterOPtions.time){
-            var priceCount = 0;
-            e.price.forEach(p => {
-                p <= filterOPtions.price ? priceCount++ : "";
+        function addingFilters(data) {
+            var filteredData = []
+
+            data.forEach(e => {
+                if (e.dist <= filterOPtions.dist & e.time <= filterOPtions.time) {
+                    var priceCount = 0;
+                    e.price.forEach(p => {
+                        p <= filterOPtions.price ? priceCount++ : "";
+                    });
+
+                    priceCount > 0 ? filteredData.push(e) : "";
+                }
             });
-            
-            priceCount > 0 ? filteredData.push(e) : "";
-        }
-    });
 
-    return filteredData
-};
+            return filteredData
+        };
 
-function filterSelections()
-{
-    $("#filtersModal").modal('hide'); 
-    filterOPtions.dist = document.getElementById("distSlider").value;
-    filterOPtions.time = document.getElementById("timeSlider").value;
-    filterOPtions.price =  document.getElementById("priceSlider").value;
+        function filterSelections() {
+            $("#filtersModal").modal('hide');
+            filterOPtions.dist = document.getElementById("distSlider").value;
+            filterOPtions.time = document.getElementById("timeSlider").value;
+            filterOPtions.price = document.getElementById("priceSlider").value;
 
-    displayResults(currentSearchResults);
-};
+            displayResults(currentSearchResults);
+        };
 
-function ResetFilters(){
-    $("#filtersModal").modal('hide'); 
-    document.getElementById("distSlider").value = 10;
-    document.getElementById("timeSlider").value = 120;
-    document.getElementById("priceSlider").value = 2000;
-    filterOPtions = {dist: 10,price: 2000,time: 120};
-};
+        function ResetFilters() {
+            $("#filtersModal").modal('hide');
+            document.getElementById("distSlider").value = 10;
+            document.getElementById("timeSlider").value = 120;
+            document.getElementById("priceSlider").value = 2000;
+            filterOPtions = {
+                dist: 10,
+                price: 2000,
+                time: 120
+            };
+        };
 
-function restaurent(val){
-    localStorage.setItem("selectedRestaurent", val);
-    window.location.href = "../Vendor/";
-};
-
-
-</script>
+        function restaurent(val) {
+            localStorage.setItem("selectedRestaurent", val);
+            window.location.href = "../Vendor/";
+        };
+    </script>
 
 </body>
 
