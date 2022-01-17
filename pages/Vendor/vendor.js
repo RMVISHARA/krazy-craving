@@ -21,24 +21,23 @@ $(document).ready(function() {
 
     vendor.menu.forEach(function(obj) {
         document.getElementById("cardList").innerHTML +=
-            '           <a href="" onclick="directToPage(' + obj.id + ')"> \n' +
-            '                <div class="card" id="cardItem">\n' +
-            '                    <div class="row no-gutters">\n' +
-            '                        <div class="image">\n' +
-            '                            <img src="' + obj.imageurl + '" class="card-img" style="border-radius: 10px" alt="...">\n' +
-            '                        </div>\n' +
-            '                        <div class="desc1">\n' +
-            '                            <div class="card-body">\n' +
-            '                                <h5 class="card-title">' + obj.name + '</h5>\n' +
-            '                               <p class="card-text">Ranging from Rs. ' + obj.price + '</p>\n' +
-            '                            </div>\n' +
-            '                        </div>\n' +
-            '                    </div>\n' +
-            '                </div>\n' +
-            '            </a><hr>';
-
+        `          <a href="" onclick="directToPage('${obj.id}')">
+        <div class="card" id="cardItem">
+            <div class="row no-gutters d-flex justify-content-between">
+                <div class="desc1">
+                    <div class="card-body p-0">
+                        <h5 class="card-title">${ obj.name}</h5>
+                        <p class="card-text">Rs. ${obj.price}</p>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="${obj.imageurl}" class="card-img" style="border-radius: 10px" alt="...">
+                </div>
+            </div>
+        </div>
+    </a>
+    <hr>`    
     });
-
     loadCommentList();
 
     var x = JSON.parse(localStorage.getItem("favVendors"));
