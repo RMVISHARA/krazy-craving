@@ -46,7 +46,6 @@
                     <a href="../UserAccount/index.html" data-position-to="window" id="accountLogo">
                         <img class="accountLogo" src="../../Assets/img/icons/usa.svg">
                     </a>
-
                 </div>
             </div>
         </div>
@@ -54,19 +53,22 @@
         <!-- content -->
         <div data-role="content">
 
-            <div class="container-fluid row">
-                <div class="col-xs-7 col-7">
+            <div class="row">
+                <div class="col-7">
                     <form>
-                        <input data-type="search" id="divOfPs-input" value="">
+                        <input data-type="search" class="w-100" id="divOfPs-input" value="">
                     </form>
                 </div>
-                <div class="col-xs-2 col-2">
-                    <a href="" data-role="button" class="findBtn" onclick="searchItems()">Find</a>
+                <div class="col-2 pr-1 pl-1">
+                    <button type="button" class="btn findBtn" onclick="searchItems()">Find</button>
                 </div>
-                <div class="col-xs-1 col-1">
-                    <a data-role="button" data-toggle="modal" class="filter" data-target="#filtersModal"><img id="filter" class="filtersymbol" src="../../Assets/img/icons/filter.svg"></a>
+                <div class="col-1 pr-1 pl-1">
+                    <button type="button" class="btn filterBtn" data-toggle="modal" data-target="#editFilters"><img id="filter" width="20" height="20" src="../../Assets/img/icons/filter.png"></button>
+                    <!-- <a data-role="button" data-toggle="modal" class="filterBtn" data-target="#filtersModal">
+                        <img id="filter" class="filtersymbol" src="../../Assets/img/icons/filter.svg">
+                    </a> -->
                 </div>
-                <div class="col-xs-2 col-2">
+                <div class="col-2 pl-1">
                     <a href="../QR/index.html" data-ajax="false"><img id="camera" src="../../Assets/img/icons/camera.svg"></a>
                 </div>
             </div>
@@ -233,7 +235,6 @@
             <!-- modals -->
             <div class="modal fade" id="noRes" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
-<<<<<<< HEAD
                 <div class="modal-content">
                     <button type="button" class="close pr-2" data-dismiss="modal" aria-label="Close" style="text-align: right !important;">
                         <span aria-hidden="true">&times;</span>
@@ -245,26 +246,13 @@
                         </center>
                         <h3 id="header1" class="text-center pt-5"><span id="message3">No Results found !!</span></h3>
                         <br>
-=======
-                    <div class="modal-content">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                        <div data-role="content">
-                            <center>
-                                <!-- <img id="av" src="../../Assets/img/icons/gift-icon.png" width="85" height="85"> -->
-                                <img id="av" src="../../Assets/img/icons/noResults.png" width="85" height="85">
-                            </center>
-                            <h1 id="header1"><span id="message3">No Results found !!</span></h1>
-                            <br>
-                        </div>
->>>>>>> e6c1fa0b5979103e588ec2c920068555137536ab
                     </div>
                 </div>
+                </div>
             </div>
-            <div class="modal fade" id="filtersModal" tabindex="-1" role="dialog" aria-hidden="true">
+
+            <div class="modal fade" id="editFilters" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
-<<<<<<< HEAD
                 <div class="modal-content">
                     <button type="button" class="close pr-2" data-dismiss="modal" aria-label="Close" style="text-align: right !important;">
                         <span aria-hidden="true">&times;</span>
@@ -285,35 +273,12 @@
                             </div>
                             <div class="col">
                                 <button type="button" class="btn btn-info" onclick="ResetFilters()">Reset</button>
-=======
-                    <div class="modal-content">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                        <div data-role="content">
-                            <center>
-                                <h2>Filters</h2>
-                            </center>
-                            <form>
-                                <label for="distSlider"><h3>Distance (Km) :</h3></label>
-                                <input type="range" name="distSlider" id="distSlider" data-highlight="true" min="0" max="10" value="10">
-                                <label for="distSlider"><h3>Time (Mins) :</h3></label>
-                                <input type="range" name="timeSlider" id="timeSlider" data-highlight="true" min="20" max="120" value="120">
-                                <label for="distSlider"><h3>Price (LKR) :</h3></label>
-                                <input type="range" name="priceSlider" id="priceSlider" data-highlight="true" min="100" max="5000" value="2000">
-                            </form>
-                            <div class="row">
-                                <div class="col"><a href="" class="pt-4" data-role="button" onclick="filterSelections()">Apply</a></div>
-                                <div class="col"><a href="" class="pt-4" data-role="button" onclick="ResetFilters()">Reset</a></div>
->>>>>>> e6c1fa0b5979103e588ec2c920068555137536ab
                             </div>
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
-
-
-        </div>
         <!-- /content -->
 
         <div class="footer" data-role="footer" data-position="fixed">
@@ -610,7 +575,7 @@
         };
 
         function filterSelections() {
-            $("#filtersModal").modal('hide');
+            $("#editFilters").modal('hide');
             filterOPtions.dist = document.getElementById("distSlider").value;
             filterOPtions.time = document.getElementById("timeSlider").value;
             filterOPtions.price = document.getElementById("priceSlider").value;
@@ -619,7 +584,7 @@
         };
 
         function ResetFilters() {
-            $("#filtersModal").modal('hide');
+            $("#editFilters").modal('hide');
             document.getElementById("distSlider").value = 10;
             document.getElementById("timeSlider").value = 120;
             document.getElementById("priceSlider").value = 2000;
@@ -633,6 +598,10 @@
         function restaurent(val) {
             localStorage.setItem("selectedRestaurent", val);
             window.location.href = "../Vendor/";
+        };
+
+        function openFilterModal(){
+            $("#editFilters").modal('show');
         };
     </script>
 
