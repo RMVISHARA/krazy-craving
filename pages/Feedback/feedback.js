@@ -35,7 +35,7 @@ function submitFeedback()
 
     localStorage.setItem("userFeedbacks",JSON.stringify(feedback));
 
-    $("#feedbackPopup").popup("open");
+    $("#feedbackPopup").modal("show");
 
     document.getElementById("userInput").value = "";
     let newStars = document.querySelectorAll('.star');
