@@ -52,8 +52,9 @@
                 </div>
             </div>
         </div>
-
-        <div class="vendorImage" id="bgImage">
+        <div class="shade">
+            <div class="vendorImage blur shade" id="bgImage">
+            </div>
         </div>
         <div class="box" id="blur">
             <div class="raw one">
@@ -65,8 +66,8 @@
                         </div>
                         <div class="col-2">
                             <div class="align-self-end">
-                            <img id="heart" src="../../Assets/img/icons/unlike-heart.svg" class="heart-icon"
-                                onclick="amend()">
+                                <img id="heart" src="../../Assets/img/icons/unlike-heart.svg" class="heart-icon"
+                                    onclick="amend()">
                             </div>
                         </div>
                     </div>
@@ -74,8 +75,7 @@
                         <div class="row  bio">
                             <div class="stars">
                                 <img src="../../Assets/img/icons/star.svg" />
-                                <span class="address"
-                                    id="ratings"></span>
+                                <span class="address" id="ratings"></span>
                             </div>
                         </div>
                         <div class="row bio">
@@ -86,38 +86,41 @@
                             <img width="17px" height="17px" src="../../Assets/img/icons/phone.svg" />
                             <span id="phone" class="phone">+9476 546 4978</span>
                         </div>
-                    </div>
-                </div>
-                <div class="menu-heading">Menu</div>
-                <hr>
-                <div class="cardList" id="cardList">
-                </div>
+                        <div class="desc">
 
-                <!-- reviews section -->
-                <div class="reviewHead">
-                    <span><b> <a href="../Reviews/index.html" style="color: black;">Reviews</a></b></span>
-                </div>
-                <div id="reviewlist" align="center">
-                </div>
-                <div class="footer" data-role="footer" data-position="fixed">
-                    <div data-role="navbar">
-                        <ul>
-                            <li><a href="../HomeUser/index.html" data-icon="none"
-                                    class="ui-nodisc-icon ui-icon-home-inactive" id="inactive"
-                                    data-ajax="false">Home</a>
-                            </li>
-                            <li><a href="../PastOrder/index.html" data-icon="none"
-                                    class="ui-nodisc-icon ui-icon-orders-inactive" id="inactive"
-                                    data-ajax="false">Orders</a></li>
-                            <li><a href="../UserFavourites/index.html" data-icon="none"
-                                    class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive"
-                                    data-ajax="false">Favourites</a></li>
-                            <li><a href="../Cart/index.html" data-icon="none"
-                                    class="ui-nodisc-icon ui-icon-cart-inactive" id="inactive"
-                                    data-ajax="false">Cart</a></li>
-
-                        </ul>
+                            <h7 style="text-align: justify;" id="longDescription"></h7>
+                        </div>
                     </div>
+                    <div class="menu-heading">Menu</div>
+                    <hr>
+                    <div class="cardList" id="cardList">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- reviews section -->
+            <div class="reviewHead">
+                <span><b> <a href="../Reviews/index.html" style="color: black;">Reviews</a></b></span>
+            </div>
+            <div id="reviewlist" align="center">
+            </div>
+            <div class="footer" data-role="footer" data-position="fixed" style="position: fixed;">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="../HomeUser/index.html" data-icon="none"
+                                class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a>
+                        </li>
+                        <li><a href="../PastOrder/index.html" data-icon="none"
+                                class="ui-nodisc-icon ui-icon-orders-inactive" id="inactive"
+                                data-ajax="false">Orders</a></li>
+                        <li><a href="../UserFavourites/index.html" data-icon="none"
+                                class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive"
+                                data-ajax="false">Favourites</a></li>
+                        <li><a href="../Cart/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-cart-inactive"
+                                id="inactive" data-ajax="false">Cart</a></li>
+
+                    </ul>
                 </div>
             </div>
             <!-- modals -->
