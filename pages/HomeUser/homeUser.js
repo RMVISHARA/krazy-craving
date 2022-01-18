@@ -594,7 +594,7 @@ $(document).ready(function () {
                     
                     <div class="row">
                         <div class="col-12 d-flex justify-content-start">
-                            <span class="address">Rs.${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
+                            <span class="address">LKR ${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
                         </div>
                     </div>
                     <hr>
@@ -637,7 +637,7 @@ $(document).ready(function () {
                     
                     <div class="row">
                         <div class="col-12 d-flex justify-content-start">
-                            <span class="address">Rs.${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
+                            <span class="address">LKR ${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
                         </div>
                     </div>
                     <hr>
