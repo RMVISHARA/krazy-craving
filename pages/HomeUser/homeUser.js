@@ -574,9 +574,13 @@ $(document).ready(function () {
         `<div class="vendor-card">
         <a class="link" href="" onclick="restaurent(${obj.id})">
             <div class="card" id="cardItem">
-                <img src="${obj.imageurl}" class="cardImage">
                 <div class="container-fluid item-group">
                     <div class="row">
+                        <div class="col-12">
+                             <img src="${obj.imageurl}" class="cardImage">     
+                        </div>
+                    </div>
+                    <div class="row pt-2">
                         <div class="col-8 d-flex justify-content-start item-name">
                             ${obj.name}
                         </div>
@@ -596,12 +600,11 @@ $(document).ready(function () {
                     <hr>
                     <div class="row">
                         <div class="col-12 d-flex">
-                            <span class="item-description">
+                            <div class="item-description">
                                 ${obj.shortDescription}
-                            </span>
+                            </div>
                         </div>
                     </div>
-                    <d>
                 </div>
             </div>
         </a>
@@ -611,42 +614,47 @@ $(document).ready(function () {
 
     topVendorList.forEach(function (obj) {
         document.getElementById("topOutlets").innerHTML +=
-            `<div class="vendor-card">
-                <a class="link" href="" onclick="restaurent(${obj.id})">
-                    <div class="card" id="cardItem" style="height: 350px !important;">
-                        <img src="${obj.imageurl}" class="cardImage">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-8 d-flex justify-content-start item-name">
-                                    ${obj.name}
-                                </div>
-                                <div class="col-4 d-flex justify-content-end">
-                                    <div class="stars">
-                                        <span class="item-rating">${obj.rating}</span>
-                                        <span class"rating-icon"><img src="../../Assets/img/icons/star-fill-white.svg"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="col-12 d-flex justify-content-start">
-                                    <span class="address">Rs.${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-12 d-flex">
-                                    <span class="item-description">
-                                        ${obj.shortDescription}
-                                    </span>
-                                </div>
-                            </div>
-                            <d>
+        `<div class="vendor-card">
+        <a class="link" href="" onclick="restaurent(${obj.id})">
+            <div class="card" id="cardItem">
+                <div class="container-fluid item-group">
+                    <div class="row">
+                        <div class="col-12">
+                             <img src="${obj.imageurl}" class="cardImage">     
                         </div>
                     </div>
-                </a>
+                    <div class="row pt-2">
+                        <div class="col-8 d-flex justify-content-start item-name">
+                            ${obj.name}
+                        </div>
+                        <div class="col-4 d-flex justify-content-end">
+                            <div class="stars">
+                                <span class="item-rating">${obj.rating}</span>
+                                <span class"rating-icon"><img src="../../Assets/img/icons/star-fill-white.svg"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-start">
+                            <span class="address">Rs.${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-12 d-flex">
+                            <div class="justify-self-start item-description">
+                            
+                                ${obj.shortDescription}
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            `;
+        </a>
+    </div>
+    `;
     });
 
 });
