@@ -10,14 +10,17 @@
     <link rel="stylesheet" type="text/css" href="homeUser.css?version=94">
     <link rel="stylesheet" type="text/css" href="../../Assets/css/common.user.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!--<link rel="stylesheet" type="text/css" href="../../Assets/css/grid.min.css">
     <link rel="stylesheet" type="text/css" href="../../Assets/css/style.min.css">-->
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
     <!--    <script src="../../Assets/js/js.min.js"></script>-->
     <script src="homeUser.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,7 +29,8 @@
 <body>
     <div data-role="page" id="homeUser">
 
-        <div data-role="header" class="mhead" style="background-color: black" data-position="fixed" data-tap-toggle="false">
+        <div data-role="header" class="mhead" style="background-color: black" data-position="fixed"
+            data-tap-toggle="false">
             <div class="row">
                 <div class="col4">
                     <a onclick="history.back()" data-position-to="window" id="accountLogo">
@@ -49,41 +53,11 @@
 
 
         <div data-role="content" align="center">
-            <div id="myCarousel" class="carousel slide promos" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <a href="#" data-ajax="false"> <img src="../../Assets/img/promo/promo1.png" style="width:100%;"> </a>
-                    </div>
-
-                    <div class="carousel-item">
-                        <a href="#" data-ajax="false"> <img src="../../Assets/img/promo/promo2.png" style="width:100%;"> </a>
-                    </div>
-
-                    <div class="carousel-item">
-                        <a href="#" data-ajax="false"> <img src="../../Assets/img/promo/promo3.png" style="width:100%;"> </a>
-                    </div>
-                </div>
-
-                <!-- Left and right controls -->
-                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+            <div class="video-group">
+                <iframe class="video-iframe" src="https://www.youtube.com/embed/WGDX2aCPFK8"></iframe>
             </div>
 
-            <div>
+            <div class="vendor-group">
                 <div class="pad">
                     <span class="title"><b>Popular Restaurants</b></span>
                 </div>
@@ -92,7 +66,7 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="vendor-group">
                 <div class="pad">
                     <span class="title"><b>New Vendors</b></span>
                 </div>
@@ -106,10 +80,16 @@
         <div class="footer" data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-home-active" id="active" data-ajax="false">Home</a></li>
-                    <li><a href="../PastOrder/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-orders-inactive" id="inactive" data-ajax="false">Orders</a></li>
-                    <li><a href="../UserFavourites/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive" data-ajax="false">Favourites</a></li>
-                    <li><a href="../Cart/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-cart-inactive" id="inactive" data-ajax="false">Cart</a></li>
+                    <li><a href="#" data-icon="none" class="ui-nodisc-icon ui-icon-home-active" id="active"
+                            data-ajax="false">Home</a></li>
+                    <li><a href="../PastOrder/index.html" data-icon="none"
+                            class="ui-nodisc-icon ui-icon-orders-inactive" id="inactive" data-ajax="false">Orders</a>
+                    </li>
+                    <li><a href="../UserFavourites/index.html" data-icon="none"
+                            class="ui-nodisc-icon ui-icon-favourite-inactive" id="inactive"
+                            data-ajax="false">Favourites</a></li>
+                    <li><a href="../Cart/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-cart-inactive"
+                            id="inactive" data-ajax="false">Cart</a></li>
 
                 </ul>
             </div>
@@ -129,7 +109,12 @@
             </div>
         </div>-->
     </div>
+<<<<<<< HEAD
     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWb2Q5E16M1dqMb1RQ5EUciRjVpi4NMxI&callback=initMap"> -->
+=======
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWb2Q5E16M1dqMb1RQ5EUciRjVpi4NMxI&callback=initMap">
+>>>>>>> origin/main
     </script>
     <script type="text/javascript">
         function getlocation() {

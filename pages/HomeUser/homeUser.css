@@ -1,3 +1,83 @@
+/**
+Custom fonts
+*/
+@font-face {
+    font-family: poppins-regular;
+    src: url(../../Assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family:inter-regular ;
+    src: url(../../Assets/fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: poppins-light;
+    src: url(../../Assets/fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: poppins-medium;
+    src: url(../../Assets/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: poppins-semibold;
+    src: url(../../Assets/fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url(../../Assets/fonts/Poppins-Bold.ttf);
+}
+.item-group{
+    margin-top: 10px;
+}
+.video-group {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 35px;
+    margin-bottom: 7vh;
+}
+
+.video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.item-name{
+    font-family: poppins-medium;
+    font-size: 18px;
+    color: black;
+    
+}
+.item-rating {
+    color: white;
+    vertical-align: middle;
+    display: inline-block;
+    font-family: poppins-light;
+    font-size: 14px;
+}
+.item-description{
+    width: 300px;
+    text-align: left;
+    height: 63px;
+    font-family: poppins-regular;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+  display: inline-block;
+}
+
+.vendor-group {
+    margin-top: 5vh;
+}
+
 .mhead {
     margin: 0px 0px 5px 0px;
     background-color: black;
@@ -24,7 +104,8 @@
 }
 
 .title {
-    font-size: 20px;
+    font-size: 24px;
+    font-family: inter-regular;
 }
 
 .pad {
@@ -37,15 +118,15 @@
 .name {
     font-size: 16px;
     height: 12px;
-    color: #858282;
+    /* color: #858282; */
     text-shadow: none;
 }
 
 .address {
-    height: 20px;
-    font-size: 14px;
+   font-family: poppins-regular;
+    font-size: 12px;
     color: #858282;
-    width: 20px;
+    /* width: 20px; */
     text-shadow: none;
 }
 
@@ -64,11 +145,22 @@
     color: #858282 !important;
 }
 
+.vendor-card {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .stars {
-    position: relative;
-    float: right;
-    margin-left: 195px;
-    margin-top: 10px;
+    margin-top: 2px;
+    background-color: #509807;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 10px;
+}
+
+.rating-icon{
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .cardImage {
@@ -80,13 +172,14 @@
 
 .lists {
     overflow-x: scroll !important;
-    white-space: nowrap !important;
+    /* white-space: nowrap !important; */
 }
 
 #cardItem {
     min-width: 270px;
-    height: fit-content;
-    display: inline-block;
+    /*
+    height: fit-content; */
+    /* display: inline-block; */
     background-color: transparent;
     border-color: transparent;
     /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
@@ -181,7 +274,7 @@
 .card {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 5px 5px 0px lightgray;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 
@@ -202,41 +295,45 @@
         width: 120px;
         margin: 5px 0 3px 31%;
     }
+
     .mhead {
         margin: 0px 0px 5px 0px;
     }
+
     .locationLogo {
         padding-top: 10px !important;
         margin-right: 80px !important;
         height: 30px !important;
     }
+
     .notificationLogo {
         padding-top: 10px !important;
         margin-right: 10px !important;
         height: 30px !important;
     }
+
     .promos {
         width: 100%;
     }
+
     .title {
         font-size: 20px;
     }
+
     .pad {
         text-align: left;
         margin-bottom: 5px;
         margin-top: 10px;
-        padding-left: 10px!important;
+        padding-left: 10px !important;
     }
+
     .name {
         font-size: 16px;
         height: 12px;
-        color: #858282;
+        /* color: #858282; */
     }
-    .address {
-        height: 20px;
-        font-size: 14px;
-        color: #858282;
-    }
+
+
     .desc {
         position: relative;
         float: left;
@@ -244,43 +341,52 @@
         text-align: left;
         margin-top: 5px;
         margin-left: 5px;
-        height: 80px!important;
+        height: 80px !important;
     }
+
     .link {
         font-weight: normal !important;
         color: #858282 !important;
     }
+
     .stars {
-        position: relative;
-        float: right;
-        margin-left: 210px!important;
-        margin-top: 10px;
+        margin-top: 2px;
+        padding: 2px, 4px, 2px, 4px;
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: green;
     }
+
     .cardImage {
         width: 100%;
         height: 200px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
+
     .lists {
         overflow-x: scroll !important;
-        white-space: nowrap !important;
+        /* white-space: nowrap !important; */
         margin: auto;
     }
+
     #cardItem {
-        min-width: 270px;
-        height: 270px!important;
+         min-width: 270px;
+         border-radius: 20px;
+        /*height: 270px !important; */
         display: inline-block;
         background-color: transparent;
         border-color: transparent;
         /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
     }
+
     #customCard {
         width: 100%;
         background-color: white !important;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
+
     /*footer*/
     .ui-icon-home-active:after {
         background-image: url("../../Assets/img/icons/home-active.svg");
@@ -288,48 +394,56 @@
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-home-inactive:after {
         background-image: url("../../Assets/img/icons/home-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-search-inactive:after {
         background-image: url("../../Assets/img/icons/search-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-search-active:after {
         background-image: url("../../Assets/img/icons/search-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-track-inactive:after {
         background-image: url("../../Assets/img/icons/track-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-track-active:after {
         background-image: url("../../Assets/img/icons/track-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-profile-inactive:after {
         background-image: url("../../Assets/img/icons/account-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-profile-active:after {
         background-image: url("../../Assets/img/icons/account-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     #inactive {
         color: #858282;
         text-align: center;
@@ -337,12 +451,14 @@
         font-size: 11pt;
         background-color: white;
     }
+
     #active {
         color: #fc9920;
         font-family: Arial;
         font-size: 11pt;
         background-color: white;
     }
+
     .card {
         box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 5px 5px 0px lightgray;
@@ -358,91 +474,94 @@
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+
     /* For portrait layouts only */
     #header {
         height: 70px;
     }
+
     .logo {
         float: left;
         width: 150px;
         padding-top: 5px;
         margin-left: 40px;
     }
+
     .locationLogo {
         padding-top: 15px;
         padding-right: 80px;
         height: 48px;
     }
+
     .notificationLogo {
         padding-top: 15px;
         padding-right: 15px;
         height: 48px;
     }
+
     .promos {
         width: 100%;
     }
+
     .title {
         font-size: 28px;
     }
+
     .pad {
         text-align: left;
         margin-bottom: 5px;
         margin-top: 10px;
         padding-left: 10px;
     }
+
     .name {
         font-size: 18px;
         height: 12px;
-        color: #858282;
+        /* color: #858282; */
     }
-    .address {
-        height: 20px;
-        font-size: 14px;
-        color: #858282;
-    }
-    .desc {
-        position: relative;
-        float: left;
-        width: 2px !important;
-        text-align: left;
-        margin-top: 5px;
-        margin-left: 5px;
-        height: 65px;
-    }
+
+
+
+
     .link {
         font-weight: normal !important;
         color: #858282 !important;
     }
+
     .stars {
-        position: relative;
-        float: right;
-        margin-left: 320px;
-        margin-top: 10px;
+        margin-top: 2px;
+        padding: 2px, 4px, 2px, 4px;
+        background-color: green;
     }
+
     .cardImage {
         width: 100%;
         height: 280px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
+
     .lists {
         overflow-x: scroll;
-        white-space: nowrap;
+        /* white-space: nowrap; */
     }
+
     #cardItem {
         min-width: 400px;
-        height: 350px;
+        /* height: 350px; */
         display: inline-block;
         background-color: transparent;
         border-color: transparent;
         /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
     }
+
     #customCard {
         width: 100%;
         background-color: white !important;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
+
     /*footer*/
     .ui-icon-home-active:after {
         background-image: url("../../Assets/img/icons/home-active.svg");
@@ -450,48 +569,56 @@
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-home-inactive:after {
         background-image: url("../../Assets/img/icons/home-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-search-inactive:after {
         background-image: url("../../Assets/img/icons/search-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-search-active:after {
         background-image: url("../../Assets/img/icons/search-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-track-inactive:after {
         background-image: url("../../Assets/img/icons/track-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-track-active:after {
         background-image: url("../../Assets/img/icons/track-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-profile-inactive:after {
         background-image: url("../../Assets/img/icons/account-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-profile-active:after {
         background-image: url("../../Assets/img/icons/account-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     #inactive {
         color: #858282;
         text-align: center;
@@ -499,12 +626,14 @@
         font-size: 11pt;
         background-color: white;
     }
+
     #active {
         color: #fc9920;
         font-family: Arial;
         font-size: 11pt;
         background-color: white;
     }
+
     .card {
         box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 5px 5px 0px lightgray;
@@ -513,88 +642,90 @@
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+
     /* For landscape layouts only */
     #header {
         height: 70px;
     }
+
     .logo {
         width: 150px !important;
         padding-top: 5px;
         margin-left: 25%;
     }
+
     .locationLogo {
         padding-top: 10px !important;
         margin-right: 100px !important;
         height: 50px !important;
     }
+
     .notificationLogo {
         padding-top: 10px !important;
         margin-right: 3% !important;
         height: 50px !important;
     }
+
     .promos {
         width: 70%;
     }
+
     .title {
         font-size: 28px;
     }
+
     .pad {
         text-align: left;
         margin-bottom: 5px;
         margin-top: 10px;
         padding-left: 10px;
     }
+
     .name {
         font-size: 18px;
         height: 12px;
-        color: #858282;
+        /* color: #858282; */
     }
-    .address {
-        height: 20px;
-        font-size: 14px;
-        color: #858282;
-    }
-    .desc {
-        position: relative;
-        float: left;
-        width: 2px !important;
-        text-align: left;
-        margin-top: 5px;
-        margin-left: 5px;
-    }
+
+
     .link {
         font-weight: normal !important;
         color: #858282 !important;
     }
+
     .stars {
-        position: relative;
-        float: right;
-        margin-left: 210px!important;
-        margin-top: 10px;
+        margin-top: 2px;
+        padding: 2px, 4px, 2px, 4px;
+        background-color: green;
     }
+
     .cardImage {
         width: 100%;
         height: 180px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
+
     .lists {
         overflow-x: scroll;
-        white-space: nowrap;
+        /* white-space: nowrap; */
     }
+
     #cardItem {
-        min-width: 280px;
-        display: inline-block;
+         min-width: 280px;
+        /*display: inline-block; */
         background-color: transparent;
         border-color: transparent;
         /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
     }
+
     #customCard {
         width: 100%;
         background-color: white !important;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
+
     /*footer*/
     .ui-icon-home-active:after {
         background-image: url("../../Assets/img/icons/home-active.svg");
@@ -602,48 +733,56 @@
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-home-inactive:after {
         background-image: url("../../Assets/img/icons/home-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-search-inactive:after {
         background-image: url("../../Assets/img/icons/search-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-search-active:after {
         background-image: url("../../Assets/img/icons/search-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-track-inactive:after {
         background-image: url("../../Assets/img/icons/track-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-track-active:after {
         background-image: url("../../Assets/img/icons/track-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-profile-inactive:after {
         background-image: url("../../Assets/img/icons/account-inactive.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     .ui-icon-profile-active:after {
         background-image: url("../../Assets/img/icons/account-active.svg");
         background-size: 90%;
         width: 25px !important;
         height: 35px !important;
     }
+
     #inactive {
         color: #858282;
         text-align: center;
@@ -651,12 +790,14 @@
         font-size: 11pt;
         background-color: white;
     }
+
     #active {
         color: #fc9920;
         font-family: Arial;
         font-size: 11pt;
         background-color: white;
     }
+
     .card {
         box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 5px 5px 0px lightgray;
