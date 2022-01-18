@@ -63,6 +63,16 @@ Custom fonts
     font-family: poppins-light;
     font-size: 14px;
 }
+.item-description{
+    width: 300px;
+    text-align: left;
+    height: 63px;
+    font-family: poppins-regular;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+  display: inline-block;
+}
 
 .vendor-group {
     margin-top: 5vh;
@@ -116,7 +126,7 @@ Custom fonts
    font-family: poppins-regular;
     font-size: 12px;
     color: #858282;
-    width: 20px;
+    /* width: 20px; */
     text-shadow: none;
 }
 
@@ -162,7 +172,7 @@ Custom fonts
 
 .lists {
     overflow-x: scroll !important;
-    white-space: nowrap !important;
+    /* white-space: nowrap !important; */
 }
 
 #cardItem {
@@ -356,7 +366,7 @@ Custom fonts
 
     .lists {
         overflow-x: scroll !important;
-        white-space: nowrap !important;
+        /* white-space: nowrap !important; */
         margin: auto;
     }
 
@@ -533,7 +543,7 @@ Custom fonts
 
     .lists {
         overflow-x: scroll;
-        white-space: nowrap;
+        /* white-space: nowrap; */
     }
 
     #cardItem {
@@ -698,7 +708,7 @@ Custom fonts
 
     .lists {
         overflow-x: scroll;
-        white-space: nowrap;
+        /* white-space: nowrap; */
     }
 
     #cardItem {
