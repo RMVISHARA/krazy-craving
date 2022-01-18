@@ -121,19 +121,19 @@
 }
 
 #p-amount:before {
-    content: "Rs. ";
+    content: "LKR ";
 }
 
 #sm-block:before {
-    content: "Rs. ";
+    content: "LKR ";
 }
 
 #md-block:before {
-    content: "Rs. ";
+    content: "LKR ";
 }
 
 #lg-block:before {
-    content: "Rs. ";
+    content: "LKR ";
 }
 
 #input_div {
@@ -291,16 +291,16 @@
         color: #fc9920;
     }
     #p-amount:before {
-        content: "Rs. ";
+        content: "LKR ";
     }
     #sm-block:before {
-        content: "Rs. ";
+        content: "LKR ";
     }
     #md-block:before {
-        content: "Rs. ";
+        content: "LKR ";
     }
     #lg-block:before {
-        content: "Rs. ";
+        content: "LKR ";
     }
     #input_div {
         margin-left: 38px;
@@ -450,16 +450,16 @@
         color: #fc9920;
     }
     #p-amount:before {
-        content: "Rs. ";
+        content: "LKR ";
     }
     #sm-block:before {
-        content: "Rs. ";
+        content: "LKR ";
     }
     #md-block:before {
-        content: "Rs. ";
+        content: "LKR ";
     }
     #lg-block:before {
-        content: "Rs. ";
+        content: "LKR ";
     }
     #input_div {
         margin-left: 38px;
@@ -600,16 +600,16 @@
         color: #fc9920;
     }
     #p-amount:before {
-        content: "Rs. ";
+        content: "LKR ";
     }
     #sm-block:before {
-        content: "Rs. ";
+        content: "LKR ";
     }
     #md-block:before {
-        content: "Rs. ";
+        content: "LKR ";
     }
     #lg-block:before {
-        content: "Rs. ";
+        content: "LKR ";
     }
     #input_div {
         margin-left: 38px;

@@ -27,7 +27,7 @@ $(document).ready(function() {
                 <div class="desc1">
                     <div class="card-body p-0">
                         <h5 class="card-title">${ obj.name}</h5>
-                        <p class="card-text">Rs. ${obj.price}</p>
+                        <p class="card-text">LKR ${obj.price}</p>
                     </div>
                 </div>
                 <div class="image">

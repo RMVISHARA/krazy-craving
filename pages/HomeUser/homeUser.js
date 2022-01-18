@@ -260,7 +260,7 @@ $(document).ready(function() {
                                 <p class="name">
                                     <b>${obj.name}</b>
                                 </p>
-                                <span class="address">Rs.${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
+                                <span class="address">LKR ${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
                                 <div class="text-wrap itemDesc pt-2" style="width: 18.5rem;">${obj.shortDescription}</div>
                             </div>
                             <div class="stars">
@@ -285,7 +285,7 @@ $(document).ready(function() {
                                 <p class="name">
                                     <b>${obj.name}</b>
                                 </p>
-                                <span class="address">Rs.${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
+                                <span class="address">LKR ${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
                                 <div class="text-wrap itemDesc pt-2" style="width: 18.5rem;">${obj.shortDescription}</div>
                             </div>
                             <div class="stars">

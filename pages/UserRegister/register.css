@@ -230,7 +230,7 @@ select {
     }
     .signup {
         width: 100%;
-        color: white;
+        color: #fc9920;
         font-size: 17px;
         text-shadow: none;
     }
@@ -352,8 +352,8 @@ select {
     }
     .signup {
         width: 100%;
-        color: white;
-        font-size: 17px;
+        color: #fc9920;
+        font-size: 20px;
         text-shadow: none;
     }
     #login {
