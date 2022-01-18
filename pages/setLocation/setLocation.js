@@ -1,7 +1,6 @@
 var geocoder;
 var map;
-var address;
-address = "";
+var address = "";
 
 function initMap() {
     var locs = JSON.parse(localStorage.getItem("locs"));
