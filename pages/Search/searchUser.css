@@ -73,11 +73,10 @@
 }
 
 #cardItem {
-    min-width: 270px;
+    width: 270px;
     height: 270px;
-    display: inline-block;
+    float: left;
     background-color: transparent;
-    border-color: transparent;
     /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
 }
 
@@ -86,22 +85,23 @@
     background-color: white !important;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    margin-left: 0px;
 }
 
 .findBtn {
     width: 55px!important;
-    margin-left: -9px !important;
     height: 34px !important;
     margin-top: -1px;
     text-align: center;
+    float: left !important;
 }
 
 .filterBtn {
     width: 42px!important;
-    margin-left: -13px !important;
     height: 34px !important;
     margin-top: -1px;
     text-align: center;
+    display: inline;
 }
 
 .filter {
@@ -121,13 +121,16 @@
 }
 
 .camera {
-    float: left;
-    margin-left: -50px !important;
     display: inline;
 }
 
-.searchbox {
-    width: 50%;
+.btngrp {
+    float: right;
+}
+
+.searchForm {
+    width: 100%;
+    padding-left: 15px;
 }
 
 
@@ -148,9 +151,24 @@
         height: 35px;
     }
     #camera {
-        width: 25px;
-        height: 25px;
-        margin-top: 15px;
+        width: 35px;
+        height: 35px;
+        margin-top: 8px;
+        margin-left: -30px !important;
+    }
+    .findBtn {
+        width: 60px!important;
+        margin-left: -15px !important;
+        height: 34px !important;
+        margin-top: -1px;
+        text-align: center;
+    }
+    .filterBtn {
+        width: 42px!important;
+        margin-left: 15px !important;
+        height: 34px !important;
+        margin-top: -1px;
+        text-align: center;
     }
     .elements {
         display: none;
@@ -256,12 +274,32 @@
         widows: 100px;
         filter: brightness(60%);
     }
+    .findBtn {
+        width: 58px!important;
+        margin-left: 80px !important;
+    }
+    .filterBtn {
+        margin-left: 15px !important;
+    }
+    #camera {
+        width: 35px;
+        height: 35px;
+        margin-top: 8px;
+        margin-left: -90px !important;
+    }
+    .searchitems {
+        margin-left: 30px !important;
+    }
+    .searchForm {
+        width: 120%;
+        padding-left: 15px;
+    }
 }
 
 
 /* ----------- iPad ----------- */
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
     /* For portrait layouts only */
     .notificationLogo {
         padding-top: 10px !important;
@@ -269,10 +307,8 @@
         height: 50px !important;
     }
     #camera {
-        width: 40px;
-        height: 40px;
+        margin-left: -110px;
         margin-top: 5px;
-        margin-left: 70px;
     }
     .elements-iphone {
         display: none;
@@ -357,6 +393,21 @@
         font-size: 13pt;
         background-color: white;
     }
+    .findBtn {
+        width: 58px!important;
+        margin-left: 85px !important;
+    }
+    .filterBtn {
+        margin-left: 15px !important;
+    }
+    .searchitems {
+        margin-left: 90px !important;
+        margin-right: auto !important;
+    }
+    .searchForm {
+        width: 110%;
+        padding-left: 15px;
+    }
     .ui-body-a,
     .ui-page-theme-a .ui-body-inherit,
     html .ui-bar-a .ui-body-inherit,
@@ -372,7 +423,7 @@
     }
 }
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
     /* For landscape layouts only */
     .notificationLogo {
         padding-top: 10px !important;
@@ -383,7 +434,7 @@
         width: 40px;
         height: 40px;
         margin-top: 5px;
-        margin-left: 70px;
+        margin-left: -150px;
     }
     .elements-iphone {
         display: none;
@@ -467,6 +518,21 @@
         font-family: Arial;
         font-size: 11pt;
         background-color: white;
+    }
+    .findBtn {
+        width: 68px!important;
+        margin-left: 140px !important;
+    }
+    .filterBtn {
+        margin-left: 15px !important;
+    }
+    .searchForm {
+        width: 112%;
+        padding-left: 15px;
+    }
+    .searchitems {
+        margin-left: 150px !important;
+        margin-right: auto !important;
     }
     .ui-body-a,
     .ui-page-theme-a .ui-body-inherit,

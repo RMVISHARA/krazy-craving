@@ -569,6 +569,26 @@ $(document).ready(function () {
     var vendorList = allVendors;
     var topVendorList = vendorList.splice(6);
 
+<<<<<<< HEAD
+    vendorList.forEach(function(obj) {
+        document.getElementById("favourites").innerHTML += `
+                <a class="link" href="" onclick="restaurent(${obj.id})">
+                    <div class="card" id="cardItem" style="height: 350px !important;">
+                        <img src="${obj.imageurl}" class="cardImage">
+                        <div class="row" id="customCard">
+                            <div class="desc">
+                                <p class="name">
+                                    <b>${obj.name}</b>
+                                </p>
+                                <span class="address">LKR ${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
+                                <div class="text-wrap itemDesc pt-2" style="width: 18.5rem;">${obj.shortDescription}</div>
+                            </div>
+                            <div class="stars">
+                                <span class="fa fa-star checked fa-xs" style="color: #FFCC36;margin-left:19%; font-size: 1rem;"></span>
+                                <span class="fa checked fa-xs" style="color: color: #FFCC36;font-size: 1rem;">${obj.rating}</span>
+                            </div>
+                           
+=======
     vendorList.forEach(function (obj) {
         document.getElementById("favourites").innerHTML += 
         `<div class="vendor-card">
@@ -578,6 +598,7 @@ $(document).ready(function () {
                     <div class="row">
                         <div class="col-12">
                              <img src="${obj.imageurl}" class="cardImage">     
+>>>>>>> origin/main
                         </div>
                     </div>
                     <div class="row pt-2">
@@ -614,6 +635,20 @@ $(document).ready(function () {
 
     topVendorList.forEach(function (obj) {
         document.getElementById("topOutlets").innerHTML +=
+<<<<<<< HEAD
+            `
+                <a class="link" href="" onclick="restaurent(${obj.id})">
+                    <div class="card" id="cardItem" style="height: 350px !important;">
+                        <img src="${obj.imageurl}" class="cardImage">
+                        <div class="row" id="customCard">
+                            <div class="desc">
+                                <p class="name">
+                                    <b>${obj.name}</b>
+                                </p>
+                                <span class="address">LKR ${obj.deliveryPrice}  &#9679 ${obj.time} mins</span>
+                                <div class="text-wrap itemDesc pt-2" style="width: 18.5rem;">${obj.shortDescription}</div>
+                            </div>
+=======
         `<div class="vendor-card">
         <a class="link" href="" onclick="restaurent(${obj.id})">
             <div class="card" id="cardItem">
@@ -628,6 +663,7 @@ $(document).ready(function () {
                             ${obj.name}
                         </div>
                         <div class="col-4 d-flex justify-content-end">
+>>>>>>> origin/main
                             <div class="stars">
                                 <span class="item-rating">${obj.rating}</span>
                                 <span class"rating-icon"><img src="../../Assets/img/icons/star-fill-white.svg"></span>
