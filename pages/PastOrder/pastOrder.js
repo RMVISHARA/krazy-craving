@@ -73,7 +73,7 @@ $(document).ready(function() {
                                 <p class="name"><b>${e.name}</b></p>
                                 <p class="detail">${e.date}</p>
                                 <p class="detail">Order#: ${e.orderNo}</p>
-                                <a  href="" data-role="button" class="rate" onclick="rateSelectedOrder(${e.RestaurentId})" >Rate Order</a>
+                                <button type="button" class="btn rate" style="width: 130px !important;" onclick="rateSelectedOrder(${e.RestaurentId})">Rate Order</button>
                             </div>
                         </div>
                         
