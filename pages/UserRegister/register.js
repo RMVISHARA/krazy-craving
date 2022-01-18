@@ -15,7 +15,7 @@ function Save() {
     };
     localStorage.setItem("favVendors",JSON.stringify(favVendors));
 
-    var locationObj = {lat: 6.9271,lng:79.8612,name:"Colombo, Sri Lanka"};
+    var locationObj = [{lat: 6.898122099999999,lng: 79.9543546,name: "993/A gonawatta road malabe"}];
     localStorage.setItem("locs",JSON.stringify(locationObj));
     window.location.href = "../HomeUser"
 }
