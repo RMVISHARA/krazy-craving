@@ -27,4 +27,4 @@ function redeemPoints() {
         $("#errorMessegePopup").modal("show");
     }
     document.getElementById("points").value = ""
-}
+};
