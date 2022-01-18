@@ -183,6 +183,7 @@
     margin-top: -5px;
     margin-bottom: 18px;
     margin-left: -80px!important;
+    float: right;
 }
 
 #totals {
@@ -278,7 +279,12 @@ hr.style-eight {
 
 /* Portrait */
 
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+    .addPoints {
+        float: right;
+        width: 120px !important;
+    }
+}
 
 
 /* Landscape */
@@ -408,7 +414,8 @@ hr.style-eight {
         margin-bottom: 5px;
         padding: 5px 5px 5px 5px;
         height: 80px;
-        width: 100%;
+        width: 610px !important;
+        margin-left: 160px;
     }
     #promo-code {
         text-decoration: none;
@@ -433,7 +440,7 @@ hr.style-eight {
         color: black;
         border-width: 0.5px;
         margin-left: 10px;
-        width: 50%;
+        width: 300px;
         margin-bottom: 5px;
     }
     .addPoints {
@@ -448,7 +455,7 @@ hr.style-eight {
         border-radius: 10px !important;
         text-shadow: none !important;
         margin-left: 10px;
-        width: 50% !important;
+        width: 250px !important;
         margin-top: -5px;
         margin-bottom: 18px;
         margin-left: -200px!important;
@@ -544,7 +551,7 @@ hr.style-eight {
     font-weight: bold;
 }
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
     /* For portrait layouts only */
     #header {
         z-index: 1000;
@@ -675,6 +682,7 @@ hr.style-eight {
         padding: 5px 5px 5px 5px;
         height: 40px;
         width: 100%;
+        margin-left: 150px;
     }
     #promo-code {
         text-decoration: none;
@@ -699,7 +707,7 @@ hr.style-eight {
         color: black;
         border-width: 0.5px;
         margin-left: 10px;
-        width: 50%;
+        width: 70%;
         margin-bottom: 5px;
     }
     .addPoints {
@@ -932,7 +940,8 @@ hr.style-eight {
         margin-bottom: 5px;
         padding: 5px 5px 5px 5px;
         height: 70px !important;
-        width: 75%;
+        width: 100%;
+        margin-left: 200px !important;
     }
     #promo-code {
         text-decoration: none;
@@ -957,6 +966,7 @@ hr.style-eight {
         height: 30px;
         border-width: 0.5px;
         margin-left: 10px;
+        width: 75% !important;
     }
     .addPoints {
         background-color: #fc9920 !important;
@@ -969,7 +979,7 @@ hr.style-eight {
         border-radius: 10px !important;
         text-shadow: none !important;
         height: 40px;
-        width: 15%;
+        width: 120% !important;
         margin-top: -5px;
         margin-bottom: 18px;
         margin-left: -170px !important;
