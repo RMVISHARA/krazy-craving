@@ -180,6 +180,12 @@
     width: 10%;
 }
 
+#addedToCartPopup {
+    width: 500px !important;
+    height: 200px !important;
+    text-align: center;
+}
+
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
