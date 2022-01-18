@@ -150,7 +150,7 @@
             return;
         };
 
-        $("#popup-reply").popup("close");
+        // $("#popup-reply").popup("close");
         setTimeout(function() { $("#v-promo-popup-success3").popup("open"); }, 1000);
 
         let commentList = JSON.parse(localStorage.getItem("commentList"));
