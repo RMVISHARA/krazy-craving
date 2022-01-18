@@ -69,8 +69,7 @@ function loadCommentList() {
                                 </div>
                             </div>
                             <div id="rplylist" align="center">
-                                <button type="button" class="replyBtn" data-toggle="modal" data-target="#popup-reply2"
-                                onclick="saveOgCommentId(${x.id})">
+                                <buttontype="button" class="btn replyBtn" data-toggle="modal" data-target="#popup-reply2" onclick="saveOgCommentId(${x.id})">
                                     Reply
                                 </button>
                             </div>

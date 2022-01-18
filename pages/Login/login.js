@@ -24,6 +24,9 @@ function Login() {
                 '12':false,
             };
             localStorage.setItem("favVendors",JSON.stringify(favVendors));
+
+            var locationObj = {lat: 6.9271,lng:79.8612,name:"Colombo, Sri Lanka"};
+            localStorage.setItem("locs",JSON.stringify(locationObj));
             
             window.location.href = "../HomeUser"
         }
