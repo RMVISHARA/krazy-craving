@@ -91,6 +91,12 @@ function loadCommentList() {
         }
     });
 
+    if(commentList.length == 0){
+        document.getElementById('NoReviews').style.display = "block";
+    }else{
+        document.getElementById('NoReviews').style.display = "none";
+    }
+
     $("#reviewlist").html(outputHtml);
 };
 
