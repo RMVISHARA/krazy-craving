@@ -187,11 +187,6 @@
         height: 30px !important;
         filter: brightness(0) invert(1) !important;
     }
-    .logo {
-        margin-left: 60%;
-        width: 160px;
-        margin-top: -12px;
-    }
 }
 
 

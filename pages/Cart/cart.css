@@ -65,7 +65,7 @@
 }
 
 .adder {
-    margin-left: 210px;
+    margin-left: 220px;
     margin-top: -65px;
     position: relative;
     color: black;
@@ -99,7 +99,7 @@
 
 #subtotal {
     position: relative;
-    margin-left: 250px;
+    margin-left: 260px;
     margin-top: 13px;
     text-decoration: none;
     text-shadow: none;
@@ -1047,7 +1047,5 @@ hr.style-eight {
     }
     #subtotal {
         margin-left: 820px !important;
-        float: right;
-        padding-right: 30px;
     }
 }

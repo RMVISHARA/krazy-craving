@@ -16,7 +16,7 @@ $(document).ready(function() {
     document.getElementById("name").innerHTML = vendor.name;
     document.getElementById("address").innerHTML = vendor.address;
     document.getElementById("ratings").innerHTML = vendor.rating;
-    document.getElementById("longDescription").innerHTML = `<p>${vendor.longDescription}</p>`;
+    document.getElementById("longDescription").innerHTML = vendor.longDescription;
     document.getElementById("bgImage").style.backgroundImage = `url('${vendor.imageurl}')`;
 
     vendor.menu.forEach(function(obj) {
@@ -27,7 +27,7 @@ $(document).ready(function() {
                 <div class="desc1">
                     <div class="card-body p-0">
                         <h5 class="card-title">${ obj.name}</h5>
-                        <p class="card-text">LKR ${obj.price}</p>
+                        <p class="card-text">Rs. ${obj.price}</p>
                     </div>
                 </div>
                 <div class="image">
