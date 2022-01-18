@@ -20,6 +20,27 @@
         margin-bottom: 10px;
         border-radius: 20px;
     }
+
+    .location{
+        border-radius: 0px !important;
+        border: none !important;
+        border-bottom: 1px solid darkgrey !important;
+    }
+
+    .mapBtn {
+        font-family: Arial;
+        background-color: #fc9920;
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+        width: 40%;
+        height: 22px;
+        border-radius: 10px;
+        border: none;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-shadow: none;
+    }
 </style>
 
 <body>
@@ -61,13 +82,14 @@
             </div>
         </div>
 
+        
         <div data-role="content" align="center">
-            <p class="pageTitle">Set Location</p>
-
+            <h2 class="pageTitle">Set Location</h2>
             <div id="map"></div>
             <div class="row">
-                <div class="col-8"> <input type="text" value="" name="location" id="location"></div>
-                <div class="col-4"><button type="button" class="btn" onclick="setLocation()">set</button></div>
+                <div class="col-1 pt-2"><img src="../../Assets/img/icons/loc.png" height="30px" width="25px"></div>
+                <div class="col-7"><input type="text" value="" name="location" id="location" class="location"></div>
+                <div class="col-4"><button type="button" class="btn mapBtn" onclick="setLocation()">set</button></div>
             </div>
 
         </div>
