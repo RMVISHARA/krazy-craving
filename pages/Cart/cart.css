@@ -294,12 +294,30 @@ hr.style-eight {
 
 /* Portrait */
 
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+    .edit-address{
+        font-size: 10px;
+        font-family: poppins-regular;
+        }
+        .address-val{
+            font-size: 12px;
+            font-family: poppins-semibold;
+        }
+}
 
 
 /* Landscape */
 
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    .edit-address{
+        font-size: 10px;
+        font-family: poppins-regular;
+        }
+    
+        .address-val{
+            font-size: 12px;
+            font-family: poppins-semibold;
+        }
     #header {
         z-index: 1000;
     }
@@ -550,6 +568,7 @@ hr.style-eight {
 
 @media only screen and (device-width: 768px) {
     /* For general iPad layouts */
+    
 }
 
 #header1 {
@@ -561,6 +580,14 @@ hr.style-eight {
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    .edit-address{
+        font-size: 15px;
+        font-family: poppins-regular;
+        }
+        .address-val{
+            font-size: 20px;
+            font-family: poppins-semibold;
+        }
     /* For portrait layouts only */
     #header {
         z-index: 1000;
@@ -812,6 +839,14 @@ hr.style-eight {
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+    .edit-address{
+        font-size: 15px;
+        font-family: poppins-regular;
+        }
+        .address-val{
+            font-size: 20px;
+            font-family: poppins-semibold;
+        }
     /* For landscape layouts only */
     #header {
         z-index: 1000;
