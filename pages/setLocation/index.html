@@ -14,10 +14,10 @@
            * element that contains the map. */
     
     #map {
-        width: 90%;
-        height: 200px;
+        width: 100%;
+        height: 120px;
         background-color: grey;
-        margin-bottom: 10px;
+        /* margin-bottom: 10px; */
         border-radius: 20px;
     }
 </style>
@@ -61,14 +61,33 @@
             </div>
         </div>
 
-        <div data-role="content" align="center">
-            <p class="pageTitle">Set Location</p>
+        <div data-role="content" style="background-color: #F2F2F2; padding-left: 0%; padding-right: 0%;" >
+            <h1 class="pageTitle" style="font-family: poppins-medium; padding-left: 10vw;">Set Location</h1>
+            <div class="container main-content">
+                <div class="row">
+                    <div class="col-12">
+                       <div id="map" style="height: 30vh;"></div>
 
-            <div id="map"></div>
-            <div class="row">
-                <div class="col-8"> <input type="text" value="" name="location" id="location"></div>
-                <div class="col-4"><button type="button" class="btn" onclick="setLocation()">set</button></div>
+                    </div>
+                </div>
+                <div class="row mt-2 mb-2"> 
+                    <div class="col-12">
+                    <input type="text" value="" name="location" id="location">
+                        
+                    </div>
+                </div>
+                <div class="row mt-2 mb-5">
+                    <div class="col-12">
+                        <a onclick="setLocation()">
+                            <div class="btn-confirm">
+                                confirm Location
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
             </div>
+
 
         </div>
 
