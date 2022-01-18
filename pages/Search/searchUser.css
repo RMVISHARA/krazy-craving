@@ -16,6 +16,19 @@
     border-bottom-right-radius: 5px
 }
 
+.item-rating {
+    color: white;
+    vertical-align: middle;
+    display: inline-block;
+    font-family: poppins-light;
+    font-size: 14px;
+}
+
+.rating-icon{
+    vertical-align: middle;
+    display: inline-block;
+}
+
 .pad {
     text-align: left;
     margin-bottom: 5px;
