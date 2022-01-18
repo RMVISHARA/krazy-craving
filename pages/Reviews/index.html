@@ -106,14 +106,18 @@
                     </div>
                 </div>
 
-                <div data-role="popup" id="popup-reply" data-theme="a" class="ui-corner-all" style="width: 390px;">
-                    <div class="p-3">
-                        <input type="text" name="reply" id="reply" value="" placeholder="Your Reply..." /><br>
-                        <center>
-                            <a href="" data-role="button" onclick='onAddRply()' class="submit pl-2 pt-2" id="submit">
-                                Submit
-                            </a>
-                        </center>
+                <div class="modal fade" id="popup-reply2" tabindex="-1" role="dialog" aria-hidden="true" style="width: 100%;margin-top: -50px;">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="p-3">
+                                <input type="text" name="reply" id="reply" value="" placeholder="Your Reply..." /><br>
+                                <div align="center">
+                                    <a href="" data-role="button" onclick='onAddRply()' class="submit pl-2 pt-2" id="submit">
+                                    Submit
+                                </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -132,7 +136,7 @@
 
         </div>
 
-        <div class="footer" data-role="footer" data-position="fixed">
+        <div class="footer" data-role="footer" data-position="fixed" style="position: fixed;">
             <div data-role="navbar">
                 <ul>
                     <li><a href="../HomeUser/index.html" data-icon="none" class="ui-nodisc-icon ui-icon-home-inactive" id="inactive" data-ajax="false">Home</a></li>

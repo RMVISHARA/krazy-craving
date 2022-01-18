@@ -107,8 +107,10 @@
                                 </div>
                             </div>
                             <div id="rplylist" align="center">
-                                <a href="" data-role="button" onclick="saveOgCommentId(${x.id})" id="replybtn" class="replyBtn" >Reply</a>
-                            </div>
+                            <button id="replybtn" type="button" class="replyBtn" data-toggle="modal" data-target="#popup-reply2"
+                            onclick="saveOgCommentId(${x.id})"> Reply</button>
+       
+                                              </div>
                            
                             `
 
@@ -164,6 +166,5 @@
     };
 
     function saveOgCommentId(val) {
-        $("#popup-reply").popup("open");
         localStorage.setItem("ogCommentId", val);
     };
