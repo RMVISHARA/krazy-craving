@@ -82,13 +82,13 @@
                 <center>
                     <input type="textarea" class="message" name="message" id="message" value="" placeholder="Message" data-role=none />
                     <br>
-                    <a href="" data-role="button" onclick='onAddComment()' class="submit" id="submit">SUBMIT</a>
+                    <a href="" data-role="button" onclick='onAddComment()' class="submit" id="submit">Submit</a>
                 </center>
 
                 <!-- success message -->
                 <div data-role="popup" id="v-promo-popup-success2">
                     <div data-role="content">
-                        <a href="#" data-rel="back" id="popupback2"> <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15"></a>
+                        <a href="#" data-rel="back" id="popupback2"> <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15" style="float: right;"></a>
                         <br>
                         <center><img id="av" src="../../Assets/img/icons/orange-tick-icon.png" width="65" height="65"></center>
                         <h5 id="header1" class="pt-3"><span id="message2">Your Reviews and Ratings have been published !!</span></h5>
@@ -98,7 +98,7 @@
 
                 <div data-role="popup" id="v-promo-popup-success3">
                     <div data-role="content">
-                        <a href="#" data-rel="back" id="popupback2"> <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15"></a>
+                        <a href="#" data-rel="back" id="popupback2"> <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15" style="float: right;"></a>
                         <br>
                         <center><img id="av" src="../../Assets/img/icons/orange-tick-icon.png" width="65" height="65"></center>
                         <h5 id="header1" class="pt-3"><span id="message3">Your Reply have been published !!</span></h5>
@@ -109,11 +109,14 @@
                 <div class="modal fade" id="popup-reply2" tabindex="-1" role="dialog" aria-hidden="true" style="width: 100%;margin-top: -50px;">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="text-align: right !important;">
+                                <span aria-hidden="true"style="padding-right: 10px;">&times;</span>
+                            </button>
                             <div class="p-3">
                                 <input type="text" name="reply" id="reply" value="" placeholder="Your Reply..." /><br>
                                 <div align="center">
                                     <a href="" data-role="button" onclick='onAddRply()' class="submit pl-2 pt-2" id="submit">
-                                    Submit
+                                    Publish
                                 </a>
                                 </div>
                             </div>
@@ -156,7 +159,10 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="close">&times;</span>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="text-align: right !important;">
+                <span aria-hidden="true"style="padding-right: 10px;">&times;</span>
+            </button>
             <center>
                 <p>Scan QR Code to Share Restaurant</p>
                 <img class="qr" src="../../Assets/img/qrcode.png">
