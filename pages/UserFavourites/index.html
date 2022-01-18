@@ -80,7 +80,7 @@
             </div>
 
             <!-- popup success -->
-            <div data-role="popup" id="add-popup-success">
+            <!-- <div data-role="popup" id="add-popup-success">
                 <div data-role="content">
                     <a href="#" data-rel="back" id="popupback">
                         <img src="../../Assets/img/icons/close.png" id="promo-add-btn" height="15" width="15"></a>
@@ -88,6 +88,21 @@
                     <center><img id="av" src="../../Assets/img/icons/orange-tick-icon.png" width="65" height="65"></center>
                     <h3 class="text-center" id="header1">Favourite list was Emailed Successfully!</h1>
                         <br>
+                </div>
+            </div> -->
+
+            <div class="modal fade" id="add-popup-success" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="close pr-4" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="float: right;">&times;</span>
+                        </button>
+                        <div data-role="content">
+                            <center><img id="av" src="../../Assets/img/icons/orange-tick-icon.png" width="65" height="65"></center>
+                            <h5 id="header1"><span id="message3">Favourite list was Emailed Successfully!</span></h5>
+                            <br>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -104,7 +119,7 @@
                         <input type="text" name="user" id="un" value="" placeholder="Reciever's Email" data-role=none required/>
                         <p id="err" style="color: red;"></p>
                         <input type="text" name="user" id="us" value="" placeholder="Description" data-role=none required/>
-                        <a href="#" data-role="button" id="submits" onclick="sendEmail()">SEND</a>
+                        <a data-toggle="modal" data-target="#add-popup-success" data-role="button" id="submits" onclick="sendEmail()">SEND</a>
                     </center>
                 </div>
             </div>
@@ -136,7 +151,7 @@
         var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         var mailbody = `
                             <html>
-                                <h2>My Favourite Food List from Home Chef</h2>
+                                <h2>My Favourite Food List from Krazy Cravings</h2>
                                 <img src='../../Assets/img/cupcakes.jpg'>
                                 <h2 >Cream Cakes</h2>
                                 <span>No.6, Marine Drive, Colpetty</span>
@@ -149,7 +164,7 @@
 
         if (regex.test(reciver)) {
             flag = true;
-            document.getElementById("add-popup-success").style.display = "block";
+            // document.getElementById("add-popup-success").style.display = "block";
             document.getElementById("err").style.display = "none";
             document.getElementById("un").value = null;
             document.getElementById("us").value = null;
@@ -160,7 +175,7 @@
                     To: reciver,
                     From: "epillPod2018@gmail.com",
                     Subject: description,
-                    Body: "<html><h2>My Favourite Food List from Home Chef</h2><img src='../../Assets/img/cupcakes.jpg'><h2 >Cream Cakes</h2><span>No.6, Marine Drive, Colpetty</span><br><img src='../../Assets/img/kottu.jpg'><h2>Kottu Kottu</h2><span>No.4, W A Mawatha, Wellawatte</span></html>",
+                    Body: "<html><h2>My Favourite Food List from Krazy Cravings</h2><img src='../../Assets/img/cupcakes.jpg'><h2 >Cream Cakes</h2><span>No.6, Marine Drive, Colpetty</span><br><img src='../../Assets/img/kottu.jpg'><h2>Kottu Kottu</h2><span>No.4, W A Mawatha, Wellawatte</span></html>",
                     Attachments: [{
                         name: "favourites.jpg",
                         path: "https://image.shutterstock.com/image-photo/large-group-junk-food-one-600w-232493077.jpg",
@@ -173,7 +188,7 @@
                 });
         } else {
             flag = false;
-            document.getElementById("add-popup-success").style.display = "none";
+            // document.getElementById("add-popup-success").style.display = "none";
             document.getElementById("err").innerHTML = "Invalid Email!";
 
         }
@@ -204,22 +219,22 @@
 
 
 
-    $(document).on("pageinit", function() {
-        $("#addItem-popup").on({
-            popupafterclose: function() {
-                if (buttonClick) {
-                    setTimeout(function() {
-                        $("#add-popup-success").popup("open", {
-                            positionTo: "#addItem-popup"
-                        })
-                    }, 100);
-                    buttonClick = false;
-                } else {
-                    console.log(buttonClick);
-                }
-            }
-        });
-    });
+    // $(document).on("pageinit", function() {
+    //     $("#addItem-popup").on({
+    //         popupafterclose: function() {
+    //             if (buttonClick) {
+    //                 setTimeout(function() {
+    //                     $("#add-popup-success").popup("open", {
+    //                         positionTo: "#addItem-popup"
+    //                     })
+    //                 }, 100);
+    //                 buttonClick = false;
+    //             } else {
+    //                 console.log(buttonClick);
+    //             }
+    //         }
+    //     });
+    // });
 
     $(document).ready(function() {
         $("#submits").click(function() {
